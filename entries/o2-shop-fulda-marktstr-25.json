@@ -4,7 +4,7 @@
  "fetch_backend": "html_webdriver",
  "filter": "xpath://ul[contains(concat(\" \",normalize-space(@class),\" \"),\" timeTable \")]",
  "name": "O2 Shop Fulda (Marktstr. 25)",
- "note": "Separate branch page from the Bahnhofstraße shop; the two branches simply keep the same hours, so identical captures are expected.",
+ "note": "Eigene Filialseite, getrennt von der Bahnhofstrasse; die zwei Filialen halten schlicht dieselben Zeiten, gleiche Einfaenge sind hier erwartbar.",
  "osm_id": "node/1333374833",
  "schema": 1,
  "tags": [

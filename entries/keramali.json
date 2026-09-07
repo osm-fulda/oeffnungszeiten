@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//span[contains(normalize-space(.),\"ÖFFNUNGSZEITEN\")])/parent::*/parent::*",
  "name": "Keramali",
- "note": "website tag points at https://www.keramali.de/, which carries no hours; watching the page that does.",
+ "note": "Das website-Tag zeigt auf https://www.keramali.de/, dort stehen keine Zeiten; beobachtet wird die Seite, die welche fuehrt.",
  "osm_id": "node/2484142483",
  "schema": 1,
  "tags": [

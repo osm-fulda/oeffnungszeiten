@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Rustico",
- "note": "Hotel Esperanto outlet. Discovery sent Bodega, Rustico and Toro Negro all to /kontakt/, which carries no hours at all; each outlet has its own page.",
+ "note": "Betrieb im Hotel Esperanto. Die Erkennung schickte Bodega, Rustico und Toro Negro alle auf /kontakt/, das gar keine Zeiten fuehrt; jeder Betrieb hat eine eigene Seite.",
  "osm_id": "node/3978092615",
  "schema": 1,
  "tags": [

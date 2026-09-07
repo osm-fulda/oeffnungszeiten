@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": ".branch-openingtimes",
  "name": "Woolworth",
- "note": "Only one Woolworth in Fulda (woolworth.de branches sitemap, 859 stores): store 1271. It is the Emaillierwerk mall branch; woolworth.de gives its postal address as Heinrichstrasse 85 while the mall is Am Emaillierwerk 1 - coords agree to ~97 m (OSM 50.54835/9.68658 vs page 50.54821/9.68793). OSM EDIT CANDIDATE: addr tag 'Am Emaillierwerk 85' mixes both - housenumber 85 belongs to Heinrichstrasse. Should be Heinrichstrasse 85 or Am Emaillierwerk 1.",
+ "note": "Nur eine Woolworth-Filiale in Fulda (Filial-Sitemap von woolworth.de, 859 Laeden): Filiale 1271. Es ist die Filiale im Center Emaillierwerk; woolworth.de nennt als Anschrift Heinrichstrasse 85, waehrend das Center Am Emaillierwerk 1 liegt, die Koordinaten stimmen bis auf rund 97 m ueberein (OSM 50.54835/9.68658 gegen Seite 50.54821/9.68793). IN OSM PRUEFEN: Das addr-Tag 'Am Emaillierwerk 85' mischt beides, die Hausnummer 85 gehoert zur Heinrichstrasse. Richtig waere Heinrichstrasse 85 oder Am Emaillierwerk 1.",
  "osm_id": "node/1465073360",
  "schema": 1,
  "tags": [

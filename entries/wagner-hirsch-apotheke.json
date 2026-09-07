@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath://p[contains(normalize-space(.),\"Adalbertstraße 1\")]",
  "name": "Hirsch Apotheke",
- "note": "Six pharmacies share one page; the entry is keyed on the branch address, which is unique per branch and survives a redesign. The page ships a second copy of every branch inside a slider - the <p> anchor picks the list copy only.",
+ "note": "Sechs Apotheken teilen sich eine Seite; der Eintrag haengt an der Filialadresse, die je Filiale eindeutig ist und einen Relaunch uebersteht. Die Seite liefert jede Filiale ein zweites Mal in einem Slider, der <p>-Anker greift nur die Listenfassung.",
  "osm_id": "node/5807606975",
  "schema": 1,
  "tags": [

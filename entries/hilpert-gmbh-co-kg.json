@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Hilpert GmbH & Co. KG",
- "note": "website tag points at https://www.hilpert.eu/, which carries no hours; watching the page that does.",
+ "note": "Das website-Tag zeigt auf https://www.hilpert.eu/, dort stehen keine Zeiten; beobachtet wird die Seite, die welche fuehrt.",
  "osm_id": "node/10789942694",
  "schema": 1,
  "tags": [

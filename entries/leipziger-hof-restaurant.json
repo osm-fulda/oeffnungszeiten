@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath://ul[contains(concat(\" \",normalize-space(@class),\" \"),\" opening-hours-list \")]",
  "name": "Leipziger Hof (Restaurant)",
- "note": "Hotel and restaurant share leipzigerhof-fulda.de, which carries no hours and needs JavaScript. The restaurant keeps its own domain, and its /kontakt page serves the hours in plain HTML. This entry is the restaurant only; the hotel node is unwatched.",
+ "note": "Hotel und Restaurant teilen sich leipzigerhof-fulda.de, das keine Zeiten fuehrt und JavaScript braucht. Das Restaurant hat eine eigene Domain, und seine /kontakt-Seite liefert die Zeiten als einfaches HTML. Dieser Eintrag ist nur das Restaurant; das Hotel-Objekt wird nicht beobachtet.",
  "osm_id": "node/6322711068",
  "schema": 1,
  "tags": [

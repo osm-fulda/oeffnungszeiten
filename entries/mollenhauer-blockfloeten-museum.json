@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Mollenhauer Blockflöten Museum",
- "note": "The museum publishes no hours of its own; both this and musikhaus-mollenhauer capture the shop's contact block, which is the access time for the museum too.",
+ "note": "Das Museum veroeffentlicht keine eigenen Zeiten; dieser Watch und musikhaus-mollenhauer fangen den Kontaktblock des Ladens ein, der zugleich die Zutrittszeit des Museums ist.",
  "osm_id": "node/11916484101",
  "schema": 1,
  "tags": [

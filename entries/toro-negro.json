@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Toro Negro",
- "note": "Hotel Esperanto outlet. Was watching /kontakt/, which carries no hours at all - blind watch, repointed 2026-08-03 to the per-outlet page.",
+ "note": "Betrieb im Hotel Esperanto. Beobachtet wurde /kontakt/, das gar keine Zeiten fuehrt, also ein blinder Watch; am 2026-08-03 auf die Seite des Betriebs umgehaengt.",
  "osm_id": "node/3978092617",
  "schema": 1,
  "tags": [

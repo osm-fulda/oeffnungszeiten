@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//h1[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
  "name": "MuseumsKAFé",
- "note": "The café publishes no hours of its own — its page says 'unser KAFé ist während der Öffnungszeiten geöffnet' — so this watch mirrors the Kinder-Akademie's hours deliberately.",
+ "note": "Das Cafe veroeffentlicht keine eigenen Zeiten, seine Seite sagt 'unser KAFé ist während der Öffnungszeiten geöffnet', deshalb spiegelt dieser Watch absichtlich die Zeiten der Kinder-Akademie.",
  "osm_id": "node/5203973987",
  "schema": 1,
  "tags": [

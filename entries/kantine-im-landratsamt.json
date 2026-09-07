@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": ".seitencontent",
  "name": "Kantine im Landratsamt",
- "note": "discovery grabbed the site-wide footer link /Kontakt/74-2500-ErklaerungBarrierefreiheit (an accessibility statement, no hours) and both gruemel.de records ended up on the same watch; repointed to the Dienstleistungen page, which carries the hours. Filter .seitencontent. gruemel.de serves the SAME page to two concurrent requests for different URLs (server-side global state - reproduced with separate cookie jars), so the two gruemel watches would swap content whenever they recheck together; guarded with trigger_text as a page-identity marker. Marker: 'Kantine im Landratsamt'.",
+ "note": "Die Erkennung griff den seitenweiten Link 'Kontakt' im Fussbereich auf /Kontakt/74-2500-ErklaerungBarrierefreiheit, eine Barrierefreiheitserklaerung ohne Zeiten, und beide gruemel.de-Eintraege landeten auf demselben Watch; umgehaengt auf die Dienstleistungen-Seite, die die Zeiten fuehrt. Filter .seitencontent. gruemel.de liefert zwei gleichzeitigen Abrufen verschiedener URLs DIESELBE Seite (serverseitiger globaler Zustand, mit getrennten Cookie-Jars reproduziert), die beiden gruemel-Watches wuerden ihre Inhalte also tauschen, sobald sie zusammen pruefen; abgesichert ueber trigger_text als Seitenkennung. Marker: 'Kantine im Landratsamt'.",
  "osm_id": "node/7014990668",
  "schema": 1,
  "tags": [

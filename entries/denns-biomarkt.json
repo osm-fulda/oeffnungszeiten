@@ -4,7 +4,7 @@
  "fetch_backend": "html_requests",
  "filter": "json:$..openingHoursSpecification",
  "name": "Denns BioMarkt",
- "note": "Visible page shows only today's hours (live status). Real week lives in the page's application/ld+json Store block -> CD include_filter 'json:$..openingHoursSpecification' on plain fetch. Zero-noise structured source.",
+ "note": "Sichtbar nennt die Seite nur den heutigen Tag (Live-Status). Die ganze Woche steht im Store-Block in application/ld+json, deshalb include_filter 'json:$..openingHoursSpecification' beim einfachen Abruf. Rauschfreie strukturierte Quelle.",
  "osm_id": "node/2166551148",
  "schema": 1,
  "tags": [

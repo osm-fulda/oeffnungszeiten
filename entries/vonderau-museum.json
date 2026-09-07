@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Vonderau Museum",
- "note": "Discovery followed the site-wide footer 'Kontakt' link to fulda.de/kontakt, which shows the BUERGERBUERO hours, not the museum's. Repointed to the museum page. OSM MERGE CANDIDATE: node/12463473269 and relation/161084 are both 'Vonderau Museum'.",
+ "note": "Die Erkennung folgte dem seitenweiten Link 'Kontakt' im Fussbereich auf fulda.de/kontakt, der die Zeiten des BUERGERBUEROS zeigt und nicht die des Museums. Auf die Museumsseite umgehaengt. IN OSM PRUEFEN, moeglicherweise zusammenzufuehren: node/12463473269 und relation/161084 heissen beide 'Vonderau Museum'.",
  "osm_id": "node/12463473269",
  "schema": 1,
  "tags": [
