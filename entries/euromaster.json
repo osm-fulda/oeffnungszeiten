@@ -4,7 +4,7 @@
  "fetch_backend": "html_requests",
  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")])]",
  "name": "Euromaster",
- "note": "2026-08-01: repointed from /kontaktcenter to the Fulda partner branch page (found via sitemap.xml); CD filter = table.tableHoraires (weekly hours, plain fetch).",
+ "note": "2026-08-01: von /kontaktcenter auf die Seite der Fuldaer Partnerfiliale umgehaengt (ueber sitemap.xml gefunden); Filter table.tableHoraires (Wochenzeiten, einfacher Abruf).",
  "osm_id": "way/445611877",
  "schema": 1,
  "tags": [

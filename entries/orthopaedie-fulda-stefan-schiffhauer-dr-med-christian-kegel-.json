@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Orthopädie Fulda, Stefan Schiffhauer, Dr. med. Christian Kegel, Dr. med. Jan Weghenkel",
- "note": "meliva.de/standorte/ is a group locator shared by several practices; repointed to this practice's own /standort/ page, which carries a clean weekly hours table.",
+ "note": "meliva.de/standorte/ ist ein gemeinsamer Standortfinder mehrerer Praxen; umgehaengt auf die eigene /standort/-Seite dieser Praxis, die eine saubere Wochentabelle fuehrt.",
  "osm_id": "node/13448807040",
  "schema": 1,
  "sort_text_alphabetically": true,

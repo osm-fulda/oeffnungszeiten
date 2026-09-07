@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//h4[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Klasmeier Kalibrier- und Messtechnik GmbH",
- "note": "website tag points at https://www.klasmeier.com/, which carries no hours; watching the page that does.",
+ "note": "Das website-Tag zeigt auf https://www.klasmeier.com/, dort stehen keine Zeiten; beobachtet wird die Seite, die welche fuehrt.",
  "osm_id": "node/10789929045",
  "schema": 1,
  "tags": [

@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Musikhaus Mollenhauer GmbH & Co. KG",
- "note": "See mollenhauer-blockfloeten-museum: the same shop contact block appears on /Kontakt and /Ladengeschaeft.",
+ "note": "Siehe mollenhauer-blockfloeten-museum: derselbe Kontaktblock des Ladens steht auf /Kontakt und auf /Ladengeschaeft.",
  "osm_id": "node/1707393447",
  "schema": 1,
  "tags": [

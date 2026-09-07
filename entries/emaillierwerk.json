@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath://li[contains(concat(\" \",normalize-space(@class),\" \"),\" shop-time \")]",
  "name": "Emaillierwerk",
- "note": "A shopping centre. The hours are 165 per-tenant li.shop-time rows, none of which names a weekday, so 'times but no weekday' is the normal state. The weekday-looking text elsewhere on that page is a holiday closure list.",
+ "note": "Ein Einkaufszentrum. Die Zeiten sind 165 li.shop-time-Zeilen je Mieter, keine davon nennt einen Wochentag, deshalb ist 'Zeiten ohne Wochentag' hier der Normalzustand. Der Text auf derselben Seite, der nach Wochentagen aussieht, ist eine Liste der Feiertagsschliessungen.",
  "osm_id": "way/193308489",
  "schema": 1,
  "tags": [

@@ -4,7 +4,7 @@
  "fetch_backend": "html_webdriver",
  "filter": "xpath://article[contains(@class,\"store_finder_block\")]",
  "name": "Siemes Schuhcenter",
- "note": "2026-08-01: repointed to the Fulda store page (store-locator result, needs Playwright); CD filter = article.store_finder_block (address + Mo-Sa 09:00-19:00).",
+ "note": "2026-08-01: auf die Fuldaer Filialseite umgehaengt (Treffer aus dem Store-Locator, braucht Playwright); Filter article.store_finder_block (Adresse plus Mo-Sa 09:00-19:00).",
  "osm_id": "node/1434864565",
  "schema": 1,
  "tags": [

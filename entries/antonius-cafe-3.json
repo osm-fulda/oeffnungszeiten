@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "antonius Cafe",
- "note": "Discovery followed /herstellung/kontakt.html, which 404s. Hofcafe hours sit on the antonius-hof page itself (the OSM website tag).",
+ "note": "Die Erkennung folgte /herstellung/kontakt.html, das 404 liefert. Die Zeiten des Hofcafes stehen auf der antonius-hof-Seite selbst, dem website-Tag aus OSM.",
  "osm_id": "node/13196229569",
  "schema": 1,
  "tags": [

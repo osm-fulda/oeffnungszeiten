@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath://div[contains(@class,\"ce_text\")][.//strong[contains(.,\"Öffnungszeiten\")]]",
  "name": "antonius Café",
- "note": "repointed to café page; xpath filter to Öffnungszeiten block (kontakt.html had an events calendar)",
+ "note": "Auf die Cafe-Seite umgehaengt; XPath-Filter auf den Oeffnungszeiten-Block (kontakt.html fuehrte einen Veranstaltungskalender).",
  "osm_id": "node/1479400272",
  "schema": 1,
  "tags": [

@@ -4,7 +4,7 @@
  "fetch_backend": "html_requests",
  "filter": ".detail-dealer-open-hours",
  "name": "Pappert (bahnhof)",
- "note": "2026-08-01: recovered via /dealer/<slug>/ branch page (matched to OSM by coordinates, 0.02 km).",
+ "note": "2026-08-01: ueber die Filialseite /dealer/<slug>/ wiedergefunden (ueber Koordinaten dem OSM-Objekt zugeordnet, 0.02 km).",
  "osm_id": "way/1284529908",
  "schema": 1,
  "tags": [

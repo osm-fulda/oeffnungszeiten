@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
  "name": "Bonifatiushaus",
- "note": "website tag points at https://www.katholische-akademie-fulda.de/katholischeakademie/index.php, which carries no hours; watching the page that does.",
+ "note": "Das website-Tag zeigt auf https://www.katholische-akademie-fulda.de/katholischeakademie/index.php, dort stehen keine Zeiten; beobachtet wird die Seite, die welche fuehrt.",
  "osm_id": "way/24681950",
  "schema": 1,
  "tags": [

@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Klostercafé Flora",
- "note": "Discovery followed a frauenberg-fulda.de link that 404s. Hours are on the flora-fulda.de homepage (the OSM website tag).",
+ "note": "Die Erkennung folgte einem Link auf frauenberg-fulda.de, der 404 liefert. Die Zeiten stehen auf der Startseite von flora-fulda.de, dem website-Tag aus OSM.",
  "osm_id": "node/5087096075",
  "schema": 1,
  "tags": [

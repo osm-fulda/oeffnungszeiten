@@ -4,7 +4,7 @@
  "fetch_backend": "html_webdriver",
  "filter": "xpath:(//p[contains(translate(.,\"MONTAG\",\"montag\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAG\",\"montag\"),\"montag\")])])[1]",
  "name": "Flora In",
- "note": "hours live behind the \"Aktuelle Öffnungszeiten\" off-canvas panel (Elementor); discovery had latched onto the popup-trigger URL #elementor-action…. Rendered + day-anchored filter on the panel content.",
+ "note": "Die Zeiten stehen hinter dem Off-Canvas-Panel \"Aktuelle Öffnungszeiten\" (Elementor); die Erkennung hatte sich an der Popup-Trigger-URL #elementor-action… festgehalten. Gerendert, Filter tagverankert auf den Inhalt des Panels.",
  "osm_id": "node/12500552619",
  "schema": 1,
  "tags": [

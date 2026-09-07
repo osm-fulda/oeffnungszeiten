@@ -4,7 +4,7 @@
  "fetch_backend": "html_requests",
  "filter": "json:$..openingHoursSpecification",
  "name": "MediaMarkt",
- "note": "retail SPA; hours only in JSON-LD script (changedetection strips script text) + JS-hydrated widget; no visible-DOM selector. Paused. (flagged 2026-07-27)",
+ "note": "Retail-SPA; die Zeiten stehen nur in JSON-LD, dessen Script-Text changedetection entfernt, und in einem per JavaScript gefuellten Widget; im sichtbaren DOM gibt es keinen Anker. Pausiert. (vermerkt 2026-07-27)",
  "osm_id": "node/1999908798",
  "schema": 1,
  "tags": [

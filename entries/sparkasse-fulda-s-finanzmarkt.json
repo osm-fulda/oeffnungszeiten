@@ -4,7 +4,7 @@
  "fetch_backend": "html_webdriver",
  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Sparkasse Fulda S-Finanzmarkt",
- "note": "Branch page. Anchored on the h2 \"Oeffnungszeiten\" so the block stays the counter hours; the separate \"Verfuegbarkeit Geldautomat\" block (Mo-So 6:00-23:00) is not opening hours and stays out. Plain fetch dies with an empty \"Exception:\" while curl and urllib from the same host return 200 and the browser renders 124 KB - so it runs on the browser backend.",
+ "note": "Filialseite. Verankert an der h2 \"Oeffnungszeiten\", damit der Block die Schalterzeiten bleibt; der eigene Block \"Verfuegbarkeit Geldautomat\" (Mo-So 6:00-23:00) ist keine Oeffnungszeit und bleibt draussen. Der einfache Abruf stirbt mit einer leeren \"Exception:\", waehrend curl und urllib vom selben Host 200 liefern und der Browser 124 KB rendert, deshalb laeuft der Watch auf dem Browser-Backend.",
  "osm_id": "node/1333664507",
  "schema": 1,
  "tags": [

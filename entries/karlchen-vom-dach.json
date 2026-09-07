@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"donnerstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"donnerstag\")])])[1]",
  "name": "Karlchen vom Dach",
- "note": "Hours are on the homepage. Discovery had scored an Elementor popup trigger (#elementor-action%3A...) as a link; manual_url pins the clean URL.",
+ "note": "Die Zeiten stehen auf der Startseite. Die Erkennung hatte einen Elementor-Popup-Trigger (#elementor-action%3A...) als Link gewertet; manual_url fixiert die saubere URL.",
  "osm_id": "way/1426728330",
  "schema": 1,
  "tags": [

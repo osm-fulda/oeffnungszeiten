@@ -4,7 +4,7 @@
  "fetch_backend": "html_requests",
  "filter": "xpath://div[contains(@class,\"ce-avsite_restaurants\")]",
  "name": "Schloßpark",
- "note": "2026-08-01: repointed to hotel restaurants page; CD filter covers all outlet blocks (Apollo Saal breakfast + a-la-carte, Dianakeller, Bar Barock). Old /kontakt-aufnehmen was a booking form.",
+ "note": "2026-08-01: auf die Restaurantseite des Hotels umgehaengt; der Filter deckt alle Betriebsbloecke ab (Apollo Saal Fruehstueck und a la carte, Dianakeller, Bar Barock). Das alte /kontakt-aufnehmen war ein Buchungsformular.",
  "osm_id": "node/1328288080",
  "schema": 1,
  "tags": [

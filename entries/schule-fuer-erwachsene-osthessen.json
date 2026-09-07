@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" anschrift \")]",
  "name": "Schule für Erwachsene Osthessen",
- "note": "website tag points at https://sfe-osthessen.de/, which carries no hours; watching the page that does.",
+ "note": "Das website-Tag zeigt auf https://sfe-osthessen.de/, dort stehen keine Zeiten; beobachtet wird die Seite, die welche fuehrt.",
  "osm_id": "way/1305138819",
  "schema": 1,
  "tags": [
