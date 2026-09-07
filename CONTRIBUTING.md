@@ -6,10 +6,10 @@ brauchst keinen laufenden Dienst, keinen API-Schlüssel und keine XPath-Kenntnis
 
 **Sprache:** Diese Seite, die README, das Issue-Formular und die Nachrichten des Bots sind deutsch,
 weil sie liest, wer in Fulda mitmacht. Handwerk und Begründung liegen auf Englisch, damit eine
-andere Stadt das hier nachbauen kann: [FILTERS.md](./FILTERS.md), [CONCEPT.md](./CONCEPT.md) und
-`docs/`. Code, Docstrings und Commit-Messages sind englisch. Ein `note` zitiert, was auf der Seite
-steht ("Termine nur nach Vereinbarung"), und bleibt deutsch: ein übersetztes Zitat taugt weniger als
-Beleg.
+andere Stadt das hier nachbauen kann: [FILTERS.md](./FILTERS.md), [CONCEPT.md](./CONCEPT.md),
+`docs/` und [entries/README.md](./entries/README.md). Code, Docstrings und Commit-Messages sind
+englisch. Ein `note` zitiert, was auf der Seite steht ("Termine nur nach Vereinbarung"), und bleibt
+deutsch: ein übersetztes Zitat taugt weniger als Beleg.
 
 ---
 

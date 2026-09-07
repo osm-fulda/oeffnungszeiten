@@ -120,7 +120,7 @@ wird eine URL genommen und beobachtet.
 | [CONCEPT.md](./CONCEPT.md) | warum es das gibt und warum Watches Dateien in git sind (englisch) |
 | [docs/changedetection.md](./docs/changedetection.md) | wie es ausgerollt ist und die drei Entscheidungen dahinter (englisch) |
 | [docs/notifications.md](./docs/notifications.md) | wie eine Änderung ins Matrix-Zimmer kommt und wie die Sitzung entsteht (englisch) |
-| [entries/README.md](./entries/README.md) | was ein Eintrag enthält und unter welcher Lizenz |
+| [entries/README.md](./entries/README.md) | was ein Eintrag enthält und unter welcher Lizenz (englisch) |
 
 Sechs Dokumente, jedes beantwortet eine Frage. Diese Seite ist die Karte, nichts wird hier zweimal
 erklärt.
@@ -128,8 +128,8 @@ erklärt.
 **Sprache:** Was zum Mitmachen nötig ist, steht auf Deutsch, denn wer beiträgt, liest ohnehin
 deutsche Öffnungszeiten: diese Seite, CONTRIBUTING.md, das Issue-Formular, die Nachrichten des Bots
 und die in Matrix. Handwerk und Begründung stehen auf Englisch, weil sie eine andere Stadt lesen
-soll, die das hier nachbaut: FILTERS.md, CONCEPT.md, `docs/`. Code, Docstrings und Commit-Messages
-sind englisch.
+soll, die das hier nachbaut: FILTERS.md, CONCEPT.md, `docs/` und `entries/README.md`. Code,
+Docstrings und Commit-Messages sind englisch.
 
 ## Lizenz
 
