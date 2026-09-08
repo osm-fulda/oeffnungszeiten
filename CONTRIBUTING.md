@@ -251,3 +251,17 @@ Was einen Selektor brüchig macht und woran man stattdessen verankert: [FILTERS.
 Mit einem Pull Request stimmst du zu, dass dein **Code** unter [GPL-3.0](./LICENSE) und deine
 **Eintragsdaten** unter [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) beigetragen
 werden, passend zu OpenStreetMap, woher der größte Teil dieses Datenbestands stammt.
+
+Zwei Lizenzen, weil eine Codelizenz keine Datenbank lizenzieren kann. Die Trennlinie liegt bei
+`entries/`: die Einträge sind die Datenbank, alles andere, `scripts/` und die Dokumentation, ist
+Code unter GPL-3.0. Was das im Alltag heißt:
+
+- **Namensnennung**: Wer diese Daten zeigt, nennt "© OpenStreetMap contributors", denn Name,
+  `website`-Tag und `osm_id` der Einträge stammen aus OSM.
+- **Share-alike**: Wer eine veränderte Fassung dieses Bestands veröffentlicht, veröffentlicht sie
+  wieder unter ODbL.
+- **Keine personenbezogenen Daten**: Ein Eintrag nennt den Betrieb, nicht die Personen darin. Eine
+  Praxis steht mit ihrem Namen da, nicht mit dem der Behandelnden; brauchte ein Arztname, um die
+  richtige Filialseite zu finden, gehört er in die Commit-Message, nicht in den Eintrag.
+
+Dieselbe Regel auf Englisch, mit der Herkunft im Detail: [entries/README.md](./entries/README.md).

@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-08",
+ "captured_sample": "Annahme Mo. - Fr. 08:00 - 15:30 Sa. 08:00 - 11:30",
+ "fetch_backend": "system",
+ "filter": "xpath://*[@id=\"Offnungszeiten\"]/following-sibling::*[1]",
+ "name": "Krieger Schrott",
+ "note": "Duda-Baukasten: die Ueberschrift Oeffnungszeiten und die Zeiten stehen in zwei getrennten dmRespRow-Zeilen, deshalb der Anker auf der naechsten Schwester der Sektion #Offnungszeiten. Die Zeiten stehen im ausgelieferten HTML; der Browser-Pfad bringt hier nichts, sockpuppetbrowser bekommt 403.",
+ "osm_id": "way/1557278559",
+ "schema": 1,
+ "tags": [
+  "fulda-recycling"
+ ],
+ "url": "https://www.krieger-schrott.de/"
+}

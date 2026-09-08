@@ -9,6 +9,18 @@ Flux aus diesem Repository ausrollt, siehe [docs/changedetection.md](./docs/chan
 
 Jeder Watch wird alle drei Tage geprüft.
 
+> **English.** This repository watches the websites of businesses in Fulda for **changed opening
+> hours**, so a mapper hears about it and can update OpenStreetMap. One file per watch in
+> `entries/`, added and changed through pull requests; a changedetection.io instance deployed by
+> Flux does the watching. Everything a contributor here reads is German, because they read German
+> opening hours anyway. The craft and the reasoning are English, so another city can rebuild this:
+> [FILTERS.md](./FILTERS.md) for how to find the block that carries the hours and how to know the
+> filter is right, [CONCEPT.md](./CONCEPT.md) for why it exists and why watches are files in git,
+> [docs/changedetection.md](./docs/changedetection.md) and
+> [docs/notifications.md](./docs/notifications.md) for the deployment and the way a change reaches
+> Matrix, [entries/README.md](./entries/README.md) for what an entry holds and under which licence.
+> Code, docstrings and commit messages are English too.
+
 ## Einen Watch hinzufügen
 
 **Der kurze Weg, ohne Installation und ohne Fork:** ein Issue über die Vorlage
@@ -125,11 +137,9 @@ wird eine URL genommen und beobachtet.
 Sechs Dokumente, jedes beantwortet eine Frage. Diese Seite ist die Karte, nichts wird hier zweimal
 erklärt.
 
-**Sprache:** Was zum Mitmachen nötig ist, steht auf Deutsch, denn wer beiträgt, liest ohnehin
-deutsche Öffnungszeiten: diese Seite, CONTRIBUTING.md, das Issue-Formular, die Nachrichten des Bots
-und die in Matrix. Handwerk und Begründung stehen auf Englisch, weil sie eine andere Stadt lesen
-soll, die das hier nachbaut: FILTERS.md, CONCEPT.md, `docs/` und `entries/README.md`. Code,
-Docstrings und Commit-Messages sind englisch.
+**Sprache:** Deutsch, was zum Mitmachen nötig ist, Englisch, was Handwerk und Begründung trägt,
+in der Tabelle darüber markiert. Welcher Text zu welcher Hälfte gehört und warum:
+[CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Lizenz
 
