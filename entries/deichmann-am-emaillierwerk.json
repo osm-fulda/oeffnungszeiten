@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-08",
+ "captured_sample": "Öffnungszeiten:WochentagStundenMo09:00 - 20:00Di09:00 - 20:00Mi09:00 - 20:00Do09:00 - 20:00Fr09:00 - 20:00Sa09:00 - 20:00SoGeschlossen",
+ "fetch_backend": "system",
+ "filter": "xpath:(//h4[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "name": "Deichmann",
+ "note": "Filiale Am Emaillierwerk. Faengt dieselben Zeiten ein wie die Filiale Keltenstrasse, zwei getrennte Filialseiten mit zufaellig gleichen Zeiten.",
+ "osm_id": "node/1465073252",
+ "schema": 1,
+ "tags": [
+  "fulda-shoes"
+ ],
+ "url": "https://stores.deichmann.com/de-de/de/hessen/fulda/am-emaillierwerk-1"
+}
