@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath://*[@id=\"Offnungszeiten\"]/following-sibling::*[1]",
  "name": "Krieger Schrott",
- "note": "Duda-Baukasten: die Ueberschrift Oeffnungszeiten und die Zeiten stehen in zwei getrennten dmRespRow-Zeilen, deshalb der Anker auf der naechsten Schwester der Sektion #Offnungszeiten. Die Zeiten stehen im ausgelieferten HTML; der Browser-Pfad bringt hier nichts, sockpuppetbrowser bekommt 403.",
+ "note": "Duda-Baukasten: die Ueberschrift Oeffnungszeiten und die Zeiten stehen in zwei getrennten dmRespRow-Zeilen, deshalb der Anker auf dem Element neben der Sektion #Offnungszeiten. Die Zeiten stehen im ausgelieferten HTML; der Browser-Pfad bringt hier nichts, sockpuppetbrowser bekommt 403.",
  "osm_id": "way/1557278559",
  "schema": 1,
  "tags": [
