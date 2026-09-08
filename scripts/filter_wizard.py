@@ -55,7 +55,12 @@ BRITTLE = re.compile(
     # random-looking token, either case: 8+ chars mixing letters and digits with no separator.
     # Tumult Hype emits UPPERCASE ids like "hype-obj-FQKA9M3088D50NH7XXPN", which a
     # lowercase-only pattern rated durable — the resulting filter matched nothing at all.
-    r'|(?:^|[-_])(?=[A-Za-z0-9]{8,}(?:$|[-_]))(?=[A-Za-z]*\d)(?=[0-9]*[A-Za-z])[A-Za-z0-9]{8,}')
+    # The boundary is any non-alphanumeric, not only `-` and `_`: `score()` runs this over a
+    # whole XPath, where the token is delimited by a space or a quote. With the narrow boundary
+    # `_dqyuY8s6034RG2wR` (XXXLutz) was flagged as a bare token and rated durable inside
+    # `//div[contains(…," _dqyuY8s6034RG2wR ")]`, so the candidate read "good pick — no warnings".
+    r'|(?:^|[^A-Za-z0-9])(?=[A-Za-z0-9]{8,}(?:$|[^A-Za-z0-9]))'
+    r'(?=[A-Za-z]*\d)(?=[0-9]*[A-Za-z])[A-Za-z0-9]{8,}')
 
 
 def txt_of(el):
