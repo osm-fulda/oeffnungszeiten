@@ -302,15 +302,6 @@
    "osm_id": "node/1328294767"
   },
   {
-   "url": "https://re-fd.de/sportbad-ziehers",
-   "name": "Sportbad Ziehers",
-   "reason": "no-hours-on-page",
-   "established": "2026-08-22",
-   "recheck": "2026-09-08",
-   "note": "Der Block #oeffnungszeiten traegt seit dem 09.05.2026 die Sommerpause statt Zeiten: das Bad oeffnet laut Seite am 7. September wieder. Der Host ist vom VPS aus wieder erreichbar (200 aus dem Pod, 22.08.2026), also kein Rechenzentrumsblock mehr. Nach der Wiedereroeffnung als Watch anlegen, Filter wie bei Stadtbad Esperanto.",
-   "osm_id": "way/25560330"
-  },
-  {
    "url": "https://www.von-poll.com/de/immobilienmakler/fulda",
    "name": "Von Poll Immobilien",
    "reason": "anti-bot",
@@ -756,24 +747,6 @@
    "recheck": "2027-02-18",
    "note": "Weder die Startseite noch /kontakt, /impressum, /oeffnungszeiten, /ueber-uns, /filialen oder /standorte nennen einen Wochentag mit Uhrzeit; am 18.08.2026 geprueft.",
    "osm_id": "node/1333620825"
-  },
-  {
-   "url": "https://stores.deichmann.com/de-de/de/hessen/fulda/keltenstrasse-20",
-   "name": "Deichmann",
-   "reason": "no-hours-on-page",
-   "established": "2026-08-18",
-   "recheck": "2027-02-18",
-   "note": "Weder die Startseite noch /kontakt, /impressum, /oeffnungszeiten, /ueber-uns, /filialen oder /standorte nennen einen Wochentag mit Uhrzeit; am 18.08.2026 geprueft.",
-   "osm_id": "node/1406092121"
-  },
-  {
-   "url": "https://stores.deichmann.com/de-de/de/hessen/fulda/am-emaillierwerk-1",
-   "name": "Deichmann",
-   "reason": "no-hours-on-page",
-   "established": "2026-08-18",
-   "recheck": "2027-02-18",
-   "note": "Weder die Startseite noch /kontakt, /impressum, /oeffnungszeiten, /ueber-uns, /filialen oder /standorte nennen einen Wochentag mit Uhrzeit; am 2026-08-18 geprueft.",
-   "osm_id": "node/1465073252"
   },
   {
    "url": "https://www.die-brillenmacher-fulda.de/",
@@ -1630,15 +1603,6 @@
    "osm_id": "node/13368126080"
   },
   {
-   "url": "https://www.muenzhandel-nass.de/",
-   "name": "Münzhandel Nass",
-   "reason": "no-hours-on-page",
-   "established": "2026-08-18",
-   "recheck": "2027-02-18",
-   "note": "Weder die Startseite noch /kontakt, /impressum, /oeffnungszeiten, /ueber-uns, /filialen oder /standorte nennen einen Wochentag mit Uhrzeit; am 2026-08-18 geprueft.",
-   "osm_id": "node/12962082237"
-  },
-  {
    "url": "https://www.heilpraktiker-fulda.com/",
    "name": "Naturheilpraxis Bildhäuser",
    "reason": "no-hours-on-page",
@@ -1938,15 +1902,6 @@
    "osm_id": "node/1328561108"
   },
   {
-   "url": "https://stadtmetzger-fulda.de/",
-   "name": "Stadtmetzgerei",
-   "reason": "no-hours-on-page",
-   "established": "2026-08-18",
-   "recheck": "2027-02-18",
-   "note": "Weder die Startseite noch /kontakt, /impressum, /oeffnungszeiten, /ueber-uns, /filialen oder /standorte nennen einen Wochentag mit Uhrzeit; am 18.08.2026 geprueft.",
-   "osm_id": "node/1332032907"
-  },
-  {
    "url": "https://www.stwgi.de/",
    "name": "Studierendenwerk Gießen",
    "reason": "no-hours-on-page",
@@ -1963,15 +1918,6 @@
    "recheck": "2027-02-04",
    "note": "Am 2026-08-04 von Hand nachgesehen: die Seite publiziert keine Oeffnungszeiten.",
    "osm_id": "way/250784824"
-  },
-  {
-   "url": "https://www.tedi.com/stores/4416/de/HESSEN/Fulda/Rangstr-39",
-   "name": "TEDi",
-   "reason": "no-hours-on-page",
-   "established": "2026-08-04",
-   "recheck": "2027-02-04",
-   "note": "Am 2026-08-04 einfach und gerendert geprueft: die Seite traegt keine Oeffnungszeiten.",
-   "osm_id": "node/5505379112"
   },
   {
    "url": "https://www.tchibo.de/tchibo-fulda-ci1923.html",
@@ -2026,15 +1972,6 @@
    "recheck": "2027-02-04",
    "note": "Am 2026-08-04 einfach abgerufen und vollstaendig gerendert geprueft: auf der Seite steht kein Wochentag und keine Uhrzeit.",
    "osm_id": "node/1333285140"
-  },
-  {
-   "url": "https://www.vs-furniere.de/",
-   "name": "V+S Furniere",
-   "reason": "no-hours-on-page",
-   "established": "2026-08-04",
-   "recheck": "2027-02-04",
-   "note": "Am 2026-08-04 einfach abgerufen und vollstaendig gerendert geprueft: auf der Seite steht kein Wochentag und keine Uhrzeit.",
-   "osm_id": "node/12500464026"
   },
   {
    "url": "https://verajakuschinski.com/",
@@ -2174,15 +2111,6 @@
    "recheck": "2027-02-18",
    "note": "Die Seite nennt eine Service-Hotline Mo-Fr 10:00-19:00 und sonst nichts; Ladenzeiten fehlen.",
    "osm_id": "node/11818788258"
-  },
-  {
-   "url": "https://www.dm.de/store/d2gb/fulda/am-emaillierwerk-1",
-   "name": "dm",
-   "reason": "no-hours-on-page",
-   "established": "2026-08-22",
-   "recheck": "2026-08-29",
-   "note": "Der Markt ist vorübergehend geschlossen: die gerenderte Seite sagt \"eröffnet wieder am Freitag, 28.08.\" und zeigt sechsmal Geschlossen plus Freitag 08:30 - 20:00 Uhr. Ein Watch darauf koennte bis dahin nur den Countdown melden. Nach der Wiedereroeffnung anlegen wie die anderen beiden dm-Maerkte, mit html_webdriver.",
-   "osm_id": "node/1465073366"
   },
   {
    "url": "https://www.engbers.com/",

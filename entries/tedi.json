@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-08",
+ "captured_sample": "Öffnungszeiten Montag 09:00 - 20:00 Dienstag 09:00 - 20:00 Mittwoch 09:00 - 20:00 Donnerstag 09:00 - 20:00 Freitag 09:00 - 20:00 Samstag 09:00 - 20:00 Sonntag Geschlossen",
+ "fetch_backend": "system",
+ "filter": "xpath:(//h4[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "name": "TEDi",
+ "note": "Mo-Sa gleiche Zeiten, das ist bei TEDi echt und kein Textbaustein. Ueberschriften-Anker statt der Tabelle, deren Klasse table site-weit vorkommt.",
+ "osm_id": "node/5505379112",
+ "schema": 1,
+ "tags": [
+  "fulda-variety_store"
+ ],
+ "url": "https://www.tedi.com/stores/4416/de/HESSEN/Fulda/Rangstr-39"
+}

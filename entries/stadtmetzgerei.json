@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-08",
+ "captured_sample": "Unsere Öffnungszeiten: Di. - Do.: 09.00 : 17.00 Uhr Fr.: 09.00 : 23:00 Uhr Sa.: 08.00 : 15.00 Uhr Frühstück: Di. - Sa. 08.00 : 11.30 Mittagstisch: Di. - Sa. 11.30 : 15.30",
+ "fetch_backend": "system",
+ "filter": "xpath://*[@id=\"text-4\"]",
+ "name": "Stadtmetzgerei",
+ "note": "Die Zeiten stehen in einem Text-Widget in der Fusszeile; der Block nennt neben den Ladenzeiten auch Fruehstueck und Mittagstisch, beides Oeffnungszeit-Information. Anker ist die Widget-ID, weil die Spaltenklasse footer_col2 ein zweites Widget mitfangen wuerde.",
+ "osm_id": "node/1332032907",
+ "schema": 1,
+ "tags": [
+  "fulda-butcher"
+ ],
+ "url": "https://stadtmetzger-fulda.de/"
+}
