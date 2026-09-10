@@ -202,22 +202,30 @@ def decode_note(pairs):
     was. The line then differs from the stored one without anything having changed, and
     `ignore_whitespace` cannot help: the replacement character is not whitespace.
 
+    The mangled half can be either one. A fetch that fails to decode reports the good stored
+    line against a mangled new one, and the next fetch that decodes correctly reports the same
+    non-change the other way round, so both halves have to be looked at.
+
     True only when every folded pair is the same text once the replacement characters and all
     whitespace are gone. A pair that hides a real difference behind the mangled bytes fails that
     test and is reported as the change it is.
 
     >>> decode_note([("Freitag 5–11 pm", "Freitag 5–11\ufffd\ufffd\ufffdpm")])[0][:14]
     '⚠ Zeichensalat'
+    >>> decode_note([("Freitag 5–11\ufffd\ufffd\ufffdpm", "Freitag 5–11 pm")])[0][:14]
+    '⚠ Zeichensalat'
     >>> decode_note([("Freitag 5–11 pm", "Freitag 5–12\ufffd\ufffd\ufffdpm")])
     []
     >>> decode_note([("Küche bis 22", "K\ufffd\ufffdche bis 22")])
+    []
+    >>> decode_note([("K\ufffd\ufffdche bis 22", "Küche bis 22")])
     []
     >>> decode_note([("Freitag 5–11 pm", "Freitag 5–11 pm")])   # no mangled bytes at all
     []
     >>> decode_note([])
     []
     """
-    if not pairs or not any(BROKEN_CHAR in new for _old, new in pairs):
+    if not pairs or not any(BROKEN_CHAR in old + new for old, new in pairs):
         return []
     bare = lambda t: re.sub(r"[\ufffd\s]+", "", t)
     if any(bare(old) != bare(new) for old, new in pairs):

@@ -245,6 +245,11 @@ guess: the pair has to be the same text once the replacement characters and all 
 gone. `5–11 pm` against `5–12␦␦␦pm` fails that test, and so does `Küche` against `K␦␦che` — a
 difference hidden behind the mangled bytes is reported as the change it is.
 
+Which half carries the mangled bytes says nothing about the verdict, so both halves are read for
+them. The failing fetch reports the good stored line against a mangled new one; the fetch after
+it reports the same non-change the other way round, arrow pointing at clean text. That second
+direction is the one that reads like a real correction, so it is the one that needs the label.
+
 Suppressing it is not on offer. `ignore_text` works line by line, so muting the artifact would
 mute every real change to the same line, which is the opening hours themselves.
 
