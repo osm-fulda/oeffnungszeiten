@@ -100,6 +100,83 @@ def resolve_tags(api, names, cache, create=True):
     return sorted(out)
 
 
+def adoptions(entries, live, lock):
+    """slug -> uuid for every entry whose lock entry is missing or stale.
+
+    An entry that adopts nothing is created, so this is the whole defence against a sync from a
+    fresh checkout duplicating every watch. That is not hypothetical: the CronJob discards its
+    checkout, so the lock it writes is gone by the next run, and a lock carried over from a
+    different instance matches nothing at all. In the cluster this function decides identity.
+
+    Two passes, and the order is the point. The URL is the better key and goes first; it is not
+    unique, though (a handful of pages back two businesses each), so a URL with several
+    candidates is decided by name against title.
+
+    >>> live = {"u1": {"url": "https://a.de/", "title": "A"},
+    ...         "u2": {"url": "https://b.de/", "title": "B"}}
+    >>> adoptions({"a": {"url": "https://a.de", "name": "A"}}, live, {}) == {"a": "u1"}
+    True
+
+    The second pass exists for the one move the URL cannot follow: the entry's URL changed. To a
+    URL match that reads as two unrelated facts, an entry pointing at nothing and a watch nobody
+    claims, and the answer would be to delete the watch and build a new one, losing its history
+    and its snapshots. A watch whose title is exactly this entry's name, that no URL claims and
+    no other entry wants, is the same watch at a new address.
+
+    >>> adoptions({"a": {"url": "https://a.de/?hl=de", "name": "A"}}, live, {}) == {"a": "u1"}
+    True
+
+    Exactly one candidate, or none. Five Aldi Süd branches share a title, and picking one of
+    them would silently rewrite a stranger's watch; a page still held by another entry is not
+    free either.
+
+    >>> two = {"u1": {"url": "https://a.de/", "title": "Aldi"},
+    ...        "u2": {"url": "https://b.de/", "title": "Aldi"}}
+    >>> adoptions({"a": {"url": "https://c.de/", "name": "Aldi"}}, two, {})
+    {}
+    >>> both = {"a": {"url": "https://a.de/", "name": "A"},
+    ...         "b": {"url": "https://b.de/?neu", "name": "A"}}
+    >>> adoptions(both, live, {}) == {"a": "u1"}
+    True
+    >>> adoptions({"a": {"url": "https://a.de/", "name": "A"}}, live, {"a": "u1"})
+    {}
+    """
+    adopt = {}
+    unlocked = [s for s in entries if lock.get(s) not in live]
+    if not unlocked:
+        return adopt
+    taken = {lock[s] for s in entries if lock.get(s) in live}
+    by_url = {}
+    for u, w in live.items():
+        by_url.setdefault(norm_url(w.get("url")), []).append(u)
+    for slug in unlocked:
+        free = [u for u in by_url.get(norm_url(entries[slug].get("url")), [])
+                if u not in taken and u not in adopt.values()]
+        if len(free) == 1:
+            pick = free[0]
+        else:
+            want = norm_name(entries[slug].get("name"))
+            exact = [u for u in free if norm_name(live[u].get("title")) == want]
+            pick = exact[0] if len(exact) == 1 else None
+        if pick:
+            adopt[slug] = pick
+
+    # Only watches that no entry addresses at all: a page some other entry still names is that
+    # entry's, even when this pass runs before that entry has claimed it.
+    wanted = {norm_url(e.get("url")) for e in entries.values()}
+    pool = [u for u in live
+            if u not in taken and norm_url(live[u].get("url")) not in wanted]
+    for slug in unlocked:
+        if slug in adopt:
+            continue
+        want = norm_name(entries[slug].get("name"))
+        same = [u for u in pool
+                if u not in adopt.values() and norm_name(live[u].get("title")) == want]
+        if len(same) == 1:
+            adopt[slug] = same[0]
+    return adopt
+
+
 def desired(entry, tag_uuids=None):
     """The watch fields this entry asserts."""
     want = {}
@@ -322,33 +399,7 @@ def main():
             _resolved[key] = resolve_tags(api, names, tag_cache, create=args.apply)
         return _resolved[key]
 
-    # An entry whose lock is missing or stale is adopted before it is created: without that, a
-    # sync from a fresh checkout duplicates every watch. That is not hypothetical — the CronJob
-    # discards its checkout, so the lock it writes is gone by the next run, and a lock carried
-    # over from a different instance matches nothing at all.
-    #
-    # The URL is not unique (a handful of pages back two businesses each), so a URL with several
-    # candidates is decided by name against title. Matching is deliberately conservative: adopt
-    # only what no other entry claims, and only on an exact normalised name, since a wrong
-    # adoption silently rewrites somebody else's watch.
-    adopt = {}
-    unlocked = [s for s in entries if lock.get(s) not in live]
-    if unlocked:
-        taken = {lock[s] for s in entries if lock.get(s) in live}
-        by_url = {}
-        for u, w in live.items():
-            by_url.setdefault(norm_url(w.get("url")), []).append(u)
-        for slug in unlocked:
-            free = [u for u in by_url.get(norm_url(entries[slug].get("url")), [])
-                    if u not in taken and u not in adopt.values()]
-            if len(free) == 1:
-                pick = free[0]
-            else:
-                want = norm_name(entries[slug].get("name"))
-                exact = [u for u in free if norm_name(live[u].get("title")) == want]
-                pick = exact[0] if len(exact) == 1 else None
-            if pick:
-                adopt[slug] = pick
+    adopt = adoptions(entries, live, lock)
 
     create, update, delete = [], [], []
     for slug, entry in entries.items():
