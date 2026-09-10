@@ -235,6 +235,58 @@ def decode_note(pairs):
             f"  Woran das liegt: {DECODE_DOC}"]
 
 
+def fold(kept):
+    """Fold every changed block onto one line per pair, as (lines, pairs).
+
+    The old half carries NO marker of its own: changedetection marks only the "(into)" side, so
+    a replaced block arrives as N unmarked lines followed by N "(into)" lines. The partners are
+    therefore the N lines directly in front of the run, paired in order, and a run has to be
+    read as a whole - taking the line before each "(into)" one at a time chains a whole table
+    onto a single line.
+
+    Only an unmarked or "(changed)" line can be an old half. An "(added)" or "(removed)" line
+    belongs to a different part of the diff and stops the search, and an "(into)" left without a
+    partner keeps its own line and its arrow: better a lonely arrow than a silently dropped half.
+
+    >>> fold([(None, "Sun Closed"), ("into", "So geschlossen")])
+    ([('changed', 'Sun Closed → So geschlossen')], [('Sun Closed', 'So geschlossen')])
+    >>> lines, _ = fold([(None, "Sat 9-18"), (None, "Sun Closed"),
+    ...                  ("into", "Sa 9-18"), ("into", "So geschlossen")])
+    >>> [t for _k, t in lines]
+    ['Sat 9-18 → Sa 9-18', 'Sun Closed → So geschlossen']
+    >>> fold([("removed", "Mo 9-17"), ("into", "Di 9-17")])[0]
+    [('removed', 'Mo 9-17'), ('into', 'Di 9-17')]
+    >>> fold([("into", "Di 9-17")])[0]
+    [('into', 'Di 9-17')]
+    >>> fold([(None, "Mo 9-17"), ("added", "Di 9-17")])[0]
+    [(None, 'Mo 9-17'), ('added', 'Di 9-17')]
+    >>> fold([])
+    ([], [])
+    """
+    folded, pairs, i = [], [], 0
+    while i < len(kept):
+        if kept[i][0] != "into":
+            folded.append(kept[i])
+            i += 1
+            continue
+        run = []
+        while i < len(kept) and kept[i][0] == "into":
+            run.append(kept[i][1])
+            i += 1
+        # As many lines in front as the run is long, and never past a line of another kind.
+        take = 0
+        while take < len(run) and len(folded) > take and folded[-1 - take][0] in (None, "changed"):
+            take += 1
+        olds = [t for _kind, t in folded[len(folded) - take:]] if take else []
+        del folded[len(folded) - take:]
+        for was, text in zip(olds, run):
+            folded.append(("changed", f"{was} → {text}"))
+            pairs.append((was, text))
+        # A block that grew: the new lines beyond the old ones have no partner to fold onto.
+        folded += [("into", t) for t in run[take:]]
+    return folded, pairs
+
+
 def format_message(title, message, lead=None):
     r"""Render one notification as (plain_text, html).
 
@@ -321,19 +373,7 @@ def format_message(title, message, lead=None):
             continue
         kept.append((m.group(1) if m else None, text))
 
-    # Fold the pair onto one line. The old half carries NO marker of its own - measured against a
-    # real alert, changedetection marks only the "(into)" side - so the partner is simply the
-    # line before it, whatever it is. An "(into)" with nothing in front keeps its own line and
-    # its arrow: better a lonely arrow than a silently dropped half.
-    folded, pairs = [], []
-    for kind, text in kept:
-        if kind == "into" and folded:
-            was = folded[-1][1]
-            folded[-1] = ("changed", f"{was} → {text}")
-            pairs.append((was, text))
-        else:
-            folded.append((kind, text))
-    kept = folded
+    kept, pairs = fold(kept)
 
     note = reorder_note(kept) or decode_note(pairs)
     rest = 0

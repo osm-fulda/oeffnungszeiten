@@ -221,11 +221,18 @@ anybody. Putting the address in the `href` and the words in the body ends that w
 having to switch a push rule off. A one-word label (`Webseite:`, `uuid:`) keeps its address
 visible: there the address is the information.
 
-**A changed line arrives as a pair.** changedetection marks only the second half: the old text
-stands on a line of its own with no marker, the new one behind `(into)`. Apart they read as two
-nearly identical lines that say nothing; the relay folds them into `<old> → <new>`, which is also
-what makes an invisible difference visible. The partner of an `(into)` is therefore whatever line
-precedes it, not a line marked `(changed)`.
+**A changed block arrives as two blocks.** changedetection marks only the second half: the old
+lines stand on their own with no marker, the new ones behind `(into)`. Apart they read as nearly
+identical lines that say nothing; the relay folds them into `<old> → <new>`, which is also what
+makes an invisible difference visible. The partner of an `(into)` is therefore an unmarked line,
+not a line marked `(changed)`.
+
+A replaced block of N lines arrives as N unmarked lines followed by N `(into)` lines, so `fold()`
+reads the run of `(into)` lines as a whole and pairs it with the N lines in front of it, in order.
+Taking the line immediately before each `(into)` one at a time looks equivalent and is not: from
+the second pair on it folds onto the line it has just written, and a whole seven-day table ends up
+on one line behind six arrows. An `(added)` or `(removed)` line stops the search, and a run longer
+than the block in front of it leaves its surplus lines standing with their own arrow.
 
 ## Zeichensalat
 
