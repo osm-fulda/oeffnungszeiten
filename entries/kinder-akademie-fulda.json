@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//h1[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
  "name": "Kinder-Akademie Fulda",
- "note": "MuseumsKAFé shares this page: the café publishes no hours of its own ('unser KAFé ist während der Öffnungszeiten geöffnet'), so both watches capture the museum's hours by design.",
+ "note": "Das MuseumsKAFé teilt sich diese Seite: Das Cafe veroeffentlicht keine eigenen Zeiten ('unser KAFé ist während der Öffnungszeiten geöffnet'), deshalb fangen beide Watches absichtlich die Zeiten des Museums ein.",
  "osm_id": "way/537351025",
  "schema": 1,
  "tags": [

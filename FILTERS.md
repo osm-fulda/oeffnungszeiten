@@ -49,7 +49,8 @@ Use JSON-LD when the visible page offers nothing better: no usable anchor, only 
 changedetection's own browser cannot find (Vergölst). Note the reason in the entry.
 
 1. **Visible hours block**: heading-anchored (case 2), stable class/id (case 3), or day-anchored
-   text (case 10); if the week is split across siblings, their common ancestor (case 11)
+   text (case 10); if the heading and the hours are separate boxes, the heading's next sibling
+   (case 2b); if the week is split across siblings, their common ancestor (case 11)
 2. **Hours only after JS** → `html_webdriver` + one of the above
 3. **JSON-LD fallback** → `json:$..openingHoursSpecification`, when no visible anchor holds.
    Before choosing it, check that its hours agree with the visible ones; if they differ, the
@@ -107,6 +108,27 @@ worth knowing because you will apply it by hand too:
 That is: *the smallest element under the hours heading that still contains a time.* Typical yield
 11–14 filters per batch of candidates.
 
+### Case 2b: heading and hours are separate sibling blocks
+**Signature:** Case 2 finds the heading and captures the word alone. The heading, its parent and
+its grandparent all read `Öffnungszeiten` and hold no time, so the page looks as if it published
+no hours — while a browser plainly shows them one box further down. Page builders cause this:
+Duda (Krieger Schrott), Squarespace and Elementor put every section in its own row, and the
+heading row is a sibling of the hours row, not its ancestor.
+**Filter:** anchor on the heading's own box and step sideways.
+```
+xpath://*[@id="Offnungszeiten"]/following-sibling::*[1]
+```
+Deluxe Barbier is the same shape one level higher:
+`//h2[…"öffnungszeiten"]/ancestor::section[1]/following-sibling::section[1]`.
+**Automated by** the wizard's Strategy 2b: from a heading that carries no time, climb through
+ancestors that hold the heading **and nothing else**, and take the first one whose next sibling
+carries hours.
+**Both guards are load-bearing.** Without the "nothing else" rule the climb starts at a nav link
+— `deluxebarbier.de` lists `Öffnungszeiten` in its menu — reaches a page-level container and
+captures whatever section follows it. Without a width cap on the sibling, that capture is the
+whole `<main>`, which does contain hours and outranked the correct filter. Measured over 80
+existing entries, 78 of them reachable: with both guards, rank 1 is unchanged on every one.
+
 ### Case 3: stable class or id container
 **Signature:** the page ships a purpose-built hours element with a human-authored (not generated)
 class or id.
@@ -118,6 +140,11 @@ Prefer this over Case 2 when it exists: it is shorter and reads better in the UI
 ### Case 4: hours render only under JS
 **Signature:** plain fetch shows a shell / spinner / no times; the browser shows hours.
 **Fix:** selector + `fetch_backend: html_webdriver`.
+**Check the render actually rendered the site.** sockpuppetbrowser sends its own user agent, and
+hosts that answer a plain fetch with 200 answer it with 403 — `krieger-schrott.de` does, 125
+bytes of `403 Forbidden`. A 403 body carries no hours, so a blocked render is indistinguishable
+from a page without hours unless you look. The wizard now keeps the plain result when the render
+comes back blocked, and says so.
 **Caveats:**
 - CD's browser renders some SPAs in **English** (Davis), so German-keyword XPaths silently match
   nothing. Anchor on class, not text.
@@ -194,6 +221,29 @@ the previous snapshot before reading anything into a diff: this shape is recogni
 A `/�/` line in `global_ignore_text` would silence it globally, but every global-settings edit
 re-baselines all watches, which is out of proportion to four affected pages.
 
+### Case 7c: the page changes language
+
+**Signature:** every line of the hours block changes at once and the times are identical,
+`Monday 8:30 am–7 pm` against `Montag 8:30 am–7 pm`. Nothing about the business changed; the
+generator rendered the day names in another language.
+
+**Cause seen here:** 9gg.de serves `<html lang="de">` with English day names, or German ones,
+depending on what its Cloudflare cache holds. `vary` names `Accept-Encoding,User-Agent` and not
+the language, so the language is not negotiated at all: sending `Accept-Language: de-DE` changes
+nothing, and neither does the user agent. All four Fulda pages on that platform flip together.
+
+**Fix: pin the language in the watch URL.** `?hl=de` forces German on 9gg.de, measured stable
+over repeated fetches, while `?lang=` and `?locale=` are ignored and `/de/` is 404. The entry
+carries the URL with the parameter. `url` is a baseline key, so the sync announces the change and
+the next check re-baselines once.
+
+**Why not filter it away instead:** the day name and its time share a line, so any rule that
+drops the language drops the hours with it. Narrowing the capture to the times alone would keep
+the watch quiet, but a diff of seven bare time ranges is not something a mapper can act on.
+
+**When there is no such parameter,** the honest answer is that the watch reports the flip and a
+human reads it in a second. Do not widen the filter to hide it.
+
 ### Case 8: server swaps content between concurrent requests
 **Signature:** two watches on the same host false-diff forever, each showing the other's page.
 gruemel.de (IIS) returns the *same* page to two simultaneous requests for different URLs. Reproduced
@@ -222,6 +272,11 @@ swallows the page.
 **Every anchor is validated by what it captures.** An ancestor class like `fl-module` matches
 dozens of unrelated blocks; taking it unchecked turned a 71-character filter into the whole
 page.
+**When every anchor fails, the generated one is still offered**, flagged `avoid — brittle
+selector`. A rejected candidate you can read beats a page reported as publishing no hours:
+that answer is not a warning, it is wrong, and it is what closed the first attempt at Krieger
+Schrott, whose Duda markup names every box `u_1535202874`. Take it only when nothing else
+exists, and write the reason in the entry's `note`.
 
 ### Case 11: common ancestor (the week is split across siblings)
 **Signature:** no single element holds the whole week. Robe's Bike House has

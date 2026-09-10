@@ -4,7 +4,7 @@
  "fetch_backend": "html_webdriver",
  "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Matratzen Concord",
- "note": "2026-08-01: datastore aligned to the branch URL the CD watch already used (was the corporate /informationen/kontakt/, which would have made cd_sync create a duplicate watch).",
+ "note": "2026-08-01: der Datenstand auf die Filial-URL gezogen, die der Watch ohnehin benutzte (vorher die Konzernseite /informationen/kontakt/, mit der die Sync einen doppelten Watch angelegt haette).",
  "osm_id": "node/4985129725",
  "schema": 1,
  "sort_text_alphabetically": true,

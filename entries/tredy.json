@@ -4,7 +4,7 @@
  "fetch_backend": "html_requests",
  "filter": "xpath://div[@data-store-id=\"0193073ab79d7cfbbd6281eed32c6db3\"]",
  "name": "tredy",
- "note": "2026-08-01: repointed to /storefinder, which server-renders every store card; CD filter pins the Fulda card by data-store-id 0193073ab79d7cfbbd6281eed32c6db3. No standalone Fulda store page exists.",
+ "note": "2026-08-01: auf /storefinder umgehaengt, das jede Filialkarte serverseitig rendert; der Filter fixiert die Fuldaer Karte ueber data-store-id 0193073ab79d7cfbbd6281eed32c6db3. Eine eigene Fuldaer Filialseite gibt es nicht.",
  "osm_id": "node/12871359764",
  "schema": 1,
  "tags": [

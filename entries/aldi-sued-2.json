@@ -4,7 +4,7 @@
  "fetch_backend": "html_webdriver",
  "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Aldi Süd",
- "note": "Captures the same hours as the Keltenstraße branch. Separate branch pages that happen to open identically (08:00-21:00 daily) — not boilerplate.",
+ "note": "Faengt dieselben Zeiten ein wie die Filiale Keltenstrasse. Zwei getrennte Filialseiten, die zufaellig gleich oeffnen (taeglich 08:00-21:00), kein Textbaustein.",
  "osm_id": "node/1465073239",
  "schema": 1,
  "sort_text_alphabetically": true,

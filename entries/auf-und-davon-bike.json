@@ -4,7 +4,7 @@
  "fetch_backend": "html_webdriver",
  "filter": "xpath://div[contains(@class,\"footer_link-list\")][.//div[normalize-space(.)=\"Öffnungszeiten\"]]",
  "name": "Auf und Davon Bike",
- "note": "The site publishes both shops' hours in one footer block naming each, so this watch and auf-und-davon-outdoor-equipment capture identical text by design. Splitting would need text-node surgery inside one element.",
+ "note": "Die Seite veroeffentlicht die Zeiten beider Laeden in einem Block im Fussbereich, der beide benennt, deshalb fangen dieser Watch und auf-und-davon-outdoor-equipment absichtlich denselben Text ein. Trennen ginge nur ueber einzelne Textknoten innerhalb eines Elements.",
  "osm_id": "node/1332272994",
  "schema": 1,
  "tags": [

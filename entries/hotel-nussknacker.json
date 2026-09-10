@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "//div[contains(@class,\"ce_text\")][h3[contains(.,\"Öffnungszeiten\")]]",
  "name": "Hotel Nußknacker",
- "note": "xpath filter to Öffnungszeiten block (page also edits unrelated text e.g. owner names)",
+ "note": "XPath-Filter auf den Oeffnungszeiten-Block (die Seite aendert auch anderen Text, etwa Namen der Inhaber).",
  "osm_id": "node/2159234645",
  "schema": 1,
  "tags": [

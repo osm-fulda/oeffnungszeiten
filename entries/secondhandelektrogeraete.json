@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": ".seitencontent",
  "name": "SecondHandElektrogeräte",
- "note": "was sharing Kantine im Landratsamt's watch after discovery picked the site-wide footer link /Kontakt/74-2500-ErklaerungBarrierefreiheit (no hours); own watch now on the Dienstleistungen page. Filter .seitencontent. gruemel.de serves the SAME page to two concurrent requests for different URLs (server-side global state - reproduced with separate cookie jars), so the two gruemel watches would swap content whenever they recheck together; guarded with trigger_text as a page-identity marker. Marker: 'Verkauf von Gebrauchtgeräten'.",
+ "note": "Teilte sich nach der Erkennung den Watch mit der Kantine im Landratsamt, weil der seitenweite Link 'Kontakt' im Fussbereich auf /Kontakt/74-2500-ErklaerungBarrierefreiheit ohne Zeiten gegriffen hatte; hat jetzt einen eigenen Watch auf der Dienstleistungen-Seite. Filter .seitencontent. gruemel.de liefert zwei gleichzeitigen Abrufen verschiedener URLs DIESELBE Seite (serverseitiger globaler Zustand, mit getrennten Cookie-Jars reproduziert), die beiden gruemel-Watches wuerden ihre Inhalte also tauschen, sobald sie zusammen pruefen; abgesichert ueber trigger_text als Seitenkennung. Marker: 'Verkauf von Gebrauchtgeräten'.",
  "osm_id": "node/12241127538",
  "schema": 1,
  "tags": [

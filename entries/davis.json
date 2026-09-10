@@ -4,7 +4,7 @@
  "fetch_backend": "html_webdriver",
  "filter": ".location-detail-openday",
  "name": "Davis",
- "note": "repointed to locationdetail SPA route = full static weekly schedule (root /shop showed only rotating Today widget)",
+ "note": "Auf die locationdetail-Route der SPA umgehaengt, die den vollen Wochenplan statisch ausliefert (unter /shop stand nur ein rotierendes Heute-Widget).",
  "osm_id": "node/3239658875",
  "schema": 1,
  "sort_text_alphabetically": true,

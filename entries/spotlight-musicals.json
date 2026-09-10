@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
  "name": "Spotlight Musicals",
- "note": "website tag points at https://spotlight-musicals.de/, which carries no hours; watching the page that does.",
+ "note": "Das website-Tag zeigt auf https://spotlight-musicals.de/, dort stehen keine Zeiten; beobachtet wird die Seite, die welche fuehrt.",
  "osm_id": "node/1332767307",
  "schema": 1,
  "tags": [

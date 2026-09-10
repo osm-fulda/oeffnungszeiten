@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Unity Hair",
- "note": "website tag points at https://www.unity-hair.de/, which carries no hours; watching the page that does.",
+ "note": "Das website-Tag zeigt auf https://www.unity-hair.de/, dort stehen keine Zeiten; beobachtet wird die Seite, die welche fuehrt.",
  "osm_id": "node/1332713881",
  "schema": 1,
  "tags": [

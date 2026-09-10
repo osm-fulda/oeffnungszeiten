@@ -4,7 +4,7 @@
  "fetch_backend": "html_webdriver",
  "filter": "xpath:(//p[contains(concat(\" \",normalize-space(@class),\" \"),\" whitespace-pre-line \")])[2]",
  "name": "Tabla",
- "note": "SPA; changedetection renders it in ENGLISH (Monday: Closed …) while our Playwright render returns German — filter must be class-based, not day-word based",
+ "note": "SPA; changedetection rendert sie auf ENGLISCH (Monday: Closed …), unser Playwright-Render dagegen auf Deutsch, deshalb muss der Filter an Klassen haengen und nicht an Tagesnamen.",
  "osm_id": "node/14053772461",
  "schema": 1,
  "tags": [

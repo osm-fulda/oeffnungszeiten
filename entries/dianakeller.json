@@ -4,7 +4,7 @@
  "fetch_backend": "html_requests",
  "filter": "xpath://tbody[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")][not(.//tbody[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")])]",
  "name": "Dianakeller",
- "note": "2026-08-01: repointed to hotel restaurants page; CD filter pins the Dianakeller section (Taeglich 18-23 Uhr). Old /kontakt-aufnehmen was a booking form.",
+ "note": "2026-08-01: auf die Restaurantseite des Hotels umgehaengt; der Filter fixiert den Dianakeller-Abschnitt (Taeglich 18-23 Uhr). Das alte /kontakt-aufnehmen war ein Buchungsformular.",
  "osm_id": "node/3978092612",
  "schema": 1,
  "tags": [

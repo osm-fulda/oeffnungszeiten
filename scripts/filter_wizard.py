@@ -42,6 +42,9 @@ import osm_cd_common as C
 HEAD_TAGS = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'strong', 'b', 'p', 'span', 'div', 'li', 'td', 'th']
 MAX_CAPTURE = 4000          # a filter capturing more than this is not a filter
 SAFE_CLASS = re.compile(r'^[A-Za-z][\w-]{2,40}$')
+# Wider than SAFE_CLASS: anything that survives being pasted into an XPath string
+# literal. A generated name is a bad anchor, not an unusable one.
+XPATH_SAFE = re.compile(r'^[\w.:-]{2,60}$')
 # Page-builder / generated names: they change on the next site edit (FILTERS.md §3 Step 2).
 # Not just hex — Beaver Builder emits base36 ids like "fl-icon-text-cjg0i7ku1qhr", so also
 # flag any long token mixing letters and digits with no separator.
@@ -52,7 +55,12 @@ BRITTLE = re.compile(
     # random-looking token, either case: 8+ chars mixing letters and digits with no separator.
     # Tumult Hype emits UPPERCASE ids like "hype-obj-FQKA9M3088D50NH7XXPN", which a
     # lowercase-only pattern rated durable — the resulting filter matched nothing at all.
-    r'|(?:^|[-_])(?=[A-Za-z0-9]{8,}(?:$|[-_]))(?=[A-Za-z]*\d)(?=[0-9]*[A-Za-z])[A-Za-z0-9]{8,}')
+    # The boundary is any non-alphanumeric, not only `-` and `_`: `score()` runs this over a
+    # whole XPath, where the token is delimited by a space or a quote. With the narrow boundary
+    # `_dqyuY8s6034RG2wR` (XXXLutz) was flagged as a bare token and rated durable inside
+    # `//div[contains(…," _dqyuY8s6034RG2wR ")]`, so the candidate read "good pick — no warnings".
+    r'|(?:^|[^A-Za-z0-9])(?=[A-Za-z0-9]{8,}(?:$|[^A-Za-z0-9]))'
+    r'(?=[A-Za-z]*\d)(?=[0-9]*[A-Za-z])[A-Za-z0-9]{8,}')
 
 
 def txt_of(el):
@@ -178,6 +186,86 @@ def heading_candidates(doc, lang):
 
 
 # --------------------------------------------------------------------------- #
+# Strategy 2b — heading and hours are separate sibling blocks
+# --------------------------------------------------------------------------- #
+def _durable_xpath(el):
+    """An XPath naming this one element by an authored id or class, or None."""
+    eid = (el.get('id') or '').strip()
+    if eid and SAFE_CLASS.match(eid) and not BRITTLE.search(eid):
+        return f'//*[@id="{eid}"]'
+    cls = _clean_class(el)
+    if cls:
+        return f'//{el.tag}[contains(concat(" ",normalize-space(@class)," ")," {cls} ")]'
+    return None
+
+
+def _resolves_to(doc, xp, text):
+    """True when `xp` picks exactly one element and it is the one we meant."""
+    try:
+        sel = doc.xpath(xp)
+    except Exception:
+        return False
+    return len(sel) == 1 and txt_of(sel[0]) == text
+
+
+def heading_sibling_candidates(doc, lang):
+    """Strategy 2 finds the word and misses the times, because they are not in the same box.
+
+    Page builders give every section its own row: Krieger Schrott (Duda) has the
+    "Öffnungszeiten" heading in one `dmRespRow` and "Mo. - Fr. 08:00 - 15:30" in the next, so
+    the heading, its parent and its grandparent all capture the heading and nothing else — and
+    the page reads as if it published no hours at all. So walk **up** from the heading and take
+    the first ancestor whose next sibling carries hours, anchored on that ancestor.
+
+    Only for headings that carry no hours themselves. Where strategy 2 already works, guessing
+    forward would add a second candidate for the same page and no information.
+    """
+    out, seen = [], set()
+    page_len = len(txt_of(doc)) or 1
+    for kw in L.keywords(lang):
+        for tag in HEAD_TAGS:
+            try:
+                els = doc.xpath(f'//{tag}[contains(normalize-space(.),"{kw}")]')
+            except Exception:
+                continue
+            for el in els:
+                own = txt_of(el)
+                # a heading is short: without this the walk starts at <body> as well and every
+                # section on the page becomes a candidate
+                if len(own) > len(kw) + 60 or L.hours_score(own, lang) > 0:
+                    continue
+                node, hops = el, 0
+                while node is not None and hops < 5:
+                    # Only climb through boxes that hold the heading and nothing else. Without
+                    # this the walk starts at a nav link, reaches a page-level container five
+                    # hops up and captures whatever section follows it: measured on
+                    # deluxe-barbier and praxis-contour, where it outranked the right filter.
+                    if len(txt_of(node)) > len(kw) + 60:
+                        break
+                    sib = node.getnext()
+                    while sib is not None and not isinstance(sib.tag, str):
+                        sib = sib.getnext()
+                    if sib is not None:
+                        text = txt_of(sib)
+                        # An hours block is small. A menu entry also passes the heading test
+                        # (deluxebarbier.de has "Öffnungszeiten" in its nav, 71 characters of
+                        # menu), and the sibling of a nav is the whole <main> — which holds
+                        # hours somewhere and would outrank the right filter.
+                        wide = len(text) > 0.4 * page_len and len(text) > 600
+                        if (text and len(text) <= MAX_CAPTURE and not wide
+                                and L.hours_score(text, lang) > 0):
+                            anchor = _durable_xpath(node)
+                            xp = anchor and anchor + '/following-sibling::*[1]'
+                            if xp and xp not in seen and _resolves_to(doc, xp, text):
+                                seen.add(xp)
+                                out.append({'strategy': f'heading "{kw}" → next block',
+                                            'filter': 'xpath:' + xp, 'text': text})
+                                break
+                    node, hops = node.getparent(), hops + 1
+    return out
+
+
+# --------------------------------------------------------------------------- #
 # Strategy 3 — authored class / id container
 # --------------------------------------------------------------------------- #
 def class_candidates(doc, lang):
@@ -267,13 +355,20 @@ def _anchor_xpath(el, lang):
     it actually captures — an ancestor class like `fl-module` matches dozens of unrelated
     blocks and would silently turn a 71-character filter into the whole page."""
     own = len(txt_of(el)) or 1
-    tries = []
+    tries, weak = [], []
     eid = (el.get('id') or '').strip()
-    if eid and SAFE_CLASS.match(eid) and not BRITTLE.search(eid):
-        tries.append(f'//*[@id="{eid}"]')
+    if eid and XPATH_SAFE.match(eid):
+        (tries if SAFE_CLASS.match(eid) and not BRITTLE.search(eid) else weak).append(
+            f'//*[@id="{eid}"]')
     cls = _clean_class(el)
     if cls:
         tries.append(f'//{el.tag}[contains(concat(" ",normalize-space(@class)," ")," {cls} ")]')
+    else:
+        for token in (el.get('class') or '').split():
+            if XPATH_SAFE.match(token) and len(token) >= 5 and not LAYOUT_CLASS.match(token):
+                weak.append(f'//{el.tag}[contains(concat(" ",normalize-space(@class)," ")'
+                            f'," {token} ")]')
+                break
     node, hops = el.getparent(), 0
     while node is not None and hops < 3:
         nid = (node.get('id') or '').strip()
@@ -297,6 +392,15 @@ def _anchor_xpath(el, lang):
         if got is not None and got <= max(3 * own, own + 400):
             ok.append((got, rank, xp))
     if not ok:
+        # Every durable anchor was either rejected as generated or ballooned into unrelated
+        # siblings, and the element still holds the hours. Offer the generated one: `score()`
+        # flags it "avoid — brittle selector", but the captured text is on screen and the page
+        # stops reading as "publishes no hours at all". That false answer is what turned away
+        # Krieger Schrott, whose Duda markup names every box `u_1535202874`.
+        for xp in weak:
+            got = _capture_len(el, xp)
+            if got is not None and got <= max(3 * own, own + 400):
+                return [xp]
         return []
     # Tightest capture wins; among near-equals (within 20%) keep the more durable one,
     # i.e. the earlier entry — id before class before ancestor class before text anchor.
@@ -457,6 +561,14 @@ def verdict(cand):
     return 'good pick — no warnings'
 
 
+def _blocked(html):
+    """Does this response body read as a block page rather than as the site?"""
+    try:
+        return L.looks_blocked(txt_of(strip_noise(lxml.html.fromstring(html))))
+    except Exception:
+        return False
+
+
 def strip_noise(doc):
     """Drop script/style/noscript before reading text.
 
@@ -503,6 +615,7 @@ def collect(html, lang, page_text_len=None):
     doc = strip_noise(lxml.html.fromstring(html))
     page_len = page_text_len if page_text_len is not None else len(txt_of(doc))
     cands = (jsonld_candidates(html) + heading_candidates(doc, lang)
+             + heading_sibling_candidates(doc, lang)
              + class_candidates(doc, lang) + content_candidates(doc, lang))
     # keep only things that actually look like hours; the whole page is added separately
     cands = [c for c in cands if L.hours_score(c['text'], lang) > 0]
@@ -679,11 +792,19 @@ def main():
     if (not real or weak) and not rendered and not args.no_render:
         print("nothing usable in the plain HTML — retrying with the browser …")
         try:
-            html = fetch_rendered(url, args.browser_ws)
-            rendered = True
-            print(f"fetched: {len(html)} bytes (rendered)")
-            ranked = collect(html, args.lang)
-            real = [c for c in ranked if c['strategy'] != 'whole page']
+            r_html = fetch_rendered(url, args.browser_ws)
+            print(f"fetched: {len(r_html)} bytes (rendered)")
+            # A render that was refused must not replace the plain result. sockpuppetbrowser
+            # sends its own user agent, and hosts that answer the plain fetch with 200 answer
+            # it with 403 — krieger-schrott.de does. Taking that body would report a page that
+            # states its hours plainly as "no opening hours here".
+            if _blocked(r_html):
+                print("  the browser was served a block page, not the site — staying with "
+                      "the plain fetch")
+            else:
+                html, rendered = r_html, True
+                ranked = collect(html, args.lang)
+                real = [c for c in ranked if c['strategy'] != 'whole page']
         except Exception as e:
             print(f"  browser render unavailable ({e}); staying with the plain fetch")
 

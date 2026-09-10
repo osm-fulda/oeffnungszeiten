@@ -4,7 +4,7 @@
  "fetch_backend": "html_requests",
  "filter": ".detail-dealer-open-hours",
  "name": "Pappert (patronatscafe)",
- "note": "2026-08-01: recovered. papperts.de/wir-sind-hier embeds every branch as JSON and each branch has a /dealer/<slug>/ page with a plain-HTML hours block (CD filter .detail-dealer-open-hours). Matched to OSM by coordinates (0.03 km).",
+ "note": "2026-08-01: wiedergefunden. papperts.de/wir-sind-hier bettet jede Filiale als JSON ein, und jede Filiale hat eine Seite /dealer/<slug>/ mit einem Oeffnungszeiten-Block in einfachem HTML (Filter .detail-dealer-open-hours). Ueber Koordinaten dem OSM-Objekt zugeordnet (0.03 km).",
  "osm_id": "node/1333599226",
  "schema": 1,
  "tags": [

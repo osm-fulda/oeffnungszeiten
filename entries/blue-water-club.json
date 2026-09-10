@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\") and contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\") and contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")])]",
  "name": "Blue Water Club",
- "note": "Opens two days a week ('saisonal von Oktober bis Mai - Freitag & Samstag ab 20 Uhr'), so a partial-week warning is correct, not a filter fault.",
+ "note": "Geoeffnet an zwei Tagen der Woche ('saisonal von Oktober bis Mai - Freitag & Samstag ab 20 Uhr'), eine Warnung ueber die unvollstaendige Woche ist also richtig und kein Filterfehler.",
  "osm_id": "node/1333417029",
  "schema": 1,
  "tags": [

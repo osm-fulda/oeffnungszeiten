@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
  "name": "Antje Kirchhof-Kramp & Madlen Wetzel",
- "note": "Only Mon and Fri are published (telephone hours 7.45-8.45 and 7.45-8.15). An audit warning about a partial week is expected here.",
+ "note": "Veroeffentlicht sind nur Mo und Fr (Telefonzeiten 7.45-8.45 und 7.45-8.15). Eine Audit-Warnung ueber die unvollstaendige Woche ist hier erwartbar.",
  "osm_id": "node/12914278806",
  "schema": 1,
  "tags": [

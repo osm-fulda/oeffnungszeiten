@@ -4,7 +4,7 @@
  "fetch_backend": "html_webdriver",
  "filter": "xpath://div[contains(@class,\"footer_link-list\")][.//div[normalize-space(.)=\"Öffnungszeiten\"]]",
  "name": "Auf und Davon outdoor equipment",
- "note": "See auf-und-davon-bike: one footer block carries both shops' hours, so the two watches capture identical text by design.",
+ "note": "Siehe auf-und-davon-bike: ein Block im Fussbereich traegt die Zeiten beider Laeden, deshalb fangen die zwei Watches absichtlich denselben Text ein.",
  "osm_id": "node/1332126791",
  "schema": 1,
  "tags": [

@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Bertelmann",
- "note": "website tag points at https://pflegedienst-bertelmann.de/, which carries no hours; watching the page that does.",
+ "note": "Das website-Tag zeigt auf https://pflegedienst-bertelmann.de/, dort stehen keine Zeiten; beobachtet wird die Seite, die welche fuehrt.",
  "osm_id": "node/13410492156",
  "schema": 1,
  "tags": [

@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "#comp-lpzfe9fb",
  "name": "Fleischerei Ulrich Knittel GmbH",
- "note": "Wix site; CSS filter to hours component",
+ "note": "Wix-Seite; CSS-Filter auf die Komponente mit den Zeiten.",
  "osm_id": "way/150980944",
  "schema": 1,
  "tags": [

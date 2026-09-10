@@ -4,7 +4,7 @@
  "fetch_backend": "html_requests",
  "filter": ".detail-dealer-open-hours",
  "name": "Zweittag Back Outlet (maberzeller strasse zweittag)",
- "note": "2026-08-01: recovered - the Zweittag outlet is listed by Pappert as Fil. Fulda/Maberzeller Strasse Zweittag; /dealer/<slug>/ page carries the hours (matched by coordinates, 0.02 km).",
+ "note": "2026-08-01: wiedergefunden, Pappert fuehrt das Zweittag-Outlet als Fil. Fulda/Maberzeller Strasse Zweittag; die Seite /dealer/<slug>/ traegt die Zeiten (ueber Koordinaten zugeordnet, 0.02 km).",
  "osm_id": "node/2790948934",
  "schema": 1,
  "tags": [
