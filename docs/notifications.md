@@ -221,11 +221,18 @@ anybody. Putting the address in the `href` and the words in the body ends that w
 having to switch a push rule off. A one-word label (`Webseite:`, `uuid:`) keeps its address
 visible: there the address is the information.
 
-**A changed line arrives as a pair.** changedetection marks only the second half: the old text
-stands on a line of its own with no marker, the new one behind `(into)`. Apart they read as two
-nearly identical lines that say nothing; the relay folds them into `<old> → <new>`, which is also
-what makes an invisible difference visible. The partner of an `(into)` is therefore whatever line
-precedes it, not a line marked `(changed)`.
+**A changed block arrives as two blocks.** changedetection marks only the second half: the old
+lines stand on their own with no marker, the new ones behind `(into)`. Apart they read as nearly
+identical lines that say nothing; the relay folds them into `<old> → <new>`, which is also what
+makes an invisible difference visible. The partner of an `(into)` is therefore an unmarked line,
+not a line marked `(changed)`.
+
+A replaced block of N lines arrives as N unmarked lines followed by N `(into)` lines, so `fold()`
+reads the run of `(into)` lines as a whole and pairs it with the N lines in front of it, in order.
+Taking the line immediately before each `(into)` one at a time looks equivalent and is not: from
+the second pair on it folds onto the line it has just written, and a whole seven-day table ends up
+on one line behind six arrows. An `(added)` or `(removed)` line stops the search, and a run longer
+than the block in front of it leaves its surplus lines standing with their own arrow.
 
 ## Zeichensalat
 
@@ -244,6 +251,11 @@ whenever the next fetch decodes correctly, so the same non-change is reported tw
 guess: the pair has to be the same text once the replacement characters and all whitespace are
 gone. `5–11 pm` against `5–12␦␦␦pm` fails that test, and so does `Küche` against `K␦␦che` — a
 difference hidden behind the mangled bytes is reported as the change it is.
+
+Which half carries the mangled bytes says nothing about the verdict, so both halves are read for
+them. The failing fetch reports the good stored line against a mangled new one; the fetch after
+it reports the same non-change the other way round, arrow pointing at clean text. That second
+direction is the one that reads like a real correction, so it is the one that needs the label.
 
 Suppressing it is not on offer. `ignore_text` works line by line, so muting the artifact would
 mute every real change to the same line, which is the opening hours themselves.
