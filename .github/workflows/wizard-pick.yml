@@ -41,8 +41,8 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       - run: pip install --quiet lxml
@@ -72,7 +72,7 @@ jobs:
             if [ -f out/no-watch.json ]; then cp out/no-watch.json no-watch.json; fi
             python3 scripts/validate_entries.py
           fi
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: wizard-entry
           path: out
@@ -89,10 +89,10 @@ jobs:
       # A pull request opened with GITHUB_TOKEN starts no further workflow, which is GitHub's
       # guard against a loop. The entry check therefore already ran in the emit job above. Put a
       # PAT in WIZARD_PR_TOKEN and the pull request also gets its own CI run, with no change here.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           token: ${{ secrets.WIZARD_PR_TOKEN || github.token }}
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: wizard-entry
           path: out

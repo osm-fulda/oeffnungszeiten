@@ -20,8 +20,8 @@ jobs:
     # the reviewer, who reads captured_sample in the diff.
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       - run: python3 scripts/validate_entries.py
@@ -60,8 +60,8 @@ jobs:
     # noise-suppression pattern shows up as false alerts weeks later, so check it on every change.
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       - name: generated values match deploy/global-settings.json
@@ -91,10 +91,10 @@ jobs:
   chart:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       # Pinned: the action's default follows "latest", which crossed the 3.x -> 4.x boundary
       # mid-PR and broke `helm plugin install` twice in opposite directions.
-      - uses: azure/setup-helm@v4
+      - uses: azure/setup-helm@v5
         with:
           version: v4.2.2
       - run: helm lint ./charts/changedetection
@@ -130,7 +130,7 @@ jobs:
   manifests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: kustomize builds
         run: |
           kubectl kustomize apps/changedetection > /dev/null
