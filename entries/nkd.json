@@ -3,7 +3,7 @@
  "captured_sample": "Montag09:00 - 19:00Dienstag09:00 - 19:00Mittwoch09:00 - 19:00Donnerstag09:00 - 19:00Freitag09:00 - 19:00Samstag09:00 - 17:00",
  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")])]",
  "name": "NKD",
- "note": "Filialseite der Kette mit Zeiten je Tag. 2026-09-03: Filter auf common ancestor geändert, der vorherige erfasste seitenabhängigen Text mit (Issue #81).",
+ "note": "Filialseite der Kette mit Zeiten je Tag. 2026-09-03: Filter auf common ancestor geändert, der vorherige erfasste seitenabhängigen Text mit (Issue #81). 2026-09-10: Filter auf common ancestor geändert, der vorherige erfasste seitenabhängigen Text mit (Issue #100).",
  "osm_id": "node/1333263702",
  "schema": 1,
  "tags": [
