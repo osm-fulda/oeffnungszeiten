@@ -41,6 +41,7 @@ import osm_cd_common as C
 
 HEAD_TAGS = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'strong', 'b', 'p', 'span', 'div', 'li', 'td', 'th']
 MAX_CAPTURE = 4000          # a filter capturing more than this is not a filter
+CONTEXT_DEPTH = 15          # how far down the ranking the heading lookup runs
 SAFE_CLASS = re.compile(r'^[A-Za-z][\w-]{2,40}$')
 # Wider than SAFE_CLASS: anything that survives being pasted into an XPath string
 # literal. A generated name is a bad anchor, not an unusable one.
@@ -611,6 +612,51 @@ def capture(html, filt):
                     for el in found).strip()
 
 
+# An element that names the block it sits above: a heading, a bold lead-in, or the link
+# an accordion uses as its tab.
+HEADISH = ('self::h1 or self::h2 or self::h3 or self::h4 or self::h5 or self::h6 '
+           'or self::strong or self::b or contains(@class,"title")')
+# `strong` and `b` are in HEADISH because plenty of pages name a block that way and never
+# reach for a heading tag. The cost is that the nearest one is often a field label sitting
+# between the block's name and its hours — "Adresse", "Telefon" — which names nothing. Skip
+# those and keep walking back.
+FIELD_LABEL = re.compile(r'^(adress?e|anschrift|telefon|tel\.?|fax|e-?mail|mail|kontakt|'
+                         r'öffnungszeiten|address|phone|e-?mail address|opening hours|hours)'
+                         r'\s*[:.]?$', re.I)
+
+
+def context_of(doc, filt):
+    """How many elements `filt` matches, and the nearest heading above the first of them.
+
+    On a page listing many branches the capture itself is anonymous — wemag.de shows
+    twenty-one blocks reading "Öffnungszeiten: Montag bis Freitag: 08:00 – 17:00 Uhr" and
+    nothing in the text says which shop that is. The heading above it does: "Fulda
+    (Ladengeschäft)", "Fulda (Hauptsitz)", "Niederlande". Without it the menu cannot be
+    answered correctly, only guessed at.
+    """
+    body = filt.split(":", 1)[1] if filt.startswith(("xpath:", "xpath1:")) else None
+    if not body:
+        return None, 0
+    try:
+        els = doc.xpath(body)
+    except Exception:
+        return None, 0
+    if not els:
+        return None, 0
+    own = txt_of(els[0])
+    try:
+        near = els[0].xpath(f'(preceding::*[{HEADISH}])[position() > last() - 8]')
+    except Exception:
+        near = []
+    for node in reversed(near):                      # nearest first
+        text = re.sub(r'\s+', ' ', txt_of(node)).strip()
+        # A heading repeated inside the capture adds nothing, and a long one is prose.
+        if not (3 <= len(text) <= 70) or text in own or FIELD_LABEL.match(text):
+            continue
+        return text, len(els)
+    return None, len(els)
+
+
 def collect(html, lang, page_text_len=None):
     doc = strip_noise(lxml.html.fromstring(html))
     page_len = page_text_len if page_text_len is not None else len(txt_of(doc))
@@ -631,6 +677,10 @@ def collect(html, lang, page_text_len=None):
     whole['score'] = score(whole, page_len, lang)
     whole['flags'] = ['no filter — every change anywhere on the page will alert'] + whole['flags']
     ranked.append(whole)
+    # Only for the head of the list: each call costs a document-wide XPath plus a walk back
+    # through the tree, and nothing below this ever reaches a reader.
+    for c in ranked[:CONTEXT_DEPTH]:
+        c['context'], c['matches'] = context_of(doc, c['filter']) if c['filter'] else (None, 0)
     return ranked
 
 
@@ -651,6 +701,11 @@ def show(ranked, lang):
     for i, c in enumerate(ranked, 1):
         print(f"[{i}] {c['strategy']:<34} {L.days_phrase(c.get('days'), lang):<22} "
               f"{len(c['text']):>5} chars")
+        if c.get('context'):
+            hits = c.get('matches', 1)
+            where = (f"unter: {c['context']}" if hits < 2 else
+                     f"{hits} Treffer, erster unter: {c['context']}")
+            print(f"    {where}")
         print(f"    {preview(c['text'])}")
         for f in c['flags']:
             print(f"    ! {f}")

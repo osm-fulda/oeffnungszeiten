@@ -1,9 +1,10 @@
 {
  "added": "2026-07-26",
- "captured_sample": "Öffnungszeiten: Montag bis Freitag: 08:00 – 17:30 Uhr Samstag: geschlossen Öffnungszeiten: Montag bis Freitag: 08:00 – 17:00 Uhr Öffnungszeiten: Montag bis Freitag: 08:00 – 17:30 Uhr Öffnungszeiten: M",
+ "captured_sample": "Heidelsteinstraße 17–1936043 Fulda +49 (0)661 - 94 60-0 fulda@wemag.de Öffnungszeiten:Montag bis Freitag: 08:00 – 17:30 UhrSamstag: geschlossen Auf Karte anzeigen",
  "fetch_backend": "system",
- "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "filter": "xpath://div[@id=\"fulda-ladengeschaft\"]",
  "name": "WEMAG",
+ "note": "Die Seite listet 21 Standorte in einem Akkordeon. Der Filter fasst nur das Ladengeschaeft Heidelsteinstrasse; die Adresse allein taugt nicht als Schluessel, weil der Eintracht-Fanshop unter derselben Anschrift sitzt. Das URL-Fragment zeigt auf den Abschnitt, nicht auf den Laden, und aendert am Abruf nichts.",
  "osm_id": "node/12892454904",
  "schema": 1,
  "tags": [
