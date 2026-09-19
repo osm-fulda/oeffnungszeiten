@@ -611,6 +611,43 @@ def capture(html, filt):
                     for el in found).strip()
 
 
+# An element that names the block it sits above: a heading, a bold lead-in, or the link
+# an accordion uses as its tab.
+HEADISH = ('self::h1 or self::h2 or self::h3 or self::h4 or self::h5 or self::h6 '
+           'or self::strong or self::b or contains(@class,"title")')
+
+
+def context_of(doc, filt):
+    """How many elements `filt` matches, and the nearest heading above the first of them.
+
+    On a page listing many branches the capture itself is anonymous — wemag.de shows
+    twenty-one blocks reading "Öffnungszeiten: Montag bis Freitag: 08:00 – 17:00 Uhr" and
+    nothing in the text says which shop that is. The heading above it does: "Fulda
+    (Ladengeschäft)", "Fulda (Hauptsitz)", "Niederlande". Without it the menu cannot be
+    answered correctly, only guessed at.
+    """
+    body = filt.split(":", 1)[1] if filt.startswith(("xpath:", "xpath1:")) else None
+    if not body:
+        return None, 0
+    try:
+        els = doc.xpath(body)
+    except Exception:
+        return None, 0
+    if not els:
+        return None, 0
+    own = txt_of(els[0])
+    try:
+        near = els[0].xpath(f'(preceding::*[{HEADISH}])[last()]')
+    except Exception:
+        near = []
+    for node in near:
+        text = re.sub(r'\s+', ' ', txt_of(node)).strip()
+        # A heading repeated inside the capture adds nothing, and a long one is prose.
+        if 3 <= len(text) <= 70 and text not in own:
+            return text, len(els)
+    return None, len(els)
+
+
 def collect(html, lang, page_text_len=None):
     doc = strip_noise(lxml.html.fromstring(html))
     page_len = page_text_len if page_text_len is not None else len(txt_of(doc))
@@ -631,6 +668,8 @@ def collect(html, lang, page_text_len=None):
     whole['score'] = score(whole, page_len, lang)
     whole['flags'] = ['no filter — every change anywhere on the page will alert'] + whole['flags']
     ranked.append(whole)
+    for c in ranked:
+        c['context'], c['matches'] = context_of(doc, c['filter']) if c['filter'] else (None, 0)
     return ranked
 
 
@@ -651,6 +690,9 @@ def show(ranked, lang):
     for i, c in enumerate(ranked, 1):
         print(f"[{i}] {c['strategy']:<34} {L.days_phrase(c.get('days'), lang):<22} "
               f"{len(c['text']):>5} chars")
+        if c.get('context'):
+            lead = 'unter' if c.get('matches', 1) < 2 else 'beginnt unter'
+            print(f"    {lead}: {c['context']}")
         print(f"    {preview(c['text'])}")
         for f in c['flags']:
             print(f"    ! {f}")

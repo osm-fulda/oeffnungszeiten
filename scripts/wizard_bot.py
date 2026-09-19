@@ -83,7 +83,10 @@ PICK = re.compile(r"^\s*/pick\s+([0-9]{1,2})\s*$", re.M)
 # string is load-bearing here — `?branch=500735` is Würth's Fulda branch, `?store=221186` is a
 # brillen.de shop, and dropping those would make seven pages look like their own front page.
 TRACKING = re.compile(r"^(utm_\w+|gclid|fbclid|msclkid|igshid|mc_[ce]id|_ga)$")
-MAX_CANDIDATES = 6
+# Ten, not six: on a page listing many branches the six widest captures win on score and
+# every single-branch block falls off the list. wemag.de/de/unternehmen/ carries 21
+# locations and the watched shop ranked 8th.
+MAX_CANDIDATES = 10
 MAX_TEXT = 600
 # The pasted alarm is quoted whole, not folded into a paragraph: it is the evidence the reader
 # compares the candidates against, and both halves of a changed line have to stay under each
@@ -533,6 +536,10 @@ def candidate_block(i, cand, lang):
     days = L.days_phrase(cand.get("days"), lang)
     head = f"### [{i}] {cand['strategy']}"
     meta = f"{days} · {len(cand['text'])} Zeichen · `{cand['filter'] or 'kein Filter'}`"
+    if cand.get("context"):
+        hits = cand.get("matches", 1)
+        meta += (f"\nunter der Überschrift **{cand['context']}**" if hits < 2 else
+                 f"\n{hits} Treffer auf der Seite, der erste unter **{cand['context']}**")
     lines = [head, meta, "", fence(cand["text"]), ""]
     lines += [f"- ! {f}" for f in cand.get("flags", [])]
     lines.append(f"- → {W.verdict(cand)}")
