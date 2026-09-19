@@ -827,9 +827,10 @@ def main():
                 write(args.out, "candidates.json", json.dumps(ranked, ensure_ascii=False,
                                                               indent=1))
                 return 0
-            if not 1 <= pick <= len(ranked):
-                raise Refused(f"`{pick}` gibt es nicht, die Seite hatte {len(ranked)} "
-                              f"Kandidaten. Setz das Label neu und such aus der neuen Liste.")
+            if not 1 <= pick <= min(len(ranked), MAX_CANDIDATES):
+                raise Refused(f"`{pick}` stand nicht zur Wahl, gezeigt waren "
+                              f"{min(len(ranked), MAX_CANDIDATES)} Kandidaten. Setz das Label "
+                              f"neu und such aus der neuen Liste.")
             cand = ranked[pick - 1]
             slug = dup[:-len(".json")]
             dest = fix_entry(os.path.join(args.out, "entry"), path, entry, cand, args.issue)
@@ -877,10 +878,11 @@ def main():
             write(args.out, "candidates.json", json.dumps(ranked, ensure_ascii=False, indent=1))
             return 0
 
-        if not 1 <= pick <= len(ranked):
-            raise Refused(f"`{pick}` gibt es nicht, die Seite hatte {len(ranked)} Kandidaten. "
-                          f"Der Abruf von eben kann anders ausgefallen sein als der erste — "
-                          f"dann setz das Label neu und such aus der neuen Liste.")
+        if not 1 <= pick <= min(len(ranked), MAX_CANDIDATES):
+            raise Refused(f"`{pick}` stand nicht zur Wahl, gezeigt waren "
+                          f"{min(len(ranked), MAX_CANDIDATES)} Kandidaten. Der Abruf von eben "
+                          f"kann anders ausgefallen sein als der erste — dann setz das Label "
+                          f"neu und such aus der neuen Liste.")
         cand = ranked[pick - 1]
         import filter_wizard as W
         path = W.emit_entry(os.path.join(args.out, "entry"), f["name"], f["url"], cand,
