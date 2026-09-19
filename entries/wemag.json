@@ -4,11 +4,11 @@
  "fetch_backend": "system",
  "filter": "xpath://div[@id=\"fulda-ladengeschaft\"]",
  "name": "WEMAG",
- "note": "Die Seite listet 21 Standorte in einem Akkordeon. Der Filter fasst nur das Ladengeschaeft Heidelsteinstrasse; die Adresse allein taugt nicht als Schluessel, weil der Eintracht-Fanshop unter derselben Anschrift sitzt.",
+ "note": "Die Seite listet 21 Standorte in einem Akkordeon. Der Filter fasst nur das Ladengeschaeft Heidelsteinstrasse; die Adresse allein taugt nicht als Schluessel, weil der Eintracht-Fanshop unter derselben Anschrift sitzt. Das URL-Fragment bleibt stehen, wie es ist: es aendert am Abruf nichts, zaehlt aber zur Identitaet des Watches, und ein Wechsel kostet die Historie.",
  "osm_id": "node/12892454904",
  "schema": 1,
  "tags": [
   "fulda-wholesale"
  ],
- "url": "https://www.wemag.de/de/unternehmen/#fulda-ladengeschaft"
+ "url": "https://www.wemag.de/de/unternehmen/#Kontaktstandorte"
 }
