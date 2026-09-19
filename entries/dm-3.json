@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-08",
+ "captured_sample": "08:30 - 20:00 Uhr 08:30 - 20:00 Uhr 08:30 - 20:00 Uhr 08:30 - 20:00 Uhr 08:30 - 20:00 Uhr 08:30 - 20:00 Uhr Dienstag Donnerstag Freitag Geschlossen Mittwoch Montag Samstag Sonntag Öffnungszeiten",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "name": "dm",
+ "note": "Filiale Am Emaillierwerk, seit dem 28.08.2026 wieder offen. Angelegt wie die anderen beiden dm-Maerkte: die Seite beginnt die Woche beim heutigen Tag, deshalb sort_text_alphabetically.",
+ "osm_id": "node/1465073366",
+ "schema": 1,
+ "sort_text_alphabetically": true,
+ "tags": [
+  "fulda-chemist"
+ ],
+ "url": "https://www.dm.de/store/d2gb/fulda/am-emaillierwerk-1"
+}

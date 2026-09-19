@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-08",
+ "captured_sample": "V+S Furniere Vertriebs GmbH Christian-Wirth-Straße 17 36043 Fulda Öffnungszeiten Mo–Do 08:00–12:00 Uhr 13:00–17:00 Uhr Fr 08:00–12:00 Uhr 13:00–15:30 Uhr Sa–So Geschlossen und jederzeit nach Vereinbar",
+ "fetch_backend": "system",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "name": "V+S Furniere",
+ "note": "Der Block faengt die Anschrift mit ein; die steht direkt ueber den Zeiten und ist stabil.",
+ "osm_id": "node/12500464026",
+ "schema": 1,
+ "tags": [
+  "fulda-trade"
+ ],
+ "url": "https://www.vs-furniere.de/"
+}

@@ -221,6 +221,29 @@ the previous snapshot before reading anything into a diff: this shape is recogni
 A `/�/` line in `global_ignore_text` would silence it globally, but every global-settings edit
 re-baselines all watches, which is out of proportion to four affected pages.
 
+### Case 7c: the page changes language
+
+**Signature:** every line of the hours block changes at once and the times are identical,
+`Monday 8:30 am–7 pm` against `Montag 8:30 am–7 pm`. Nothing about the business changed; the
+generator rendered the day names in another language.
+
+**Cause seen here:** 9gg.de serves `<html lang="de">` with English day names, or German ones,
+depending on what its Cloudflare cache holds. `vary` names `Accept-Encoding,User-Agent` and not
+the language, so the language is not negotiated at all: sending `Accept-Language: de-DE` changes
+nothing, and neither does the user agent. All four Fulda pages on that platform flip together.
+
+**Fix: pin the language in the watch URL.** `?hl=de` forces German on 9gg.de, measured stable
+over repeated fetches, while `?lang=` and `?locale=` are ignored and `/de/` is 404. The entry
+carries the URL with the parameter. `url` is a baseline key, so the sync announces the change and
+the next check re-baselines once.
+
+**Why not filter it away instead:** the day name and its time share a line, so any rule that
+drops the language drops the hours with it. Narrowing the capture to the times alone would keep
+the watch quiet, but a diff of seven bare time ranges is not something a mapper can act on.
+
+**When there is no such parameter,** the honest answer is that the watch reports the flip and a
+human reads it in a second. Do not widen the filter to hide it.
+
 ### Case 8: server swaps content between concurrent requests
 **Signature:** two watches on the same host false-diff forever, each showing the other's page.
 gruemel.de (IIS) returns the *same* page to two simultaneous requests for different URLs. Reproduced

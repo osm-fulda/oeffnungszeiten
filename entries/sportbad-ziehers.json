@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-08",
+ "captured_sample": "ÖffnungszeitenMontag Montag 07:30 – 21:30 Uhr 07:30 – 21:30 Uhr Dienstag Dienstag 07:30 – 20:00 Uhr 07:30 – 20:00 Uhr Mittwoch Mittwoch 07:30 – 20:00 Uhr 07:30 – 20:00 Uhr Donnerstag Donnerstag geschl",
+ "fetch_backend": "system",
+ "filter": "xpath://*[@id=\"oeffnungszeiten\"]",
+ "name": "Sportbad Ziehers",
+ "note": "Sommerpause bis 07.09.2026, seitdem stehen wieder Zeiten statt des Hinweises. Gleicher Anker wie Stadtbad Esperanto, dasselbe CMS.",
+ "osm_id": "way/25560330",
+ "schema": 1,
+ "tags": [
+  "fulda-swimming"
+ ],
+ "url": "https://re-fd.de/sportbad-ziehers"
+}

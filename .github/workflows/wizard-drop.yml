@@ -27,10 +27,10 @@ jobs:
       # A pull request opened with GITHUB_TOKEN starts no further workflow, which is GitHub's
       # guard against a loop — so the entry check runs here. A PAT in WIZARD_PR_TOKEN gets the
       # pull request its own CI run, with no change here.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           token: ${{ secrets.WIZARD_PR_TOKEN || github.token }}
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       # No `pip install lxml`: the removal path never imports the wizard, because no page is

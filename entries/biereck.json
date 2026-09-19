@@ -3,11 +3,11 @@
  "captured_sample": "Montag 5–9:30 pm Dienstag 5–11 pm Mittwoch 5–11 pm Donnerstag 5–11 pm Freitag 5–11 pm Samstag 4 pm–1 am Sonntag 4:30–10 pm",
  "filter": "xpath://table[contains(concat(\" \",normalize-space(@class),\" \"),\" openinghours \")]",
  "name": "Biereck",
- "note": "2026-08-15: Dritter Laden auf der Plattform 9gg.de nach Gleis 10 und Highlander, gleiche Falle: die Nachbartabelle mit derselben Klasse \"table\" ist ein Wetter-Widget und haette jede Pruefung ausgeloest. Zeiten stehen dort englisch als am/pm. 2026-08-19: 9gg.de schreibt zwischen Zahl und \"pm\" ein schmales geschuetztes Leerzeichen (U+202F) und liefert im HTTP-Header keinen charset, nur im Meta-Tag. Wird das Byte nicht als UTF-8 gelesen, stehen im Snapshot drei Ersatzzeichen statt des Leerzeichens - \"4���pm\" gegen \"4 pm\". Das sieht wie eine Zeitenaenderung aus, ist aber dieselbe Seite. Vor dem Deuten den vorherigen Snapshot ansehen.",
+ "note": "2026-08-15: Dritter Laden auf der Plattform 9gg.de nach Gleis 10 und Highlander, gleiche Falle: die Nachbartabelle mit derselben Klasse \"table\" ist ein Wetter-Widget und haette jede Pruefung ausgeloest. Zeiten stehen dort englisch als am/pm. 2026-08-19: 9gg.de schreibt zwischen Zahl und \"pm\" ein schmales geschuetztes Leerzeichen (U+202F) und liefert im HTTP-Header keinen charset, nur im Meta-Tag. Wird das Byte nicht als UTF-8 gelesen, stehen im Snapshot drei Ersatzzeichen statt des Leerzeichens - \"4���pm\" gegen \"4 pm\". Das sieht wie eine Zeitenaenderung aus, ist aber dieselbe Seite. Vor dem Deuten den vorherigen Snapshot ansehen. 2026-09-10: Die Plattform rendert die Wochentage mal deutsch, mal englisch. Der Wechsel haengt nicht am Accept-Language, sondern daran, was der Cloudflare-Cache gerade haelt (\"vary: Accept-Encoding,User-Agent\", kein Vary auf die Sprache). Jeder Wechsel meldet sieben geaenderte Zeilen ohne eine geaenderte Zeit. Der Parameter ?hl=de erzwingt Deutsch, an allen vier 9gg-Watches gemessen und ueber drei Abrufe stabil; ?lang= und ?locale= wirken nicht, /de/ ist 404. Die Zeiten selbst stehen in beiden Sprachen als am/pm, das schmale Leerzeichen bleibt auch.",
  "osm_id": "node/5814042167",
  "schema": 1,
  "tags": [
   "fulda-pub"
  ],
- "url": "https://zum-biereck.9gg.de/"
+ "url": "https://zum-biereck.9gg.de/?hl=de"
 }

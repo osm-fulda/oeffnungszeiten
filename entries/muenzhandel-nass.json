@@ -1,0 +1,13 @@
+{
+ "added": "2026-09-08",
+ "captured_sample": "Öffnungszeiten:Montag – Freitag: 9.30 Uhr – 13:30 Uhr und14:00 Uhr – 18.00 UhrSamstag:10.00 Uhr – 14.00 Uhr",
+ "fetch_backend": "system",
+ "filter": "xpath:(//h4[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "name": "Münzhandel Nass",
+ "osm_id": "node/12962082237",
+ "schema": 1,
+ "tags": [
+  "fulda-jewelry"
+ ],
+ "url": "https://www.muenzhandel-nass.de/"
+}

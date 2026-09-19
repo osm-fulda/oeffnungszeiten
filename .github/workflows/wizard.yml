@@ -24,8 +24,8 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       - run: pip install --quiet lxml
@@ -43,7 +43,7 @@ jobs:
         run: |
           PYTHONPATH=scripts python3 scripts/wizard_bot.py candidates $FIX \
             --body-file body.md --out out
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: wizard-candidates
           path: out
@@ -55,7 +55,7 @@ jobs:
     permissions:
       issues: write
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: wizard-candidates
           path: out
