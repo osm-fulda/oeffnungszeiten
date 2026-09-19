@@ -1,0 +1,10 @@
+{
+ "added": "2026-09-11",
+ "captured_sample": "Dienstag – Samstag17:00 – 21:00 Uhr",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")])]",
+ "lang": "de",
+ "name": "Dimitra",
+ "osm_id": "node/14174014793",
+ "schema": 1,
+ "url": "https://www.dimitra-fulda.de/"
+}

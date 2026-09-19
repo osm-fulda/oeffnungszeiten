@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-08",
+ "captured_sample": "Öffnungszeiten:WochentagStundenMo09:00 - 20:00Di09:00 - 20:00Mi09:00 - 20:00Do09:00 - 20:00Fr09:00 - 20:00Sa09:00 - 20:00SoGeschlossen",
+ "fetch_backend": "system",
+ "filter": "xpath:(//h4[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "name": "Deichmann",
+ "note": "Filiale Keltenstrasse. Mo-Sa gleiche Zeiten, So geschlossen. Die Seite trug am 18.08.2026 noch keine Zeiten, der Filialauftritt wurde seitdem umgebaut (Klassen c-hours-*).",
+ "osm_id": "node/1406092121",
+ "schema": 1,
+ "tags": [
+  "fulda-shoes"
+ ],
+ "url": "https://stores.deichmann.com/de-de/de/hessen/fulda/keltenstrasse-20"
+}
