@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Montag bis Donnerstags: 12.30 bis 18.00 Freitags von 15.00 bis 18.00 Samstag: 11:00 bis 14.00 Uhr Montag: 16.30 bis 18:00 Uhr Dienstag: 16.30 bis 18:00 Uhr Mittwoch: 16:30 bis 18:00Uhr Dienstag 18.00 ",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" oeffnungszeiten \")]",
+ "lang": "de",
+ "name": "Fahrschule Gerhard Weber",
+ "osm_id": "node/11962893002",
+ "schema": 1,
+ "tags": [
+  "lkfulda-driving_school",
+  "lkfulda-neuhof"
+ ],
+ "url": "https://fahrschule-fulda.de/fahrschule/"
+}

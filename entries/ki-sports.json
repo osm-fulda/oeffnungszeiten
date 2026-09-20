@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Karriere 06652 9928838 WhatsApp Mo-So: 6-22 Uhr Unser Team ist vor Ort: 9- 20 Uhr",
+ "filter": "xpath://span[contains(concat(\" \",normalize-space(@class),\" \"),\" ki-footer-item \")]",
+ "lang": "de",
+ "name": "Ki Sports",
+ "osm_id": "node/9486105132",
+ "schema": 1,
+ "tags": [
+  "lkfulda-fitness_centre",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://ki-sports.com/"
+}

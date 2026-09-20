@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "ÖffnungszeitenMo. - Fr. 12:00 - 23:00Sa. - So. 12:00 - 00:00",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Blackout Tonstudio",
+ "osm_id": "way/576600785",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-studio"
+ ],
+ "url": "https://www.blackout-tonstudio.de/"
+}

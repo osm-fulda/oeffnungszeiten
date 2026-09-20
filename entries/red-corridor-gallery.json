@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Öffnungszeiten: Di .- Fr. 14 - 18 Uhr, Sa. 11 - 16 UhrDonnerstags: 18 - 21 Uhr \"Art after Dark\"",
+ "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])",
+ "lang": "de",
+ "name": "Red Corridor Gallery",
+ "osm_id": "way/620880187",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gallery",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.redcorridor.com/ausstellungen/13-little-by-little"
+}

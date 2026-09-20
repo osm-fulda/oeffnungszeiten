@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Das Mobilzentrum Schulstraße 3736093 Künzell+49661 96210905service@das-mobilzentrum.com Werkstattzeiten Mo. – Fr. 08:00 – 17:00 Uhr(oder nach Vereinbarung)",
+ "filter": "xpath://*[@id=\"a-lila\"]",
+ "lang": "de",
+ "name": "Das Mobilzentrum",
+ "osm_id": "way/576202552",
+ "schema": 1,
+ "tags": [
+  "lkfulda-car_repair",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.das-mobilzentrum.com/"
+}

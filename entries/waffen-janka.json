@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Öffnungszeiten Ladengeschäft Montag: geschlossen Dienstag: 9:30-18 Uhr Mittwoch: 9:30-18 Uhr Donnerstag: 9:30-18 Uhr Freitag: 9:30-18 Uhr Samstag: 9-13 Uhr Öffnungszeiten Schießkino Montag: geschlosse",
+ "filter": "xpath://*[@id=\"opening-hours\"]",
+ "lang": "de",
+ "name": "Waffen Janka",
+ "osm_id": "way/658676400",
+ "schema": 1,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-weapons"
+ ],
+ "url": "https://www.waffen-janka.de/"
+}

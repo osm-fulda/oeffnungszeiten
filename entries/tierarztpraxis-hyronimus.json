@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Sprechstunde nach Terminvereinbarung Montag bis Freitag08.00 – 13.0014.00 – 17.00",
+ "filter": "xpath:(//h4[contains(normalize-space(.),\"Sprechstunde\")])/parent::*",
+ "lang": "de",
+ "name": "Tierarztpraxis Hyronimus",
+ "osm_id": "node/8264883832",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-veterinary"
+ ],
+ "url": "https://www.tierarztpraxis-hieronymus.de/"
+}

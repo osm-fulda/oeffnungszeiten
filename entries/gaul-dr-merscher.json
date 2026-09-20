@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Montag – Freitag8.00 – 17.30Pausenzeit12.00 bis 14.00Termine nach Vereinbarung",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Gaul & Dr. Merscher",
+ "osm_id": "node/4927485001",
+ "schema": 1,
+ "tags": [
+  "lkfulda-lawyer",
+  "lkfulda-neuhof"
+ ],
+ "url": "https://www.gaul-merscher.de/kontakt/"
+}

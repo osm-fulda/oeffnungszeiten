@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Mo–Fr 8:00–18:00 Uhr · Raiffeisenstr. 6, 36145 Hofbieber",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" wfft-hours \")]",
+ "lang": "de",
+ "name": "Therapiepraxis Birkenbach",
+ "osm_id": "node/13849974050",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hofbieber",
+  "lkfulda-physiotherapist"
+ ],
+ "url": "https://www.ergotherapiepraxis-hofbieber.de/"
+}

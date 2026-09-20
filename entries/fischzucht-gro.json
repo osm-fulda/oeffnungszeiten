@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Lebendfischverkauf Dienstag bis Freitag 8:00 Uhr bis 17:00 Uhr Samstag: 8:00 Uhr bis 12:00 Uhr Sonntag + Montag = Ruhetage",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")])]",
+ "lang": "de",
+ "name": "Fischzucht Groß",
+ "osm_id": "node/2621072949",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-seafood"
+ ],
+ "url": "https://www.fisch-gross.de/"
+}

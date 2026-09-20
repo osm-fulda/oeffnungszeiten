@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Kontak­tieren Sie uns Haben Sie Fragen oder benö­tigen Sie ein maßge­schnei­dertes Angebot für Ihre Heizungs- oder Sani­tär­be­dürf­nisse? Unser Team steht Ihnen zur Verfügung, um Ihre Anliegen zeitna",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Thomas Weber",
+ "osm_id": "node/13473724299",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hvac",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://www.weber-heiztechnik.de/"
+}

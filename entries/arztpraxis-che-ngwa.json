@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Montag 7.30 - 12 Uhr und 15 - 18 Uhr Dienstag 7.30 - 12 Uhr Mittwoch 7.30 - 12 Uhr Donnerstag 7.30 - 12 Uhr und 15 - 18 Uhr Freitag 7.30 - 12 Uhr",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Arztpraxis Che Ngwa",
+ "osm_id": "node/13472323325",
+ "schema": 1,
+ "tags": [
+  "lkfulda-doctors",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://arztpraxis-chengwa.de/"
+}

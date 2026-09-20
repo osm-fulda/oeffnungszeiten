@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Adresse Leinweber Baucentrum GmbH & Co. KG Ruhrstrauch 2 36100 Petersberg ÖFFNUNGSZEITEN Montag - Samstag 06:00 - 21:00 Uhr Unsere Experten aus den Fachabteilungen erreichst du von Montag-Freitag 08:0",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")])]",
+ "lang": "de",
+ "name": "Leinweber Bauzentrum",
+ "osm_id": "node/13473795359",
+ "schema": 1,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-trade"
+ ],
+ "url": "https://www.leinweber-baucentrum.de/de/services/standorte/filiale-petersberg.html"
+}

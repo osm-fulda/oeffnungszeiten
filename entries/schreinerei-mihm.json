@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Du möchtest mehr erfahren? Kontaktiere uns zu Deinem nächsten Projekt! ÖffnungszeitenMo-Do 08:00 - 17:00 UhrFr vorübergehend geschlossen",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" paragraph \")]",
+ "lang": "de",
+ "name": "Schreinerei Mihm",
+ "osm_id": "node/13849120268",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hofbieber",
+  "lkfulda-joiner"
+ ],
+ "url": "https://mihm.de/kontakt"
+}

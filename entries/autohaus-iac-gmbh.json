@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Öffnungszeiten Sales Department Mo-Fr: 8:30-18:00 Uhr Samstag: 9:00-14:00 Uhr Sonntag ist geschlossen",
+ "filter": "xpath:(//h6[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Autohaus IAC GmbH",
+ "osm_id": "way/550475895",
+ "schema": 1,
+ "tags": [
+  "lkfulda-car",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://autohaus-iac.de/kontakt/"
+}

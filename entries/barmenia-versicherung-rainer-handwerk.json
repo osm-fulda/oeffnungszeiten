@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Mo. - Fr.09:00 - 20:00Sa.09:00 - 14:00So.geschlossen",
+ "filter": "xpath://thead[contains(concat(\" \",normalize-space(@class),\" \"),\" sr-only \")]/following-sibling::*[1]",
+ "lang": "de",
+ "name": "Barmenia Versicherung - Rainer Handwerk",
+ "osm_id": "node/11676367208",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hofbieber",
+  "lkfulda-insurance"
+ ],
+ "url": "https://agentur.barmenia.de/rainer_handwerk"
+}

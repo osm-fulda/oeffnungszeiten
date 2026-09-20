@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "📍 Handelspunkt-Hohmann 📞 06657-5408183 ✉️ info@handelspunkt-hohmann.de Mo-Do: 08:00 - 16:30 Uhr Fr: 08:00 - 13:00 Uhr Information Kontakt Zahlung & Versand Rückversand Servicebegleitschein Hinweise zu",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" footer-links \")]",
+ "lang": "de",
+ "name": "Handelspunkt-Hohmann GmbH & Co. KG",
+ "osm_id": "node/13458647878",
+ "schema": 1,
+ "tags": [
+  "lkfulda-company",
+  "lkfulda-dipperz"
+ ],
+ "url": "https://www.handelspunkt-hohmann.de"
+}

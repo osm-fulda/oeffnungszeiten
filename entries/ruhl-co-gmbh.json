@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Mo - Fr:08:00 - 17:15Sa:08:00 - 12:00 Mo - Fr:08:00 - 17:00Sa:08:00 - 12:00",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" cms-html \")]",
+ "lang": "de",
+ "name": "Ruhl & Co. GmbH",
+ "osm_id": "node/13473795357",
+ "schema": 1,
+ "tags": [
+  "lkfulda-car_parts",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://www.ruhl-autoteile.de/"
+}

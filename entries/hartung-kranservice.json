@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Mo - Fr 7:00 - 17:00 Samstag 9:00 - 13:00 Sonntag Geschlossen",
+ "filter": "xpath://dl[contains(concat(\" \",normalize-space(@class),\" \"),\" open-hours-data \")]",
+ "lang": "de",
+ "name": "Hartung Kranservice",
+ "osm_id": "node/13458619134",
+ "schema": 1,
+ "tags": [
+  "lkfulda-company",
+  "lkfulda-dipperz"
+ ],
+ "url": "https://www.hartung-kranservice.de/kontaktieren-sie-uns"
+}

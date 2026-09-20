@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Öffnungszeiten:Mo - Fr 9.00 - 17.00 UhrSa 10.00 - 14.00 Uhr",
+ "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Hartmann & Sohn GmbH",
+ "osm_id": "node/13458619114",
+ "schema": 1,
+ "tags": [
+  "lkfulda-dipperz",
+  "lkfulda-stonemason"
+ ],
+ "url": "https://www.hartmann-sohn.de/kontakt/"
+}

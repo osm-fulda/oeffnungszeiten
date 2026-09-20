@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Sie erreichen uns von Montag bis Donnerstag von08:00 – 16:00 Uhr und Freitag von 08:00 – 13:00 Uhr. Empfehlen Sie unsSchreiben Sie eine Rezension für uns:Hier uns in Google bewerten",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Fladung Wellness & Spa",
+ "osm_id": "node/13850115715",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hofbieber",
+  "lkfulda-joiner"
+ ],
+ "url": "https://www.fladung-wellness.de"
+}

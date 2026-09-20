@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "DAS UNTERNEHMEN Ing.-Büro FRIEDRICH Harald Friedrich, Dipl.-Wirtsch.-Ing. (TU) Fuldaer Straße 20 36124 Eichenzell Deutschland Tel.: 06659 / 919 444 Fax: 06659 / 919 445 target@ibfriedrich.com www.ibfr",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Ing.-Büro Friedrich",
+ "osm_id": "node/12037476084",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-engineer"
+ ],
+ "url": "http://www.ibfriedrich.com/de/index.html"
+}

@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Natur­heilkunde & Natur­medizin Praxis 0 66 54 / 96 09 50 praxis@dr-von-rosen.de Öffnungszeiten Mo - Fr 08:00 - 13:00 Uhr Di u Do 15:00 - 18:30 Uhr Sa nach Vereinbarung Klinik 0 66 54 / 160 klinik@dr-",
+ "filter": "xpath://*[@id=\"intro\"]",
+ "lang": "de",
+ "name": "Schlosspark-Klinik",
+ "osm_id": "way/87265843",
+ "schema": 1,
+ "tags": [
+  "lkfulda-clinic",
+  "lkfulda-gersfeld-rhoen"
+ ],
+ "url": "https://dr-von-rosen.de/"
+}

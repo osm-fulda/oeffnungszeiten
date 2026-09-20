@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "ÖFFNUNGSZEITEN FAHRZEUGVERKAUFMo. – Fr.: 09:30 – 18:00 UhrSa.: 09:30 – 13:00 UhrÖFFNUNGSZEITEN FRITZ BERGER SHOPMo. – Fr.: 09:30 – 18:00 UhrSa.: 09:30 – 13:00 UhrÖFFNUNGSZEITEN SERVICE & WERKSTATTMo. ",
+ "filter": "xpath://*[@id=\"c61\"]",
+ "lang": "de",
+ "name": "Günther Caravaning",
+ "osm_id": "way/1117563544",
+ "schema": 1,
+ "tags": [
+  "lkfulda-caravan",
+  "lkfulda-eichenzell"
+ ],
+ "url": "https://www.guenther-caravaning.de/"
+}

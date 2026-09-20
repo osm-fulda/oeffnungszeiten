@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Öffnungszeiten Mo-So: 0:00 - 24:00",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Tennishalle Hünfeld",
+ "osm_id": "way/122113602",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-sports_hall"
+ ],
+ "url": "https://www.tennishalle-huenfeld.de/kontakt-und-anfahrt/"
+}

@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Montag bis Freitag 7 bis 18 Uhr, rund um die Uhr mit Service-Level-Vertrag.",
+ "filter": "xpath://span[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//span[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Denk IT",
+ "osm_id": "way/935732676",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-it"
+ ],
+ "url": "https://www.denkit.com/"
+}

@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Mo08:30 - 18:00 UhrDi08:30 - 18:00 UhrMi08:30 - 18:00 UhrDo08:30 - 18:00 UhrFr08:30 - 18:00 UhrSa08:30 - 13:00 Uhr",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" openings \")]",
+ "lang": "de",
+ "name": "Apotheke Dipperz",
+ "osm_id": "node/13458352935",
+ "schema": 1,
+ "tags": [
+  "lkfulda-dipperz",
+  "lkfulda-pharmacy"
+ ],
+ "url": "https://www.apotheke-dipperz.de/"
+}

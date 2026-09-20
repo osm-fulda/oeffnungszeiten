@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Montag, Freitag07:30 - 13:00Dienstag, Donnerstag07:30 - 13:0015:00 - 18:00Mittwoch07:30 - 12:00",
+ "filter": "xpath://table[contains(concat(\" \",normalize-space(@class),\" \"),\" semantic-data-opening-hours \")]",
+ "lang": "de",
+ "name": "Hausarztpraxis Hönscher",
+ "osm_id": "node/13472307672",
+ "schema": 1,
+ "tags": [
+  "lkfulda-doctors",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://www.hausarzt-hoenscher.de/patienteninfo/%C3%B6ffnungszeiten/"
+}

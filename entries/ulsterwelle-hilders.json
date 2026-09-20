@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Öffnungszeiten BadMo: geschlossenDi – Do: 11:00 – 20:00 UhrFr, Sa & Feiertage: 11:00 – 20:45 UhrSo: 11:00 – 20:00 Uhr Öffnungszeiten SaunaMo: geschlossenDi – Do: 15:30 – 21:45 UhrFr, Sa & Feiertage: 1",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Ulsterwelle Hilders",
+ "osm_id": "way/289366546",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hilders",
+  "lkfulda-water_park"
+ ],
+ "url": "https://www.ulsterwelle.de/"
+}

@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Montag 08:30 - 18:30 Uhr Dienstag 08:30 - 18:30 Uhr Mittwoch 08:30 - 18:30 Uhr Donnerstag 08:30 - 18:30 Uhr Freitag 08:30 - 15:30 Uhr Samstag 10:00 - 14:30 Uhr Sonntag Geschlossen Montag bis Donnersta",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" opening-hours-list \")]",
+ "lang": "de",
+ "name": "Autodienst Roland Fritz",
+ "osm_id": "node/3562943208",
+ "schema": 1,
+ "tags": [
+  "lkfulda-car_repair",
+  "lkfulda-nuesttal"
+ ],
+ "url": "https://www.autofit.com/autofit-fritz/"
+}

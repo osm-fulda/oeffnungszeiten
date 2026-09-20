@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Mo. - Do.09:30 - 12:3013:30 - 18:30Fr.09:30 - 12:30Sa. - So.geschlossen",
+ "filter": "xpath://thead[contains(concat(\" \",normalize-space(@class),\" \"),\" sr-only \")]/following-sibling::*[1]",
+ "lang": "de",
+ "name": "Barmenia Versicherung - Christiane Sauer",
+ "osm_id": "node/11681015631",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-insurance"
+ ],
+ "url": "https://agentur.barmenia.de/adem_kama"
+}

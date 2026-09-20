@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Unsere Sprechzeiten: Montag 08.30-13.00 und 14.00-18.30 Uhr Dienstag 08.30-13.00 und 14.00-18.30 Uhr Mittwoch 08.30-13.30 Uhr Donnerstag 08.30-13.00 und 14.00-18.30 Uhr Freitag 08.30-14.30 Uhr und nac",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Sprechzeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Zahnarztpraxis Dr. Johannes Wilhelm",
+ "osm_id": "node/9730475350",
+ "schema": 1,
+ "tags": [
+  "lkfulda-dentist",
+  "lkfulda-dipperz"
+ ],
+ "url": "https://www.zahnarzt-dipperz.de"
+}

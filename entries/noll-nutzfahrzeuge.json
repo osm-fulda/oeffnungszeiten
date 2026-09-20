@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Allgemeine Verwaltung Mo - Fr 07:45 - 16:45 Sa 07:45 - 12:00 +49 661 934300 info@noll-nutzfahrzeuge.de Ersatzteil-Abteilung Mo - Fr 07:30 - 17:00 Sa 07:30 - 13:00 +49 661 934300 lager@noll-nutzfahrzeu",
+ "filter": "xpath://*[@id=\"contact\"]",
+ "lang": "de",
+ "name": "Noll Nutzfahrzeuge",
+ "osm_id": "way/576202519",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-truck"
+ ],
+ "url": "https://www.noll-nutzfahrzeuge.de/"
+}

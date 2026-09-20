@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Öffnungszeiten Montag - Freitag: 8:00 -18:00Termine nach Vereinbarung Kontakt Telefon: +49 6652 7949040Mail: mail@ihresprachtherapeutin.de",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Fachpraxis für Atem-, Sprach- und Stimmtherapie",
+ "osm_id": "node/13438488467",
+ "schema": 1,
+ "tags": [
+  "lkfulda-burghaun",
+  "lkfulda-speech_therapist"
+ ],
+ "url": "https://www.ihresprachtherapeutin.de/"
+}
