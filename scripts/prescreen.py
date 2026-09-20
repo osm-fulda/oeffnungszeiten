@@ -63,15 +63,25 @@ TAG = re.compile(r'\b(mo|di|mi|do|fr|sa|so|montag|dienstag|mittwoch|donnerstag|f
                  r'|sonntag)', re.I)
 
 
+def wirt_von(url):
+    """The comparable host of a URL: punycoded, lowercase, without `www.`.
+
+    Both sides of the block test go through here, because both are written by hand and neither
+    spelling is the canonical one. A candidate list carries the URL as the OSM tag has it --
+    schemeless ('www.euronics.de/fulda') often enough, and with an umlaut where the business
+    has one. Raw, the first has no netloc at all and the second compares as UTF-8 against an
+    ASCII block list, so neither can ever match an entry that exists to stop the fetch.
+    """
+    return re.sub(r"^www\.", "", urllib.parse.urlsplit(C.normalize_url(url)).netloc.lower())
+
+
 def gesperrte_hosts(no_watch="no-watch.json", liste="blocked-hosts.txt"):
     """Hosts that answer here and refuse in the cluster. Two sources, one meaning."""
     raus = set()
     try:
         for r in json.load(open(no_watch, encoding="utf-8"))["records"]:
             if r.get("reason") in ("datacenter-block", "anti-bot") and r.get("url"):
-                wirt = urllib.parse.urlsplit(r["url"]).netloc.lower()
-                if wirt.startswith("www."):
-                    wirt = wirt[4:]
+                wirt = wirt_von(r["url"])
                 if wirt:
                     raus.add(wirt)
     except FileNotFoundError:
@@ -80,7 +90,7 @@ def gesperrte_hosts(no_watch="no-watch.json", liste="blocked-hosts.txt"):
         for zeile in open(liste, encoding="utf-8"):
             zeile = zeile.split("#")[0].strip()
             if zeile:
-                raus.add(zeile.lower())
+                raus.add(wirt_von(zeile))
     except FileNotFoundError:
         pass
     return raus
@@ -162,8 +172,7 @@ def main():
     gesperrt = gesperrte_hosts()
     zaehler = collections.Counter()
     for r in reihum(rows)[:args.anzahl]:
-        wirt = urllib.parse.urlsplit(r["website"]).netloc.lower()
-        wirt = wirt[4:] if wirt.startswith("www.") else wirt
+        wirt = wirt_von(r["website"])
         if any(wirt == g or wirt.endswith("." + g) for g in gesperrt):
             art, beleg = "blocked", f"{wirt} is unreachable from the cluster"
         else:

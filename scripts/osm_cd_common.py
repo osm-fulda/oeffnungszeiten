@@ -45,16 +45,26 @@ def _idna_host(u):
         return u
 
 
+# A `%` that does not start a valid escape is a literal one and has to be encoded; a `%` that
+# does starts an escape that must survive untouched. Distinguishing them is what lets the same
+# pass handle an already-encoded URL and a price list under `/50%-rabatt/`.
+_ROH_PROZENT = re.compile(r"%(?![0-9A-Fa-f]{2})")
+
+
 def _encode_path(u):
-    """Percent-encode a non-ASCII path or query ('/patienteninfo/öffnungszeiten/').
+    """Percent-encode what urllib cannot send in a request line: non-ASCII ('/öffnungszeiten/'),
+    spaces, and a literal `%`.
 
-    urllib sends the URL as ASCII and raises UnicodeEncodeError before the request leaves,
-    which a caller sorts under "unreachable" -- and it hits exactly the pages most likely to
-    carry hours, because a site that spells its path in German spells it `öffnungszeiten`.
-    Three of eleven such URLs in one district run failed this way.
+    urllib encodes the request line as ASCII and raises UnicodeEncodeError before the request
+    leaves, which a caller sorts under "unreachable" -- and it hits exactly the pages most
+    likely to carry hours, because a site that spells its path in German spells it
+    `öffnungszeiten`. Three of eleven such URLs in one district run failed this way.
 
-    `%` stays safe so an already-encoded URL survives a second pass unchanged: encoding
-    `%C3%B6` again would yield `%25C3%25B6`, a path no server knows.
+    `%` stays safe while quoting so an already-encoded URL survives a second pass unchanged:
+    encoding `%C3%B6` again would yield `%25C3%25B6`, a path no server knows. That alone would
+    leave a literal percent sign standing as a broken escape, so one is encoded beforehand --
+    `%-r` is not an escape, and a server answers 400 to it, which is the very failure this
+    function exists to remove.
 
     >>> _encode_path('https://x.de/patienteninfo/öffnungszeiten/')
     'https://x.de/patienteninfo/%C3%B6ffnungszeiten/'
@@ -64,16 +74,22 @@ def _encode_path(u):
     'https://x.de/suche?q=%C3%B6l&s=1#%C3%B6l'
     >>> _encode_path('https://x.de/a+b/c?d=e')
     'https://x.de/a+b/c?d=e'
+    >>> _encode_path('https://x.de/mein kontakt')
+    'https://x.de/mein%20kontakt'
+    >>> _encode_path('https://x.de/50%-rabatt/')
+    'https://x.de/50%25-rabatt/'
     """
     try:
         t = urllib.parse.urlsplit(u)
-        if u.isascii():
-            return u
+
+        def kodieren(teil, safe):
+            return urllib.parse.quote(_ROH_PROZENT.sub("%25", teil), safe=safe)
+
         return urllib.parse.urlunsplit((
             t.scheme, t.netloc,
-            urllib.parse.quote(t.path, safe="/%:@!$&'()*+,;=~"),
-            urllib.parse.quote(t.query, safe="/%:@!$&'()*+,;=~?="),
-            urllib.parse.quote(t.fragment, safe="/%:@!$&'()*+,;=~?"),
+            kodieren(t.path, "/%:@!$&'()*+,;=~"),
+            kodieren(t.query, "/%:@!$&'()*+,;=~?="),
+            kodieren(t.fragment, "/%:@!$&'()*+,;=~?"),
         ))
     except Exception:
         return u
