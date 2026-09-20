@@ -104,7 +104,11 @@ UNTERSEITEN = ("kontakt", "kontakt/", "impressum", "oeffnungszeiten", "ueber-uns
 
 
 def text(url):
-    h = urllib.request.urlopen(urllib.request.Request(url, headers=C.UA), timeout=25).read()
+    # Through normalize_url like every other fetch here: the candidate list carries the URL as
+    # OSM spells it, which is schemeless often enough and non-ASCII on exactly the pages worth
+    # screening ('/öffnungszeiten', 'rübsam-metall.de'). Raw, those die before the request.
+    req = urllib.request.Request(C.normalize_url(url), headers=C.UA)
+    h = urllib.request.urlopen(req, timeout=25).read()
     d = lxml.html.fromstring(h)
     for t in d.xpath("//script|//style"):
         t.getparent().remove(t)

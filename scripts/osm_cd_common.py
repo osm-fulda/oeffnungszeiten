@@ -45,16 +45,55 @@ def _idna_host(u):
         return u
 
 
+def _encode_path(u):
+    """Percent-encode a non-ASCII path or query ('/patienteninfo/öffnungszeiten/').
+
+    urllib sends the URL as ASCII and raises UnicodeEncodeError before the request leaves,
+    which a caller sorts under "unreachable" -- and it hits exactly the pages most likely to
+    carry hours, because a site that spells its path in German spells it `öffnungszeiten`.
+    Three of eleven such URLs in one district run failed this way.
+
+    `%` stays safe so an already-encoded URL survives a second pass unchanged: encoding
+    `%C3%B6` again would yield `%25C3%25B6`, a path no server knows.
+
+    >>> _encode_path('https://x.de/patienteninfo/öffnungszeiten/')
+    'https://x.de/patienteninfo/%C3%B6ffnungszeiten/'
+    >>> _encode_path('https://x.de/patienteninfo/%C3%B6ffnungszeiten/')
+    'https://x.de/patienteninfo/%C3%B6ffnungszeiten/'
+    >>> _encode_path('https://x.de/suche?q=öl&s=1#öl')
+    'https://x.de/suche?q=%C3%B6l&s=1#%C3%B6l'
+    >>> _encode_path('https://x.de/a+b/c?d=e')
+    'https://x.de/a+b/c?d=e'
+    """
+    try:
+        t = urllib.parse.urlsplit(u)
+        if u.isascii():
+            return u
+        return urllib.parse.urlunsplit((
+            t.scheme, t.netloc,
+            urllib.parse.quote(t.path, safe="/%:@!$&'()*+,;=~"),
+            urllib.parse.quote(t.query, safe="/%:@!$&'()*+,;=~?="),
+            urllib.parse.quote(t.fragment, safe="/%:@!$&'()*+,;=~?"),
+        ))
+    except Exception:
+        return u
+
+
 def normalize_url(u):
     """OSM website tags are often schemeless ('www.x.de') or protocol-relative
     ('//x.de'); changedetection rejects those with HTTP 400. Add https://.
-    Non-ASCII hosts are punycoded for the same reason (see _idna_host)."""
+    Non-ASCII hosts are punycoded for the same reason (see _idna_host), and a
+    non-ASCII path or query is percent-encoded (see _encode_path).
+
+    >>> normalize_url('www.rübsam-metall.de/öffnungszeiten')
+    'https://www.xn--rbsam-metall-dlb.de/%C3%B6ffnungszeiten'
+    """
     u = u.strip()
     if u.startswith("//"):
         u = "https:" + u
     elif not re.match(r"(?i)^https?://", u):
         u = "https://" + u
-    return _idna_host(u)
+    return _encode_path(_idna_host(u))
 
 
 class CDIO:
