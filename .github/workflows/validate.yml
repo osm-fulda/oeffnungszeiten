@@ -28,6 +28,10 @@ jobs:
       # The prune guard decides whether an hourly job may delete watches. Small enough to hold in
       # the docstring, important enough that CI runs the examples.
       - run: python3 -m doctest scripts/entries_sync.py
+      # normalize_url decides what every fetch here actually requests. A URL it mangles fails
+      # before the request leaves and reads like a dead site, so the encoding rules belong in
+      # examples a run can check.
+      - run: python3 -m doctest scripts/osm_cd_common.py
       # wizard_bot reads what a stranger typed into an issue form. Its parsing and validation
       # half is stdlib and needs no network, exactly so it can be checked in this job.
       - run: PYTHONPATH=scripts python3 -m doctest scripts/wizard_bot.py
