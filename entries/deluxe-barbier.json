@@ -1,9 +1,10 @@
 {
  "added": "2026-08-19",
- "captured_sample": "montag - freitag:09:00 - 18:00 Uhrsamstag:08:00 - 16:00 uhr",
- "filter": "xpath://h2[contains(translate(.,\"ÖFFNUNGSZEITEN\",\"öffnungszeiten\"),\"öffnungszeiten\")]/ancestor::section[1]/following-sibling::section[1]",
+ "captured_sample": "ÖFFNUNGSZEITENMontag – Freitag09:00 – 18:00Samstag08:00 – 16:00SonntagGeschlossen",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://div[contains(.,\"Löherstraße 34\") and contains(translate(.,\"ÖFFNUNGSZEITENMOTAG\",\"öffnungszeitenmotag\"),\"öffnungszeiten\")][not(.//div[contains(.,\"Löherstraße 34\") and contains(translate(.,\"ÖFFNUNGSZEITENMOTAG\",\"öffnungszeitenmotag\"),\"öffnungszeiten\")])]//div[contains(translate(.,\"ÖFFNUNGSZEITENMOTAG\",\"öffnungszeitenmotag\"),\"öffnungszeiten\") and contains(translate(.,\"ÖFFNUNGSZEITENMOTAG\",\"öffnungszeitenmotag\"),\"montag\")][not(.//div[contains(translate(.,\"ÖFFNUNGSZEITENMOTAG\",\"öffnungszeitenmotag\"),\"öffnungszeiten\") and contains(translate(.,\"ÖFFNUNGSZEITENMOTAG\",\"öffnungszeitenmotag\"),\"montag\")])]",
  "name": "Deluxe Barbier",
- "note": "Eine Seite, zwei OSM-Objekte (Deluxe Barbier und Deluxe Barbier II).",
+ "note": "Standort 1, Löherstraße 34. Die Seite führt beide Standorte, deshalb hängt der Filter an der Anschrift.",
  "osm_id": "node/11812128771",
  "schema": 1,
  "tags": [

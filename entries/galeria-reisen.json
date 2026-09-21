@@ -1,8 +1,8 @@
 {
  "added": "2026-07-26",
- "captured_sample": "Montag: 09:30 bis 18:00 Uhr Dienstag: 09:30 bis 18:00 Uhr Mittwoch: 09:30 bis 18:00 Uhr Donnerstag: 09:30 bis 18:00 Uhr Freitag: 09:30 bis 18:00 Uhr Samstag: geschlossen Sonntag: geschlossen",
+ "captured_sample": "Montag:09:30 bis 18:00 UhrDienstag:09:30 bis 18:00 UhrMittwoch:09:30 bis 18:00 UhrDonnerstag:09:30 bis 18:00 UhrFreitag:09:30 bis 18:00 UhrSamstag:geschlossenSonntag:geschlossenKurzfristige Änderung d",
  "fetch_backend": "system",
- "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" WorkingHours_fullDayTime__HLG_E \")]",
+ "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Galeria Reisen",
  "osm_id": "node/1333605786",
  "schema": 1,

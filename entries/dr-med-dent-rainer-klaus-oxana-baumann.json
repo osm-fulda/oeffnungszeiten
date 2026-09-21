@@ -1,13 +1,13 @@
 {
  "added": "2026-08-03",
- "captured_sample": "ZAHNÄRZTE DR. KLAUS, O. BAUMANN & Dr. L. Koch-Klaus Florgengasse 18 36043 Fulda Tel.: 0661 / 72683 E-Mail: info@zahnarzt-dr-klaus.de ÖFFNUNGSZEITEN Mo-Do 07:30 Uhr bis 19:00 Uhr Fr 07:30 Uhr bis 17:00",
+ "captured_sample": "Öffnungszeiten Mo. – Do. 07:00 – 19:00 Uhr Fr. 07:00 – 17:00 Uhr Sa. 09:00 – 12:00 Uhr",
  "fetch_backend": "system",
- "filter": "xpath:(//h4[contains(normalize-space(.),\"ÖFFNUNGSZEITEN\")])/parent::*/parent::*",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Dr. med. dent. Rainer Klaus & Oxana Baumann",
  "osm_id": "node/5513504547",
  "schema": 1,
  "tags": [
   "fulda-dentist"
  ],
- "url": "https://www.zahnarzt-dr-klaus.de/kontakt/"
+ "url": "https://www.zahnarzt-dr-klaus.de/"
 }
