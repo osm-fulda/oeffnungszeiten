@@ -1,13 +1,14 @@
 {
  "added": "2026-07-25",
- "captured_sample": "Öffnungszeiten Rezeption ParkHotel Montags - Freitags: 06:00 - 22:30 Uhr Samstags und Sonntags: 06:00 - 22:00 Uhr Bei Anreise außerhalb unserer Öffnungszeiten bitten wir um telefonische Kontaktaufnahm",
+ "captured_sample": "Unsere Küche kocht Montag bis Samstag von 11.30 bis 14 Uhr und 17 bis 21 Uhr, Sonntag von 11 bis 14 Uhr.Das Restaurant ist Montag bis Samstag bis 22 Uhr geöffnet.",
  "fetch_backend": "system",
- "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "filter": "xpath://div[contains(.,\"Unsere Küche kocht\")][not(.//div[contains(.,\"Unsere Küche kocht\")])]",
  "name": "Park-Hotel Kolpinghaus",
+ "note": "Die Rezeptionszeiten auf /de/kontakt sind dort verschwunden; das OSM-Objekt ist amenity=restaurant, also stehen die Küchen- und Restaurantzeiten hier richtig.",
  "osm_id": "node/425773219",
  "schema": 1,
  "tags": [
   "fulda-restaurants"
  ],
- "url": "https://parkhotel-fulda.de/de/kontakt"
+ "url": "https://parkhotel-fulda.de/restaurant-fulda"
 }

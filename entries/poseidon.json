@@ -1,8 +1,8 @@
 {
  "added": "2026-07-25",
- "captured_sample": "Öffnungszeiten Montag – Samstag: 17:30 – 23:30 Uhr Sonn- & Feiertage: 11:30 – 14:30 Uhr & 17:30 – 23:30 Uhr Um telefonische Tischreservierung an Feiertagen und am Wochenende wird gebeten.",
+ "captured_sample": "ÖffnungszeitenMo, Mi – Sa17:30 – 22:30 UhrDienstagRuhetagSonn- & Feiertage11:30 – 14:30 & 17:30 – 22:30 Uhr",
  "fetch_backend": "system",
- "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" wfh-hours \")]",
  "name": "Poseidon",
  "osm_id": "node/267874538",
  "schema": 1,

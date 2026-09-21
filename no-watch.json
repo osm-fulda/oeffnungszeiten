@@ -2558,6 +2558,15 @@
    "recheck": "on-relocation",
    "note": "Vercel Attack Challenge Mode: 429 mit 'Vercel Security Checkpoint' statt Inhalt, Header 'x-vercel-mitigated: challenge', kein Retry-After. Gleiches Ergebnis aus dem Cluster und von einer Heimleitung, also kein Ratenlimit. Der Watch lief vom 19. bis 24.08.2026 und hat bei drei Pruefungen nie einen Snapshot erfasst. Zeiten zum Zeitpunkt der Entfernung, aus JSON-LD und sichtbarer Tabelle: Mo-Do 10-18, Fr 10-16.",
    "osm_id": "way/207224345"
+  },
+  {
+   "url": "https://re-gruppe.de/baeder/freibad-rosenau/",
+   "name": "Freibad Rosenau",
+   "reason": "no-hours-on-page",
+   "established": "2026-09-21",
+   "recheck": "2027-05-15",
+   "note": "Saisonbad. Seit dem 6. September 2026 steht auf der Seite nur noch der Satz zur Winterpause, die Zeiten sind weg und kommen laut Betreiber im Mai 2027 zurueck. Eine Watch darauf meldet acht Monate lang nichts und steht jeden Montag als RED im Bericht. Im Mai wieder aufnehmen, der Filter //*[@id=\"oeffnungszeiten\"] traf bis zuletzt sauber.",
+   "osm_id": "way/23462098"
   }
  ]
 }

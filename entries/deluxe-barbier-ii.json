@@ -1,9 +1,10 @@
 {
  "added": "2026-08-19",
- "captured_sample": "montag - freitag:09:00 - 18:00 Uhrsamstag:08:00 - 16:00 uhr",
- "filter": "xpath://h2[contains(translate(.,\"ÖFFNUNGSZEITEN\",\"öffnungszeiten\"),\"öffnungszeiten\")]/ancestor::section[1]/following-sibling::section[1]",
+ "captured_sample": "ÖFFNUNGSZEITENMontag – Mittwoch09:00 – 18:00Donnerstag – Samstag09:00 – 19:00SonntagGeschlossen",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://div[contains(.,\"Peterstor 9\") and contains(translate(.,\"ÖFFNUNGSZEITENMOTAG\",\"öffnungszeitenmotag\"),\"öffnungszeiten\")][not(.//div[contains(.,\"Peterstor 9\") and contains(translate(.,\"ÖFFNUNGSZEITENMOTAG\",\"öffnungszeitenmotag\"),\"öffnungszeiten\")])]//div[contains(translate(.,\"ÖFFNUNGSZEITENMOTAG\",\"öffnungszeitenmotag\"),\"öffnungszeiten\") and contains(translate(.,\"ÖFFNUNGSZEITENMOTAG\",\"öffnungszeitenmotag\"),\"montag\")][not(.//div[contains(translate(.,\"ÖFFNUNGSZEITENMOTAG\",\"öffnungszeitenmotag\"),\"öffnungszeiten\") and contains(translate(.,\"ÖFFNUNGSZEITENMOTAG\",\"öffnungszeitenmotag\"),\"montag\")])]",
  "name": "Deluxe Barbier II",
- "note": "Eine Seite, zwei OSM-Objekte (Deluxe Barbier und Deluxe Barbier II).",
+ "note": "Standort 2, vor dem Peterstor 9. Die Seite führt beide Standorte, deshalb hängt der Filter an der Anschrift.",
  "osm_id": "node/13368126821",
  "schema": 1,
  "tags": [
