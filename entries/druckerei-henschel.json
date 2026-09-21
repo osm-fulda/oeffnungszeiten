@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Öffnungszeiten Mo – Do: 7.00 bis 16.00 UhrFr: 7.00 bis 13.00 Uhr",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Druckerei Henschel",
+ "osm_id": "node/12585412354",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hosenfeld",
+  "lkfulda-printer"
+ ],
+ "url": "https://www.druckerei-henschel.de"
+}

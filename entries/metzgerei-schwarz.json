@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Montag: Ruhetag Dienstag: 07.30 – 13.00 | 15.00 – 18.00 Mittwoch: 07.30 – 13.00 Donnerstag: 07.30 – 13.00 | 15.00 – 18.00 Freitag: 07.30 – 13.00 | 15.00 – 18.00 Samstag: 07.30 – 13.00 Montag: 06.30 – ",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")])]",
+ "lang": "de",
+ "name": "Metzgerei Schwarz",
+ "osm_id": "node/9278714858",
+ "schema": 1,
+ "tags": [
+  "lkfulda-butcher",
+  "lkfulda-grossenlueder"
+ ],
+ "url": "https://schwarz-uffhausen.de/metzgerei/filialen/"
+}

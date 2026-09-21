@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Sprechzeiten Bitte vereinbaren Sie vorab einen Termin. Montag 8 – 12 Uhr Dienstag 8 – 12 Uhr Mittwoch 8 – 12 Uhr Donnerstag 8 – 12 und 16 – 18 Uhr Freitag 8 – 12 Uhr und nach Vereinbarung",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Sprechzeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Hausarzt Petersberg",
+ "osm_id": "node/13472307673",
+ "schema": 1,
+ "tags": [
+  "lkfulda-doctors",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://www.hausarztpraxis-petersberg.de/"
+}

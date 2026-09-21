@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "+49 (0) 6652 606 0 [email protected] Mo - Do 08:00 - 16:00 Fr 08:00 - 13:00",
+ "filter": "xpath://*[@id=\"sp-top2\"]",
+ "lang": "de",
+ "name": "Schuy + Folmeg Maschinenbau GmbH",
+ "osm_id": "node/13457838852",
+ "schema": 1,
+ "tags": [
+  "lkfulda-company",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://www.schuy.com/de/"
+}

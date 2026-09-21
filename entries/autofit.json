@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Montag 07:30 - 12:30 Uhr 13:30 - 17:30 Uhr Dienstag 07:30 - 12:30 Uhr 13:30 - 17:30 Uhr Mittwoch 07:30 - 12:30 Uhr 13:30 - 17:30 Uhr Donnerstag 07:30 - 12:30 Uhr 13:30 - 17:30 Uhr Freitag 07:30 - 12:3",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" opening-hours-list \")]",
+ "lang": "de",
+ "name": "AUTOFIT",
+ "osm_id": "way/179130055",
+ "schema": 1,
+ "tags": [
+  "lkfulda-car_repair",
+  "lkfulda-gersfeld-rhoen"
+ ],
+ "url": "https://www.mueller-gersfeld.autofitpartner.de/"
+}

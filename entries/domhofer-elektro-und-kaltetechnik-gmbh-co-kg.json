@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Öffnungszeiten Montag bis Donnerstag: 8:30-12:30 u. 14:30-17:30 Uhr Freitag: 8:30-12:30 u. 14:30-17:00 Uhr Samstag: Nach Vereinbarung möglich",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Domhöfer Elektro- und Kältetechnik GmbH & Co. KG",
+ "osm_id": "node/13850115716",
+ "schema": 1,
+ "tags": [
+  "lkfulda-electrician",
+  "lkfulda-hofbieber"
+ ],
+ "url": "https://domhoefer.de/"
+}

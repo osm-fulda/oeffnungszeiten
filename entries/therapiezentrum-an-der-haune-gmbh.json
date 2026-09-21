@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Öffnungszeiten Montag - Freitag: 8:00 - 19:00 Uhr und nach Vereinbarung Termin vereinbaren",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Therapiezentrum an der Haune GmbH",
+ "osm_id": "node/13460445598",
+ "schema": 1,
+ "tags": [
+  "lkfulda-burghaun",
+  "lkfulda-physiotherapist"
+ ],
+ "url": "https://www.haune-therapie.de"
+}

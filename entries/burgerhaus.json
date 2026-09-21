@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "So finden Sie uns Sie sind hier: Gemeinde Dipperz » Rathaus » Erreichbarkeit und Sprechzeiten Anschrift Gemeinde DipperzAm Dorfbrunnen 236160 DipperzTelefon: (06657) 9633-0Telefax: (06657) 9633-40 Spr",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Sprechzeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "Bürgerhaus",
+ "osm_id": "node/1810910942",
+ "schema": 1,
+ "tags": [
+  "lkfulda-dipperz",
+  "lkfulda-townhall"
+ ],
+ "url": "https://www.dipperz.de/content/rathaus/so-finden-sie-uns/"
+}

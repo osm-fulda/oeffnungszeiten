@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Montag - Freitag:7:00 - 17:00 Uhr",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" openings-card \")]",
+ "lang": "de",
+ "name": "Raimund Hohmann GmbH",
+ "osm_id": "node/9433359513",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eiterfeld",
+  "lkfulda-trade"
+ ],
+ "url": "https://www.raimund-hohmann.de/"
+}

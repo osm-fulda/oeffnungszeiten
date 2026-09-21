@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Donnerstag-Dienstag 11:30 – 14:00 Uhr und 17:00 – 24:00 Uhr(warme Küche von 11:30-13:30 und 18:00 – 20:30 Uhr)Mittwoch Ruhetag (geöffnet nach Rücksprache – rufen Sie uns an)",
+ "filter": "xpath://tbody[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")][not(.//tbody[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")])]",
+ "lang": "de",
+ "name": "Hohmann",
+ "osm_id": "node/3708576367",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hilders",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://hotel-hohmann.de/restaurant-gaststube-hohmann-in-hilders/"
+}

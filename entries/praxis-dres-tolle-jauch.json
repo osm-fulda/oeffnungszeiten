@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "SprechzeitenMontag8 bis 13:00 Uhr &15 bis 19:00 UhrDienstag8 bis 13:00 Uhr &15 bis 19:00 UhrMittwoch8 bis 13:00 UhrDonnerstag8 bis 13:00 Uhr &15:00 bis 20:00 UhrFreitag8 bis 13:00 UhrAußerhalb der Öff",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Praxis Dres. Tölle/ Jauch",
+ "osm_id": "node/611659944",
+ "schema": 1,
+ "tags": [
+  "lkfulda-doctors",
+  "lkfulda-flieden"
+ ],
+ "url": "https://www.praxis-toelle.de/"
+}

@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "ÖffnungszeitenÖffnungszeitenMo.-Do. Montag-Donnerstag: 07:00-16:00 UhrFr. Freitag: 07:00-15:00 UhrSa. Samstag: GeschlossenSo. Sonntag: Geschlossen",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Martin Abel GmbH",
+ "osm_id": "way/1430721575",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eiterfeld",
+  "lkfulda-plumber"
+ ],
+ "url": "https://www.abelhaustechnik.de/"
+}

@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Persönliche Fachberatung rund um PVC-Planen & Abdeckplanen nach Maß Telefonisch erreichen Sie uns unter +49 (0)6681 9678446 Montag bis Freitag von 08:00 bis 17:00 Uhroder per E-Mail .",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" twt-widget-hotline-content \")]",
+ "lang": "de",
+ "name": "Tekoplan",
+ "osm_id": "node/13458168193",
+ "schema": 1,
+ "tags": [
+  "lkfulda-company",
+  "lkfulda-ehrenberg-rhoen"
+ ],
+ "url": "https://www.tekoplan-planen.shop/"
+}

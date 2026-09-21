@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Öffnungszeiten: Wir sind für Sie da: Montag, Dienstag, Donnerstag, Freitag 8.30 bis 18.00 Uhr Mittwoch 8.30 bis 13 Uhr Samstag 8.30 bis 14.00 Uhr",
+ "filter": "xpath://h6[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//h6[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Rosen-Schleicher",
+ "osm_id": "node/3095484524",
+ "schema": 1,
+ "tags": [
+  "lkfulda-garden_centre",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.rosen-schleicher.de/"
+}

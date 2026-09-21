@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Mo - Fr 9:30 - 18:00 Samstag 9:30 - 13:00 Sonntag Geschlossen",
+ "filter": "xpath://dl[contains(concat(\" \",normalize-space(@class),\" \"),\" open-hours-data \")]",
+ "lang": "de",
+ "name": "Gardinen Kress",
+ "osm_id": "node/13269683675",
+ "schema": 1,
+ "tags": [
+  "lkfulda-curtain",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://www.gardinen-kress.de/"
+}

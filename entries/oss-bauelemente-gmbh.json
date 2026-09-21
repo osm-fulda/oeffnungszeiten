@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Öffnungszeiten: Montag bis Donnerstag: 07:00 – 17:00 Uhr Freitags: 07:00 – 16:00 Uhr Samstags nach Vereinbarung",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "OSS Bauelemente GmbH",
+ "osm_id": "way/184767647",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eiterfeld",
+  "lkfulda-window_blind"
+ ],
+ "url": "https://oss-bauelemente.de/"
+}

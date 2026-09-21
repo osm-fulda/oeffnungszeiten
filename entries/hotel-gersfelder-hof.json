@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Damit Sie kulinarisch rundum umsorgt sind ist unser Restaurant WEBER`S wie folgt geöffnet.Montag – Samstag von 7.00 -10.00 Uhr können Sie sich an unserem Rhöner Frühstücksbuffet bedienen. An Sonn- und",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Hotel Gersfelder Hof",
+ "osm_id": "way/179088440",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.gersfelder-hof.de/restaurant/"
+}

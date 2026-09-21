@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Mo - Fr 8:00 - 18:00 Samstag 8:00 - 14:00 Sonntag Geschlossen",
+ "filter": "xpath://dl[contains(concat(\" \",normalize-space(@class),\" \"),\" open-hours-data \")]",
+ "lang": "de",
+ "name": "Gärtnerei Schmitt und Sohn",
+ "osm_id": "node/2461660876",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gardener",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.gaertnerei-schmitt.de/"
+}

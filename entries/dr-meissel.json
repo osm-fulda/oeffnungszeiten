@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-20",
+ "captured_sample": "Mo.08:00 - 12:00 Uhr und 15:00 - 16:30 Uhr Di., Do.08:00 - 12:00 Uhr und 17:00 - 18:30 Uhr Mi., Fr.08:00 - 12:00 Uhr",
+ "filter": "xpath://table[contains(concat(\" \",normalize-space(@class),\" \"),\" uk-table \")]",
+ "lang": "de",
+ "name": "Dr. Meissel",
+ "osm_id": "node/5626491080",
+ "schema": 1,
+ "tags": [
+  "lkfulda-doctors",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.allgemeinarztpraxis-meissel.de/"
+}
