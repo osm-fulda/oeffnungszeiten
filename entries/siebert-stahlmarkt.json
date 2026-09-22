@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Im Steierfeld 7 | 36151 Gruben(0 66 52) 96 54 - 0Öffnungszeiten:Mo. bis Do.7:30 - 16:30 UhrFr.7:30 - 16:00 UhrAbholung:8:00 - 15:00 Uhr",
+ "filter": "xpath:(//div[contains(.,\"Im Steierfeld\") and contains(translate(.,\"ÖFFNUNGSZEITEN\",\"öffnungszeiten\"),\"öffnungszeiten\")][not(.//div[contains(.,\"Im Steierfeld\") and contains(translate(.,\"ÖFFNUNGSZEITEN\",\"öffnungszeiten\"),\"öffnungszeiten\")])])[1]",
+ "lang": "de",
+ "name": "Siebert STAHLMARKT",
+ "note": "Die Seite fuehrt drei Standorte. Das OSM-Objekt steht Im Steierfeld in Gruben, deshalb haengt der Filter an dieser Anschrift.",
+ "osm_id": "node/13649072549",
+ "schema": 1,
+ "tags": [
+  "lkfulda-burghaun",
+  "lkfulda-wholesale"
+ ],
+ "url": "https://www.siebert-stahlmarkt.de"
+}

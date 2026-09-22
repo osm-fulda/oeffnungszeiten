@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Montag bis Donnerstag: von 08.00 bis 17.30 Uhr Freitag: von 8:00-16:30 Uhr Samstag: Jeden 1. Sa/Monat 9:00-12:00 Uhr Montag bis Donnerstag: von 08.00 bis 17.30 Uhr Freitag: von 8:00-16:30 Uhr Samstag:",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"donnerstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"donnerstag\")])]",
+ "lang": "de",
+ "name": "Martin Deuter Kfz-Meisterbetrieb",
+ "osm_id": "way/115887928",
+ "schema": 1,
+ "tags": [
+  "lkfulda-car_repair",
+  "lkfulda-grossenlueder"
+ ],
+ "url": "https://deuter-kfz.de/"
+}

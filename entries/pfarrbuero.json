@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Dienstag von 8.00 – 14.00 Uhr und Donnerstag von 13.00 - 16.00 Uhr",
+ "filter": "xpath://span[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")][not(.//span[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")])]",
+ "lang": "de",
+ "name": "Pfarrbüro",
+ "note": "Das JSON-LD der Seite nennt andere Zeiten (Mo-Fr 10-14) als der sichtbare Text; der Filter haengt am Text.",
+ "osm_id": "node/13413028464",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bad-salzschlirf",
+  "lkfulda-religion"
+ ],
+ "url": "https://www.fulda-evangelisch.de/gemeinden/kirchengemeinden/bad-salzschlirf-grossenlueder"
+}

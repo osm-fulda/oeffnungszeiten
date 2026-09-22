@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Öffnungszeiten Hotel täglich von 08:00 bis 22:00 Uhr Die Öffnungszeiten der Restaurantküche weichen hiervon ab! Diese entnehmen Sie bitte dem Unterpunkt „Restaurant – Küchen-Öffnungszeiten“.",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Zum Taufstein",
+ "osm_id": "way/41332157",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kalbach",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.zum-taufstein.de/kontakt/"
+}

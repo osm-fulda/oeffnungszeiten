@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Sie erreichen unsTel. 06652 / 9648-0Email: info@ruebsam-metall.de Mo. - Do.08:00 - 12:30 Uhr13:00 - 16:30 UhrFr.08:00 - 14:30 UhrWarenannahme Mo. - Do.08:00 - 12:30 Uhr13:00 - 15:30 UhrFr.08:00 - 12:0",
+ "filter": "xpath://*[@id=\"widgetbar_site_2\"]",
+ "lang": "de",
+ "name": "Rübsam & Co.",
+ "note": "Die Warenannahme steht im selben Block und hat eigene Zeiten.",
+ "osm_id": "way/1268591114",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-metal_construction"
+ ],
+ "url": "http://www.xn--rbsam-metall-dlb.de/"
+}

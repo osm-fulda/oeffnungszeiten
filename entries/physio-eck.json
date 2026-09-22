@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "ÖffnungszeitenMo: 07:00 - 18:30 UhrDi: 07:00 - 19:00 UhrMi: 07:00 - 18:00 UhrDo: 07:00 - 18:00 UhrFr: 07:00 - 17:30 Uhr und nach Absprache",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Physio Eck",
+ "osm_id": "node/12876036470",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-physiotherapist"
+ ],
+ "url": "https://www.physio-eck-pilgerzell.de/"
+}
