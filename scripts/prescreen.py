@@ -50,6 +50,7 @@ import lxml.html
 
 HERE = __file__.rsplit("/", 1)[0]
 sys.path.insert(0, HERE)
+import hours_lang as L  # noqa: E402
 import osm_cd_common as C  # noqa: E402
 
 # The sentence these microsites carry in their own text. Matched on the body, not on the host,
@@ -57,10 +58,6 @@ import osm_cd_common as C  # noqa: E402
 PLATTFORM = re.compile(r'betrieben und verwaltet durch (lieferando|takeaway|just eat)'
                        r'|powered by (lieferando|takeaway)'
                        r'|diese website wird betrieben und verwaltet', re.I)
-ZEIT = re.compile(r'\d{1,2}[:.]\d{2}\s*(?:-|–|—|bis)\s*\d{1,2}[:.]\d{2}'
-                  r'|\d{1,2}\s*(?:-|–|bis)\s*\d{1,2}\s*Uhr')
-TAG = re.compile(r'\b(mo|di|mi|do|fr|sa|so|montag|dienstag|mittwoch|donnerstag|freitag|samstag'
-                 r'|sonntag)', re.I)
 
 
 def wirt_von(url):
@@ -118,7 +115,14 @@ def text(url):
     # OSM spells it, which is schemeless often enough and non-ASCII on exactly the pages worth
     # screening ('/öffnungszeiten', 'rübsam-metall.de'). Raw, those die before the request.
     req = urllib.request.Request(C.normalize_url(url), headers=C.UA)
-    h = urllib.request.urlopen(req, timeout=25).read()
+    # Decode through the charset the server declares, like filter_wizard does. Handing raw
+    # bytes to lxml lets it guess, and it guesses Latin-1 for UTF-8 often enough that
+    # "Unsere Öffnungszeiten: Mo – Fr" arrives as "Unsere Ã–ffnungszeiten: Mo â€“ Fr". The
+    # en dash is then no dash at all, no time range matches, and a page that publishes its
+    # hours plainly is filed as "no-times" (leinwebermotorgeraete.de).
+    with urllib.request.urlopen(req, timeout=25) as r:
+        enc = r.headers.get_content_charset() or "utf-8"
+        h = r.read(5_000_000).decode(enc, "replace")
     d = lxml.html.fromstring(h)
     for t in d.xpath("//script|//style"):
         t.getparent().remove(t)
@@ -126,9 +130,29 @@ def text(url):
 
 
 def zeiten(txt):
-    return [m.group(0).strip()
-            for m in re.finditer(r'.{0,40}(?:' + ZEIT.pattern + r').{0,40}', txt)
-            if TAG.search(m.group(0))]
+    """Stellen, an denen eine Uhrzeit und ein Wochentag beieinander stehen.
+
+    Über `hours_lang`, nicht über eigene Regeln: dort steht schon, was hier zweimal falsch
+    war. Ein Tag klebt in gerendertem Text am vorigen Wort ("ÖffnungszeitenMo: 07:00 - 18:30
+    Uhr", physio-eck-pilgerzell.de) — `\\b` findet ihn nicht, `_boundary_ok` schon. Und eine
+    Uhrzeit heißt nicht immer `HH:MM`: "Mo - Fr 10 - 18 Uhr" trägt gar keine Minuten, während
+    ein eigener Zeit-Regex in IP-Adressen anschlägt. Dieselbe Erkennung wie im Wizard heißt
+    außerdem: was hier durchkommt, findet dort auch einen Filter.
+
+    Jede Uhrzeit bringt ihren eigenen Kontext mit, und zwei Zeiten einer Spanne liefern
+    denselben Ausschnitt zweimal — deshalb am Ende ohne Wiederholungen.
+
+    >>> zeiten("ÖffnungszeitenMo: 07:00 - 18:30 Uhr")
+    ['ÖffnungszeitenMo: 07:00 - 18:30 Uhr']
+    >>> zeiten("Mo – Fr: 8:00 – 17:30 Uhr")
+    ['Mo – Fr: 8:00 – 17:30 Uhr']
+    >>> zeiten("Sorry 212.110.223.68, your request cannot be processed")
+    []
+    >>> zeiten("Gegründet 1926, 40 Mitarbeiter")
+    []
+    """
+    treffer = [kontext for _token, kontext in L.time_matches(txt) if L.weekdays_any(kontext)]
+    return list(dict.fromkeys(treffer))
 
 
 def pruefe(url):
