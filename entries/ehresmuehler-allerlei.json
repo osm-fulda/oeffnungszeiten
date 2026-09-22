@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Öffnungszeiten von unserem Hofladen Dienstag und Freitag von 10.00 bis 12.00 Uhr und von 14.00 bis 18.00 Uhr Samstag von 10.00 bis 13.00 Uhr",
+ "filter": "xpath://div[contains(.,\"Dienstag und Freitag\") and contains(.,\"Samstag\")][not(.//div[contains(.,\"Dienstag und Freitag\") and contains(.,\"Samstag\")])]",
+ "lang": "de",
+ "name": "Ehresmühler Allerlei",
+ "note": "Di/Fr und Sa stehen in getrennten Zeilen; der Filter nimmt den Block, der beide traegt.",
+ "osm_id": "node/13937754899",
+ "schema": 1,
+ "tags": [
+  "lkfulda-farm",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://erlesmuehle.de/unser-hofladen/"
+}

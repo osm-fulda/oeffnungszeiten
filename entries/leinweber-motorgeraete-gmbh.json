@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Standort Unsere Öffnungszeiten: Mo – Fr: 8:00 – 17:30 Uhr Sa: 9:00 – 12:00 Uhr Leinweber Motorgeräte GmbH Schaffeld 2 – 4 36119 Neuhof-Dorfborn",
+ "filter": "xpath:(//h5[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Leinweber Motorgeräte GmbH",
+ "osm_id": "node/13722704419",
+ "schema": 1,
+ "tags": [
+  "lkfulda-company",
+  "lkfulda-neuhof"
+ ],
+ "url": "https://www.leinwebermotorgeraete.de"
+}

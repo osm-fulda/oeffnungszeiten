@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Montag08:00 - 12:00 Uhr Von 08:00 bis 12:00 Uhr Dienstag08:00 - 12:00 Uhr Von 08:00 bis 12:00 Uhr 14:00 - 18:00 Uhr Von 14:00 bis 18:00 Uhr MittwochgeschlossenDonnerstag08:00 - 12:00 Uhr Von 08:00 bis",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" opening-hours__days \")]",
+ "lang": "de",
+ "name": "Rathaus Burghaun",
+ "note": "Der Block mit der Ueberschrift fuehrt auch \"Geschlossen: oeffnet naechsten Montag um 08:00 Uhr\" — eine Statuszeile, die sich taeglich aendert und jeden Tag Alarm ausloesen wuerde. Der Filter nimmt nur die Wochentabelle.",
+ "osm_id": "node/10734858294",
+ "schema": 1,
+ "tags": [
+  "lkfulda-burghaun",
+  "lkfulda-townhall"
+ ],
+ "url": "https://www.burghaun.de/"
+}

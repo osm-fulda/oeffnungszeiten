@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Dann ruf uns an:Mo - Fr: 10:00 - 17:00 UhrTel. +49 6683 384 9890",
+ "filter": "xpath://p[contains(.,\"Dann ruf uns an\")][not(.//p[contains(.,\"Dann ruf uns an\")])]",
+ "lang": "de",
+ "name": "Canna Commerce GmbH",
+ "note": "Shop-Seite ohne Zeitenblock; die Zeiten stehen im Fliesstext neben der Rufnummer. Eine bessere Seite hat der Betrieb nicht.",
+ "osm_id": "node/9885342688",
+ "schema": 1,
+ "tags": [
+  "lkfulda-company",
+  "lkfulda-ehrenberg-rhoen"
+ ],
+ "url": "https://gogrow.de/collections/100x100-cm-growboxen"
+}

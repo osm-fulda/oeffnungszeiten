@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Öffnungszeiten BÜROZEITEN Di & Do: 17:00 – 18:30 Uhr UNTERRICHT Di & Do: 18:30 – 20:00 Uhr",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Dianas Fahrschule",
+ "note": "Buerozeiten und Theorieunterricht stehen im selben Block; Oeffnungszeit ist die Buerozeit.",
+ "osm_id": "node/4994368006",
+ "schema": 1,
+ "tags": [
+  "lkfulda-driving_school",
+  "lkfulda-eichenzell"
+ ],
+ "url": "https://dianasfahrschule.de/kontakt/"
+}

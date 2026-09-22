@@ -2567,6 +2567,69 @@
    "recheck": "2027-05-15",
    "note": "Saisonbad. Seit dem 6. September 2026 steht auf der Seite nur noch der Satz zur Winterpause, die Zeiten sind weg und kommen laut Betreiber im Mai 2027 zurueck. Eine Watch darauf meldet acht Monate lang nichts und steht jeden Montag als RED im Bericht. Im Mai wieder aufnehmen, der Filter //*[@id=\"oeffnungszeiten\"] traf bis zuletzt sauber.",
    "osm_id": "way/23462098"
+  },
+  {
+   "url": "https://lift-kosten.de/kontakt-lift-kosten/",
+   "name": "Lift Reith GmbH & Co. KG",
+   "reason": "no-hours-on-page",
+   "established": "2026-09-22",
+   "recheck": "never",
+   "note": "Auf der Seite stehen keine Zeiten im sichtbaren Text, nur im JSON-LD — und das nennt Mo-So 09:00-17:00, waehrend die Karte Mo-Do 08:00-17:00 und Fr 08:00-12:00 fuehrt. Ein Filter auf Markup, das der Seite widerspricht, waere kein Beleg.",
+   "osm_id": "node/3854157957"
+  },
+  {
+   "url": "https://www.einza.com/standorte?tx_einzashop_storelist%5Baction%5D=detail&tx_einzashop_storelist%5Bcontroller%5D=Store&tx_einzashop_storelist%5Bstore%5D=102&tx_einzashop_storelist%5Bzip%5D=fulda&cHash=4d5cf76cb5884d447ad5a19c7d75d6d5",
+   "name": "einzA Farben, Niederlassung Fulda",
+   "reason": "site-unreachable",
+   "established": "2026-09-22",
+   "recheck": "2026-12-01",
+   "note": "Die Standortseite traegt die Zeiten der Niederlassung, antwortet aber wiederholt mit 504 Gateway Time-out oder laeuft in die Zeitueberschreitung. Der cHash in der URL bindet die Seite ausserdem an eine Sitzung. Im Dezember erneut versuchen.",
+   "osm_id": "node/5334648901"
+  },
+  {
+   "url": "https://www.werbebonbons.de",
+   "name": "MARIP GmbH",
+   "reason": "no-hours-on-page",
+   "established": "2026-09-22",
+   "recheck": "never",
+   "note": "Die Seite nennt nur eine telefonische Erreichbarkeit im Navigationsband (Mo - Fr von 8 - 18 Uhr), keine Oeffnungszeiten, und das OSM-Objekt traegt selbst keine. Ein Filter auf das Navigationsband meldet jeden Umbau des Menues.",
+   "osm_id": "node/13850121949"
+  },
+  {
+   "url": "https://f60-sports.de/kursplan",
+   "name": "F60 Sports",
+   "reason": "no-hours-on-page",
+   "established": "2026-09-22",
+   "recheck": "never",
+   "note": "Die Seite fuehrt einen Kursplan, keine Oeffnungszeiten: je Wochentag mehrere Kurse mit eigenen Zeiten. Der Plan aendert sich jede Saison, ohne dass sich die Oeffnungszeit aendert. Das Studio veroeffentlicht keine Oeffnungszeiten.",
+   "osm_id": "way/132734829"
+  },
+  {
+   "url": "https://physiotherapiehoch3.de/kontakt/",
+   "name": "Physiotherapie³",
+   "reason": "appointment-only",
+   "established": "2026-09-22",
+   "recheck": "never",
+   "note": "Weder die Kontaktseite noch die Startseite nennen Zeiten, auch gerendert nicht. Die Praxis arbeitet nach Terminvergabe; in OSM steht nur, dass am Wochenende geschlossen ist.",
+   "osm_id": "node/14026476349"
+  },
+  {
+   "url": "https://neue-rhoen.de/kontakt.html",
+   "name": "Fachklinik Neue Rhön",
+   "reason": "no-hours-on-page",
+   "established": "2026-09-22",
+   "recheck": "never",
+   "note": "Die Seite nennt nur die Erreichbarkeit des Aufnahmesekretariats (werktags von 8-16 Uhr), nicht die Oeffnungszeit der Klinik. Das OSM-Objekt ist ein Krankenhaus und traegt aus gutem Grund keine Oeffnungszeiten.",
+   "osm_id": "way/153958686"
+  },
+  {
+   "url": "https://www.landgasthof-zumstern.de/restaurant/",
+   "name": "Landgasthof Zum Stern",
+   "reason": "anti-bot",
+   "established": "2026-09-22",
+   "recheck": "2027-03-01",
+   "note": "Der einfache Abruf bekommt 'Connection refused'. Mit Browser lieferte die Seite am 22.09.2026 einmal den Block 'Montag bis Freitag 17.00 Uhr - 20:30 Uhr, Samstag und Sonntag Ruhetag', bei drei weiteren Versuchen derselben Minute jedoch eine leere Seite. Eine Watch darauf meldet Leerlauf statt Zeiten; im Maerz erneut ansehen.",
+   "osm_id": "way/164285479"
   }
  ]
 }

@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "StartBesucherinfosÖffnungszeiten und Eintritt Öffnungzeiten und Preise Das Museum Burghaun ist immer am 1. Sonntag im Monat von 15:00 bis 18:00 Uhr geöffnet, sowie nach Absprache über: Gemeindeverwalt",
+ "filter": "xpath:(//h1[contains(normalize-space(.),\"Öffnung\")])/parent::*",
+ "lang": "de",
+ "name": "Heimatmuseum Burghaun",
+ "note": "Oeffnet am 1. Sonntag im Monat; der Ausschnitt traegt den Satz, nicht eine Wochentabelle.",
+ "osm_id": "node/5436245137",
+ "schema": 1,
+ "tags": [
+  "lkfulda-burghaun",
+  "lkfulda-museum"
+ ],
+ "url": "https://www.gemeindemuseum-burghaun.de/seite/224172/%C3%B6ffnungszeiten-und-eintritt.html"
+}

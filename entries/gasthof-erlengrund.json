@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Sommeröffnungszeiten (bis Ende Oktober): Mo, Do 17:00 - 22:00 Di - Mi Geschlossen Fr - So 11:30 - 22:00 Winteröffnungszeiten: (November bis April)Donnerstag ab 18:00 Uhr geöffnetFreitag bis Sonntag & ",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"öffnungszeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "Gasthof Erlengrund",
+ "note": "Zwei Saisons auf der Seite; der Ausschnitt traegt Sommer und Winter, damit der Wechsel im Herbst auffaellt.",
+ "osm_id": "node/3880537860",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-restaurant"
+ ],
+ "url": "http://www.gasthof-erlengrund.de/"
+}

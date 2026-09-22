@@ -1,0 +1,16 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Montag: Ruhetag Dienstag bis Samstag: 16 bis 22 Uhr Sonntag: 15 bis 21 Uhr Ihr Zimmer können Sie ab 16 Uhr beziehen. Abreise ist bis 10.30 Uhr am nächsten Morgen. Sollten Sie außerhalb der genannten Z",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Der Florenberg",
+ "note": "Die Seite baut die Zeiten erst mit Javascript auf. Restaurant und Biergarten teilen sich die Seite, deshalb zwei Watches auf denselben Block.",
+ "osm_id": "way/111593882",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-restaurant"
+ ],
+ "url": "http://www.derflorenberg.de/"
+}

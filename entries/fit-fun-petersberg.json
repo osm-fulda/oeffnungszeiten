@@ -1,0 +1,16 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "ÖffnungszeitenMo–Fr 06:30–22:30Sa & So 08:00–18:00",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://div[contains(.,\"Öffnungszeiten\") and contains(.,\"06:30\")][not(.//div[contains(.,\"Öffnungszeiten\") and contains(.,\"06:30\")])]",
+ "lang": "de",
+ "name": "Fit & Fun Petersberg",
+ "note": "Die Zeiten erscheinen erst nach Javascript.",
+ "osm_id": "node/13473725228",
+ "schema": 1,
+ "tags": [
+  "lkfulda-fitness_centre",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://www.fitundfun-petersberg.de/"
+}

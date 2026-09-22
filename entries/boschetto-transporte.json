@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Rufen Sie einfach an unter Tel.: +49 6657 608602 Mobil: +49 151 42640122 Email: geschaeftsleitung@boschetto-transporte.de Bürozeiten Mo-Fr 07:00 – 16:00 Sa nach telefonischer Absprache Werkstattzeiten",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" middle-sm \")]",
+ "lang": "de",
+ "name": "Boschetto Transporte",
+ "osm_id": "node/13458647876",
+ "schema": 1,
+ "tags": [
+  "lkfulda-company",
+  "lkfulda-dipperz"
+ ],
+ "url": "https://boschetto-transporte.de"
+}

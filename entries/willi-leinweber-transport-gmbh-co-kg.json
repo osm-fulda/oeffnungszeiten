@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Recyclingpark Künzell: Im Streich, 36093 Künzell … Sommer (April bis Oktober) Montag bis Freitag 07:00-16:30 Uhr Samstag: 08:00-13:00 Uhr Winter (November bis März) nach Vereinbarung",
+ "filter": "xpath://div[contains(.,\"Im Streich\") and contains(.,\"Sommer\")][not(.//div[contains(.,\"Im Streich\") and contains(.,\"Sommer\")])]",
+ "lang": "de",
+ "name": "Willi Leinweber Transport GmbH & Co. KG",
+ "note": "Die Seite fuehrt vier Standorte. Das OSM-Objekt liegt Am Streich in Kuenzell, also der Recyclingpark; der Filter haengt an dieser Anschrift.",
+ "osm_id": "node/5524748133",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-trade"
+ ],
+ "url": "https://leinweber-willi.de/kontakt/"
+}

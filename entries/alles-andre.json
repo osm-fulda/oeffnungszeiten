@@ -1,0 +1,16 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "Tag Mittagstisch Abend Montag 11:30 bis 14:00 17:30 bis 22:00* Dienstag Ruhetag Mittwoch Ruhetag Donnerstag 11:30-14:00 17:30-22:00* Freitag 11:30-14:00 17:30-23:00* Samstag 11:30-14:00 17:30-23:00* S",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://tbody[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//tbody[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Alles André",
+ "note": "Die Tabelle erscheint erst nach Javascript; der einfache Abruf liefert sie nicht mehr.",
+ "osm_id": "node/10008363755",
+ "schema": 1,
+ "tags": [
+  "lkfulda-burghaun",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://allesandre.de/"
+}

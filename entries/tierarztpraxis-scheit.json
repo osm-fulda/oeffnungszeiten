@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-22",
+ "captured_sample": "ÖffnungszeitenÖffnungszeitenMo., Di. Montag, Dienstag: 09:00-12:00 Uhr16:00-18:00 UhrMi. Mittwoch: 09:00-12:00 Uhr16:00-20:00 UhrDo., Fr. Donnerstag, Freitag: 09:00-12:00 Uhr16:00-18:00 UhrSa. Samstag",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" cm_widget_block \")]",
+ "lang": "de",
+ "name": "Tierarztpraxis Scheit",
+ "osm_id": "way/295136907",
+ "schema": 1,
+ "tags": [
+  "lkfulda-burghaun",
+  "lkfulda-veterinary"
+ ],
+ "url": "https://tierarztpraxis-scheit.de/"
+}
