@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Öffnungszeiten Montag bis Freitag Samstag und Sonntag 16:00 bis 22:00 Uhr 10:00 bis 20:00 Uhr ➡️ Sonderöffnungszeiten an Feiertagen und während der Ferien findet ihr unter „Aktuelles“ Mit unserer Fast",
+ "filter": "xpath:(//h1[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "DAV Kletterzentrum Fulda",
+ "osm_id": "way/171654751",
+ "schema": 1,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-sports_centre"
+ ],
+ "url": "https://www.kletterzentrum-fulda.de/"
+}

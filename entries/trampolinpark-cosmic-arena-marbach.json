@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "in den Ferien Montag 11:00-19:00 Uhr Dienstag 11:00-19:00 Uhr Mittwoch 11:00-19:00 Uhr Donnerstag 11:00-19:00 Uhr Freitag 11:00-21:00 Uhr Samstag 10:00-19:00 Uhr Sonntag 10:00-19:00 Uhr Feiertage / Br",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mittwoch\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mittwoch\")])]",
+ "lang": "de",
+ "name": "Trampolinpark Cosmic Arena Marbach",
+ "note": "Die Seite fuehrt darunter noch Ferienzeiten; der Filter nimmt den regulaeren Block.",
+ "osm_id": "way/131232667",
+ "schema": 1,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-sports_centre"
+ ],
+ "url": "https://www.cosmic-arena.de/"
+}

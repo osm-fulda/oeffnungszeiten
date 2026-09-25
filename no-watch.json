@@ -2630,6 +2630,60 @@
    "recheck": "2027-03-01",
    "note": "Der einfache Abruf bekommt 'Connection refused'. Mit Browser lieferte die Seite am 22.09.2026 einmal den Block 'Montag bis Freitag 17.00 Uhr - 20:30 Uhr, Samstag und Sonntag Ruhetag', bei drei weiteren Versuchen derselben Minute jedoch eine leere Seite. Eine Watch darauf meldet Leerlauf statt Zeiten; im Maerz erneut ansehen.",
    "osm_id": "way/164285479"
+  },
+  {
+   "url": "https://www.ats.moarbich.de/",
+   "name": "Autotechnik Roland Balzer",
+   "reason": "no-hours-on-page",
+   "established": "2026-09-25",
+   "recheck": "2027-03-01",
+   "note": "Die Seite nennt die Zeiten nur im Fliesstext ohne fassbaren Block; bester Kandidat des Wizards ist die ganze Seite. Eine Watch darauf meldet jede Aenderung am Layout. Im Maerz erneut ansehen.",
+   "osm_id": "way/176539770"
+  },
+  {
+   "url": "https://www.kuebeldienst-heinrich.de/oeffnungszeiten/",
+   "name": "Kübeldienst Heinrich",
+   "reason": "no-hours-on-page",
+   "established": "2026-09-25",
+   "recheck": "2027-03-01",
+   "note": "Eigene Oeffnungszeiten-Seite, aber ohne eingrenzbaren Block — nur die ganze Seite. Der Wert in OSM stammt von dort und ist geprueft; beobachten laesst er sich nicht.",
+   "osm_id": "way/448427692"
+  },
+  {
+   "url": "https://www.gemeinsamleben-fulda.de/",
+   "name": "Gemeinsam Leben - Gemeinsam Lernen",
+   "reason": "no-hours-on-page",
+   "established": "2026-09-25",
+   "recheck": "2027-03-01",
+   "note": "Die Zeiten stehen in einem Fliesstextsatz, den kein Filter sauber fasst; der Wizard bietet nur die ganze Seite an.",
+   "osm_id": "node/6555923926"
+  },
+  {
+   "url": "http://www.eiscafe-ferreiro.de/",
+   "name": "Eiscafé Ferreiro",
+   "reason": "no-hours-on-page",
+   "established": "2026-09-25",
+   "recheck": "2027-03-01",
+   "note": "Saisontabelle als Bild beziehungsweise ohne fassbare Struktur; nur die ganze Seite waere beobachtbar. Der Kartenwert ist am 23.09.2026 von Hand geprueft.",
+   "osm_id": "node/2984325837"
+  },
+  {
+   "url": "http://www.fliegerschule-wasserkuppe.de/",
+   "name": "Weltensegler",
+   "reason": "no-hours-on-page",
+   "established": "2026-09-25",
+   "recheck": "2027-03-01",
+   "note": "Der einzige fassbare Block sind die Buerozeiten der Flugschule (Mo-Fr 09:00-12:00), nicht die des Restaurants. Ein Filter darauf wuerde das falsche beobachten.",
+   "osm_id": "node/2472082969"
+  },
+  {
+   "url": "http://www.fleischerei-meissmer.de/",
+   "name": "Meißmer",
+   "reason": "no-hours-on-page",
+   "established": "2026-09-25",
+   "recheck": "2027-03-01",
+   "note": "Der beste Kandidat des Wizards faengt die Bedienleiste eines Videos. Die Zeiten stehen auf der Seite, aber in keinem Element, das sich eingrenzen laesst.",
+   "osm_id": "node/3561362916"
   }
  ]
 }

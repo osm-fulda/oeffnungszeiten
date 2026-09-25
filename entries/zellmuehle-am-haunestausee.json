@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "ÖffnungszeitenDonnerstags von 12:00 – 20:00 UhrFreitags von 12:00 – 22:00 UhrSamstags von 11:00 – 22:00 UhrSonntags von 11:00 – 20:00 Uhr",
+ "filter": "xpath:(//b[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "Zellmühle am Haunestausee",
+ "osm_id": "node/2521163704",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bar",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://zellmuehle.de/"
+}

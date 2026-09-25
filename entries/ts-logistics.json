@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Öffnungszeiten Mo-Fr: 08:00-17:00 Sa-So: geschlossen",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "TS Logistics",
+ "osm_id": "node/10942947004",
+ "schema": 1,
+ "tags": [
+  "lkfulda-company",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://www.ts-logistics.eu/de/"
+}

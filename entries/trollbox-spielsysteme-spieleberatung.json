@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Unsere aktuellen Öffnungszeiten:Mittwoch und Freitag: jeweils von 15:00 Uhr bis 19:00 UhrSamstag: 11:00 Uhr bis 18:00 Uhr…und nach Vereinbarung!",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Trollbox Spielsysteme Spieleberatung",
+ "osm_id": "way/311388779",
+ "schema": 1,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-toys"
+ ],
+ "url": "http://trollbox.de"
+}

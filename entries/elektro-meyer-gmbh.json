@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Öffnungs­zeiten Montag - Donnerstag 07:30 Uhr - 16:30 Uhr Freitag 07:30 Uhr - 14:30 Uhr Öffnungs­zeiten Montag - Donnerstag 07:30 Uhr - 16:30 Uhr Freitag 07:30 Uhr - 14:30 Uhr",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Elektro Meyer GmbH",
+ "osm_id": "node/13458686250",
+ "schema": 1,
+ "tags": [
+  "lkfulda-dipperz",
+  "lkfulda-electrician"
+ ],
+ "url": "https://www.elektro-meyer-dipperz.de"
+}

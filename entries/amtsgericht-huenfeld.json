@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Hauptstraße 24, 36088 HünfeldPostanschrift: Amtsgericht Hünfeld, 36084 HünfeldSprechzeiten: Montag bis Freitag: 09:00 Uhr bis 12:00 Uhr Der Digitale Service Point ist eine zentrale Stelle der hessisch",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Amtsgericht Hünfeld",
+ "osm_id": "node/1614891381",
+ "schema": 1,
+ "tags": [
+  "lkfulda-courthouse",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://ordentliche-gerichtsbarkeit.hessen.de/landgerichtsbezirk-fulda/amtsgericht-huenfeld"
+}

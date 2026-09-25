@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Tabelle Das Bestattungshaus Jörg Müller Turmstraße 5 Am Bachrainer Kreisel 36093 Künzell Tabelle 0661 250250 0661 2502520 info@das-bestattungshaus.de Tabelle Unsere Bürozeiten Montag bis Freitag Von 0",
+ "filter": "xpath://aside[contains(concat(\" \",normalize-space(@class),\" \"),\" footer-widgets \")]",
+ "lang": "de",
+ "name": "Das Bestattungshaus",
+ "note": "JSON-LD war der beste Kandidat, der Filter nimmt stattdessen den sichtbaren Text.",
+ "osm_id": "way/576581672",
+ "schema": 1,
+ "tags": [
+  "lkfulda-funeral_directors",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.das-bestattungshaus.de/"
+}

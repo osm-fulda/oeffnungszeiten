@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Kontakt Tel.: 0661 - 62995E-Mail: info@gasthofhaunetal.de(keine Tisch-Reservierungen per E-Mail)ÖffnungszeitenDo./Fr.: 17 - 23 Uhr(Küche 17.30 – 20:30 Uhr)Samstags: 14 - 23 Uhr(Küche 17.30 – 20.30 Uhr",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")])]",
+ "lang": "de",
+ "name": "Gasthof Haunetal",
+ "osm_id": "node/1995733956",
+ "schema": 1,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.gasthofhaunetal.de/"
+}

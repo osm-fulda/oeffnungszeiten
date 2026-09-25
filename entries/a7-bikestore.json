@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Bikestore Uttrichshausen (November bis April) Montag 09:00 Uhr - 12:00 Uhr Dienstag 09:00 Uhr - 12:00 Uhr Mittwoch 09:00 Uhr - 16:00 Uhr Donnerstag geschlossen Freitag 09:00 Uhr - 12:00 Uhr Samstag ge",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" penci-working-hours \")]",
+ "lang": "de",
+ "name": "A7 Bikestore",
+ "note": "Die Unterseite fuehrt beide Saisons; in der Karte steht nur der Sommerblock, den die Seite belegt.",
+ "osm_id": "node/11962724737",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bicycle",
+  "lkfulda-kalbach"
+ ],
+ "url": "https://a7-bikestore.com/oeffnungszeiten/"
+}

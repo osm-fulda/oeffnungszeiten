@@ -1,13 +1,15 @@
 {
- "added": "2026-08-15",
+ "added": "2026-09-25",
  "captured_sample": "Fulda Innenstadt Kanalstraße 74 36037 Fulda Tel.: 0661 – 90 15 20 47 E-Mail: info@kitchen74.de Öffnungszeiten Montag – Samstag: 11:00 – 18:00 Uhr Parkplätze Parkplätze befinden sich umliegend Zahlungs",
  "filter": "xpath:(//h5[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
  "name": "Kitchen 74",
- "note": "2026-08-15: Fasst Adresse und Telefon mit ein; die aendern sich selten, dafuer ist der Anker die h5-Ueberschrift und damit stabil.",
- "osm_id": "node/1336881814",
+ "note": "Zwei Standorte auf einer Seite; das OSM-Objekt ist Petersberg, der Filter haengt am dortigen Block.",
+ "osm_id": "node/8117877735",
  "schema": 1,
  "tags": [
-  "fulda-restaurants"
+  "lkfulda-petersberg",
+  "lkfulda-restaurant"
  ],
  "url": "https://kitchen74.de/kontakt/"
 }

@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Montags – Donnerstags 08:00 – 15:30 Uhr Freitags 08:00 – 13:00 Uhr Montage Montags – Donnerstags 08:00 – 15:30 Uhr Freitags 08:00 – 13:00 Uhr Montage",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Schmitt – HLS GmbH",
+ "osm_id": "node/13458619136",
+ "schema": 1,
+ "tags": [
+  "lkfulda-dipperz",
+  "lkfulda-hvac"
+ ],
+ "url": "https://hls-schmitt.de/"
+}

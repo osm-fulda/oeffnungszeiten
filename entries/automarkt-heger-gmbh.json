@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Unsere ÖffnungszeitenMontag bis Freitag:08:00 Uhr - 17:00 Uhr",
+ "filter": "xpath:(//h6[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Automarkt Heger GmbH",
+ "osm_id": "node/13458619135",
+ "schema": 1,
+ "tags": [
+  "lkfulda-car_repair",
+  "lkfulda-dipperz"
+ ],
+ "url": "https://automarkt-heger.de/"
+}

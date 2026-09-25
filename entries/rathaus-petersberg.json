@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Gemeindeverwaltung Petersberg Rathausplatz 1, 36100 Petersberg Zentrale 0661-62060 Telefax 0661-620650 E-Mail gemeinde@petersberg.de SprechzeitenMo-Fr 8:00-12:00 UhrMo 13:30-15:30 UhrMi 14:00-18:00 Uh",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Sprechzeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "Rathaus Petersberg",
+ "osm_id": "way/403711938",
+ "schema": 1,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-townhall"
+ ],
+ "url": "https://petersberg.de/"
+}

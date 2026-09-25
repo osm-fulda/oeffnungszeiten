@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Partyservice Oestreich Wir haben unseren Laden jeden zweiten Samstag für euch geöffnet! Geöffnet von 10:00 Uhr bis 11:00 Uhr am: 11. Januar 19. April 25. Januar 3. Mai 8. Februar 17. Mai 22. Februar 3",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" span8 \")]",
+ "lang": "de",
+ "name": "Fleischerei Oestreich",
+ "note": "Laden oeffnet jede zweite Woche samstags; die Seite listet die Termine einzeln auf.",
+ "osm_id": "node/2461634379",
+ "schema": 1,
+ "tags": [
+  "lkfulda-butcher",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://partyservice-oestreich.de/"
+}

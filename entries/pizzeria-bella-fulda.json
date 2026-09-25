@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Montag: Ruhetag Dienstag–Samstag: 16:00–22:00 Uhr Sonntag: 11:00–14:00 Uhr und 16:00–22:00 Uhr Montags ist Ruhetag. Von Dienstag bis Samstag haben wir von 16:00 bis 22:00 Uhr geöffnet. Sonntags sind w",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Pizzeria Bella Fulda",
+ "osm_id": "node/5565930090",
+ "schema": 1,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://bellafulda.de"
+}

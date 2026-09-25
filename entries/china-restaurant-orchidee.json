@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Täglich (außer dienstags) von 12.00 – 14.30 und 18.00 – 22.00Dienstag ist Ruhetag (außer an Feiertagen)",
+ "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")])]",
+ "lang": "de",
+ "name": "China-Restaurant Orchidee",
+ "osm_id": "node/2510221380",
+ "schema": 1,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.chinarestaurant-orchidee-petersberg.de/"
+}

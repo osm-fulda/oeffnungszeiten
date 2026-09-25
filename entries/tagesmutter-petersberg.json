@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Sabine Eller Qualifizierte Tagesmutter Bachstraße 20 36100 Petersberg/Marbach 0151/57722778 (Gerne auch Nachricht per WhatsApp) info@tagesmutter-petersberg.de Betreuungszeiten Montag bis Mittwoch: 8–1",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Tagesmutter Petersberg",
+ "osm_id": "node/10943135952",
+ "schema": 1,
+ "tags": [
+  "lkfulda-company",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://tagesmutter-petersberg.de/"
+}

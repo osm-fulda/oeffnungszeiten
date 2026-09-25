@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Montags, Dienstags & Mittwochs: Ruhetag Donnerstags – Samstags: ab 17 Uhr (und nach Vereinbarung) Sonn- & Feiertags: von 11:30 Uhr – 14:00 Uhr und von 17:00 Uhr – 20:00 Uhr",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Weikardshof",
+ "osm_id": "way/248051481",
+ "schema": 1,
+ "tags": [
+  "lkfulda-biergarten",
+  "lkfulda-ebersburg"
+ ],
+ "url": "https://www.weikardshof-rhoen.de/"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Bergstr. 136100 PetersbergTel. 0661-9012870info@reiter-immobilien.netÖffnungszeiten:Mo-Do: 09:00 - 18:00 UhrSa: 10:00 - 16:00 Uhr",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Reiter Immobilien",
+ "note": "JSON-LD nennt nur Mo-Fr; der sichtbare Text traegt auch den Samstag.",
+ "osm_id": "node/13955898294",
+ "schema": 1,
+ "tags": [
+  "lkfulda-estate_agent",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://www.reiter-immobilien.net/"
+}
