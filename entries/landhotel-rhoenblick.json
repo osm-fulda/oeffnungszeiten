@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Unsere ÖffnungszeitenMontag bis Samstag ab 16.00 Uhr / Küche 17.00 Uhr bis 21.30 UhrMittwoch (Ruhetag) Öffnung auf AnfrageSonntag Küche 11-30 Uhr bis 13.45 Uhr und 17.30 Uhr bis 20.30 Uhr Feiertage ab",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "Landhotel Rhönblick",
+ "note": "Der Ausschnitt traegt Oeffnungs- und Kuechenzeiten zusammen, so wie die Seite sie schreibt.",
+ "osm_id": "node/1600493962",
+ "schema": 1,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://rhoenblick-steinau.de/"
+}

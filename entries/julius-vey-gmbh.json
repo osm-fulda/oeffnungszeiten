@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Montag bis Donnerstag 7.00 Uhr bis 16.00 Uhr Freitag 7.00 Uhr bis 13.30 Uhr",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Julius Vey GmbH",
+ "osm_id": "node/13458940549",
+ "schema": 1,
+ "tags": [
+  "lkfulda-ehrenberg-rhoen",
+  "lkfulda-joiner"
+ ],
+ "url": "https://moebelvey.de/kontakt/"
+}

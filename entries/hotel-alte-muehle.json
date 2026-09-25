@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Wir bitten Sie um eine rechtzeitige Reservierung, damit wir Ihren Aufenthalt optimal gestalten können. Unser Restaurant öffnet von Donnerstag bis Samstag von 17:30 Uhr bis 23:00 Uhr.",
+ "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"donnerstag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"donnerstag\")])]",
+ "lang": "de",
+ "name": "Hotel Alte Mühle",
+ "osm_id": "way/342551758",
+ "schema": 1,
+ "tags": [
+  "lkfulda-ebersburg",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://rhoenhotel-altemuehle.de/"
+}

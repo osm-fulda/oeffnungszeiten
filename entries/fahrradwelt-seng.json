@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "ÖffnungszeitenHauptsaison (Mär. - Aug.)Montag: GeschlossenDienstag bis Freitag: 09:00 - 19:00 UhrSamstag: 09:00 - 16:00 UhrNebensaison (Sep. - Feb.)Montag: GeschlossenDienstag bis Freitag: 10:00 - 18:",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Fahrradwelt Seng",
+ "osm_id": "way/550447137",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bicycle",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://www.fahrradwelt-seng.de/"
+}

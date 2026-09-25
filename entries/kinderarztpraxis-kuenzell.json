@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Sprechzeitenmontags - freitags 8.30 - 12.00 Uhr und 15.00 - 18.00 Uhr telefonische Erreichbarkeit montags - freitags 8.30 - 12.00 Uhr und 15.00 - 17.00 Uhr(außer mittwochs und freitags Nachmittag)sowi",
+ "filter": "xpath://*[@id=\"widgetbar_site_1\"]",
+ "lang": "de",
+ "name": "Kinderarztpraxis Künzell",
+ "osm_id": "node/5524548659",
+ "schema": 1,
+ "tags": [
+  "lkfulda-doctors",
+  "lkfulda-kuenzell"
+ ],
+ "url": "http://www.kinderarztpraxis-kuenzell.de"
+}

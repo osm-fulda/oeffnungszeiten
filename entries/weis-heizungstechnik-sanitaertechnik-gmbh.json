@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Öffnungszeiten Mo - Do: 7:30-16:30 Uhr Freitag: 7:30-14:00 Uhr",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Weis Heizungstechnik Sanitärtechnik GmbH",
+ "osm_id": "node/10942962841",
+ "schema": 1,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-plumber"
+ ],
+ "url": "https://weis24.de/"
+}

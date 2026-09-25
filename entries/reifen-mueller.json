@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "FilialeFulda-Petersberg Breitunger Straße 7 36100 Fulda-Petersberg Telefon: +49 (0)661/607672 Telefax: petersberg@reifen-mueller.com Öffnungszeiten Mo. - Fr. von 08:00 - 17:00 Uhr Sa. von 08:00 - 12:0",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Reifen Müller",
+ "osm_id": "node/13473795358",
+ "schema": 1,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-tyres"
+ ],
+ "url": "https://petersberg.reifen-mueller.com/startseite-kopie-1/"
+}

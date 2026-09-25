@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "Montag 8:00 - 11:30 Uhr und 14:30 - 17:00 Uhr Dienstag 8:00 - 11:30 Uhr und 14:30 - 17:00 Uhr Mittwoch 8:00 - 11:30 Uhr Donnerstag 8:00 - 11:30 Uhr und 14:30 - 17:00 Uhr Freitag 8:00 - 11:30 Uhr und n",
+ "filter": "xpath://table[contains(concat(\" \",normalize-space(@class),\" \"),\" sprechzeiten \")]",
+ "lang": "de",
+ "name": "Dr. med. Michael Harre",
+ "note": "Portalseite (kinderaerzte-im-netz.de), der Filter fasst aber genau den Zeitenblock dieser Praxis.",
+ "osm_id": "node/4689539510",
+ "schema": 1,
+ "tags": [
+  "lkfulda-doctors",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://www.kinderaerzte-im-netz.de/aerzte/petersberg/petersberg-fulda/hauptseite.html"
+}

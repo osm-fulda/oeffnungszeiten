@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-25",
+ "captured_sample": "ÖffnungszeitenMontag – Freitag: 07:00 – 18:30 UhrSamstag: 07:00 – 14:00 Uhr",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "SB Union Großmarkt",
+ "osm_id": "way/290917101",
+ "schema": 1,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-wholesale"
+ ],
+ "url": "https://sbunion.de/markt-petersberg/"
+}
