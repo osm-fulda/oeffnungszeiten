@@ -1,0 +1,16 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Mo. bis Fr.: 8 - 18 Uhr Pausenzeit: 14:00-15:00 Uhr Sa.: 9 - 13 Uhr Termine nach Geschäftsschluss nur nach ausdrücklicher Vereinbarung",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://*[contains(.,\"Pausenzeit\") and contains(.,\"Sa.\")][not(.//*[contains(.,\"Pausenzeit\") and contains(.,\"Sa.\")])]",
+ "lang": "de",
+ "name": "Erb KFZ-Meisterbetrieb",
+ "note": "2026-09-29: Wix-Seite, Klassen sind generiert; Filter ueber das Wort \"Pausenzeit\".",
+ "osm_id": "way/1311830148",
+ "schema": 1,
+ "tags": [
+  "lkfulda-car_repair",
+  "lkfulda-grossenlueder"
+ ],
+ "url": "https://www.erb-motoren.de"
+}

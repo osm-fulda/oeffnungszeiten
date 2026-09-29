@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Geöffnet ist täglich ab 12:00 Uhr bis zum Softclosing ab 18:00 Uhr. (Softclosing = Vorbereitung auf einen betriebsabhängigen Feierabend)",
+ "filter": "xpath://*[contains(.,\"Softclosing\") and contains(.,\"12:00\")][not(.//*[contains(.,\"Softclosing\") and contains(.,\"12:00\")])]",
+ "lang": "de",
+ "name": "Bistro Fischerhütte (Hessenmühle)",
+ "note": "2026-09-29: Nur der Satz zur Fischerhuette; die Seite fuehrt auch das Restaurant.",
+ "osm_id": "way/192399474",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.landgasthof-hessenmuehle.de/de/gastronomie/"
+}

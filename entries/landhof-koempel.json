@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Öffnungszeiten unseres Bauernladen Montag - Freitag 07:30 - 18:00 Uhr Samstag 07:30 - 13:30 Uhr ... und nach Vereinbarung. Wir freuen uns auf Ihren Besuch!",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Landhof Kömpel",
+ "osm_id": "way/108773924",
+ "schema": 1,
+ "tags": [
+  "lkfulda-farm",
+  "lkfulda-grossenlueder"
+ ],
+ "url": "https://www.landhof-koempel.de/"
+}

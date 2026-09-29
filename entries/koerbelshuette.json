@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Körbelshütte · An der Schnepfenkapelle 4 · 36137 Großenlüder Tel: 0 66 48 / 62 00 90 · info@koerbelshuette.de Öffnungszeiten: Sommer (1. Mai bis 31. Oktober) · Mi. bis Sa. 14 - 18 Uhr · So. 12- 18 Uhr",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Körbelshütte",
+ "note": "2026-09-29: Saisonzeiten (Sommer Mai-Okt, Winter Nov-Apr). Das Banner \"Winterzeiten ab 1. Oktober 2026\" steht ausserhalb des Filters.",
+ "osm_id": "way/224873474",
+ "schema": 1,
+ "tags": [
+  "lkfulda-cafe",
+  "lkfulda-grossenlueder"
+ ],
+ "url": "https://koerbelshuette.de/"
+}

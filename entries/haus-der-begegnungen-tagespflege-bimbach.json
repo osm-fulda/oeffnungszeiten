@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Tägliche Öffnungszeiten: Montag bis Freitag von8.30 Uhr bis 16.30 Uhr",
+ "filter": "xpath:(//h1[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Haus der Begegnungen (Tagespflege Bimbach)",
+ "osm_id": "way/115887924",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-social_facility"
+ ],
+ "url": "http://www.seniorentagespflege-bimbach.de/index.php/oeffnungszeiten"
+}

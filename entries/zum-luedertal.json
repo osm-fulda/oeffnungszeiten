@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Mo.: ab 17:00 Uhr Di.: ab 17:00 Uhr Mi.: Ruhetag Do.: ab 17:00 Uhr Fr.: ab 17:00 Uhr Sa.: ab 17:00 Uhr So.: 10:00 – 14:00 Uhr",
+ "filter": "xpath://*[contains(.,\"Mi.: Ruhetag\") and contains(.,\"ab 17\")][not(.//*[contains(.,\"Mi.: Ruhetag\") and contains(.,\"ab 17\")])]",
+ "lang": "de",
+ "name": "Zum Lüdertal",
+ "note": "2026-09-29: Die Startseite hat zwei Bloecke; der erste (Mo 15-18 ...) ist nicht das Restaurant.",
+ "osm_id": "node/10151382319",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://zum-luedertal.de/"
+}

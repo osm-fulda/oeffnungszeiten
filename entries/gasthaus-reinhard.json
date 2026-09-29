@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Öffnungszeiten: Montag und Dienstag: Ruhetag Mittwoch bis Samstag ab 17:00 Uhr Sonntag ab 10:30 bis 14:30 Uhr und 17:00 bis 22:00 Uhr",
+ "filter": "xpath://*[contains(.,\"Ruhetag\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Ruhetag\") and contains(.,\"Uhr\")])]",
+ "lang": "de",
+ "name": "Gasthaus Reinhard",
+ "osm_id": "way/108260050",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.gasthaus-reinhard.de/willkommen.html"
+}

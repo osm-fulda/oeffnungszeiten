@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "KontaktTel: 06648-6287900 E-Mail: buchung@landgasthof-zurlinde-bimbach.deÖffnungszeiten RestaurantDienstag - Donnerstag 16:00 - 22:00 UhrFreitag, Samstag: 16:00 - 23:00 UhrSonntag: 10.00 - 21:00 Uhr",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Landgasthof Zur Linde (Bimbach)",
+ "note": "2026-09-29: Nur der Restaurant-Block, nicht die Biergarten-Saisonzeiten.",
+ "osm_id": "node/7414170635",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://landgasthof-zurlinde-bimbach.de/"
+}

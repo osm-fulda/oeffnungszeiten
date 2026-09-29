@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Unsere Öffnungszeiten: Montag 09:00 – 12:30 14:00 – 18:00 Dienstag 09:00 – 12:30 14:00 – 18:00 Mittwoch 09:00 – 12:30 14:00 – 18:00 Donnerstag 09:00 – 12:30 14:00 – 18:00 Freitag 09:00 – 12:30 14:00 –",
+ "filter": "xpath://*[@id=\"post-32\"]",
+ "lang": "de",
+ "name": "Schuh-Sport-Schneck",
+ "osm_id": "way/101923682",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-shoes"
+ ],
+ "url": "https://www.schuh-sport-schneck.de/schuh-sport-schneck-schuhe-sport-und-mode-seit-ueber-60-jahren/oeffnungszeiten/"
+}

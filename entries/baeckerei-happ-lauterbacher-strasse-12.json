@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Nahkauf Großenlüder Lauterbacher Straße 1236137 GroßenlüderT 06648 620 234 Anfahrt Mo. - Fri. 06:00 - 18:30 Uhr Sa. 06:00 - 13:00 Uhr So. 07:00 - 11:00 Uhr Sa, 03. Oktober 07.00 - 11.00 Uhr",
+ "filter": "xpath://div[contains(.,\"Lauterbacher Straße 12\") and contains(.,\"Uhr\")][not(.//div[contains(.,\"Lauterbacher Straße 12\") and contains(.,\"Uhr\")])]",
+ "lang": "de",
+ "name": "Bäckerei Happ (Lauterbacher Straße 12)",
+ "note": "2026-09-29: Zeile der Filialliste ueber die Anschrift (FILTERS.md Fall 12), wie die anderen Happ-Eintraege.",
+ "osm_id": "node/2018839453",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bakery",
+  "lkfulda-grossenlueder"
+ ],
+ "url": "https://baecker-happ.de/fachgeschaefte/"
+}

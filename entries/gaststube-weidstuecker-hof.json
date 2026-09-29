@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Mittwoch & Donnerstag 17:00 – 22:00 UhrSonntag 14:00 – 18:00 Uhr",
+ "filter": "xpath://ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mittwoch\")][not(.//ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mittwoch\")])]",
+ "lang": "de",
+ "name": "Gaststube Weidstücker Hof",
+ "note": "2026-09-29: Nur die regulaeren Zeiten, nicht die Brunch- und Eventtermine.",
+ "osm_id": "node/11972455378",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://weidstuecker-hof-events.de/"
+}

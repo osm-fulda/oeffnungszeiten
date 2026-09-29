@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Montag - Freitag von 9.00 - 13.00 Uhr oder nach Absprache",
+ "filter": "xpath://span[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//span[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Döppner Heizung Bäder Solar",
+ "osm_id": "way/917623549",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-hvac"
+ ],
+ "url": "https://doeppner.de/kontakt/"
+}

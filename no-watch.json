@@ -2729,6 +2729,33 @@
    "recheck": "on-relocation",
    "note": "Von hier 200, vom VPS 403 von Cloudflare (4547 Bytes) bei aktuellem Chrome-UA, gemessen 2026-09-29.",
    "osm_id": "way/122113602"
+  },
+  {
+   "url": "https://www.rewe.de/marktseite/grossenlueder/1464160/rewe-markt-lauterbacher-strasse-33/",
+   "name": "Rewe (Großenlüder, Lauterbacher Straße 33)",
+   "reason": "anti-bot",
+   "established": "2026-09-29",
+   "recheck": "on-relocation",
+   "note": "WAF-Sperre auf rewe.de, auch im Browser. Wert in OSM am 29.09.2026 vom Nutzer auf der Marktseite abgelesen und bestaetigt.",
+   "osm_id": "way/352865409"
+  },
+  {
+   "url": "https://www.rewe.de/marktseite/grossenlueder/1775168/nahkauf-lauterbacher-strasse-12/",
+   "name": "Nahkauf (Großenlüder, Lauterbacher Straße 12)",
+   "reason": "anti-bot",
+   "established": "2026-09-29",
+   "recheck": "on-relocation",
+   "note": "WAF-Sperre auf rewe.de (auch nahkauf.de: 403), auch im Browser. Wert in OSM am 29.09.2026 vom Nutzer auf der Marktseite abgelesen und bestaetigt.",
+   "osm_id": "way/191140981"
+  },
+  {
+   "url": "https://www.zahnarzt-kreiss.de/",
+   "name": "Zahnarzt Kreiss",
+   "reason": "appointment-only",
+   "established": "2026-09-29",
+   "recheck": "never",
+   "note": "Seite: \"Sprechzeiten: Montag bis Freitag, nach Vereinbarung. Wir bitten um telefonische Terminvereinbarung.\" Keine Uhrzeit, die ein Watch erfassen koennte. OSM-Wert \"nach Vereinbarung\" am 29.09.2026 bestaetigt.",
+   "osm_id": "node/7204225769"
   }
  ]
 }

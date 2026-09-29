@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Montag Geschlossen Dienstag 09:00 – 18:00 Mittwoch 09:00 – 18:00 Donnerstag 09:00 – 18:00 Freitag 09:00 – 18:00 Samstag 08:00 – 13:00 Sonntag Geschlossen",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://*[@id=\"opening-hours-table\"]",
+ "lang": "de",
+ "name": "Einzigartig by Bastian Schaefer",
+ "osm_id": "node/12978200450",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-hairdresser"
+ ],
+ "url": "https://einzigartig.style/pages/contact"
+}
