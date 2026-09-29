@@ -341,6 +341,22 @@ Check for it with a per-watch snapshot read, not the UI diff:
 curl -s -H "x-api-key: $KEY" "$CD/api/v1/watch/<uuid>/history/<ts>" | head -c 200
 ```
 
+### Case 14: `Exception:` with nothing after it
+Symptom: the watch reports `fetch error: Exception:` and no message, while the page answers 200
+from the pod and the filter matches in `lxml`. The fetch is fine; the `xpath:` filter is not
+evaluated at all. changedetection hands `xpath:` to elementpath, whose tree builder asserts on
+content that follows `</html>`: a stray `<script>` or a debug line like `No Cache ist
+aktiviert!`. The `AssertionError` has no message, hence the empty `Exception:`.
+
+Fix: the same expression with `xpath1:`, which runs through `lxml` directly and never builds
+the elementpath tree. XPath 1.0 covers everything the wizard emits. Reproduce in the pod:
+
+```python
+from changedetectionio import html_tools as h
+h.xpath_filter(xpath_filter=x, html_content=html)    # AssertionError
+h.xpath1_filter(xpath_filter=x, html_content=html)   # the hours
+```
+
 ### Not a case: absence
 No hours published anywhere, anti-bot 403 in all modes (lieferando/DataDome class), dead domain:
 write the object into [`no-watch.json`](./no-watch.json) instead, with the reason, the date and a

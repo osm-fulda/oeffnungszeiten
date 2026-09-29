@@ -1,8 +1,8 @@
 {
  "added": "2026-08-03",
- "captured_sample": "Donnerstag 12:00 - 21:00 Freitag 12:00 - 21:00 Samstag 12:00 - 21:00 Sonntag 12:00 - 18:00",
+ "captured_sample": "SPÄTOMMER 2026 Die Tage werden kürzer + am Aueweiher wird es abends früher dunkel. [...] Do.-Sa. 12:00 - 19:00So. 12:00 - 18:00Teilweise für private Events reserviert",
  "fetch_backend": "system",
- "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"donnerstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"donnerstag\")])]",
+ "filter": "xpath://div[contains(@class,\"grid-group-wrapper-root\")][contains(.,\":00\")][not(.//div[contains(@class,\"grid-group-wrapper-root\")][contains(.,\":00\")])]",
  "name": "Pier 36 Fulda",
  "osm_id": "node/13304700184",
  "schema": 1,
