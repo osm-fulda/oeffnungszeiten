@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Montag: 08:00 - 20:00 Dienstag: 08:00 - 20:00 Mittwoch: 08:00 - 20:00 Donnerstag: 08:00 - 20:00 Freitag: 08:00 - 20:00 Samstag: 07:00 - 20:00 Sonntag:Geschlossen",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" detail-open-hours-list \")]",
+ "lang": "de",
+ "name": "Pappert (Künzell)",
+ "osm_id": "node/1289233695",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bakery",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.papperts.de/dealer/fil-kunzell/"
+}

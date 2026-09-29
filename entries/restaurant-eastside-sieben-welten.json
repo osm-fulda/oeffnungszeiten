@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "ÖffnungszeitenTäglich von 10.00 bis 22.00 UhrSonderöffnungszeiten24. Dezember von 10.00 bis 16.00 Uhr31. Dezember von 10.00 bis 18.00 Uhr",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "Restaurant Eastside (Sieben Welten)",
+ "note": "2026-09-29: OSM traegt die Zeiten der Therme (Entscheidung 27.09.2026). Die Gastronomieseite nennt Fruehstueck und Abendessen nur als Buffet-Angebote; bewusst nicht uebernommen.",
+ "osm_id": "node/954893693",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.siebenwelten.de/spa-resort/oeffnungszeiten-preise/"
+}

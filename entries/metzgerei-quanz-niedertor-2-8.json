@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Filiale Hünfeld Tegut Niedertor 2-8 36088 Hünfeld Tel: (06652) 15 23 Öffnungszeiten: Mo. - Sa.: 07:00 - 19:00 Uhr",
+ "filter": "xpath://*[contains(.,\"Niedertor\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Niedertor\") and contains(.,\"Uhr\")])]",
+ "lang": "de",
+ "name": "Metzgerei Quanz (Niedertor 2-8)",
+ "note": "2026-09-29: Filiale im tegut; Zeile der Filialliste ueber die Anschrift (FILTERS.md Fall 12).",
+ "osm_id": "node/2192568346",
+ "schema": 1,
+ "tags": [
+  "lkfulda-butcher",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://www.metzgerei-quanz.de/startseite-neu/"
+}

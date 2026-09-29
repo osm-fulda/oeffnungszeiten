@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Öffnungszeiten Di - Fr 9:00 - 18:00Montag Ruhetag Kontakt + Anfahrt Hahlweg 39 36093 Künzell 0661 - 38 02 16 90 Anfahrt E-Mail",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" box-grau \")]",
+ "lang": "de",
+ "name": "Marie-Luise Weber Haare & Schönheit",
+ "osm_id": "node/5318502509",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hairdresser",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.marie-luise-weber.de/"
+}

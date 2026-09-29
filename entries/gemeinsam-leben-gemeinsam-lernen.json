@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Montag - Freitag: 9:00 - 13.00 Uhr / Mittwoch bis 16.00 Uhr",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Gemeinsam Leben - Gemeinsam Lernen",
+ "note": "2026-09-29: Stand seit 2026-09-25 in no-watch.json (Fliesstext, nur ganze Seite). Der Wizard findet jetzt den Block \"Montag - Freitag: 9:00 - 13.00 Uhr / Mittwoch bis 16.00 Uhr\".",
+ "osm_id": "node/6555923926",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-social_facility"
+ ],
+ "url": "https://gemeinsamleben-fulda.de/"
+}

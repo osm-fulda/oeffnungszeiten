@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Montag–Freitag: 14.00–19.00 Uhr Samstag: 10.00–14.00 Uhr",
+ "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Das Bett",
+ "osm_id": "node/12842798315",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bed",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.das-bett.com/"
+}

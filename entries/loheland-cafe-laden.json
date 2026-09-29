@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Montag bis Samstag von 9 bis 18 Uhr",
+ "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Loheland Café & Laden",
+ "osm_id": "way/114467665",
+ "schema": 1,
+ "tags": [
+  "lkfulda-cafe",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.loheland.de/loheland-laden"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Mo., Di., & Do.: von 10:00 - 18:00 Uhr Mi. & Fr.: Geschlossen",
+ "filter": "xpath://*[contains(.,\"Geschlossen\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Geschlossen\") and contains(.,\"Uhr\")])]",
+ "lang": "de",
+ "name": "Skin Feelings",
+ "note": "2026-09-29: Der Wizard bot die Webflow-Klasse paragraph-52 an; die trifft viermal und nimmt die Anschrift mit. Jetzt das innerste Element mit Geschlossen und Uhr.",
+ "osm_id": "node/13512981765",
+ "schema": 1,
+ "tags": [
+  "lkfulda-beauty",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.skinfeelings.de"
+}

@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Donnerstag15:00 - 18:00 Uhr Von 15:00 bis 18:00 Uhr Freitag15:00 - 18:00 Uhr Von 15:00 bis 18:00 Uhr Samstag15:00 - 18:00 Uhr Von 15:00 bis 18:00 Uhr Sonntag15:00 - 18:00 Uhr Von 15:00 bis 18:00 Uhr $",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" component-openingHours \")]",
+ "lang": "de",
+ "name": "Museum Modern Art",
+ "osm_id": "way/1532007600",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-museum"
+ ],
+ "url": "https://www.museum-modern.art/de/"
+}

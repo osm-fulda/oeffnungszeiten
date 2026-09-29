@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Öffnungszeiten Montags bis Freitags 8:00 – 12:00 Uhr Mittwochs 14:00 – 18:00 Uhr Donnerstags 14:00 – 16:30 Uhr(nur Bürgerbüro)",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Gemeindeverwaltung Künzell",
+ "osm_id": "way/142693662",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-townhall"
+ ],
+ "url": "https://www.kuenzell.de/"
+}

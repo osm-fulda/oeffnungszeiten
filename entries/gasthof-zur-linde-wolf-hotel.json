@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Mo. & Di.: RuhetagMi. – Sa.: 17:00 bis 21:00 Uhr warme KücheSo.: 11:30 bis 21:00 Uhr warme Küche Ab 21:00 Uhr verabschiedet sich unsere warme Küche – wir freuen uns jedoch, Ihnen weiterhin Getränke fü",
+ "filter": "xpath://*[contains(.,\"Ruhetag\")][not(.//*[contains(.,\"Ruhetag\")])]/parent::*",
+ "lang": "de",
+ "name": "Gasthof zur Linde (Wolf Hotel)",
+ "note": "2026-09-29: Die alte Domain gasthofzurlinde.de steht zum Verkauf; das Restaurant gehoert jetzt zum Wolf Hotel. Filter nimmt nur den Restaurant-Block, nicht Check-in und Rezeption.",
+ "osm_id": "node/1917471158",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://wolfhotel-zurlinde.de/"
+}

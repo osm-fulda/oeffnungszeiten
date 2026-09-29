@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Öffnungszeiten der Verwaltung: Montag bis Donnerstag: 8.00 bis 17.00 Uhr Freitag: 8.00 bis 14.00 Uhr",
+ "filter": "xpath://p[contains(.,\"Öffnungszeiten der Verwaltung\")] | //p[contains(.,\"Öffnungszeiten der Verwaltung\")]/following-sibling::p[position()<=2]",
+ "lang": "de",
+ "name": "Loheland Verwaltung",
+ "note": "2026-09-29: Die Zeiten stehen im Impressum auf zwei Absaetzen hinter der Ueberschrift; der gemeinsame Vorfahr waere das ganze Impressum.",
+ "osm_id": "way/428741841",
+ "schema": 1,
+ "tags": [
+  "lkfulda-association",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.loheland.de/service-impressum"
+}

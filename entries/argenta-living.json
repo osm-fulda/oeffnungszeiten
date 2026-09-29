@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Öffnungszeiten Restaurant - Bar - Lounge Di.-Sa.: 17:00 - 23:00 Uhr So.: 12:30 - 21:00 Uhr Montag Ruhetag Frühstück Di.-So.: 08:00 - 11:00 Uhr nur mit Reservierung",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Argenta Living",
+ "note": "2026-09-29: Objekt in OSM ohne name; Restaurant-Bar-Lounge des Hotels Argenta, Turmstrasse 131.",
+ "osm_id": "node/11149877653",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://argenta-living.de/"
+}

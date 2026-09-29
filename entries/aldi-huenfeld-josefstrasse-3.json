@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Montag08:00 - 20:00Dienstag08:00 - 20:00Mittwoch08:00 - 20:00Donnerstag08:00 - 20:00Freitag08:00 - 20:00Samstag08:00 - 20:00SonntagGeschlossen",
+ "filter": "xpath://tbody[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//tbody[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Aldi (Hünfeld, Josefstraße 3)",
+ "osm_id": "node/2192215254",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-supermarket"
+ ],
+ "url": "https://www.aldi-nord.de/filialen-und-oeffnungszeiten/huenfeld/josefstrasse-3/3182169.html"
+}

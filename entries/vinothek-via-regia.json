@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Freitag und Samstag 17 bis 20 Uhr",
+ "filter": "xpath://span[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")][not(.//span[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")])]",
+ "lang": "de",
+ "name": "Vinothek Via Regia",
+ "osm_id": "node/10312670930",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-wine"
+ ],
+ "url": "https://www.vinothek-viaregia.de/"
+}

@@ -2650,15 +2650,6 @@
    "osm_id": "way/448427692"
   },
   {
-   "url": "https://www.gemeinsamleben-fulda.de/",
-   "name": "Gemeinsam Leben - Gemeinsam Lernen",
-   "reason": "no-hours-on-page",
-   "established": "2026-09-25",
-   "recheck": "2027-03-01",
-   "note": "Die Zeiten stehen in einem Fliesstextsatz, den kein Filter sauber fasst; der Wizard bietet nur die ganze Seite an.",
-   "osm_id": "node/6555923926"
-  },
-  {
    "url": "http://www.eiscafe-ferreiro.de/",
    "name": "Eiscafé Ferreiro",
    "reason": "no-hours-on-page",
@@ -2684,6 +2675,42 @@
    "recheck": "2027-03-01",
    "note": "Der beste Kandidat des Wizards faengt die Bedienleiste eines Videos. Die Zeiten stehen auf der Seite, aber in keinem Element, das sich eingrenzen laesst.",
    "osm_id": "node/3561362916"
+  },
+  {
+   "url": "https://www.rewe.de/marktseite/kuenzell/1465105/rewe-markt-am-frankengrund-9/",
+   "name": "REWE (Künzell, Am Frankengrund 9)",
+   "reason": "anti-bot",
+   "established": "2026-09-29",
+   "recheck": "on-relocation",
+   "note": "403 auf den einfachen Abruf, wie bei allen rewe.de-Marktseiten. Wert in OSM am 28.09.2026 von Hand geprueft.",
+   "osm_id": "way/141501273"
+  },
+  {
+   "url": "https://www.mcdonalds.com/de/de-de/restaurant-suche.html/l/kunzell/danziger-str-12/1556",
+   "name": "McDonald's (Künzell, Danziger Straße 12)",
+   "reason": "anti-bot",
+   "established": "2026-09-29",
+   "recheck": "on-relocation",
+   "note": "403 auf den einfachen Abruf. Wert in OSM am 28.09.2026 von Hand geprueft.",
+   "osm_id": "way/97338205"
+  },
+  {
+   "url": "https://www.kaercher.com/de/cleanpark.html",
+   "name": "Kärcher Clean Park Koch (Hünfeld)",
+   "reason": "no-hours-on-page",
+   "established": "2026-09-29",
+   "recheck": "2027-03-01",
+   "note": "Die Konzernseite fuehrt nur die Zeiten der Service-Hotline in Winnenden (07195 903-0), keine des Waschparks in Huenfeld. Eine Seite fuer den Standort gibt es nicht.",
+   "osm_id": "node/4551077434"
+  },
+  {
+   "url": "https://www.altepiesel.de/",
+   "name": "Alte Piesel",
+   "reason": "no-hours-on-page",
+   "established": "2026-09-29",
+   "recheck": "2027-03-01",
+   "note": "Keine festen Zeiten: \"Die Alte Piesel ist an allen Tagen geoeffnet, an denen Veranstaltungen stattfinden.\" OSM traegt \"bei Veranstaltungen\" (geprueft 26.09.2026).",
+   "osm_id": "way/620822483"
   }
  ]
 }

@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Mo.-Fr: 14:00 – 19:00 Uhr Sa.-So: 10.30 – 19:00 Uhr Feiertage: 10:30 – 19:00 Uhr ------------------------------------------------------Während der Schulferien in: Hessen: 11:00 – 19:00 Uhr Bayern: 12:",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Takka-Tukka Abenteuerland & Sportwelt",
+ "osm_id": "way/142673476",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-sports_centre"
+ ],
+ "url": "https://fulda.takka-tukka.com/"
+}

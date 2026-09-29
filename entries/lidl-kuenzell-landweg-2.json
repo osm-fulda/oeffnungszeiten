@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday 07:00-21:00",
+ "filter": "json:$..openingHoursSpecification",
+ "lang": "de",
+ "name": "Lidl (Künzell, Landweg 2)",
+ "note": "2026-09-29: JSON-LD, weil der sichtbare Block erst im Browser entsteht. Stimmt am 29.09.2026 mit OSM ueberein (Mo-Sa 07:00-21:00).",
+ "osm_id": "way/141501270",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-supermarket"
+ ],
+ "url": "https://www.lidl.de/s/de-DE/filialen/kuenzell/landweg-2-ecke-turmstr/"
+}

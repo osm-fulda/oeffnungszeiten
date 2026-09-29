@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Arbeitszeit: von Montag bis Freitag10.00 bis 18.00 Uhr | Samstag 10:00 bis 13:00 Uhr",
+ "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "CarGo",
+ "osm_id": "node/13420578773",
+ "schema": 1,
+ "tags": [
+  "lkfulda-car_rental",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://cargo-fulda.de/contact-us/"
+}

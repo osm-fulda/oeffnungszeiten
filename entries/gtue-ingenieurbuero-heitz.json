@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Öffnungszeiten Mo. - Fr. 8:00 - 17:00UhrSa. 9:00 - 12:00Uhr",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "GTÜ Ingenieurbüro Heitz",
+ "osm_id": "way/132730206",
+ "schema": 1,
+ "tags": [
+  "lkfulda-car_repair",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.gtue.de/standorte/ingenieurbuero-heitz-gbr-kuenzell/171695000"
+}

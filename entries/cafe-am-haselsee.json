@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Öffnungszeiten in der Sommersaison:Dienstag bis Freitag: 14 bis 19 Uhr (Montag Ruhetag)Samstag und Sonntag: 9 bis 19 UhrÖffnungszeiten in der Wintersaison (ab 1. November):Samstag und Sonntag: 9 bis 1",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "Café am Haselsee",
+ "osm_id": "way/122384022",
+ "schema": 1,
+ "tags": [
+  "lkfulda-cafe",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://www.hessischeskegelspiel.de/restaurants-und-cafes/cafe-am-haselsee/"
+}
