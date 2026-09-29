@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Filiale Hünfeld Norma Josefstraße 16 36088 Hünfeld Tel: (06652) 13 74 Öffnungszeiten: Mo. - Sa.: 07:00 - 19:00 Uhr",
+ "filter": "xpath://*[contains(.,\"Josefstr\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Josefstr\") and contains(.,\"Uhr\")])]",
+ "lang": "de",
+ "name": "Metzgerei Quanz (Josefstraße 16)",
+ "note": "2026-09-29: Filiale im Norma; Zeile der Filialliste ueber die Anschrift (FILTERS.md Fall 12).",
+ "osm_id": "node/3542359205",
+ "schema": 1,
+ "tags": [
+  "lkfulda-butcher",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://www.metzgerei-quanz.de/startseite-neu/"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Neue Öffnungszeiten: Jeweils Wochenende um den 1. Sonntag im Monat geöffnet 13:30 Uhr - 18:00 Uhr Nächste Termine: Juli: 03.07. - 05.07. Aug.: 31.07. - 02.08. Sept.: 04.09. - 06.09. Okt.: 02.10. - 04.",
+ "filter": "xpath://td[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"sonntag\")][not(.//td[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"sonntag\")])]",
+ "lang": "de",
+ "name": "Rhöner Bauernhofcafé",
+ "note": "2026-09-29: Offen nur am Wochenende um den 1. Sonntag im Monat; der Block fuehrt die naechsten Termine mit und meldet sich, wenn neue dazukommen.",
+ "osm_id": "node/6585654887",
+ "schema": 1,
+ "tags": [
+  "lkfulda-cafe",
+  "lkfulda-kuenzell"
+ ],
+ "url": "http://www.rhoener-bauernhofcafe.de/"
+}

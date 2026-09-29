@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "ÖffnungszeitenMontag bis Mittwoch: geschlossenDonnerstag bis Samstag:17:00 - 0:00Sonntag: 11:30 - 14:3017:00 - 0:00",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Zum Goldenen Stern",
+ "osm_id": "node/13062033075",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.zum-goldenen-stern.net/kontakt.html"
+}

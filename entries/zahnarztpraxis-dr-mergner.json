@@ -1,0 +1,16 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Montag 8:00 - 12:00 & 14:00 - 19:00 Mittwoch 8:00 - 12:00 Dienstag, Donnerstag, Freitag 8:00 - 12:00 & 14:00 - 18:00 Montag 8:00 - 12:00 & 14:00 - 19:00 Mittwoch 8:00 - 12:00 Dienstag, Donnerstag, Fre",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" elementor-widget-uael-business-hours \")]",
+ "lang": "de",
+ "name": "Zahnarztpraxis Dr. Mergner",
+ "note": "2026-09-29: Die Seite liefert den Block doppelt (Desktop und Mobil).",
+ "osm_id": "node/9047466384",
+ "schema": 1,
+ "sort_text_alphabetically": true,
+ "tags": [
+  "lkfulda-dentist",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://www.dr-mergner.de/"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Das Bahnmuseum hat 2026 von April bis Oktober am 1. Sonntag im Monat jeweils von 16.00 bis 18.00 Uhr geöffnet.",
+ "filter": "xpath://*[contains(.,\"Bahnmuseum hat\")][not(.//*[contains(.,\"Bahnmuseum hat\")])]",
+ "lang": "de",
+ "name": "Bahnmuseum Hünfeld",
+ "note": "2026-09-29: Die Seite fuehrt alle Aussenstellen; der Filter nimmt nur den Satz zum Bahnmuseum. Er nennt das Jahr, meldet sich also zum Jahreswechsel.",
+ "osm_id": "node/11711619971",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-museum"
+ ],
+ "url": "https://www.zuse-museum-huenfeld.de/de/aussenstellen/"
+}

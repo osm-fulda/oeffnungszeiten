@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Montag: 07.00 Uhr – 18.00 Uhr Dienstag: 07.00 Uhr – 18.00 Uhr Mittwoch: 07.00 Uhr – 18.00 Uhr Donnerstag: 07.00 Uhr – 18.00 Uhr Freitag: 07.00 Uhr – 18.00 Uhr Samstag: 07.00 Uhr – 13.00 Uhr Sonntag: g",
+ "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Fleischerei Gies (Künzell-Bachrain)",
+ "osm_id": "node/1210695288",
+ "schema": 1,
+ "tags": [
+  "lkfulda-butcher",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://fleischerei-gies.de/filialen/kuenzell-bachrain/"
+}

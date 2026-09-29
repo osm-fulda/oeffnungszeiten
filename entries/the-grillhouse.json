@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Turmstr. 13936093 Künzell / FuldaÖffnungszeiten: Sonntag - Donnerstag 17-21 UhrFreitag / Samstag 17-22 Uhr Tel: 0661 90033165",
+ "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])",
+ "lang": "de",
+ "name": "The Grillhouse",
+ "osm_id": "node/2691153612",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://thegrillhouse.de/"
+}

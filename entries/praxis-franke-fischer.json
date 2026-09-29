@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Montags08:00 – 13:00 und 15:00 bis 17:30 Uhr Dienstags08:00 – 14:00 Uhr Mittwochs08:00 – 13:00 und 15:00 bis 18:30 Uhr Donnerstags08:00 – 13:00 und 15:00 bis 17:00 Uhr Freitags08:00 – 13:00 Uhr",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" nectar-hor-list-item \")]",
+ "lang": "de",
+ "name": "PRAXIS franke fischer",
+ "osm_id": "node/12276809909",
+ "schema": 1,
+ "tags": [
+  "lkfulda-dentist",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://frankefischer.de/kontakt/"
+}

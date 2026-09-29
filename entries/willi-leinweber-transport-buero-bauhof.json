@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Sommer (April bis Oktober) Montag bis Freitag 07:00-18:00 Uhr Samstag: 07:00-13:00 Uhr Winter (November bis März) Montag bis Freitag 07:00-17:00 Uhr Samstag: 08:00-12:00 Uhr",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" without-person \")]",
+ "lang": "de",
+ "name": "Willi Leinweber Transport (Büro/Bauhof)",
+ "note": "2026-09-29: Die Kontaktseite fuehrt sieben Standorte; der Wizard nahm die Sandverladung. without-person trifft genau einmal und ist der Block von Buero/Bauhof In den Gruenden 10.",
+ "osm_id": "node/1600493536",
+ "schema": 1,
+ "tags": [
+  "lkfulda-company",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://leinweber-willi.de/kontakt/"
+}

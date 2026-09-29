@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Hünfeld Fuldaer Straße Fuldaer Straße 26-2836088 HünfeldT 06652 747 3957 Anfahrt Mo. - Fri. 05:00 - 18:00 Uhr Sa. 05:00 - 17:00 Uhr So. 07:00 - 17:00 Uhr Sa, 03. Oktober 077.00 - 17.00 Uhr",
+ "filter": "xpath://div[contains(.,\"Fuldaer Straße 26\") and contains(.,\"Uhr\")][not(.//div[contains(.,\"Fuldaer Straße 26\") and contains(.,\"Uhr\")])]",
+ "lang": "de",
+ "name": "Bäckerei Happ (Fuldaer Straße 26)",
+ "note": "2026-09-29: Zeile der Filialliste ueber die Anschrift (FILTERS.md Fall 12), wie die anderen Happ-Eintraege.",
+ "osm_id": "way/337797550",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bakery",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://baecker-happ.de/fachgeschaefte/"
+}

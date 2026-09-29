@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Für gewerbliche Kunden Mo. - Do. 07:00-17:00 Fr. 07:00-15:00 Ausstellung für Endkunden Mo. - Do. 09:00-17:00 Fr. 09:00-15:00",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" opening-hours-container \")]",
+ "lang": "de",
+ "name": "Jordan (NL Fulda)",
+ "osm_id": "way/124057096",
+ "schema": 1,
+ "tags": [
+  "lkfulda-floorer",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.jordanshop.de/de-DE/filiale/W.%20&%20L.%20Jordan%20GmbH%20NL%20Fulda"
+}

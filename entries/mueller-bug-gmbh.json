@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Sie erreichen uns Montag bis Freitag zwischen 07:00 Uhr und 17:00 Uhr.",
+ "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Müller + Bug GmbH",
+ "osm_id": "node/10654092016",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-roofer"
+ ],
+ "url": "https://www.dachdecker-mueller-bug.de/de/kontakt"
+}

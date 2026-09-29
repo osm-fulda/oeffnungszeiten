@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Liebe Gäste, unsere Gaststätte ist Mittwoch, Donnerstag und Freitag ab 17:00 Uhr geöffnet. Die Gaststätte ist vom 02.09.-04.09.2026 geschlossen. Liebe Gäste, unsere Gaststätte ist Dienstag, Mittwoch, ",
+ "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mittwoch\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mittwoch\")])]",
+ "lang": "de",
+ "name": "Karolinenhof",
+ "note": "2026-09-29: Die Seite fuehrt zwei Hinweise (#open1, #open2) mit verschiedenen Tagen; der Filter nimmt beide. OSM traegt We-Fr aus #open1.",
+ "osm_id": "node/288354576",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.karolinenhof-kuenzell.de/"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "ÖffnungszeitenMontag, Dienstag, Donnerstag, Freitag09:30 bis 12:00 und 14:00 bis 17:00 UhrSamstag09:30 bis 13:00 Uhr ÖffnungszeitenMontag, Dienstag, Donnerstag, Freitag09:30 bis 13:00 und 14:00 bis 18",
+ "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])",
+ "lang": "de",
+ "name": "Otto Diehl",
+ "note": "2026-09-29: Die Seite fuehrt zwei verschiedene Zeitenbloecke (09:30-12:00/14:00-17:00, Mi zu, gegen 09:30-13:00/14:00-18:00). Der Filter nimmt beide, damit jede Aenderung an einem von ihnen auffaellt. OSM traegt den ersten.",
+ "osm_id": "node/13457893886",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-sewing"
+ ],
+ "url": "https://otto-diel.de/"
+}

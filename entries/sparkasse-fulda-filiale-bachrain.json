@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "ÖffnungszeitenMontag14:00-16:00 UhrDienstag09:00-12:30 UhrDonnerstag09:00-12:30 UhrFreitag14:00-16:00 Uhr",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Sparkasse Fulda (Filiale Bachrain)",
+ "osm_id": "node/954893666",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bank",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.sparkasse-fulda.de/de/home/toolbar/filialen/sparkasse-fulda-filiale-bachrain-8570.html"
+}

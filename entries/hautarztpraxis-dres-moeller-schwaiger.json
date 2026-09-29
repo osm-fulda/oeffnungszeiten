@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Sprechstunden Mo, Di8.00 - 13.00 und 14.00 - 17.30 Uhr Mi8.00 - 15.00 Uhr Do8.00 - 13.00 und 14.00 - 18.00 Uhr Fr8.00 - 14.00 Uhr",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Sprechstunde\")])/parent::*",
+ "lang": "de",
+ "name": "Hautarztpraxis Dres. Moeller & Schwaiger",
+ "osm_id": "node/1333352648",
+ "schema": 1,
+ "tags": [
+  "lkfulda-doctors",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.hautarzt-moeller-schwaiger.de/"
+}

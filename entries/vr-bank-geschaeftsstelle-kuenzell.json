@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Tag Von Bis Von Bis Montag 09:00 12:00 Dienstag 09:00 12:00 14:00 16:00 Mittwoch 09:00 12:00 Donnerstag 09:00 12:00 14:00 16:00 Freitag 09:00 12:00 14:00 16:00 Samstag Geschlossen Sonntag Geschlossen",
+ "filter": "xpath://table[contains(.,\"Montag\")][contains(.,\"persönlich bedienten\")]//*[self::th or self::td]",
+ "lang": "de",
+ "name": "VR Bank (Geschäftsstelle Künzell)",
+ "note": "2026-09-29: Die Seite hat zwei Tabellen; die zweite und das JSON-LD sind der SB-Bereich (06-23 Uhr). Der Filter nimmt nur die Filialtabelle. Zellen einzeln gewaehlt, weil die Tabelle als Ganzes Tag und Zeiten ohne Trenner aneinanderhaengt.",
+ "osm_id": "way/699259401",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bank",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.regionalbank.de/meine-bank/filialen/filialen-uebersicht/geschaeftsstelle-kuenzell.html"
+}

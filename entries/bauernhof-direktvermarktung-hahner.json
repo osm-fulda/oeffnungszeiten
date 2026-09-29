@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Öffnungszeiten wie gewohnt: Montag und Donnerstag von 8.00 bis 18.00 Uhr Samstag von 8.00 bis 12.00 Uhr",
+ "filter": "xpath:(//h1[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Bauernhof & Direktvermarktung Hahner",
+ "osm_id": "node/3517771718",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bakery;butcher",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.bauernhof-hahner.de/"
+}

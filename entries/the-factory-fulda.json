@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Monday, Tuesday, Wednesday, Friday 06:00-21:00 · Thursday 08:00-21:00 · Saturday 09:00-18:00 · Sunday 10:00-16:00",
+ "filter": "json:$..openingHoursSpecification",
+ "lang": "de",
+ "name": "The Factory Fulda",
+ "note": "2026-09-29: JSON-LD, weil die sichtbare Tabelle (Framer) nur generierte Klassen hat und Tage und Zeiten getrennt ausgibt. Stimmt am 29.09.2026 mit der sichtbaren Tabelle ueberein.",
+ "osm_id": "node/13434456230",
+ "schema": 1,
+ "tags": [
+  "lkfulda-fitness_centre",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.thefactoryfulda.de/"
+}
