@@ -140,6 +140,14 @@ def adoptions(entries, live, lock):
     True
     >>> adoptions({"a": {"url": "https://a.de/", "name": "A"}}, live, {"a": "u1"})
     {}
+
+    A second entry on a page that has one watch so far is not that watch's owner by position:
+    the name decides, and the newcomer is created.
+
+    >>> pair = {"a-neu": {"url": "https://a.de/", "name": "A Büro"},
+    ...         "a": {"url": "https://a.de/", "name": "A"}}
+    >>> adoptions(pair, live, {}) == {"a": "u1"}
+    True
     """
     adopt = {}
     unlocked = [s for s in entries if lock.get(s) not in live]
@@ -149,10 +157,14 @@ def adoptions(entries, live, lock):
     by_url = {}
     for u, w in live.items():
         by_url.setdefault(norm_url(w.get("url")), []).append(u)
+    sharers = {}
+    for e in entries.values():
+        sharers[norm_url(e.get("url"))] = sharers.get(norm_url(e.get("url")), 0) + 1
     for slug in unlocked:
-        free = [u for u in by_url.get(norm_url(entries[slug].get("url")), [])
+        url = norm_url(entries[slug].get("url"))
+        free = [u for u in by_url.get(url, [])
                 if u not in taken and u not in adopt.values()]
-        if len(free) == 1:
+        if len(free) == 1 and sharers[url] == 1:
             pick = free[0]
         else:
             want = norm_name(entries[slug].get("name"))

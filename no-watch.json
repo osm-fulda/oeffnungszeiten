@@ -2711,6 +2711,24 @@
    "recheck": "2027-03-01",
    "note": "Keine festen Zeiten: \"Die Alte Piesel ist an allen Tagen geoeffnet, an denen Veranstaltungen stattfinden.\" OSM traegt \"bei Veranstaltungen\" (geprueft 26.09.2026).",
    "osm_id": "way/620822483"
+  },
+  {
+   "url": "https://www.blackout-tonstudio.de/",
+   "name": "Blackout Tonstudio",
+   "reason": "datacenter-block",
+   "established": "2026-09-29",
+   "recheck": "on-relocation",
+   "note": "Von hier 200, aus dem Pod 403 von Cloudflare (4547 Bytes) bei aktuellem Chrome-UA, gemessen 2026-09-29.",
+   "osm_id": "way/576600785"
+  },
+  {
+   "url": "https://www.tennishalle-huenfeld.de/kontakt-und-anfahrt/",
+   "name": "Tennishalle Hünfeld",
+   "reason": "datacenter-block",
+   "established": "2026-09-29",
+   "recheck": "on-relocation",
+   "note": "Von hier 200, vom VPS 403 von Cloudflare (4547 Bytes) bei aktuellem Chrome-UA, gemessen 2026-09-29.",
+   "osm_id": "way/122113602"
   }
  ]
 }

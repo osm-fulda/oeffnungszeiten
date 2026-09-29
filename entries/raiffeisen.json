@@ -1,7 +1,7 @@
 {
  "added": "2026-09-20",
  "captured_sample": "ÖffnungszeitenGroßenlüderMontag 09:00 - 12:00 UhrDienstag 09:00 - 12:00 Uhr und 14:00 - 16:00 UhrMittwoch 09:00 - 12:00 UhrDonnerstag 09:00 - 12:00 Uhr und 14:00 - 16:00 UhrFreitag 14:00 - 16:00 UhrFl",
- "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" render-layoutClasses-col-md-8 \")]",
+ "filter": "xpath://main",
  "lang": "de",
  "name": "Raiffeisen",
  "osm_id": "way/89715631",
@@ -10,5 +10,5 @@
   "lkfulda-bank",
   "lkfulda-hosenfeld"
  ],
- "url": "https://www.rb-grossenlueder.de/meine-bank/filialen/filialsuche.html"
+ "url": "https://www.rb-fuldaerland.de/meine-bank/filialen/filialsuche.html"
 }

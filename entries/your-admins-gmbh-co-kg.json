@@ -1,13 +1,13 @@
 {
  "added": "2026-08-13",
- "captured_sample": "GeschäftszeitenWir sind für Sie da ! Mo. bis Fr. von 8.30 Uhr bis 16.30 Uhr.Installationen, Updates und Wartungsarbeiten erledigen wir selbstverständlich außerhalb der Geschäftszeiten. Unser Helpdesk hat für unsere Kunden eine erweiterte Erreichbarkeit.",
+ "captured_sample": "Geschäftszeiten Wir sind für Sie da! Fulda Mo. bis Fr. von 7:00 Uhr bis 16:30 Uhr Frankfurt Mo. bis Fr. von 8:00 Uhr bis 17:00 Uhr",
  "fetch_backend": "system",
- "filter": "xpath:(//h1[contains(normalize-space(.),\"Geschäftszeiten\")])/parent::*",
+ "filter": "xpath://li[.//strong[contains(.,\"Geschäftszeiten\")]]",
  "name": "your admins GmbH & Co. KG",
  "osm_id": "node/12992564276",
  "schema": 1,
  "tags": [
   "fulda-it"
  ],
- "url": "https://www.your-admins.de/"
+ "url": "https://www.your-admins.de/kontakt/"
 }

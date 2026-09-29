@@ -144,6 +144,9 @@ ACTIONS = (
     ("no filters were found",
      "Der Filter trifft nicht mehr, die Seite wurde umgebaut. Neue Kandidaten: "
      "filter_wizard.py --uuid"),
+    ("fetch error: Exception:",
+     "Steht hinter Exception: nichts, scheitert nicht der Abruf, sondern der XPath-Parser an "
+     "Inhalt hinter </html>. Filter mit xpath1: statt xpath: pruefen (FILTERS.md Fall 14)."),
     ("fetch error",
      "Abruf scheitert. Seite von hier und von der VPS mit gleicher Kennung testen."),
     ("no opening hours on this page at all",
