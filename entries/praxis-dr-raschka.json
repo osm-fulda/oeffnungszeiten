@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Sprechstunden: Mo bis Fr 8.30 – 11.30 Uhr Mo und Do 14.30 – 17.00 Uhr Di 17.00 – 19.00 Uhr und nach Terminvereinbarung",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Sprechstunde\")])/parent::*",
+ "lang": "de",
+ "name": "Praxis Dr. Raschka",
+ "osm_id": "way/823787201",
+ "schema": 1,
+ "tags": [
+  "lkfulda-doctors",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://praxis-raschka.de/"
+}

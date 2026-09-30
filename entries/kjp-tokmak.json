@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "SprechzeitenMo, Di, Do Mi, Fr8:15 - 12:00 & 14:00 - 17:00 8:15 - 12:00 Telefonische SprechzeitenMo, Di, Do Mi, Fr8:15 - 11:15 & 14:15 - 16:00 8:15 - 11:15♥",
+ "filter": "xpath:(//h5[contains(normalize-space(.),\"Sprechzeiten\")])/parent::*",
+ "lang": "de",
+ "name": "KJP Tokmak",
+ "note": "2026-09-30: Erfasst Sprech- und Telefonzeiten; in OSM stehen die Sprechzeiten.",
+ "osm_id": "node/11176945488",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hospital",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://kjp-tokmak.de"
+}

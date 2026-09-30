@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Montag 10:00-13:30 & 14:30-17:00 Dienstag Geschlossen Mittwoch Geschlossen Donnerstag 10:00-13:30 & 14:30-17:00 Freitag Geschlossen Samstag 10:00 - 13:00",
+ "filter": "xpath://ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Foto Daniel",
+ "note": "2026-09-30: Firma \"GmbH I.L.\" (in Liquidation) — der Watch meldet eine Schliessung.",
+ "osm_id": "way/209016503",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-photo"
+ ],
+ "url": "https://foto-daniel.rf-webworld.de/"
+}

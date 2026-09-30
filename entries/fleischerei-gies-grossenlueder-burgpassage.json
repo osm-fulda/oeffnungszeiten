@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Adresse: Adresse: Lauterbacher Straße 1 Telefon: 06648 / 7527 Öffnungszeiten: Montag: 07.00 Uhr – 18.00 Uhr Dienstag: 07.00 Uhr – 18.00 Uhr Mittwoch: 07.00 Uhr – 18.00 Uhr Donnerstag: 07.00 Uhr – 18.0",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Fleischerei Gies (Großenlüder, Burgpassage)",
+ "osm_id": "way/108770514",
+ "schema": 1,
+ "tags": [
+  "lkfulda-butcher",
+  "lkfulda-grossenlueder"
+ ],
+ "url": "https://fleischerei-gies.de/filialen/grossenlueder-burgpassage/"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Gesellenstube Olympia Montag Ruhetag Dienstag - Samstag 17:30 Uhr - 22:00 Uhr Sonntag / Feiertag 11:30 Uhr - 14:00 Uhr 17:30 Uhr - 21:00 Uhr",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" uael-modal-title-wrap \")]/following-sibling::*[1]",
+ "lang": "de",
+ "name": "Gesellenstube Olympia",
+ "note": "2026-09-30: Nur der Block der Gaststube, nicht die Abholzeiten.",
+ "osm_id": "node/2484106788",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.gesellenstube-olympia.de/"
+}

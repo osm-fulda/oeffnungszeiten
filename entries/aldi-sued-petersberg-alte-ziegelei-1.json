@@ -1,0 +1,17 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "ÖffnungszeitenMi.07:00 - 20:00Do.07:00 - 20:00Fr.07:00 - 20:00Sa.03.10.2026geschlossenSonderöffnungszeitenSo.geschlossenMo.07:00 - 20:00Di.07:00 - 20:00- DHL Packstation",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Aldi Süd (Petersberg, Alte Ziegelei 1)",
+ "note": "2026-09-30: Wie die anderen Aldi-Sued-Eintraege: gerendert und alphabetisch sortiert, weil der Block ein wanderndes Wochenfenster ist.",
+ "osm_id": "way/26565338",
+ "schema": 1,
+ "sort_text_alphabetically": true,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-supermarket"
+ ],
+ "url": "https://www.aldi-sued.de/filialen/l/petersberg/alte-ziegelei-1/b877"
+}

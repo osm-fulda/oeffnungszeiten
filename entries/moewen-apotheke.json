@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "ÖFFNUNGSZEITEN MÖWEN-APOTHEKE MONTAG - FREITAG 8:30 - 18:00 Mai bis August Mittwoch 8:30 - 13:00 SAMSTAG 8:30 - 13:00 TEL 06648-7234 FAX 06648 8992 INFO@MOEWENAPOTHEKE.COM Die Möwen-Apotheke befindet ",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Möwen Apotheke",
+ "osm_id": "node/5778449356",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-pharmacy"
+ ],
+ "url": "https://www.moewenapotheke.com"
+}

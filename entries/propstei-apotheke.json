@@ -1,0 +1,16 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Öffnungszeiten WochentagUhrzeitenMo - Fr08:00 - 18:00 UhrSa08:30 - 13:00 Uhr Öffnungszeiten WochentagUhrzeitenMo - Fr08:00 - 18:00 UhrSa08:30 - 13:00 Uhr",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Propstei Apotheke",
+ "note": "2026-09-30: Sichtbare Tabelle statt JSON-LD.",
+ "osm_id": "node/4944184936",
+ "schema": 1,
+ "sort_text_alphabetically": true,
+ "tags": [
+  "lkfulda-petersberg",
+  "lkfulda-pharmacy"
+ ],
+ "url": "https://www.propstei-apo.de"
+}

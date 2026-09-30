@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Mo., Di., Mi., Do.: 10:00 - 18:00 UhrFreitag: 09:00 - 18:00 UhrSamstag: 10:00 - 13:00 Uhr",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")])]",
+ "lang": "de",
+ "name": "B!Othek",
+ "note": "2026-09-30: Die Seite meldet \"Die B!Othek sucht einen Kaeufer!\" (30.09.2026).",
+ "osm_id": "node/4297904594",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-supermarket"
+ ],
+ "url": "https://www.biothek-fulda.de/"
+}

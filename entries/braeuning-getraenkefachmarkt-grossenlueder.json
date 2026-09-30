@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Unsere Öffnungszeiten in Großenlüder jetzt geschlossen Montag 9:00–12:30 14:00–18:00 Dienstag 9:00–12:30 14:00–18:00 Mittwoch 9:00–12:30 14:00–18:00 Donnerstag 9:00–12:30 14:00–18:00 Freitag 9:00–12:3",
+ "filter": "xpath://*[contains(.,\"Öffnungszeiten in Großenlüder\") and contains(.,\"Samstag\")][not(.//*[contains(.,\"Öffnungszeiten in Großenlüder\") and contains(.,\"Samstag\")])]",
+ "lang": "de",
+ "name": "Bräuning Getränkefachmarkt (Großenlüder)",
+ "note": "2026-09-30: Die Seite fuehrt alle Maerkte; der Filter nimmt das Zeiten-Widget \"Unsere Oeffnungszeiten in Grossenlueder\".",
+ "osm_id": "way/108829711",
+ "schema": 1,
+ "tags": [
+  "lkfulda-beverages",
+  "lkfulda-grossenlueder"
+ ],
+ "url": "https://www.getraenke-braeuning.de/Getraenkemaerkte/"
+}

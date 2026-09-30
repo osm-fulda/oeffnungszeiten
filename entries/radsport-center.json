@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Unsere Öffnungszeiten Montag bis Freitag: 10.00 bis 12.00 Uhr 14.00 bis 18.00 UhrMittwoch: geschlossen (Werkstatt-Tag)Samstag: 10.00 bis 13.00 Uhr Unsere Öffnungszeiten Montag bis Freitag: 10.00 bis 1",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Radsport-Center",
+ "osm_id": "way/108541058",
+ "schema": 1,
+ "sort_text_alphabetically": true,
+ "tags": [
+  "lkfulda-bicycle",
+  "lkfulda-grossenlueder"
+ ],
+ "url": "https://www.radsportcenter.de/"
+}

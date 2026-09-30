@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "AdresseFriedrich-Dietz-Straße 3, 36093 KünzellTelefon0661 / 48 00 76 7E-Mailinfo@schuh-zentgraf.deÖffnungszeiten:Montag bis Freitag09.00 Uhr bis 19.00 UhrSamstag09.00 Uhr bis 18.00 UhrImmer durchgehen",
+ "filter": "xpath:(//*[contains(.,\"Friedrich-Dietz\") and contains(.,\"Samstag\")][not(.//*[contains(.,\"Friedrich-Dietz\") and contains(.,\"Samstag\")])])[1]",
+ "lang": "de",
+ "name": "Schuhaus Zentgraf (Künzell)",
+ "note": "2026-09-30: Die Seite fuehrt zwei Filialen; der Filter nimmt Kuenzell (Friedrich-Dietz-Strasse 3), nicht Arzell.",
+ "osm_id": "node/2702463224",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-shoes"
+ ],
+ "url": "https://schuh-zentgraf.de/"
+}

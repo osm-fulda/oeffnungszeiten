@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Dienstag15:00 - 17:00 Uhr Von 15:00 bis 17:00 Uhr Mittwoch15:00 - 17:00 Uhr Von 15:00 bis 17:00 Uhr Freitag15:00 - 17:00 Uhr Von 15:00 bis 17:00 Uhr Samstag15:00 - 17:00 Uhr Von 15:00 bis 17:00 Uhr So",
+ "filter": "xpath://*[contains(.,\"Dienstag\") and contains(.,\"Sonntag\")][not(.//*[contains(.,\"Dienstag\") and contains(.,\"Sonntag\")])]",
+ "lang": "de",
+ "name": "Konrad-Zuse-Museum",
+ "osm_id": "node/1637963470",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-museum"
+ ],
+ "url": "https://www.zuse-museum-huenfeld.de/de/"
+}

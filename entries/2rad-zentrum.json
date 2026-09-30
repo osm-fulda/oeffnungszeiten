@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Saisonale Öffnungszeiten:September – FebruarMo. – Fr.: 10:00 – 18:00 UhrSa.: 10:00 – 14:00 UhrMärz – AugustMo. – Fr.: 09:00 – 18:00 UhrSa.: 09:00 – 14:00 Uhr",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "2Rad Zentrum",
+ "osm_id": "node/1781668303",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bicycle",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://2radgalerie.de/"
+}

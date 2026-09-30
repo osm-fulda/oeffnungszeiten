@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Montag: 06:00 - 18:00 Dienstag: 06:00 - 18:00 Mittwoch: 06:00 - 18:00 Donnerstag: 06:00 - 18:00 Freitag: 06:00 - 18:00 Samstag: 06:00 - 17:00 Sonntag: 07:00 - 17:00",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" detail-open-hours-list \")]",
+ "lang": "de",
+ "name": "papperts (Fil. Hünfeld)",
+ "osm_id": "node/3561362917",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bakery",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://www.papperts.de/dealer/fil-hunfeld/"
+}
