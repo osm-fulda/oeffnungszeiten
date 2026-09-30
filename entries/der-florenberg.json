@@ -1,14 +1,15 @@
 {
  "added": "2026-09-22",
- "captured_sample": "Montag: Ruhetag Dienstag bis Samstag: 16 bis 22 Uhr Sonntag: 15 bis 21 Uhr Ihr Zimmer können Sie ab 16 Uhr beziehen. Abreise ist bis 10.30 Uhr am nächsten Morgen. Sollten Sie außerhalb der genannten Z",
+ "captured_sample": "Februar bis DezemberDienstag bis Samstag: ab 16 UhrSonntag ab 15 Uhr(bis 21 Uhr warme Küche)Montag: Ruhetag",
  "fetch_backend": "html_webdriver",
- "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "filter": "xpath://*[not(self::script)][contains(.,\"Februar bis Dezember\") and contains(.,\"Ruhetag\")][not(.//*[not(self::script)][contains(.,\"Februar bis Dezember\") and contains(.,\"Ruhetag\")])]",
  "lang": "de",
  "name": "Der Florenberg",
- "note": "Die Seite baut die Zeiten erst mit Javascript auf. Restaurant und Biergarten teilen sich die Seite, deshalb zwei Watches auf denselben Block.",
- "osm_id": "way/111593882",
+ "note": "2026-09-30: Filter auf den Gaststaetten-Block (\"Februar bis Dezember ...\"). Der alte Filter nahm den Hotel-Absatz (Check-in Di-Sa 16-22, So 15-21), und genau dieser Wert stand bis 30.09.2026 falsch in OSM. Betrieb jetzt als Grundstuecksflaeche way/1563853994 (Restaurant + Hotel), Haus und Biergarten sind reine Geometrie; der eigene Biergarten-Watch entfaellt. Die Seite baut die Zeiten erst mit Javascript auf.",
+ "osm_id": "way/1563853994",
  "schema": 1,
  "tags": [
+  "lkfulda-hotel",
   "lkfulda-kuenzell",
   "lkfulda-restaurant"
  ],
