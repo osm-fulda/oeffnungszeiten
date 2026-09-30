@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Bimbach - St. Laurentius Judith Stock Sprechzeiten:Montags: 09:00 - 10:00 UhrDonnerstags: 16:00 - 18:00 Uhr  Am Kirchborn 11, 36137 Großenlüder-Bimbach",
+ "filter": "xpath://*[contains(.,\"Kirchborn\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Kirchborn\") and contains(.,\"Uhr\")])]",
+ "lang": "de",
+ "name": "Pfarramt St. Laurentius Bimbach",
+ "note": "2026-09-29: Die Seite fuehrt alle Pfarrbueros; der Filter nimmt den Bimbacher Block. Nicht die \"Erreichbarkeit\" oben (Zentralbuero, Telefon), nicht das JSON-LD.",
+ "osm_id": "way/115785079",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-religion"
+ ],
+ "url": "https://www.katholische-kirche-heiligkreuz.de/unsere-pfarrei/zentrales-pfarrbuero"
+}

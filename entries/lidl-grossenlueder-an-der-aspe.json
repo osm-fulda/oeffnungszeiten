@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday 07:00-21:00",
+ "filter": "json:$..openingHoursSpecification",
+ "lang": "de",
+ "name": "Lidl (Großenlüder, An der Aspe)",
+ "note": "2026-09-29: JSON-LD wie bei den anderen Lidl-Eintraegen; der sichtbare Block ist ein Datumsfenster und aendert sich taeglich.",
+ "osm_id": "way/108776573",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-supermarket"
+ ],
+ "url": "https://www.lidl.de/s/de-DE/filialen/grossenlueder/an-der-aspe/"
+}

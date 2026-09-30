@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Mo. 08:30 - 13:00 Di. 08:30 - 13:00 Mi. 08:30 - 13:00 Do. 08:30 - 13:00, 15:00 - 19:00 Fr. 08:30 - 13:00",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" inet-hero-agentur__office-hours-table \")]",
+ "lang": "de",
+ "name": "LVM Detlef Mathes",
+ "osm_id": "node/13428348419",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-insurance"
+ ],
+ "url": "https://agentur.lvm.de/d-mathes/1"
+}

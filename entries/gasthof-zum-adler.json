@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-29",
+ "captured_sample": "Montag, Dienstag und Mittwoch Ruhetag Donnerstag — Samstag ab 16 Uhr (warme Küche bis 21 Uhr) Sonntag 11 – 14 Uhr (warme Küche bis 13.30 Uhr) ab 17 Uhr (warme Küche bis 20 Uhr)",
+ "filter": "xpath://*[contains(.,\"Ruhetag\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Ruhetag\") and contains(.,\"Uhr\")])]",
+ "lang": "de",
+ "name": "Gasthof zum Adler",
+ "note": "2026-09-29: Der Block fuehrt auch Einzeltermine (geschlossene Gesellschaft, Urlaub) — die melden sich mit, das ist gewollt.",
+ "osm_id": "way/191100773",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://hannaetches.de/oeffnungszeiten/"
+}
