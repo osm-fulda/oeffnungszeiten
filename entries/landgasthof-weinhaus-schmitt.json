@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Montag: ab 17:00 Uhr Dienstag: ab 17:00 Uhr Mittwoch: ab 17:00 Uhr Donnerstag: Ruhetag Freitag: ab 17:00 Uhr Samstag: ab 17:00 Uhr Sonntag: 11:00 – 14:00 Uhr und ab 17:00 Uhr An Feiertagen bitten wir ",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" entry-content \")]",
+ "lang": "de",
+ "name": "Landgasthof Weinhaus Schmitt",
+ "osm_id": "way/108829259",
+ "schema": 1,
+ "tags": [
+  "lkfulda-grossenlueder",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://landgasthof-schmitt.de/oeffnungszeiten/"
+}

@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Kontakt und Öffnungszeiten Rufen Sie uns an oder schreiben sie uns: E-Mail: info[at]amv-computer.de Telefon: +49 6652 5884 Fax: +49 6652 5885 Öffnungszeiten: Montag bis Freitag 9:30 – 18:00 Uhr Samsta",
+ "filter": "xpath:(//h1[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "Elektro VOGT (amv computer)",
+ "osm_id": "node/2193980850",
+ "schema": 1,
+ "tags": [
+  "lkfulda-electronics",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://amvcomputer.de/kontakt-und-offnungszeiten/"
+}

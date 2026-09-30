@@ -1,0 +1,17 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Apotheke am Niedertor Niedertor 18 | 36088 Hünfeld 06652 96170 06652 961716 info@niedertor-apotheke.com Mo - Fr 08:00 - 18:00 Uhr Sa 08:30 - 13:00 Uhr Instagram Facebook Wo finden Sie uns? Apotheke am",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://*[contains(.,\"Niedertor\") and contains(.,\"08:30 - 13:00\")][not(.//*[contains(.,\"Niedertor\") and contains(.,\"08:30 - 13:00\")])]",
+ "lang": "de",
+ "name": "Apotheke am Niedertor",
+ "note": "2026-09-30: Die Seite fuehrt beide Ohlendorf-Apotheken; Filter ueber Name/Anschrift und die Samstagszeit.",
+ "osm_id": "node/2193967524",
+ "schema": 1,
+ "sort_text_alphabetically": true,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-pharmacy"
+ ],
+ "url": "https://www.ohlendorf-apotheken.de"
+}

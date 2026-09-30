@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Montag geschlossen Dienstag 10:00-17:30 Uhr Mittwoch 10:00-17:30 Uhr Donnerstag 10:00-17:30 Uhr Freitag 10:00-17:30 Uhr Samstag 10:00-14:00 Uhr Sonntag geschlossen * Beratung nach individueller Termin",
+ "filter": "xpath://p[contains(concat(\" \",normalize-space(@class),\" \"),\" font-text \")]",
+ "lang": "de",
+ "name": "küche perfekt bug",
+ "osm_id": "way/26564669",
+ "schema": 1,
+ "tags": [
+  "lkfulda-furniture",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://www.kuecheperfekt.de/"
+}

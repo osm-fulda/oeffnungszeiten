@@ -1,0 +1,16 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Montag: 10:00 - 20:00 Dienstag: 10:00 - 20:00 Mittwoch: 10:00 - 20:00 Donnerstag: 10:00 - 20:00 Freitag: 10:00 - 20:00 Samstag: 10:00 - 20:00",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")])]",
+ "lang": "de",
+ "name": "Polo Motorrad Store Fulda (Petersberg)",
+ "note": "2026-09-30: Neue Filialseite (seit 29.09.2026 auch im website-Tag); die alte polo-motorrad.de-Seite zeigte nur die Shop-Huelle.",
+ "osm_id": "node/1439262875",
+ "schema": 1,
+ "tags": [
+  "lkfulda-motorcycle",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://www.polo-motorrad.com/de-de/stores/polo-motorrad-store-petersberg"
+}

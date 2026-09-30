@@ -1,0 +1,17 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Marien-Apotheke Hauptstraße 3 | 36088 Hünfeld 06652 919123 06652 919124 info@marienapothekehuenfeld.de Mo - Fr 08:00 - 19:00 Uhr Sa 08:00 - 13:00 Uhr Instagram Facebook Wo finden Sie uns? Marien-Apoth",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://*[contains(.,\"Marien-Apotheke\") and contains(.,\"08:00 - 19:00\")][not(.//*[contains(.,\"Marien-Apotheke\") and contains(.,\"08:00 - 19:00\")])]",
+ "lang": "de",
+ "name": "Marien-Apotheke (Hünfeld)",
+ "note": "2026-09-30: Die Seite fuehrt beide Ohlendorf-Apotheken; Filter ueber den Namen und die Wochenzeit.",
+ "osm_id": "way/208974970",
+ "schema": 1,
+ "sort_text_alphabetically": true,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-pharmacy"
+ ],
+ "url": "https://www.ohlendorf-apotheken.de"
+}

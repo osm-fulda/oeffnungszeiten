@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Markt Mo-Sa: 08:00 - 20:00 Post Mo-Sa: 08:00 - 20:00",
+ "filter": "xpath://*[@id=\"openingtimesCollapse\"]",
+ "lang": "de",
+ "name": "tegut (Hünfeld-Mackenzell)",
+ "osm_id": "way/89614682",
+ "schema": 1,
+ "sort_text_alphabetically": true,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-supermarket"
+ ],
+ "url": "https://www.tegut.com/maerkte/markt/tegut-huenfeld-mackenzell-huenfelder-strasse-2.html"
+}

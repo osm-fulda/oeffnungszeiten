@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Hünfeld: Montag, Dienstag, Donnerstag, Freitag 09:00 - 17:00 Uhr Mittwoch & Samstag 09:00 - 13:00 Uhr Fulda: Montag bis Freitag 10:00 - 17:00 Uhr Samstag 10:00 - 13:30 Uhr",
+ "filter": "xpath://*[@id=\"c6134\"]/following-sibling::*[1]",
+ "lang": "de",
+ "name": "Reisebüro Happ (Hünfeld)",
+ "note": "2026-09-30: Block mit den Bueros Huenfeld und Fulda; die Zentrale Flieden steht darueber.",
+ "osm_id": "node/5960963334",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-travel_agency"
+ ],
+ "url": "https://www.reisebuero-happ.de/"
+}

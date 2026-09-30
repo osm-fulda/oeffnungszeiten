@@ -1,0 +1,14 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Mo.-Fr. 9:00 - 18:00 UhrSa. 10:00 - 13:00 Uhr",
+ "filter": "xpath://*[contains(.,\"Mo.-Fr.\") and contains(.,\"Sa.\")][not(.//*[contains(.,\"Mo.-Fr.\") and contains(.,\"Sa.\")])]",
+ "lang": "de",
+ "name": "Matthias Vogt Orthopädie & Schuhtechnik",
+ "osm_id": "node/7878634893",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-shoes"
+ ],
+ "url": "https://www.ortho-vogt.de/"
+}

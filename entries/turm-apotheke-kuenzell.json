@@ -1,0 +1,16 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Montag 08:30 - 18:00 Uhr Dienstag 08:30 - 18:00 Uhr Mittwoch 08:30 - 18:00 Uhr Donnerstag 08:30 - 18:00 Uhr Freitag 08:30 - 18:00 Uhr Samstag 09:00 - 12:00 Uhr Sonnen-Apotheke geschlossen Sonntag gesc",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://tbody[contains(.,\"Samstag\") and contains(.,\"Sonnen\")]",
+ "lang": "de",
+ "name": "Turm Apotheke (Künzell)",
+ "note": "2026-09-30: Gemeinsame Tabelle der drei Kuenzeller Apotheken; die Samstagsausnahme der Sonnen-Apotheke steht darin.",
+ "osm_id": "node/954893617",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-pharmacy"
+ ],
+ "url": "https://www.xn--apotheken-knzell-tzb.de/"
+}

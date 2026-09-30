@@ -1,0 +1,15 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Montag: 09:00 - 13:00 Uhr14:00 - 18:00 Uhr Dienstag: 09:00 - 13:00 Uhr14:00 - 18:00 Uhr Mittwoch: geschlossen Donnerstag: 09:00 - 13:00 Uhr14:00 - 18:00 Uhr Freitag: 09:00 - 13:00 Uhr14:00 - 18:00 Uhr",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://*[contains(.,\"Mittwoch\") and contains(.,\"Freitag\")][not(.//*[contains(.,\"Mittwoch\") and contains(.,\"Freitag\")])]",
+ "lang": "de",
+ "name": "DERPART Reisebüro Krug (Hünfeld)",
+ "osm_id": "way/254162645",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-travel_agency"
+ ],
+ "url": "https://www.derpart.com/huenfeld"
+}

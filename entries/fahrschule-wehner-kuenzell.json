@@ -1,0 +1,16 @@
+{
+ "added": "2026-09-30",
+ "captured_sample": "Unser Büro hat montags & mittwochs in Petersberg und dienstags & donnerstags in Künzell jeweils von 15:30 – 18:30 geöffnet. Komm uns doch besuchen!",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://*[contains(.,\"dienstags & donnerstags in Künzell\") and contains(.,\"18:30\")][not(.//*[contains(.,\"dienstags & donnerstags in Künzell\") and contains(.,\"18:30\")])]",
+ "lang": "de",
+ "name": "Fahrschule Wehner (Künzell)",
+ "note": "2026-09-30: Der Satz nennt beide Bueros; Kuenzell ist Di/Do.",
+ "osm_id": "node/13891254116",
+ "schema": 1,
+ "tags": [
+  "lkfulda-driving_school",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://fahrschule-wehner.de/"
+}
