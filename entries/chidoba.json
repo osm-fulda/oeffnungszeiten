@@ -1,13 +1,14 @@
 {
  "added": "2026-07-25",
- "captured_sample": "Headquarter Zentrale Unsere Bürozeiten: Mo - Fr: 09:00 - 16:30 Uhr Tel: (06196) 773-0633 Fax: (06196) 773-0635 E-Mail: info@chidoba.com",
+ "captured_sample": "chidoba Fulda EMAILLIERWERK Franchise Restaurant Location Am Emaillierwerk 1 36043 Fulda Öffnungszeiten Mo - Sa: 11:00 Uhr bis 20:00 Uhr So: Geschlossen Telefon (0661) 480 470 23",
  "fetch_backend": "system",
- "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" formfield-icon-category \")]",
+ "filter": "xpath://*[contains(.,\"EMAILLIERWERK\") and contains(.,\"Öffnungszeiten\")][not(.//*[contains(.,\"EMAILLIERWERK\") and contains(.,\"Öffnungszeiten\")])]",
  "name": "Chidoba",
+ "note": "2026-09-30: Standortseite statt Kontaktseite; der alte Filter erfasste die Buerozeiten der Zentrale (Mo-Fr 9-16:30). Die Seite fuehrt alle Filialen, der Filter nimmt Fulda Emaillierwerk.",
  "osm_id": "node/10091957711",
  "schema": 1,
  "tags": [
   "fulda-restaurants"
  ],
- "url": "https://www.chidoba.com/kontakt"
+ "url": "https://www.chidoba.com/standorte"
 }

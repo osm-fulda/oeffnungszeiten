@@ -1,9 +1,10 @@
 {
  "added": "2026-07-26",
- "captured_sample": "Telefonverkauf Tel. 0661/4958 321 Mo-Fr: 08:00-15:00 Uhr Sa: 08:00-12:00 Uhr",
+ "captured_sample": "GROMA Fulda Montag bis Freitag: 08:00 – 18:00 Uhr Samstag: 08:00 – 14:00 Uhr",
  "fetch_backend": "system",
- "filter": "xpath://*[@id=\"text-5\"]",
+ "filter": "xpath://*[contains(.,\"GROMA Fulda\") and contains(.,\"14:00\")][not(.//*[contains(.,\"GROMA Fulda\") and contains(.,\"14:00\")])]",
  "name": "C+C Wehner Groma",
+ "note": "2026-09-30: Filter auf \"Oeffnungszeiten GROMA Fulda\". Der alte Filter (#text-5) erfasste den Telefonverkauf (Mo-Fr 8-15), nicht den Markt.",
  "osm_id": "way/125151736",
  "schema": 1,
  "tags": [
