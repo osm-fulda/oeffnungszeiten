@@ -2,8 +2,9 @@
  "added": "2026-08-13",
  "captured_sample": "Montag bis Freitag 09:00 Uhr bis 12:00 Uhr undMontag bis Donnerstag 13:30 Uhr bis 15:30 Uhr",
  "fetch_backend": "system",
- "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "filter": "xpath://*[contains(.,\"für den Publikumsverkehr\") and contains(.,\"Donnerstag\")][not(.//*[contains(.,\"für den Publikumsverkehr\") and contains(.,\"Donnerstag\")])]",
  "name": "Sozialgericht Fulda",
+ "note": "2026-10-01: Filter auf die Rechtsantragsstelle (\"fuer den Publikumsverkehr … geoeffnet: Dienstag 13:30-15:00, Donnerstag 09:30-11:30\"). Der alte Filter erfasste die telefonische Erreichbarkeit, die am 30.09.2026 versehentlich als opening_hours in OSM landete.",
  "osm_id": "node/13482049001",
  "schema": 1,
  "tags": [

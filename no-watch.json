@@ -2765,6 +2765,15 @@
    "recheck": "on-relocation",
    "osm_id": "node/1333294013",
    "note": "Die Filialseite bei Mode Vogt nennt auch gerendert weder Anschrift noch Zeiten. Der fruehere Watch erfasste die Service-Hotline (Mo-Fr 8-14). OSM-Wert Mo-Fr 10:00-18:30; Sa 10:00-18:00 deckt sich mit Verzeichnissen (kaufda, osthessen-news)."
+  },
+  {
+   "url": "https://www.sporthaus-marquardt.de/content/kontakt/",
+   "name": "Sporthaus Marquardt",
+   "reason": "no-hours-on-page",
+   "established": "2026-10-01",
+   "recheck": "on-relocation",
+   "note": "Die Kontaktseite nennt nur \"0661-75084 Mo.-Fr. 10-18 Uhr\" — die Telefonzeit; Ladenzeiten stehen nirgends. Der fruehere Watch erfasste die Telefonzeile.",
+   "osm_id": "node/2572319935"
   }
  ]
 }

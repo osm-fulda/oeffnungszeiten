@@ -3,11 +3,13 @@
  "captured_sample": "Öffnungszeiten Brauhaus Mo - Do: 11:00 - 23:00 Uhr Fr: 11:00 - 24:00 Uhr Sa & vor Feiertagen: 11:00 - 24:00 Uhr So: 10:00 - 22:00 Uhr",
  "fetch_backend": "system",
  "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten Brauhaus\")])[1]/parent::*",
- "name": "Biergarten Wiesenmühle",
- "osm_id": "way/165967077",
+ "name": "Brauhaus Wiesenmühle",
+ "note": "2026-10-01: OSM umgebaut — der Betrieb (Brauhaus + Hotel) ist jetzt die Gelaendeflaeche way/1563992813; der Biergarten ist leisure=outdoor_seating ohne eigene Zeiten. Filter weiter auf \"Oeffnungszeiten Brauhaus\".",
+ "osm_id": "way/1563992813",
  "schema": 1,
  "tags": [
-  "fulda-biergarten"
+  "fulda-hotel",
+  "fulda-restaurants"
  ],
  "url": "https://wiesenmuehle.de/oeffnungszeiten/"
 }
