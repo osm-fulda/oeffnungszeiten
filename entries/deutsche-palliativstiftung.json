@@ -1,9 +1,10 @@
 {
  "added": "2026-08-13",
- "captured_sample": "Öffnungszeiten: Mo.-Fr. 09:00 Uhr bis 14:00 Uhr",
+ "captured_sample": "0661 4804 9797 0661 4804 9798 Öffnungszeiten: Mo.-Fr. 09:00 Uhr bis 14:00 Uhr info@palliativstiftung.com Am Bahnhof 2, 36037 Fulda",
  "fetch_backend": "system",
- "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])",
+ "filter": "xpath://p[contains(concat(\" \",normalize-space(@class),\" \"),\" sppb-addon-title \")]",
  "name": "Deutsche PalliativStiftung",
+ "note": "2026-10-01: Filter auf day-anchored text geändert, der vorherige erfasste seitenabhängigen Text mit (Issue #120).",
  "osm_id": "node/11916919214",
  "schema": 1,
  "tags": [
