@@ -4,7 +4,8 @@
  "fetch_backend": "system",
  "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" promotions-details \")]",
  "name": "Hopfenglück",
- "osm_id": "way/37196594",
+ "note": "2026-10-01: OSM umgebaut — der Betrieb ist jetzt die Gelaendeflaeche way/1564025142 (Restaurant, Biergarten, Brauerei); Haus und Biergarten sind reine Geometrie. Der eigene Biergarten-Eintrag entfaellt.",
+ "osm_id": "way/1564025142",
  "schema": 1,
  "tags": [
   "fulda-restaurants"

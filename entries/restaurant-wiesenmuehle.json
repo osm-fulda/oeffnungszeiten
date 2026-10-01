@@ -3,7 +3,8 @@
  "captured_sample": "Öffnungszeiten Restaurant Mühlestube Mi - Do: 17:30 - 23:00 Uhr Fr: 17:30 - 24:00 Uhr Sa & vor Feiertagen: 11:30 - 24:00 Uhr So: 11:30 - 22:00 Uhr",
  "fetch_backend": "system",
  "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten Restaurant\")])[1]/parent::*",
- "name": "Restaurant Wiesenmühle",
+ "name": "Restaurant Mühlestube (Wiesenmühle)",
+ "note": "2026-10-01: Der Punkt node/3967006105 ist jetzt die Mühlestube mit eigenen Zeiten; das Brauhaus steht an der Gelaendeflaeche (eigener Eintrag).",
  "osm_id": "node/3967006105",
  "schema": 1,
  "tags": [
