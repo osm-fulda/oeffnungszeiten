@@ -1,14 +1,15 @@
 {
  "added": "2026-09-20",
- "captured_sample": "Lebendfischverkauf Dienstag bis Freitag 8:00 Uhr bis 17:00 Uhr Samstag: 8:00 Uhr bis 12:00 Uhr Sonntag + Montag = Ruhetage",
- "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")])]",
+ "captured_sample": "Hofverkauf Di–Fr: 8– 12 Uhr | 13 – 17 Uhr Sa: 8– 12 Uhr",
+ "filter": "xpath://*[contains(.,\"Hofverkauf\") and contains(.,\"Sa:\")][not(.//*[contains(.,\"Hofverkauf\") and contains(.,\"Sa:\")])]",
  "lang": "de",
  "name": "Fischzucht Groß",
+ "note": "2026-10-02: Filter auf den Hofverkauf-Block (\"ab dem 21.03.2026\"), der dem Laden entspricht. Die aelteren Bloecke (Angelteiche/Speisefischverkauf Di-So 8-17, Lebendfischverkauf) liegen ausserhalb. fisch-gross.de leitet auf rhoenforelle.de weiter.",
  "osm_id": "node/2621072949",
  "schema": 1,
  "tags": [
   "lkfulda-gersfeld-rhoen",
   "lkfulda-seafood"
  ],
- "url": "https://www.fisch-gross.de/"
+ "url": "https://www.rhoenforelle.de/"
 }
