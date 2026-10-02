@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Eisdiele Hettenhausen Eisautomat 24/7 auf dem ParkplatzHauptstraße 51, 36129 Gersfeld (Rhön) 06656 2759635 Mi bis Sa: 13 bis 18 Uhr Sonn- und Feiertage: 12 bis 18 Uhr",
+ "filter": "xpath://*[contains(.,\"Hauptstraße 51\") and contains(.,\"Mi bis Sa\")][not(.//*[contains(.,\"Hauptstraße 51\") and contains(.,\"Mi bis Sa\")])]",
+ "lang": "de",
+ "name": "Die Eisheiligen (Gersfeld)",
+ "note": "2026-10-02: Storefinder fuehrt mehrere Standorte; der Filter nimmt den Block Hauptstrasse 51.",
+ "osm_id": "node/9082208609",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-ice_cream"
+ ],
+ "url": "https://eisheiligen.de/storefinder/"
+}

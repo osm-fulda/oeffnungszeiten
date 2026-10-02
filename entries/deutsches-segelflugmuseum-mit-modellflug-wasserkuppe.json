@@ -1,0 +1,14 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Sommer-Saison (1. April bis 31. Oktober)Täglich von 10:00 Uhr bis 17:00 UhrWinter-Saison (1. November bis 19. Dezember und 11. Januar bis 31. März)Nur an den Wochenenden: Samstag/Sonntag von 10:00 Uhr",
+ "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")])]",
+ "lang": "de",
+ "name": "Deutsches Segelflugmuseum mit Modellflug Wasserkuppe",
+ "osm_id": "way/647874018",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-museum"
+ ],
+ "url": "http://www.segelflugmuseum.de/index.php/oeffnungszeiten-eintrittspreise"
+}

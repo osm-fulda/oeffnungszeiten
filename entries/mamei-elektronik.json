@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "mo.:10:00 – 12:00 Uhr15:00 – 18:00 Uhrdi.:15:00 – 18:00 Uhrdo.:15:00 – 18:00 Uhrfr.:10:00 – 12:00 Uhr15:00 – 18:00 Uhrsa.:10:00 – 13:00 Uhr",
+ "filter": "xpath://table[contains(concat(\" \",normalize-space(@class),\" \"),\" opening-hours \")]",
+ "lang": "de",
+ "name": "MAMEI Elektronik",
+ "note": "2026-10-02: Sichtbare Tabelle; das JSON-LD kennt die Mittagspause nicht.",
+ "osm_id": "way/179130053",
+ "schema": 1,
+ "tags": [
+  "lkfulda-electronics",
+  "lkfulda-gersfeld-rhoen"
+ ],
+ "url": "https://mamei.de/"
+}

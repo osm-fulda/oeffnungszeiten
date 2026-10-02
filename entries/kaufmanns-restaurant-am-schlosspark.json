@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Öffnungszeiten A K T U E L L Donnerstag – Freitag 17.00 – 23.00 Uhr / Hauptküche Abends bis 21.00 Uhr Samstag 11.30 Uhr bis 13.30 Uhr / 17.00 – 23.00 Uhr Hauptküche Abends bis 21.00 Uhr Sonntag 11.30 ",
+ "filter": "xpath://*[@id=\"oeffnungszeiten\"]",
+ "lang": "de",
+ "name": "Kaufmann’s Restaurant am Schlosspark",
+ "note": "2026-10-02: Seite ueberschreibt den Block mit \"A K T U E L L\" — ein Wechsel zurueck zu Saisonzeiten meldet sich hier.",
+ "osm_id": "node/3880537867",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://kaufmanns-am-schlosspark.de"
+}

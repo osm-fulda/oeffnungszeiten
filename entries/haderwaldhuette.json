@@ -1,0 +1,14 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "�ffnungszeiten:Montag bis Freitag: 12:00 Uhr - 21:00 UhrSamstag und Sonntag: 10:00 Uhr - 21:00 UhrDonnerstag Ruhetag Das Haderwaldh�ttenteam.",
+ "filter": "xpath://*[@id=\"Text68\"]",
+ "lang": "de",
+ "name": "Haderwaldhütte",
+ "osm_id": "node/337222948",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-restaurant"
+ ],
+ "url": "http://www.haderwaldhuette-gichenbach.de/"
+}

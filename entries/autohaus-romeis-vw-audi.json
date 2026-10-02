@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Öffnungszeiten Montag 07:45 - 17:30 Dienstag 07:45 - 17:30 Mittwoch 07:45 - 17:30 Donnerstag 07:45 - 17:30 Freitag 07:45 - 17:30 Samstag Nur nach Vereinbarung Sonntag Geschlossen Öffnungszeiten Werkst",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Autohaus Romeis VW & Audi",
+ "note": "2026-10-02: Der Block fuehrt Verkauf und Werkstatt; in OSM steht der Verkauf (erste Zeilen).",
+ "osm_id": "node/4973313021",
+ "schema": 1,
+ "tags": [
+  "lkfulda-car",
+  "lkfulda-gersfeld-rhoen"
+ ],
+ "url": "https://www.autohaus-romeis.de/"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Café Gersfeld Peter-Seifert-Str. 136129 Gersfeld Geöffnet Montag - Freitag11:00-17:30 Uhr Samstag, Sonntag u. an Feiertagen geschlossen Tel.: 06654-7677eMail: info@cafegersfeld.de",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")])]",
+ "lang": "de",
+ "name": "Cafe Gersfeld",
+ "note": "2026-10-02: Betriebsurlaubs-Hinweise stehen ausserhalb des Filters.",
+ "osm_id": "node/298317219",
+ "schema": 1,
+ "tags": [
+  "lkfulda-cafe",
+  "lkfulda-gersfeld-rhoen"
+ ],
+ "url": "https://www.cafegersfeld.de/"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Öffnungszeiten: Montag - Samstag 8°° - 12°° Uhr und 14°° - 18°° Uhr Sonntag durchgehend von 9°° - 18°° Uhr Dienstag und Mittwoch Ruhetag Veranstaltungen oder Anmeldungen sind auf Anfrage auch an unser",
+ "filter": "xpath://*[contains(.,\"Ruhetag\") and contains(.,\"Sonntag\")][not(.//*[contains(.,\"Ruhetag\") and contains(.,\"Sonntag\")])]",
+ "lang": "de",
+ "name": "Café Wahl",
+ "note": "2026-10-02: Zeiten nur auf /cafe.htm; die Startseite nennt keine.",
+ "osm_id": "node/298317217",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.cafe-wahl-gersfeld.de/cafe.htm"
+}

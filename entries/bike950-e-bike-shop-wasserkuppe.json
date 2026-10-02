@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Öffnungszeiten Montag-Samstag 10-18 Uhr Mi. u. So. Ruhetage +496654-9175821",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "BIKE950 E-Bike-Shop Wasserkuppe",
+ "note": "2026-10-02: Sichtbarer Block statt JSON-LD.",
+ "osm_id": "node/7680079905",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bicycle",
+  "lkfulda-gersfeld-rhoen"
+ ],
+ "url": "https://bike950.de/"
+}

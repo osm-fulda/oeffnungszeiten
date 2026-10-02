@@ -1,0 +1,14 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Unsere Öffnungszeiten Montag bis Freitag 8.00 - 18.30 Uhr Samstag 8.00 - 13.00 Uhr",
+ "filter": "xpath://*[@id=\"text-5\"]",
+ "lang": "de",
+ "name": "Apotheke Marbaise",
+ "osm_id": "node/453094314",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-pharmacy"
+ ],
+ "url": "https://apotheke-marbaise.de"
+}

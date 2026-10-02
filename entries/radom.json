@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Rundgang durch das Gebäude und Museum bis einschließlich 1.11.26:täglich 11 – 16 Uhr Das erwartet Sie beim Radom-Rundgang",
+ "filter": "xpath://*[contains(.,\"Rundgang durch das Gebäude\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Rundgang durch das Gebäude\") and contains(.,\"Uhr\")])]",
+ "lang": "de",
+ "name": "Radom",
+ "note": "2026-10-02: Rundgang \"bis einschliesslich 1.11.26 taeglich 11-16\"; OSM traegt Sa,Su (vermutlich Winter). Watch meldet die Winterzeiten.",
+ "osm_id": "way/178438430",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-museum"
+ ],
+ "url": "https://radom-wasserkuppe.de/offnungszeiten-preise/"
+}

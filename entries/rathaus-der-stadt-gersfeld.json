@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Rathaus Stadt Gersfeld Marktplatz 1936129 Gersfeld (Rhön) +49 (0)6654 17-0 Bankverbindung: Sparkasse Fulda IBAN: DE76 5305 0180 0002 0045 09 BIC: HELADEF1FDS SITZUNGSDIENST Sitzungsdienst ALLRIS 4 (nu",
+ "filter": "xpath://*[contains(.,\"Öffnungszeiten Rathaus\") and contains(.,\"Bauabteilung\")][not(.//*[contains(.,\"Öffnungszeiten Rathaus\") and contains(.,\"Bauabteilung\")])]",
+ "lang": "de",
+ "name": "Rathaus der Stadt Gersfeld",
+ "note": "2026-10-02: Block enthaelt auch die Bauabteilung; in OSM steht das Rathaus.",
+ "osm_id": "way/179101821",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-townhall"
+ ],
+ "url": "https://www.gersfeld.de/rathaus.html"
+}

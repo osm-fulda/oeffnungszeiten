@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Do. von Anfang Mai bis Ende Okt. von 17:00 Uhr bis 21 UhrFr. von 17:00 Uhr bis 21:00 UhrSa. So. Mo. von 12:00 Uhr bis 21:00 Uhr Di. Mi. ist RuhetagDo. von Anfang Nov. bis Ende April RuhetagDie Küche s",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Gaststätte Zur Hohen Rhön \"Jausenstation\"",
+ "note": "2026-10-02: Der Block enthaelt auch die Feiertags- und Eventliste; neue Termine melden sich mit, das ist gewollt.",
+ "osm_id": "node/10932237026",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.gaststaette-zur-hohen-rhoen-mosbach.com/offnungszeiten"
+}

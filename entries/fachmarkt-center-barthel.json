@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Öffnungszeiten Mo.-Fr. 09:00 – 12:30 und 14:00 – 18:00 Uhr Sa. 09:00 – 13:00 Uhr",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "Fachmarkt Center Barthel",
+ "note": "2026-10-02: Nur die Ladenzeiten; der Sommerhinweis (Jun-Aug Mi ab 12:30 zu) steht in einem eigenen Block weit davon und ist schon in OSM.",
+ "osm_id": "way/371053773",
+ "schema": 1,
+ "tags": [
+  "lkfulda-doityourself",
+  "lkfulda-gersfeld-rhoen"
+ ],
+ "url": "https://fachmarkt-gersfeld.de/"
+}

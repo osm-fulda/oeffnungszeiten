@@ -1,0 +1,14 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Montag 7:30–12:00 nachmittags geschlossen Dienstag 7:30–12:00 nachmittags geschlossen Mittwoch 7:30–12:00 14:30–18:00 Donnerstag 7:30–12:00 14:30–18:00 Freitag 7:30–12:00 14:30–18:00 Samstag 7:30–12:0",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" cm-w_oh-times \")]",
+ "lang": "de",
+ "name": "Hermann Ochs",
+ "osm_id": "node/2568996359",
+ "schema": 1,
+ "tags": [
+  "lkfulda-general",
+  "lkfulda-gersfeld-rhoen"
+ ],
+ "url": "https://www.hermann-ochs.de/"
+}

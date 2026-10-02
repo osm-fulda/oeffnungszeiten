@@ -1,0 +1,14 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Öffnungszeiten:Donnerstag RuhetagMontag - Mittwoch 12:00 - 17:30 UhrFreitag 12:00 - 17:30Samstag 09:00 - 18:00 Uhr Sonn- und Feiertage 12:00 - 18:00 Uhr",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "MandelRose® Café am Marktplatz",
+ "osm_id": "node/950346995",
+ "schema": 1,
+ "tags": [
+  "lkfulda-cafe",
+  "lkfulda-gersfeld-rhoen"
+ ],
+ "url": "https://mandelrose-gersfeld.de/"
+}

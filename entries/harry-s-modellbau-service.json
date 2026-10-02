@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Montags bis Freitags 10.oo Uhr bis 12.oo Uhr 18.oo Uhr bis 20.oo Uhr Samstag 10.oo Uhr bis 12.oo Uhr Montags bis Freitags 10.oo Uhr bis 12.oo Uhr 18.oo Uhr bis 20.oo Uhr Samstag 10.oo Uhr bis 12.oo Uh",
+ "filter": "xpath://*[contains(.,\"Montags bis Freitags\") and contains(.,\"Samstag\")][not(.//*[contains(.,\"Montags bis Freitags\") and contains(.,\"Samstag\")])]",
+ "lang": "de",
+ "name": "Harry's Modellbau-Service",
+ "note": "2026-10-02: Seite schreibt \"10.oo Uhr\"; der Extraktor las das nicht.",
+ "osm_id": "node/4474523462",
+ "schema": 1,
+ "tags": [
+  "lkfulda-electronics",
+  "lkfulda-gersfeld-rhoen"
+ ],
+ "url": "http://www.harrys-modellbau-service.de/"
+}

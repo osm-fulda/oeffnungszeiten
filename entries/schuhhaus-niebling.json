@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Termine sind an folgenden Tagen möglich: Mittwoch 10.30 – 12.00 Uhr Freitag 14.00 – 17.00 Uhr Unsere Öffnungszeiten: Montag 9.00 – 12.30 Uhr / Fußtrainings-Kurse Dienstag 9.00 – 12.30 Uhr / 14.00 – 18",
+ "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mittwoch\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mittwoch\")])]",
+ "lang": "de",
+ "name": "Schuhhaus Niebling",
+ "note": "2026-10-02: Block fuehrt auch die Termin-Einkaufszeiten (Mi/Fr); in OSM stehen die Ladenzeiten.",
+ "osm_id": "way/179142482",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-shoes"
+ ],
+ "url": "https://gms-shoes.com/schuhhaus-niebling-in-gersfeld-rhoen/?nobanner=1"
+}
