@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Montag und Dienstag RuhetagMittwoch bis Sonntag 11:00 Uhr bis 22:00 Uhr Durchgehnd warme Küche 11:00 Uhr bis 20:30 UhrHähnchenpaula Sparbrod 21, 36129 GersfeldServicetelefon 06654 - 436",
+ "filter": "xpath://ul[contains(concat(\" \",normalize-space(@class),\" \"),\" opening-hours \")]",
+ "lang": "de",
+ "name": "Hähnchen Paula",
+ "note": "2026-10-02: Seite nennt warme Kueche bis 20:30; in OSM steht die Oeffnungszeit bis 22:00.",
+ "osm_id": "way/164425804",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.haehnchen-paula.de/"
+}

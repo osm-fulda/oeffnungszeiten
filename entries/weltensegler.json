@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Montag ist RuhetagDienstag -Sonntag 10 bis 17 Uhr Warme Küche ab 11 Uhr Wintersaison November bis FebruarMontag & Dienstag RuhetagMittwoch – Sonntag 11 bis 16 UhrBei schlechtem Wetter können die Öffnu",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Weltensegler",
+ "note": "2026-10-02: Eigene Seite seit Betreiberwechsel (Landgasthof Zum Stern); die alte Fliegerschul-Seite stand in no-watch.",
+ "osm_id": "node/2472082969",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://weltensegler-wasserkuppe.de/"
+}

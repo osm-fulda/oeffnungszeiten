@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Öffnungszeiten Aktuell haben wir bei gutem Wetter an Wochenenden geöffnet.",
+ "filter": "xpath://*[contains(.,\"bei gutem Wetter\") and contains(.,\"Wochenend\")][not(.//*[contains(.,\"bei gutem Wetter\") and contains(.,\"Wochenend\")])]",
+ "lang": "de",
+ "name": "Lotti's Futterkiste",
+ "note": "2026-10-02: Nur \"bei gutem Wetter an Wochenenden\"; der Watch meldet, wenn wieder feste Zeiten erscheinen.",
+ "osm_id": "node/5641290102",
+ "schema": 1,
+ "tags": [
+  "lkfulda-fast_food",
+  "lkfulda-gersfeld-rhoen"
+ ],
+ "url": "http://www.lottis-futterkiste.de/"
+}

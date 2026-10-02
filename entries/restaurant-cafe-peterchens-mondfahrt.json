@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Restaurant & Café:Montag: 17:00 - 22:00 UhrDienstag & Mittwoch: Schaffenspause! Donnerstag und Freitag: 17:00 - 22:00 UhrSamstag und Sonntag: 12:00 - 22:00 UhrDie Küche schließt jeweils um 21:00 Uhr.W",
+ "filter": "xpath://span[contains(concat(\" \",normalize-space(@class),\" \"),\" pm_text \")]",
+ "lang": "de",
+ "name": "Restaurant Café Peterchens Mondfahrt",
+ "note": "2026-10-02: Nur Restaurant & Cafe, nicht Fruehstueck und Hotel-Rezeption.",
+ "osm_id": "node/10780108596",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://peterchens-mondfahrt.de/restaurant-cafe-wasserkuppe-rhoen/"
+}

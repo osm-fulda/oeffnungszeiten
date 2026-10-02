@@ -2659,15 +2659,6 @@
    "osm_id": "node/2984325837"
   },
   {
-   "url": "http://www.fliegerschule-wasserkuppe.de/",
-   "name": "Weltensegler",
-   "reason": "no-hours-on-page",
-   "established": "2026-09-25",
-   "recheck": "2027-03-01",
-   "note": "Der einzige fassbare Block sind die Buerozeiten der Flugschule (Mo-Fr 09:00-12:00), nicht die des Restaurants. Ein Filter darauf wuerde das falsche beobachten.",
-   "osm_id": "node/2472082969"
-  },
-  {
    "url": "http://www.fleischerei-meissmer.de/",
    "name": "Meißmer",
    "reason": "no-hours-on-page",
@@ -2774,6 +2765,15 @@
    "recheck": "on-relocation",
    "note": "Die Kontaktseite nennt nur \"0661-75084 Mo.-Fr. 10-18 Uhr\" — die Telefonzeit; Ladenzeiten stehen nirgends. Der fruehere Watch erfasste die Telefonzeile.",
    "osm_id": "node/2572319935"
+  },
+  {
+   "url": "https://www.edeka.de/maerkte/061755/",
+   "name": "Edeka (Gersfeld)",
+   "reason": "anti-bot",
+   "established": "2026-10-02",
+   "recheck": "on-relocation",
+   "note": "403 auf den einfachen Abruf, wie die anderen edeka.de-Marktseiten. Wert in OSM am 01.10.2026 gegen die Marktseite geprueft (Mo-Do 06:30-19:00, Fr-Sa 06:30-20:00).",
+   "osm_id": "node/845128775"
   }
  ]
 }

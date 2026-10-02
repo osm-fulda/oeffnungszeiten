@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Das Freibad Gersfeld ist noch bis zum 13.09.2026 täglich für Sie geöffnet - von 9:30 Uhr bis 19:30 Uhr.",
+ "filter": "xpath://*[contains(.,\"Das Freibad Gersfeld ist\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Das Freibad Gersfeld ist\") and contains(.,\"Uhr\")])]",
+ "lang": "de",
+ "name": "Freibad Gersfeld",
+ "note": "2026-10-02: Saisonsatz (\"noch bis zum 13.09.2026\"); der Watch meldet die naechste Saison.",
+ "osm_id": "relation/9270547",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-water_park"
+ ],
+ "url": "https://www.gersfeld.de/freibaeder.html"
+}

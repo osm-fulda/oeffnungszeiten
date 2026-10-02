@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Öffnungszeiten Öffnungszeiten Sporthaus Mo-Fr 09:00-17:00Sa 10:00-13:00Öffnungszeiten Skiverleih: Montag - Freitag 9-17 Uhr, Samstag und Sonntag 9-13 und 14-17 Uhr Öffnungszeiten Bistrorante: Montag-F",
+ "filter": "xpath:(//li[contains(normalize-space(.),\"Öffnungszeiten\")])",
+ "lang": "de",
+ "name": "Sporthaus Alpina",
+ "note": "2026-10-02: Block fuehrt Sporthaus, Skiverleih und Bistro; in OSM steht nur das Sporthaus.",
+ "osm_id": "node/1894723813",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-sports"
+ ],
+ "url": "https://www.alpina-sporthaus.de/"
+}

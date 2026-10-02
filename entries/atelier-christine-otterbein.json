@@ -1,0 +1,14 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "ÖFFNUNGSZEITENMo.-Sa. 10-13 UhrMo. Do. Fr. 15-18 Uhrund nach Vereinbarung",
+ "filter": "xpath:(//p[contains(normalize-space(.),\"ÖFFNUNGSZEITEN\")])/parent::*",
+ "lang": "de",
+ "name": "Atelier Christine Otterbein",
+ "osm_id": "node/13172723158",
+ "schema": 1,
+ "tags": [
+  "lkfulda-clothes",
+  "lkfulda-gersfeld-rhoen"
+ ],
+ "url": "https://otterbein-modedesign.de/"
+}

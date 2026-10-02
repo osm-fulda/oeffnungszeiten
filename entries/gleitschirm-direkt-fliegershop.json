@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-02",
+ "captured_sample": "Im GLEITSCHIRM DIREKT Fliegershop im Papillon Flugcenter Wasserkuppe sind wir Mo-So täglich von 9 bis 17 Uhr für dich da.",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://*[contains(.,\"Mo-So täglich\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Mo-So täglich\") and contains(.,\"Uhr\")])]",
+ "lang": "de",
+ "name": "Gleitschirm Direkt Fliegershop",
+ "osm_id": "node/6533660648",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gersfeld-rhoen",
+  "lkfulda-sports"
+ ],
+ "url": "https://gleitschirm-direkt.de"
+}
