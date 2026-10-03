@@ -1,0 +1,14 @@
+{
+ "added": "2026-10-03",
+ "captured_sample": "Frühstück Montag bis Freitag von 6.30 bis 10.30 Uhr Samstag und Sonntag von 6.30 bis 11 Uhr À-la-carte Täglich von 11 bis 18 Uhr",
+ "fetch_backend": "html_requests",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" section__panel \")][.//h2[contains(.,\"Apollo Saal\")]]//table",
+ "name": "Apollo Saal",
+ "note": "Die Seite fuehrt drei Betriebe in eigenen Abschnitten; der Filter nimmt die Zeiten-Tabellen unter der Ueberschrift \"Apollo Saal\" (Fruehstueck und a la carte, zwei Abschnitte). Der OSM-Knoten hiess bisher \"Schloßpark\" und liegt in der Orangerie.",
+ "osm_id": "node/1328288080",
+ "schema": 1,
+ "tags": [
+  "fulda-restaurants"
+ ],
+ "url": "https://www.maritim.de/de/hotels/deutschland/hotel-am-schlossgarten-fulda/restaurants"
+}
