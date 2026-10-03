@@ -2,8 +2,9 @@
  "added": "2026-08-03",
  "captured_sample": "TAG Montag Dienstag Mittwoch Donnerstag Freitag Samstag Sonntag PÄDAGOGIKBETRIEB* Montag: geschlossen Dienstag: 8.00 – 18.00 Uhr Mittwoch: 8.00 – 18.00 Uhr Donnerstag: 8.00 – 18.00 Uhr Freitag: 8.00 –",
  "fetch_backend": "system",
- "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")])]",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")])]",
  "name": "Wirgarten",
+ "note": "2026-10-03: Filter auf common ancestor geändert, der vorherige erfasste seitenabhängigen Text mit (Issue #123).",
  "osm_id": "way/24642832",
  "schema": 1,
  "tags": [
