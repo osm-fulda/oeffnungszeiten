@@ -1,0 +1,13 @@
+{
+ "added": "2026-10-03",
+ "captured_sample": "Dienstag bis Samstag von 18 bis 1 Uhr Happy Hour von 18 bis 19.30 Uhr: 50 % auf Longdrinks und Aperitifs",
+ "fetch_backend": "html_requests",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" section__panel \")][.//h2[contains(.,\"Bar Barock\")]]//table",
+ "name": "Bar Barock",
+ "note": "Hotelbar, eigener Abschnitt auf der Restaurantseite. Noch kein OSM-Objekt; osm_id nachtragen, sobald es angelegt ist. Die \"BARock Bar\" in der Kanalstrasse ist ein anderer Betrieb.",
+ "schema": 1,
+ "tags": [
+  "fulda-bar"
+ ],
+ "url": "https://www.maritim.de/de/hotels/deutschland/hotel-am-schlossgarten-fulda/restaurants"
+}

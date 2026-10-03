@@ -1,10 +1,10 @@
 {
  "added": "2026-07-25",
- "captured_sample": "Frühstück Montag bis Freitag von 6.30 bis 10.30 Uhr Samstag und Sonntag von 6.30 bis 11 Uhr Dienstag bis Samstag von 18 bis 1 Uhr Happy Hour von 18 bis 19.30 Uhr: 50 % auf Longdrinks und Aperitifs",
+ "captured_sample": "À-la-carte Täglich von 18 bis 23 Uhr (Küchenschluss 22 Uhr)",
  "fetch_backend": "html_requests",
- "filter": "xpath://tbody[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")][not(.//tbody[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")])]",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" section__panel \")][.//h2[contains(.,\"Dianakeller\")]]//table",
  "name": "Dianakeller",
- "note": "2026-08-01: auf die Restaurantseite des Hotels umgehaengt; der Filter fixiert den Dianakeller-Abschnitt (Taeglich 18-23 Uhr). Das alte /kontakt-aufnehmen war ein Buchungsformular.",
+ "note": "Die Seite fuehrt drei Betriebe in eigenen Abschnitten; der Filter nimmt die Zeiten-Tabelle unter der Ueberschrift \"Dianakeller\". Der fruehere tbody-Filter fing Apollo-Saal-Fruehstueck und Bar Barock ein, nicht den Dianakeller. Die Seite schreibt nur \"Täglich\", deshalb warnt die Pruefung, es sei kein Wochentag genannt.",
  "osm_id": "node/3978092612",
  "schema": 1,
  "tags": [
