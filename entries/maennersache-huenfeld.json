@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Öffnungszeiten Mo. - Fr.: 10.00 - 18.00 Uhr Sa.: 10.00 - 15.00 Uhr Anfahrt Google-Maps Karte",
+ "filter": "xpath:(//b[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "MännerSache Hünfeld",
+ "note": "2026-10-04: Filialseite bei Mode Vogt; die eigene Domain ist tot.",
+ "osm_id": "way/209016504",
+ "schema": 1,
+ "tags": [
+  "lkfulda-clothes",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://www.mode-vogt.de/filialen/maennersache-huenfeld"
+}

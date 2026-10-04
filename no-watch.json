@@ -2623,15 +2623,6 @@
    "osm_id": "way/153958686"
   },
   {
-   "url": "https://www.landgasthof-zumstern.de/restaurant/",
-   "name": "Landgasthof Zum Stern",
-   "reason": "anti-bot",
-   "established": "2026-09-22",
-   "recheck": "2027-03-01",
-   "note": "Der einfache Abruf bekommt 'Connection refused'. Mit Browser lieferte die Seite am 22.09.2026 einmal den Block 'Montag bis Freitag 17.00 Uhr - 20:30 Uhr, Samstag und Sonntag Ruhetag', bei drei weiteren Versuchen derselben Minute jedoch eine leere Seite. Eine Watch darauf meldet Leerlauf statt Zeiten; im Maerz erneut ansehen.",
-   "osm_id": "way/164285479"
-  },
-  {
    "url": "https://www.ats.moarbich.de/",
    "name": "Autotechnik Roland Balzer",
    "reason": "no-hours-on-page",
@@ -2783,6 +2774,15 @@
    "recheck": "2027-04-01",
    "note": "Die Zeiten stehen weder im HTML noch im gerenderten Text; sie erscheinen erst nach einem Klick auf ÖFFNUNGSZEITEN (Link mit leerem href, per JavaScript). Wert am 04.10.2026 nach Klick gelesen: Mo-Fr 08:30-18:30, Sa 08:30-13:00. Gilt vermutlich fuer alle vasters-apotheken.de-Seiten. Browser Steps in changedetection waeren der Weg.",
    "osm_id": "node/442018148"
+  },
+  {
+   "url": "https://www.expert.de/petersberg",
+   "name": "expert klein (Petersberg)",
+   "reason": "today-only",
+   "established": "2026-10-04",
+   "recheck": "on-relocation",
+   "note": "Sichtbar ist nur der heutige Status ('Geschlossen - öffnet um ...'); die Wochenzeiten stehen nur in den serialisierten Seitendaten (Minuten: Mo-Fr 600-1140, Sa 600-1080). Wert am 04.10.2026 daraus bestaetigt: Mo-Fr 10-19, Sa 10-18.",
+   "osm_id": "node/1455862048"
   }
  ]
 }

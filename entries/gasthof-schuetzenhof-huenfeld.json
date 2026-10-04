@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Öffnungszeiten Montag Ruhetag Dienstag – Freitag 11:30 – 13:30 Uhr 17:30 Uhr Küche bis 20:30 Uhr Samstag 17:30 Uhr Küche bis 20:30 Uhr Sonntag 11:30 – 13:30 Uhr 17:30 Uhr Küche bis 20:30 Uhr",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Gasthof Schützenhof (Hünfeld)",
+ "note": "2026-10-04: Fusszeilen-Block; die Tabelle oben sagt dasselbe. Bis 29.09.2026 widersprachen sich beide (13:45/13:30).",
+ "osm_id": "node/2192602767",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://schuetzenhof-huenfeld.de/"
+}

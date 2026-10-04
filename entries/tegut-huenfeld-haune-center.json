@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Markt Mo-Sa: 07:00 - 21:00 Getränkemarkt Mo-Fr: 08:30 - 20:00 Sa: 08:00 - 20:00",
+ "filter": "xpath://*[@id=\"openingtimesCollapse\"]",
+ "lang": "de",
+ "name": "tegut (Hünfeld, Haune Center)",
+ "note": "2026-10-04: Block fuehrt Markt und Getraenkemarkt; der Getraenkemarkt ist in OSM ein eigenes Objekt (node/3112855150, Josefstr. 16). Eine Meldung betrifft ggf. beide.",
+ "osm_id": "node/2192215257",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-supermarket"
+ ],
+ "url": "https://www.tegut.com/maerkte/markt/tegut-huenfeld-haune-center-josefstrasse-3.html"
+}

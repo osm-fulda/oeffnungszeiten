@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Öffnungszeiten Montag u. Dienstag Ruhetag Mittwoch u. Sonntag 11:30 - 14:00 Uhr ab 17:00 Uhr Donnerstsg bis Samstag ab 17:00 Uhr",
+ "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Lindenhof Keulos",
+ "note": "2026-10-04: website-Tag http://www.lindenhofkeulos.de/ ist ein Rahmen um diese Beepworld-Seite.",
+ "osm_id": "way/438321402",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://keulos.beepworld.de/oeffnungszeiten.htm"
+}
