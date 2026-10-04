@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Unsere aktuellen Öffnungszeiten: Café/Restaurant Montag Ruhetag Dienstag-Mittwoch 10:30 Uhr bis 18:00 Uhr Donnerstag-Samstag 10:30 Uhr bis 22:00 Uhr Sonntag 10:30 Uhr bis 18:00 Uhr",
+ "filter": "xpath://*[contains(.,\"aktuellen Öffnungszeiten\") and contains(.,\"Sonntag\")][not(.//*[contains(.,\"aktuellen Öffnungszeiten\") and contains(.,\"Sonntag\")])]",
+ "lang": "de",
+ "name": "Die Fasanerie (Café/Restaurant)",
+ "note": "2026-10-04: Beobachtet den Block \"Unsere aktuellen Öffnungszeiten\" (Stand 03.10.2026: Di-Mi 10:30-18, Do-Sa 10:30-22, So 10:30-18), der in OSM steht. Die Fusszeile (Di-Mi 12-18, Do-Sa 12-23, So 12-18) ist der Normalbetrieb: verschwindet der Aktuell-Block, gilt vermutlich wieder sie.",
+ "osm_id": "node/1022744000",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://die-fasanerie.de/"
+}

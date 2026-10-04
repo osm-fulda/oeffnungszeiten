@@ -1,0 +1,14 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Öffnungszeiten Mo und Di geschlossen Mi bis Sa: 17:00 – 22:00 So: 11:00 – 14:00, 17:00 – 22:00",
+ "filter": "xpath:(//h5[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Gasthof \"Zum Schwarzen Ross\"",
+ "osm_id": "node/3843263657",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://gasthof-schwarzesross.de/"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Unsere Öffnungszeiten: Montag – Freitag von 05:00 bis 12:30 Uhr und von 14:30 bis 18:00 UhrSamstag von 06:00 bis 12:30 Uhr #col-290011802 > .col-inner { padding: 10px 10px 10px 10px; margin: 15px 0px ",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" medium-9 \")]",
+ "lang": "de",
+ "name": "Nahkauf Reith",
+ "note": "2026-10-04: Seite hatte bis 03.10.2026 zwei widerspruechliche Bloecke (06:00/05:00); seit 04.10. einheitlich Mo-Fr 05:00, Sa 06:00.",
+ "osm_id": "node/11963443212",
+ "schema": 1,
+ "tags": [
+  "lkfulda-convenience",
+  "lkfulda-eichenzell"
+ ],
+ "url": "https://www.nahkauf-reith.de/"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Täglich von 17.00 bis 22.00 UhrMittwochs, Sonn- und Feiertags11.00 bis 14.00 Uhr17.00 bis 22.00 Uhr",
+ "filter": "xpath://*[contains(.,\"Täglich von 17\") and contains(.,\"Feiertags\")][not(.//*[contains(.,\"Täglich von 17\") and contains(.,\"Feiertags\")])]",
+ "lang": "de",
+ "name": "Pizzeria \"Italia\" (Eichenzell)",
+ "note": "2026-10-04: Nur der Zeitenabsatz, nicht das Mittwochsangebot.",
+ "osm_id": "node/3843263662",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://pizzeria-italia-amadeo.de/"
+}

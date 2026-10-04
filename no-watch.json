@@ -2774,6 +2774,15 @@
    "recheck": "on-relocation",
    "note": "403 auf den einfachen Abruf, wie die anderen edeka.de-Marktseiten. Wert in OSM am 01.10.2026 gegen die Marktseite geprueft (Mo-Do 06:30-19:00, Fr-Sa 06:30-20:00).",
    "osm_id": "node/845128775"
+  },
+  {
+   "url": "https://www.vasters-apotheken.de/roehn_apotheke",
+   "name": "Rhön Apotheke (Eichenzell)",
+   "reason": "no-hours-on-page",
+   "established": "2026-10-04",
+   "recheck": "2027-04-01",
+   "note": "Die Zeiten stehen weder im HTML noch im gerenderten Text; sie erscheinen erst nach einem Klick auf ÖFFNUNGSZEITEN (Link mit leerem href, per JavaScript). Wert am 04.10.2026 nach Klick gelesen: Mo-Fr 08:30-18:30, Sa 08:30-13:00. Gilt vermutlich fuer alle vasters-apotheken.de-Seiten. Browser Steps in changedetection waeren der Weg.",
+   "osm_id": "node/442018148"
   }
  ]
 }

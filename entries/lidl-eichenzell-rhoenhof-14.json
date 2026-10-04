@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday 07:00-21:00",
+ "filter": "json:$..openingHoursSpecification",
+ "lang": "de",
+ "name": "Lidl (Eichenzell, Rhönhof 14)",
+ "note": "2026-10-04: JSON-LD wie bei den anderen Lidl-Eintraegen.",
+ "osm_id": "way/119549812",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-supermarket"
+ ],
+ "url": "https://www.lidl.de/s/de-DE/filialen/eichenzell/rhoenhof-14/"
+}

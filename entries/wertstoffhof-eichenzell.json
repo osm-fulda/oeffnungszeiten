@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Zur Mühlau 13, 36124 Eichenzell Öffnungszeiten Wertstoffhof Eichenzell Samstag 09.00 - 12.00 Uhr Dienstag 14.00 - 16.00 Uhr November bis März Donnerstag 14.00 - 16.00 Uhr April bis Oktober Donnerstag ",
+ "filter": "xpath://*[contains(.,\"Öffnungszeiten Wertstoffhof\") and contains(.,\"Donnerstag\")][not(.//*[contains(.,\"Öffnungszeiten Wertstoffhof\") and contains(.,\"Donnerstag\")])]",
+ "lang": "de",
+ "name": "Wertstoffhof Eichenzell",
+ "note": "2026-10-04: Der Wizard nahm den Buergerbuero-Block der Seitenleiste; Filter ueber die Ueberschrift des Wertstoffhofs.",
+ "osm_id": "node/442018146",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-recycling"
+ ],
+ "url": "https://www.eichenzell.de/de/buergerservice-rathaus/abfallentsorgung-energieversorgung/wertstoffhof/"
+}

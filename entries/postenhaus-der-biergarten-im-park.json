@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Biergarten am Postenhaus Bei trockenem Wetter Montag- Freitag ab 14:00 Uhr Samstag-Sonntag ab 12:00 Uhr",
+ "filter": "xpath://*[contains(.,\"Biergarten am Postenhaus\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Biergarten am Postenhaus\") and contains(.,\"Uhr\")])]",
+ "lang": "de",
+ "name": "Postenhaus - der Biergarten im Park",
+ "note": "2026-10-04: Biergarten-Block \"bei trockenem Wetter Mo-Fr ab 14, Sa-So ab 12\". Gleiche Seite wie die Fasanerie, eigenes Objekt.",
+ "osm_id": "node/1022743936",
+ "schema": 1,
+ "tags": [
+  "lkfulda-biergarten",
+  "lkfulda-eichenzell"
+ ],
+ "url": "https://die-fasanerie.de/"
+}

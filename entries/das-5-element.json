@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Öffnungszeiten So – Do 12:00 – 04:00 Fr – Sa 12:00 – 05:00 Tickets & Gutscheine Automaten vor Ort",
+ "filter": "xpath:(//span[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Das 5. Element",
+ "note": "2026-10-04: Sichtbarer Block; OSM-Wert mit Komma (Su-Th 12:00-04:00, Fr,Sa 12:00-05:00), damit keine Nachtspanne abgeschnitten wird.",
+ "osm_id": "way/119549604",
+ "schema": 1,
+ "tags": [
+  "lkfulda-brothel",
+  "lkfulda-eichenzell"
+ ],
+ "url": "https://www.das5element.de/"
+}

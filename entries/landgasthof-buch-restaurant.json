@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Montag ab 18 Uhr Dienstag ab 18 Uhr Mittwoch ab 18 Uhr Donnerstag Ruhetag Freitag Ruhetag Samstag ab 18 Uhr Sonntag ab 17:30 Uhr",
+ "filter": "xpath://tbody[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//tbody[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Landgasthof Buch (Restaurant)",
+ "note": "2026-10-04: Zeiten nur auf /restaurant/; Startseite nennt keine.",
+ "osm_id": "way/364721707",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-restaurant"
+ ],
+ "url": "http://www.landgasthof-buch.de/restaurant/"
+}
