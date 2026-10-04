@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Eichenzell Gersfelder Straße 836124 EichenzellT 06659 618 121 Anfahrt Mo. - Fri. 06:00 - 18:00 Uhr Sa. 06:00 - 16:00 Uhr So. 07:00 - 17:00 Uhr Sa, 03. Oktober 07.00 - 17.00 Uhr",
+ "filter": "xpath://div[contains(.,\"Gersfelder Straße 8\") and contains(.,\"Uhr\")][not(.//div[contains(.,\"Gersfelder Straße 8\") and contains(.,\"Uhr\")])]",
+ "lang": "de",
+ "name": "Bäckerei Happ (Eichenzell, Gersfelder Straße 8)",
+ "note": "2026-10-04: Zeile der Filialliste ueber die Anschrift (FILTERS.md Fall 12), wie die anderen Happ-Eintraege.",
+ "osm_id": "node/3268752269",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bakery",
+  "lkfulda-eichenzell"
+ ],
+ "url": "https://baecker-happ.de/fachgeschaefte/"
+}

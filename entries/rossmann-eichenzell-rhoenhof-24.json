@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Mo 08:00-20:00, Tu 08:00-20:00, We 08:00-20:00, Th 08:00-20:00, Fr 08:00-20:00, Sa 08:00-20:00",
+ "filter": "json:$..openingHours",
+ "lang": "de",
+ "name": "Rossmann (Eichenzell, Rhönhof 24)",
+ "note": "2026-10-04: Eigene Zeiten stehen nur im JSON-LD (openingHours Mo-Sa 08-20); die sichtbaren #openingN-Bloecke sind Nachbarfilialen (#opening0 = Rangstr. Fulda). Das JSON-LD enthaelt einen rohen Zeilenumbruch im name-Feld und ist fuer strenge Parser ungueltig — liefert der Watch leer, zeigt es der Montagsbericht (betrifft dann auch rossmann.json).",
+ "osm_id": "node/1318655640",
+ "schema": 1,
+ "tags": [
+  "lkfulda-chemist",
+  "lkfulda-eichenzell"
+ ],
+ "url": "https://www.rossmann.de/de/filialen/hessen/eichenzell/rhoenhof-24.html"
+}

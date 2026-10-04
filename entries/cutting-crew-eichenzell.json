@@ -1,0 +1,14 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Öffnungszeiten Di. - Fr.09:00-19:00 Uhr Sa.09:00-15:00 Uhr Weitere Salons Fulda Hünfeld Schlüchtern Links Facebook Instagram Ausbildung Stellenausschreibung Kontakt Google Maps Fuldaer Str. 1936124 Ei",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" mx-auto \")]",
+ "lang": "de",
+ "name": "cutting crew Eichenzell",
+ "osm_id": "node/8752541817",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-hairdresser"
+ ],
+ "url": "https://www.wirsindfriseure.de/eichenzell"
+}

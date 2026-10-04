@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Bürozeiten Montag – Freitag: 7 bis 17 Uhr",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "rhöncloud GmbH",
+ "note": "2026-10-04: Buerozeiten.",
+ "osm_id": "node/14203087101",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-office"
+ ],
+ "url": "https://www.rhoencloud.de/kontakt/"
+}

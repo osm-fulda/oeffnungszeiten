@@ -1,0 +1,14 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Öffnungszeiten Montag 09:00 - 19:00 Dienstag 09:00 - 19:00 Mittwoch 09:00 - 19:00 Donnerstag 09:00 - 19:00 Freitag 09:00 - 19:00 Samstag 09:00 - 17:00 Sonntag Geschlossen",
+ "filter": "xpath:(//h5[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Thomas Philipps Eichenzell",
+ "osm_id": "node/3270700564",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-variety_store"
+ ],
+ "url": "https://www.thomas-philipps.de/maerkte/thomas-philipps-eichenzell-36124-eichenzell"
+}

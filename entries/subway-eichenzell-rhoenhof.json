@@ -1,0 +1,16 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "WochentagÖffnungszeitenSo10:00 - 23:00Mo10:00 - 23:00Di10:00 - 23:00Mi10:00 - 23:00Do10:00 - 23:00Fr10:00 - 23:00Sa10:00 - 23:00",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath:(//table[contains(@class,\"c-hours-details\")])[1]",
+ "lang": "de",
+ "name": "Subway (Eichenzell, Rhönhof)",
+ "note": "2026-10-04: Wie subway-bahnhofstrasse: erste Zeitentabelle.",
+ "osm_id": "node/1342946055",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-fast_food"
+ ],
+ "url": "https://restaurants.subway.com/de/deutschland/he/eichenzell/rhonhof-am-langen-acker"
+}

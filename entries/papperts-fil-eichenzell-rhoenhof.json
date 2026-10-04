@@ -1,0 +1,16 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Montag: 06:00 - 19:00 Dienstag: 06:00 - 19:00 Mittwoch: 06:00 - 19:00 Donnerstag: 06:00 - 19:00 Freitag: 06:00 - 19:00 Samstag: 07:00 - 17:00 Sonntag: 07:00 - 17:00",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" detail-open-hours-list \")]",
+ "lang": "de",
+ "name": "papperts (Fil. Eichenzell Rhönhof)",
+ "note": "2026-10-04: Filialseite; das website-Tag zeigte bis 02.10.2026 auf die Konzernstartseite.",
+ "osm_id": "node/3270236279",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bakery",
+  "lkfulda-eichenzell"
+ ],
+ "url": "https://www.papperts.de/dealer/fil-eichenzell-rhonhof/"
+}

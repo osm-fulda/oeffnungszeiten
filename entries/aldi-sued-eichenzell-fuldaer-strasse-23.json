@@ -1,0 +1,16 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "ÖffnungszeitenSo.geschlossenMo.08:00 - 20:00Di.08:00 - 20:00Mi.08:00 - 20:00Do.08:00 - 20:00Fr.08:00 - 20:00Sa.08:00 - 20:00- DHL Packstation",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "ALDI SÜD (Eichenzell, Fuldaer Straße 23)",
+ "note": "2026-10-04: Wie aldi-sued-3: einfacher Abruf gibt 403, gerendert geht es. Der Block fuehrt auch Sonderoeffnungszeiten (Feiertage) — die melden sich mit.",
+ "osm_id": "node/2450999906",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-supermarket"
+ ],
+ "url": "https://filialen.aldi-sued.de/hessen/eichenzell/fuldaer-strasse-23"
+}

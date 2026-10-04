@@ -1,0 +1,14 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "AUSSTELLUNG - LAGER Montag, Dienstag, Mittwoch und Freitag 9.00 – 17.00 Uhr und außerhalb der Öffnungzeiten nach Terminabsprache. Damit wir ausreichend Zeit für Sie haben vereinbaren Sie gerne einen T",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnung\")])/parent::*",
+ "lang": "de",
+ "name": "Fliesen Ruppel",
+ "osm_id": "way/374693862",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-tiles"
+ ],
+ "url": "https://www.fliesen-ruppel.de/"
+}
