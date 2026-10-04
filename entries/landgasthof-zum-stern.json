@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Montag bis Freitag 17.00 Uhr – 20:30 UhrSamstag und Sonntag RuhetagÜbernachtung mit Frühstück ist Samstags weiterhin möglich.",
+ "filter": "xpath://ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Landgasthof Zum Stern",
+ "note": "2026-10-04: Stand am 22.09.2026 als anti-bot in no-watch (leere Antworten); am 04.10. dreimal stabil geladen. Liefert der Watch leer, zurueck nach no-watch.",
+ "osm_id": "way/164285479",
+ "schema": 1,
+ "tags": [
+  "lkfulda-huenfeld",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.landgasthof-zumstern.de/restaurant/"
+}

@@ -1,0 +1,16 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "ÖffnungszeitenSo.geschlossenMo.08:00 - 20:00Di.08:00 - 20:00Mi.08:00 - 20:00Do.08:00 - 20:00Fr.08:00 - 20:00Sa.08:00 - 20:00- DHL Packstation",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "ALDI SÜD (Künzell, In den Gründen 4)",
+ "note": "2026-10-04: Wie die anderen ALDI-Eintraege: einfacher Abruf 403, gerendert geht es.",
+ "osm_id": "way/141501274",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-supermarket"
+ ],
+ "url": "https://filialen.aldi-sued.de/hessen/kuenzell/in-den-gruenden-4"
+}

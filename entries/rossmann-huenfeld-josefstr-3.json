@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Mo 08:00-20:00, Tu 08:00-20:00, We 08:00-20:00, Th 08:00-20:00, Fr 08:00-20:00, Sa 08:00-18:00",
+ "filter": "json:$..openingHours",
+ "lang": "de",
+ "name": "Rossmann (Hünfeld, Josefstr. 3)",
+ "note": "2026-10-04: JSON-LD wie bei den anderen Rossmann-Eintraegen; sichtbare #openingN sind Nachbarfilialen. JSON-LD fuer strenge Parser ungueltig (roher Zeilenumbruch).",
+ "osm_id": "node/2192215251",
+ "schema": 1,
+ "tags": [
+  "lkfulda-chemist",
+  "lkfulda-huenfeld"
+ ],
+ "url": "https://www.rossmann.de/de/filialen/hessen/huenfeld/josefstr--3.html"
+}
