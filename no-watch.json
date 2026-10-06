@@ -2783,6 +2783,51 @@
    "recheck": "on-relocation",
    "note": "Sichtbar ist nur der heutige Status ('Geschlossen - öffnet um ...'); die Wochenzeiten stehen nur in den serialisierten Seitendaten (Minuten: Mo-Fr 600-1140, Sa 600-1080). Wert am 04.10.2026 daraus bestaetigt: Mo-Fr 10-19, Sa 10-18.",
    "osm_id": "node/1455862048"
+  },
+  {
+   "url": "https://www.reitsport-cavallini.de/Impressum:_:4.html",
+   "name": "Cavallini Reitsport",
+   "reason": "datacenter-block",
+   "established": "2026-10-06",
+   "recheck": "on-relocation",
+   "note": "Von hier rendert die Seite im Browser (Impressum mit Ladenzeiten Mo-Fr 16-20), der Cluster-Browser bekommt 403; curl bekommt von beiden Seiten 403. Gemessen 06.10.2026, nie ein Snapshot.",
+   "osm_id": "way/100686487"
+  },
+  {
+   "url": "https://www.gregorstore.de/",
+   "name": "Gregor's",
+   "reason": "anti-bot",
+   "established": "2026-10-06",
+   "recheck": "on-relocation",
+   "note": "Cloudflare-Sperrseite von jimdosite.com auch fuer einen Browser von hier, 403 vom VPS. Gemessen 06.10.2026, nie ein Snapshot.",
+   "osm_id": "way/108344514"
+  },
+  {
+   "url": "https://www.cafegersfeld.de/",
+   "name": "Cafe Gersfeld",
+   "reason": "datacenter-block",
+   "established": "2026-10-06",
+   "recheck": "on-relocation",
+   "note": "Von hier 200, vom VPS und aus dem Pod keine Verbindung (Max retries exceeded). Gemessen 06.10.2026, nie ein Snapshot.",
+   "osm_id": "node/298317219"
+  },
+  {
+   "url": "http://velvetrobe.com/",
+   "name": "Atelier VelvetRobe u. Stoffburg",
+   "reason": "site-unreachable",
+   "established": "2026-10-06",
+   "recheck": "2027-04-06",
+   "note": "Am 06.10.2026: velvetrobe.com hat keine Nameserver mehr, die Domain ist registriert, loest aber nicht auf. Ob der Laden noch besteht, ist offen.",
+   "osm_id": "node/1336845280"
+  },
+  {
+   "url": "https://koehler24.de/",
+   "name": "Modehaus Köhler",
+   "reason": "site-unreachable",
+   "established": "2026-10-06",
+   "recheck": "2027-04-06",
+   "note": "Am 06.10.2026: koehler24.de steht in der redemptionPeriod, die Domain ist also ausgelaufen. Ob der Laden noch besteht, ist offen.",
+   "osm_id": "node/1332671718"
   }
  ]
 }

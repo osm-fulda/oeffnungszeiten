@@ -1,7 +1,7 @@
 {
  "added": "2026-08-17",
- "captured_sample": "Montag 10:00 - 13:00 Uhr — Dienstag 10:00 - 13:00 Uhr 14:00 - 18:00 Uhr Mittwoch 10:00 - 13:00 Uhr — Donnerstag 10:00 - 13:00 Uhr 14:00 - 18:00 Uhr Freitag 10:00 - 13:00 Uhr —",
- "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" opening-hours__days-wrapper \")]",
+ "captured_sample": "Montag 10:00–13:00 Uhr Dienstag 10:00–13:00 Uhr und 14:00–18:00 Uhr Mittwoch 10:00–13:00 Uhr Donnerstag 10:00–13:00 Uhr und 14:00–18:00 Uhr Freitag 10:00–13:00 Uhr Samstag Geschlossen Sonntag Geschlossen",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" opening-hours \")]",
  "name": "Targobank",
  "note": "Schalterzeiten; die SB-Zone (Mo-Sa 08:00-20:00) ist keine Oeffnungszeit der Filiale.",
  "osm_id": "node/307922173",

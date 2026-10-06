@@ -1,9 +1,9 @@
 {
  "added": "2026-08-18",
- "captured_sample": "Öffnungszeiten Mo, Di, Do 08 - 18:30 Uhr Mi 08 - 18 Uhr, Fr 08 - 15 Uhr",
- "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "captured_sample": "Öffnungszeiten Standort Mo.08:00 - 20:00 Uhr Di.08:00 - 20:00 Uhr Mi.08:00 - 20:00 Uhr Do.08:00 - 20:00 Uhr Fr.08:00 - 19:00 Uhr Sa.geschlossen So.geschlossen Rezeption Mo.08:00 - 17:00 Uhr Di.08:00 - 17:00 Uhr Mi.08:00 - 17:00 Uhr Do.08:00 - 17:00 Uhr Fr.08:00 - 15:00 Uhr",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" hours-row \")]",
  "name": "ZAR Ambulante Reha",
- "note": "Sichtbarer Block statt JSON-LD: das JSON-LD nennt Mo-Fr 08:00-17:00 und widerspricht damit der sichtbaren Angabe (Mo, Di, Do bis 18:30, Fr bis 15:00).",
+ "note": "2026-10-06: Seite umgebaut, nennt jetzt Standort (Mo-Do 08-20, Fr 08-19) und Rezeption (Mo-Do 08-17, Fr 08-15) getrennt; beide im Filter. Sichtbarer Block statt JSON-LD, das JSON-LD widerspricht der sichtbaren Angabe.",
  "osm_id": "node/12650591150",
  "schema": 1,
  "tags": [
