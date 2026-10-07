@@ -58,7 +58,9 @@ LANGS = {
 # The optional seconds are for JSON-LD: `openingHoursSpecification` writes "opens": "09:00:00",
 # and without them the lookahead tripped over the second colon — which made watch_audit report
 # a working KIND watch as "no opening hours on this page at all".
-_CLOCK = r'(?<![\d.:])\d{1,2}\s*[:.]\s*\d{2}(?::\d{2})?(?![\d.:])'
+# A dot after a letter is an abbreviation, not part of a number: "Mo.9.00 – 14.00 Uhr" is how the
+# IKK writes its only hours, and rejecting every preceding dot made the wizard call that page blind.
+_CLOCK = r'(?<![\d:])(?<!\d\.)\d{1,2}\s*[:.]\s*\d{2}(?::\d{2})?(?![\d.:])'
 # "10 - 18 Uhr", "10–18 Uhr", "10 bis 18 Uhr", "18 Uhr"
 _GERMAN_BARE = r'(?<!\d)\d{1,2}\s*(?:[-–—]|bis)\s*\d{1,2}\s*Uhr|(?<!\d)\d{1,2}(?:[.:]\d{2})?\s*Uhr'
 # "Mo-Di 11-24h", "11 - 2 h" — German shorthand with an h suffix and no minutes
@@ -71,8 +73,12 @@ _DAY_BARE = (r'\b(?:mo|di|mi|do|fr|sa|so)[a-zäöü]*\.?'
              r'(?:\s*(?:[-–—]|bis)\s*(?:mo|di|mi|do|fr|sa|so)[a-zäöü]*\.?)?'
              r'[\s:]*(?<![\d.:])\d{1,2}\s*[-–—]\s*\d{1,2}(?![\d.:])')
 _ENGLISH_BARE = r'(?<!\d)\d{1,2}(?::\d{2})?\s*(?:am|pm|a\.m\.|p\.m\.)'
+# "8°° - 12°° Uhr", "10.oo Uhr" — typewriter shapes for full hours. Café Wahl and Harry's
+# Modellbau write nothing else, and the audit called both "no opening hours on this page".
+_FULL_HOUR = r'(?<![\d.:])\d{1,2}\s*(?:°°|[.:]oo)(?![a-z\d])'
 
-TIME_RE = re.compile(f'{_CLOCK}|{_GERMAN_BARE}|{_GERMAN_H}|{_DAY_BARE}|{_ENGLISH_BARE}', re.I)
+TIME_RE = re.compile(f'{_CLOCK}|{_GERMAN_BARE}|{_GERMAN_H}|{_DAY_BARE}|{_ENGLISH_BARE}|{_FULL_HOUR}',
+                     re.I)
 
 # Text shapes of an anti-bot / error interstitial. Phrases must be DISTINCTIVE: a bare
 # "captcha" or "forbidden" also occurs in ordinary contact forms and legal text, and

@@ -1,13 +1,14 @@
 {
  "added": "2026-07-26",
- "captured_sample": "Slabowski Hair & Beauty Paul-Klee-Straße 40 36041 Fulda – Galerie * Telefon * Mail * 0661 – 90 19 125 * service@slabowski-friseur.de Öffnungszeiten * Mo * Di * Mi * Do * Fr * Sa * Geschlossen * 10:00–",
+ "captured_sample": "Öffnungszeiten Montaggeschlossen Dienstag10 – 18 Uhr Mittwoch10 – 18 Uhr Donnerstag9 – 19 Uhr Freitag9 – 18 Uhr Samstag9 – 14 Uhr Sonntaggeschlossen",
  "fetch_backend": "system",
- "filter": "xpath:(//h1[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Slabowski – Hair & Beauty",
+ "note": "2026-10-06: /kontakt/ leitet auf /standort.html um.",
  "osm_id": "node/12839662933",
  "schema": 1,
  "tags": [
   "fulda-hairdresser"
  ],
- "url": "https://slabowski-friseur.de/kontakt/"
+ "url": "https://slabowski-friseur.de/standort.html"
 }

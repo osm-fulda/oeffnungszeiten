@@ -1,10 +1,10 @@
 {
  "added": "2026-09-29",
- "captured_sample": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday 07:00-21:00",
- "filter": "json:$..openingHoursSpecification",
+ "captured_sample": "Monday Tuesday Wednesday Thursday Friday Saturday 07:00 21:00",
+ "filter": "xpath:for $s in parse-json(//script[@type=\"application/ld+json\"][contains(.,\"openingHoursSpecification\")])?openingHoursSpecification?* return string-join(($s?dayOfWeek?*, $s?opens, $s?closes), \" \")",
  "lang": "de",
  "name": "Lidl (Künzell, Landweg 2)",
- "note": "2026-09-29: JSON-LD, weil der sichtbare Block erst im Browser entsteht. Stimmt am 29.09.2026 mit OSM ueberein (Mo-Sa 07:00-21:00).",
+ "note": "2026-09-29: JSON-LD, weil der sichtbare Block erst im Browser entsteht. Stimmt am 29.09.2026 mit OSM ueberein (Mo-Sa 07:00-21:00). 2026-10-06: JSON-LD per XPath 3.1 parse-json statt json:. Der json:-Filter von changedetection 0.55.8 bricht an einem leeren <script> der Seite ab (\"string index out of range\"); der sichtbare Block nennt Kalenderdaten statt Wochentage und wuerde jeden Tag melden.",
  "osm_id": "way/141501270",
  "schema": 1,
  "tags": [

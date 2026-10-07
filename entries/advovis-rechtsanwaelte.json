@@ -1,12 +1,13 @@
 {
  "added": "2026-08-18",
- "captured_sample": "Unsere Öffnungszeiten: ​ Montag bis Donnerstag: 08:00 bis 13:00 Uhr 14:00 bis 16:30 Uhr ​ Freitag: 08:00 bis 13:00 Uhr - sowie nach Vereinbarung - ​",
- "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "captured_sample": "Unsere Öffnungszeiten Mo–Do: 08:00–13:00 und 14:00–16:30 Uhr Fr: 08:00–13:00 Uhr Weitere Termine nach Vereinbarung.",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" av-hours \")]",
  "name": "Advovis Rechtsanwälte Fachanwälte Steuerberatung",
+ "note": "2026-10-07: Die Zeiten stehen im Footer von advovis.com, den Wix als iframe von filesusr.com nachlaedt; der Watch liest das iframe direkt. Bearbeitet die Kanzlei den Block, bekommt das iframe einen neuen Dateinamen und der Watch meldet einen Abruffehler: dann die neue Adresse aus dem iframe-src der Startseite holen.",
  "osm_id": "node/13195448304",
  "schema": 1,
  "tags": [
   "fulda-lawyer"
  ],
- "url": "https://www.advovis.com"
+ "url": "https://www-advovis-com.filesusr.com/html/44be05_e3b60653832847e7b32b623d19517339.html"
 }

@@ -159,7 +159,12 @@ def check_live(e, lang_default="de", browser_ws=None):
         doc = W.strip_noise(lxml.html.fromstring(html))
         sel = doc.xpath(xp)
     except Exception as exc:
-        errs.append(f"filter is not valid XPath / did not evaluate: {str(exc)[:70]}")
+        if filt.startswith("xpath:"):
+            # changedetection evaluates `xpath:` as XPath 3.1 (elementpath); lxml only knows 1.0,
+            # so a `parse-json(...)` or `for ... return` filter cannot be checked here.
+            warns.append("XPath 3 filter, lxml cannot evaluate it — only changedetection checks it")
+        else:
+            errs.append(f"filter is not valid XPath / did not evaluate: {str(exc)[:70]}")
         return errs, warns
     if not sel:
         if needs_browser and browser_ws:

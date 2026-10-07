@@ -1,10 +1,10 @@
 {
  "added": "2026-10-04",
- "captured_sample": "Mo 08:00-20:00, Tu 08:00-20:00, We 08:00-20:00, Th 08:00-20:00, Fr 08:00-20:00, Sa 08:00-18:00",
- "filter": "json:$..openingHours",
+ "captured_sample": "Mo - Fr08:00 - 20:00 Sa08:00 - 18:00 SoGeschlossen",
+ "filter": "xpath://*[@id=\"openbox\"]//p[contains(concat(\" \",normalize-space(@class),\" \"),\" opening \")]",
  "lang": "de",
  "name": "Rossmann (Hünfeld, Josefstr. 3)",
- "note": "2026-10-04: JSON-LD wie bei den anderen Rossmann-Eintraegen; sichtbare #openingN sind Nachbarfilialen. JSON-LD fuer strenge Parser ungueltig (roher Zeilenumbruch).",
+ "note": "2026-10-06: Sichtbarer Block #openbox der eigenen Filiale. Das JSON-LD ist ungueltig (roher Zeilenumbruch im name-Feld), changedetection findet darin nichts; die #openingN-Bloecke weiter unten sind Nachbarfilialen.",
  "osm_id": "node/2192215251",
  "schema": 1,
  "tags": [
