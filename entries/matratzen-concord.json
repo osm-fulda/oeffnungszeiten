@@ -1,15 +1,15 @@
 {
  "added": "2026-07-26",
- "captured_sample": "10:00 - 16:00 10:00 - 18:30 10:00 - 18:30 10:00 - 18:30 10:00 - 18:30 10:00 - 18:30 geschlossen * Di. * Do. * Fr. * Mi. * Mo. * Sa. * So. Öffnungszeiten",
- "fetch_backend": "html_webdriver",
- "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "captured_sample": "dayOfWeek 1-5 10:00-18:30, 6 10:00-16:00, 7 closed",
+ "fetch_backend": "system",
+ "filter": "json:$.response.openingHours",
  "name": "Matratzen Concord",
- "note": "2026-08-01: der Datenstand auf die Filial-URL gezogen, die der Watch ohnehin benutzte (vorher die Konzernseite /informationen/kontakt/, mit der die Sync einen doppelten Watch angelegt haette).",
+ "note": "2026-10-07: Die sichtbare Filialseite https://www.matratzen-concord.de/filialen/fulda/0247 baut der Uberall-Filialfinder erst nach der Cookie-Zustimmung; ohne sie antwortet der Server mit 404. Der Watch liest dieselben Daten direkt aus der Uberall-API (dayOfWeek 1 = Montag). specialOpeningHours bleibt draussen, sonst meldet jeder Feiertag.",
  "osm_id": "node/4985129725",
  "schema": 1,
- "sort_text_alphabetically": true,
+ "sort_text_alphabetically": false,
  "tags": [
   "fulda-bed"
  ],
- "url": "https://www.matratzen-concord-filialen.de/fulda/a632"
+ "url": "https://uberall.com/api/storefinders/dqtoh7n2m6OGByE1FJxlQ4gDnGNB6i/locations/3302298?v=20230110&language=de"
 }

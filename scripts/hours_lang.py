@@ -58,7 +58,9 @@ LANGS = {
 # The optional seconds are for JSON-LD: `openingHoursSpecification` writes "opens": "09:00:00",
 # and without them the lookahead tripped over the second colon — which made watch_audit report
 # a working KIND watch as "no opening hours on this page at all".
-_CLOCK = r'(?<![\d.:])\d{1,2}\s*[:.]\s*\d{2}(?::\d{2})?(?![\d.:])'
+# A dot after a letter is an abbreviation, not part of a number: "Mo.9.00 – 14.00 Uhr" is how the
+# IKK writes its only hours, and rejecting every preceding dot made the wizard call that page blind.
+_CLOCK = r'(?<![\d:])(?<!\d\.)\d{1,2}\s*[:.]\s*\d{2}(?::\d{2})?(?![\d.:])'
 # "10 - 18 Uhr", "10–18 Uhr", "10 bis 18 Uhr", "18 Uhr"
 _GERMAN_BARE = r'(?<!\d)\d{1,2}\s*(?:[-–—]|bis)\s*\d{1,2}\s*Uhr|(?<!\d)\d{1,2}(?:[.:]\d{2})?\s*Uhr'
 # "Mo-Di 11-24h", "11 - 2 h" — German shorthand with an h suffix and no minutes

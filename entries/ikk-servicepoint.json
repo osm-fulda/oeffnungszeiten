@@ -1,9 +1,10 @@
 {
  "added": "2026-08-18",
- "captured_sample": "Öffnungszeiten:Mo.9.00 – 14.00 UhrKommen Sie innerhalb der Öffnungszeit bei uns vorbei. Oder vereinbaren Sie einen Termin. Telefonisch sind wir stets unter der Telefonnummer 0681 3876-1000 erreichbar. Senden Sie bitte Ihre Post an unsere zentrale Postadresse: IKK Südwest, 66098 Saarbrücken",
- "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "captured_sample": "Mo.9.00 – 14.00 Uhr",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" location__opening-times \")]",
  "name": "Servicepoint der IKK Südwest im ITZ Fulda",
- "note": "Der Servicepoint oeffnet nur montags; der Block nennt daneben den Hinweis, ohne Termin vorbeizukommen.",
+ "note": "Der Servicepoint oeffnet nur montags; der Block nennt daneben den Hinweis, ohne Termin vorbeizukommen. 2026-10-07: Der Block steht jetzt in einem Slider, den erst JavaScript fuellt; nur der Slider, ohne den Hinweistext darunter.",
  "osm_id": "node/12465171648",
  "schema": 1,
  "tags": [
