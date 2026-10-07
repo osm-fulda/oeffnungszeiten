@@ -59,6 +59,11 @@ def audit(base_url, api_key, uuids=()):
 
 RECHECK_BUDGET = 420        # seconds to wait for the rechecks to come back
 RECHECK_POLL = 15
+# Shopify answers the whole VPS address with 429 and `Retry-After: 60` once two of its shops are
+# fetched within a minute of each other, whatever the shop. Rechecking all 429s at once therefore
+# reproduces every one of them, and since a recheck also resets the cadence, the same watches
+# collide again three days later. Measured 07.10.2026: six shops, still 429 at 25 s spacing.
+RATE_LIMITED_GAP = 90
 
 
 def confirmed(rows, base_url, api_key, budget=RECHECK_BUDGET):
@@ -83,20 +88,31 @@ def confirmed(rows, base_url, api_key, budget=RECHECK_BUDGET):
 
     api = C.CDIO(base_url, api_key)
     before, asked = {}, []
-    for r in suspects:
-        u = r["uuid"]
+
+    def ask(u):
         try:
             before[u] = (api.get(u) or {}).get("last_checked")
             api.recheck(u)
             asked.append(u)
         except Exception as e:
             print(f"recheck {u} failed: {e}", file=sys.stderr)
-    if not asked:
+
+    limited = [r["uuid"] for r in suspects if any("429" in i for i in r.get("issues") or [])]
+    for r in suspects:
+        if r["uuid"] not in limited:
+            ask(r["uuid"])
+    # The rate-limited ones go one at a time, RATE_LIMITED_GAP apart, inside the wait below.
+    budget = max(budget, len(limited) * RATE_LIMITED_GAP + RECHECK_POLL * 4)
+    if not asked and not limited:
         return rows
 
-    print(f"rechecking {len(asked)} fetch error(s), up to {budget}s …", file=sys.stderr)
-    deadline, done = time.time() + budget, set()
-    while asked and time.time() < deadline:
+    print(f"rechecking {len(asked) + len(limited)} fetch error(s), "
+          f"{len(limited)} of them spaced, up to {budget}s …", file=sys.stderr)
+    deadline, done, next_limited = time.time() + budget, set(), time.time()
+    while (asked or limited) and time.time() < deadline:
+        if limited and time.time() >= next_limited:
+            ask(limited.pop(0))
+            next_limited = time.time() + RATE_LIMITED_GAP
         time.sleep(RECHECK_POLL)
         for u in list(asked):
             try:
