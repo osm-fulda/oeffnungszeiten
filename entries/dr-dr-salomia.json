@@ -1,0 +1,14 @@
+{
+ "added": "2026-10-07",
+ "captured_sample": "Mo - Di 8 - 18 Uhr Mittwoch 8 - 14 UhrDonnerstag 8 - 18 Uhr Freitag 8 - 14 Uhr",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mittwoch\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mittwoch\")])]",
+ "lang": "de",
+ "name": "Dr. Dr. Salomia",
+ "note": "2026-10-07: Praxisnachfolge von Dr. Dr. Waechter, gleiche Adresse (Flemingstrasse 2a) und Telefonnummer; mkg-waechter.de ist noch online, aber veraltet (#137, #138).",
+ "osm_id": "node/3102022961",
+ "schema": 1,
+ "tags": [
+  "fulda-dentist"
+ ],
+ "url": "https://www.mkg-salomia.de/"
+}
