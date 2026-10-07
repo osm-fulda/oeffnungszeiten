@@ -1,0 +1,13 @@
+{
+ "added": "2026-08-15",
+ "captured_sample": "Fulda Männermode Unterm Heilig Kreuz 10 36037 Fulda Tel. 0661 9773-0 fulda@koehler24.de Öffnungszeiten Mo. – Fr. 10:00 bis 19:00 Uhr",
+ "filter": "xpath://*[contains(.,\"Unterm Heilig Kreuz 10\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Unterm Heilig Kreuz 10\") and contains(.,\"Uhr\")])]",
+ "name": "Modehaus Köhler",
+ "note": "2026-08-15: Das Haus fuehrt Gießen und Fulda auf einer Seite, Gießen zuerst — der Wizard-Vorschlag zeigte den Seltersweg. Nach Adresse geschluesselt.",
+ "osm_id": "node/1332671718",
+ "schema": 1,
+ "tags": [
+  "fulda-clothes"
+ ],
+ "url": "https://koehler24.de/"
+}
