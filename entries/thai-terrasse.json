@@ -1,9 +1,10 @@
 {
  "added": "2026-07-25",
- "captured_sample": "Tel.: +49 (0)661/75601 Öffnungszeiten Montag bis Sonntag: 17:00–21:30 Uhr Mittwoch: Ruhetag Speisen auch zum Mitnehmen Tel.: +49 (0)661/75601 Öffnungszeiten Montag und Dienstag: 17:00–21:30 Uhr Mittwo",
+ "captured_sample": "Mo, Di, Do – So: 17:00 – 21:30 UhrMittwoch: Ruhetag",
  "fetch_backend": "system",
- "filter": "xpath:(//h5[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" fuss-zeiten \")]",
  "name": "thai-terrasse",
+ "note": "2026-10-07: Seite umgebaut, die Zeiten stehen jetzt im Block fuss-zeiten.",
  "osm_id": "node/429748128",
  "schema": 1,
  "tags": [

@@ -2819,6 +2819,15 @@
    "recheck": "2027-04-06",
    "note": "Am 06.10.2026: velvetrobe.com hat keine Nameserver mehr, die Domain ist registriert, loest aber nicht auf. Ob der Laden noch besteht, ist offen.",
    "osm_id": "node/1336845280"
+  },
+  {
+   "url": "https://sturmius.fulda.schule.hessen.de/index.html",
+   "name": "Sturmiusschule",
+   "reason": "site-unreachable",
+   "established": "2026-10-07",
+   "recheck": "2027-01-07",
+   "note": "Am 2026-10-07: Jede Adresse unter sturmius.fulda.schule.hessen.de leitet auf loginproxy2.bildung.hessen.de um (\"Not a protected or trusted URL\"), auch von zu Hause. Sieht nach einer Umstellung beim Land aus, daher kurzer Pruefabstand.",
+   "osm_id": "way/1201939427"
   }
  ]
 }
