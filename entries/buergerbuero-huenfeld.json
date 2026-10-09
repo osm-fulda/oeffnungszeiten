@@ -1,16 +1,16 @@
 {
  "added": "2026-10-04",
- "captured_sample": "Montag: 8 - 13 UhrDienstag: 8 - 13 Uhr und 14.30 - 17 UhrMittwoch: 8 - 13 UhrDonnerstag: 8 - 18 UhrFreitag: 8 - 13 Uhr",
- "fetch_backend": "html_webdriver",
- "filter": "xpath:(//h5[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "captured_sample": "Montag: 8 - 13 Uhr Dienstag: 8 - 13 Uhr und 14.30 - 17 Uhr Mittwoch: 8 - 13 Uhr Donnerstag: 8 - 18 Uhr Freitag: 8 - 13 Uhr",
+ "fetch_backend": "system",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" bim-department--openingHours \")]",
  "lang": "de",
  "name": "Bürgerbüro Hünfeld",
- "note": "2026-10-04: Block \"Öffnungszeiten\" beim Kontakt des Buergerbueros, nur gerendert. Die Seitenleiste fuehrt Verwaltung und Buergerbuero Mittelstrasse getrennt. 2026-10-06: Anker auf die Ueberschrift statt auf \"Montag: 8\"; der alte Filter griff im Cluster nie und waere bei jeder Zeitaenderung blind geworden.",
+ "note": "2026-10-07: Abteilungsseite des Buergerbueros, die der Server fertig ausliefert. Auf der Seite /buergerservice-politik/buergerservice/buergerbuero/ baut erst Angular den Block, und der Cluster-Browser bekam ihn dort nie zu sehen; dort fuehrt die Seitenleiste ausserdem die Verwaltung (Konrad-Adenauer-Platz) getrennt.",
  "osm_id": "node/9509261437",
  "schema": 1,
  "tags": [
   "lkfulda-government",
   "lkfulda-huenfeld"
  ],
- "url": "https://www.huenfeld.de/de/buergerservice-politik/buergerservice/buergerbuero/"
+ "url": "https://www.huenfeld.de/de/buergerservice/abteilungen/HES:department:13351/buergerbuero/"
 }
