@@ -2819,15 +2819,6 @@
    "recheck": "2027-04-06",
    "note": "Am 06.10.2026: velvetrobe.com hat keine Nameserver mehr, die Domain ist registriert, loest aber nicht auf. Ob der Laden noch besteht, ist offen.",
    "osm_id": "node/1336845280"
-  },
-  {
-   "url": "https://koehler24.de/",
-   "name": "Modehaus Köhler",
-   "reason": "site-unreachable",
-   "established": "2026-10-06",
-   "recheck": "2027-04-06",
-   "note": "Am 06.10.2026: koehler24.de steht in der redemptionPeriod, die Domain ist also ausgelaufen. Ob der Laden noch besteht, ist offen.",
-   "osm_id": "node/1332671718"
   }
  ]
 }
