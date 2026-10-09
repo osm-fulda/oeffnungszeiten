@@ -1,10 +1,10 @@
 {
  "added": "2026-10-02",
- "captured_sample": "Eisdiele Hettenhausen Eisautomat 24/7 auf dem ParkplatzHauptstraße 51, 36129 Gersfeld (Rhön) 06656 2759635 Mi bis Sa: 13 bis 18 Uhr Sonn- und Feiertage: 12 bis 18 Uhr",
- "filter": "xpath://*[contains(.,\"Hauptstraße 51\") and contains(.,\"Mi bis Sa\")][not(.//*[contains(.,\"Hauptstraße 51\") and contains(.,\"Mi bis Sa\")])]",
+ "captured_sample": "Eisdiele Hettenhausen Eisautomat 24/7 auf dem ParkplatzHauptstraße 51, 36129 Gersfeld (Rhön) 06656 2759635 Di und Mi, Fr und Sa: 13 bis 18 Uhr Sonntag: 12 bis 18 Uhr Eisdiele ist noch bis 18.10.26 geöffnet",
+ "filter": "xpath:(//*[contains(.,\"Hauptstraße 51\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Hauptstraße 51\") and contains(.,\"Uhr\")])])[1]",
  "lang": "de",
  "name": "Die Eisheiligen (Gersfeld)",
- "note": "2026-10-02: Storefinder fuehrt mehrere Standorte; der Filter nimmt den Block Hauptstrasse 51.",
+ "note": "2026-10-02: Storefinder fuehrt mehrere Standorte; der Filter nimmt den Block Hauptstrasse 51. 2026-10-09: Anker auf die Adresse statt auf \"Mi bis Sa\"; der alte Filter wurde blind, als sich genau diese Zeiten aenderten. [1], weil die Seite den Block fuer Desktop und Mobil doppelt fuehrt.",
  "osm_id": "node/9082208609",
  "schema": 1,
  "tags": [
