@@ -4,6 +4,7 @@
  "fetch_backend": "html_webdriver",
  "filter": "xpath:(//td[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Cowboystiefel Shop",
+ "note": "2026-10-07: Browser statt requests: Shopify antwortet dem Python-Client im Cluster mit 429, auch bei einer Abfrage pro Minute; curl und der Cluster-Browser bekommen von derselben Adresse 200.",
  "osm_id": "node/13004511904",
  "schema": 1,
  "tags": [

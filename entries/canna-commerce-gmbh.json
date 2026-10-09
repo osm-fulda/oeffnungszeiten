@@ -1,10 +1,11 @@
 {
  "added": "2026-09-22",
  "captured_sample": "Dann ruf uns an:Mo - Fr: 10:00 - 17:00 UhrTel. +49 6683 384 9890",
+ "fetch_backend": "html_webdriver",
  "filter": "xpath://p[contains(.,\"Dann ruf uns an\")][not(.//p[contains(.,\"Dann ruf uns an\")])]",
  "lang": "de",
  "name": "Canna Commerce GmbH",
- "note": "Shop-Seite ohne Zeitenblock; die Zeiten stehen im Fliesstext neben der Rufnummer. Eine bessere Seite hat der Betrieb nicht.",
+ "note": "Shop-Seite ohne Zeitenblock; die Zeiten stehen im Fliesstext neben der Rufnummer. Eine bessere Seite hat der Betrieb nicht. 2026-10-07: Browser statt requests: Shopify antwortet dem Python-Client im Cluster mit 429, auch bei einer Abfrage pro Minute; curl und der Cluster-Browser bekommen von derselben Adresse 200.",
  "osm_id": "node/9885342688",
  "schema": 1,
  "tags": [

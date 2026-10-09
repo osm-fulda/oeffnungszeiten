@@ -1,9 +1,10 @@
 {
  "added": "2026-07-26",
- "captured_sample": "Öffnungszeiten Besuchen Sie uns Mo. - Fr.: 10:00 - 18:00 Uhr Sa.: 10:00 - 14:00 Uhr ​ Während der Sommermonate Juli & August ist der Laden ab 28°C nachmittags geschlossen.",
- "fetch_backend": "system",
- "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" e_a0EV \")]",
+ "captured_sample": "Öffnungszeiten Montag – Freitag: 10:00 – 18:00 UhrSamstag: 10:00 – 14:00 UhrSonntag: geschlossen",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Konditorei Lembach",
+ "note": "2026-10-09: Seite umgebaut, Zeiten jetzt im Block \"Besuch & Kontakt\"; der Hinweis auf Sommerschliessung ab 28 Grad ist weg. 2026-10-07: Browser statt requests: Shopify antwortet dem Python-Client im Cluster mit 429, auch bei einer Abfrage pro Minute; curl und der Cluster-Browser bekommen von derselben Adresse 200.",
  "osm_id": "node/1332267938",
  "schema": 1,
  "tags": [
