@@ -1,9 +1,10 @@
 {
  "added": "2026-07-26",
  "captured_sample": "Mittelstraße 16, 36037 Fulda TUE - FRI: 10:30 AM - 6:30 PM SAT: 10:30 AM - 7:00 PM Visit us",
- "fetch_backend": "system",
+ "fetch_backend": "html_webdriver",
  "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" lightly-spaced-row \")]",
  "name": "Seize 16",
+ "note": "2026-10-07: Browser statt requests: Shopify antwortet dem Python-Client im Cluster mit 429, auch bei einer Abfrage pro Minute; curl und der Cluster-Browser bekommen von derselben Adresse 200.",
  "osm_id": "node/1336872651",
  "schema": 1,
  "tags": [

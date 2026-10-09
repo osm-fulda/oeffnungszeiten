@@ -1,10 +1,10 @@
 {
  "added": "2026-08-03",
- "captured_sample": "* Montag–Donnerstag: 14–22 Uhr * Freitag & Samstag: 11–0 Uhr * Sonntag & Feiertage: 11–22 Uhr",
+ "captured_sample": "Öffnungszeiten: Das Karlchen ist in der Winterpause. Ab dem 27.03.2025 geht's beim Karlchen weiter.",
  "fetch_backend": "system",
- "filter": "xpath:(//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"donnerstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"donnerstag\")])])[1]",
+ "filter": "xpath://p[contains(concat(\" \",normalize-space(@class),\" \"),\" elementor-icon-box-description \")][starts-with(normalize-space(.),\"Öffnungszeiten\")]",
  "name": "Karlchen vom Dach",
- "note": "Die Zeiten stehen auf der Startseite. Die Erkennung hatte einen Elementor-Popup-Trigger (#elementor-action%3A...) als Link gewertet; manual_url fixiert die saubere URL.",
+ "note": "Die Zeiten stehen auf der Startseite. Die Erkennung hatte einen Elementor-Popup-Trigger (#elementor-action%3A...) als Link gewertet; manual_url fixiert die saubere URL. 2026-10-07: Anker auf den Uhr-Kasten \"Öffnungszeiten:\", der in der Saison die Zeiten traegt. In der Winterpause steht dort ein Pausentext (am 2026-10-07 noch der von 2025); oben auf der Seite: Pause bis 20.11.2026, dann Wintergarten.",
  "osm_id": "way/1426728330",
  "schema": 1,
  "tags": [
