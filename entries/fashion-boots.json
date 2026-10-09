@@ -1,9 +1,10 @@
 {
  "added": "2026-07-26",
  "captured_sample": "Montag - Freitag: 8.00 - 13.00, 14.00 - 17.00 Uhr",
- "fetch_backend": "system",
+ "fetch_backend": "html_webdriver",
  "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
  "name": "Fashion Boots",
+ "note": "2026-10-07: Browser statt requests: Shopify antwortet dem Python-Client im Cluster mit 429, auch bei einer Abfrage pro Minute; curl und der Cluster-Browser bekommen von derselben Adresse 200.",
  "osm_id": "node/13004511903",
  "schema": 1,
  "tags": [
