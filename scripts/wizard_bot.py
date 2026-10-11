@@ -56,6 +56,8 @@ FIELDS = {
     "Seite, die keine Zeiten mehr führt": "url",
     "Was auf der Seite steht": "note",
     "Warum die Seite nichts mehr hergibt": "reason",
+    # the sorting form: the page, and the diff above (same heading, same key)
+    "Seite, die sich täglich umsortiert": "url",
 }
 
 # The removal form's dropdown. A reporter reads a page, not our block list, so the form offers
@@ -686,6 +688,48 @@ def pr_body(f, cand, path, issue, notes=()):
     ])
 
 
+def sort_entries(hits, entries="entries"):
+    """{filename: entry with sort_text_alphabetically set} for every hit that lacks the flag.
+
+    Every entry on the page gets it, not only one: two businesses sharing a page share its
+    rotation too, and sorting one of them would leave the other alarming. A hit that already
+    sorts is left out, so an empty result means the alarm was the one that follows switching
+    sorting on.
+
+    Written the way `rotation_check.py --fix` writes it, so both paths produce the same diff.
+    """
+    out = {}
+    for name in hits:
+        e = json.load(open(os.path.join(entries, name), encoding="utf-8"))
+        if e.get("sort_text_alphabetically"):
+            continue
+        e["sort_text_alphabetically"] = True
+        out[name] = json.dumps(e, ensure_ascii=False, indent=1, sort_keys=True) + "\n"
+    return out
+
+
+def sort_pr_body(names, diff, issue):
+    lines = [f"**{', '.join(names)}**: die Seite sortiert ihre Zeitentabelle täglich neu, "
+             f"gemeldet in #{issue}. Der Eintrag bekommt `sort_text_alphabetically`, danach "
+             f"vergleicht changedetection den sortierten Text und die Umsortierung ist kein "
+             f"Alarm mehr.", ""]
+    if diff:
+        lines += ["Was die Nachricht zeigte:", "", fence(diff, MAX_DIFF, keep_lines=True), ""]
+    lines += [
+        "Der Bot hat die Seite **nicht** abgerufen: ein einzelner Abruf kann eine Umsortierung "
+        "nicht zeigen, die hängt an der Tageszeit. Der Beleg ist der Diff oben — jede Zeile "
+        "kommt unverändert wieder. Wer gegenprüfen will: "
+        "`python3 scripts/rotation_check.py --url <Seite>` vergleicht die gespeicherten "
+        "Snapshots.",
+        "",
+        "Nach dem Merge kündigt die Sync den Wechsel an, und es kommt **genau ein** Alarm: der "
+        "erste sortierte Snapshot gegen den letzten unsortierten. Danach ist Ruhe.",
+        "",
+        f"Closes #{issue}",
+    ]
+    return "\n".join(lines)
+
+
 def compare_url(repo, branch, title, body, base="main"):
     """A link that opens GitHub's pull-request form with everything filled in.
 
@@ -725,6 +769,8 @@ def main():
                     help="correct the filter of an existing entry instead of creating one")
     ap.add_argument("--drop", action="store_true",
                     help="remove an existing entry and record the page in the block list")
+    ap.add_argument("--sort", action="store_true",
+                    help="switch sort_text_alphabetically on for the entries on this page")
     ap.add_argument("--entries", default="entries",
                     help="checked for a watch on the same page (default: %(default)s)")
     ap.add_argument("--absences", default="no-watch.json",
@@ -751,6 +797,11 @@ def main():
             # and everything the record needs beyond the reason and the note is already in it.
             f = {"url": check_url(raw.get("url")), "reason": raw.get("reason"),
                  "note": raw_section(body, "Was auf der Seite steht")}
+        elif args.sort:
+            # Nothing is fetched here either: a single fetch cannot show a rotation, the
+            # relay's verdict on the diff is the evidence, and the reviewer reads it.
+            f = {"url": check_url(raw.get("url")),
+                 "diff": raw_section(body, "Was die Nachricht zeigte")}
         elif args.fix:
             # Name, OSM id and tags are already on disk; asking for them again would invite a
             # second, contradicting answer. Only the page and the reported diff come from here.
@@ -798,6 +849,29 @@ def main():
                 {"slug": slug, "name": entry.get("name"), "url": entry.get("url"),
                  "branch": f"weg/{slug}", "remove": f"entries/{hits[0]}",
                  "title": f"no-watch: {entry.get('name')}"}, ensure_ascii=False, indent=1))
+            return 0
+
+        if args.sort:
+            hits = watching(f["url"], args.entries)
+            if not hits:
+                raise Refused(
+                    "Diese Seite steht nicht in `entries/`, es gibt also keinen Watch zum "
+                    "Sortieren. Nimm die Zeile `Webseite:` aus der Alarmnachricht.")
+            changed = sort_entries(hits, args.entries)
+            if not changed:
+                raise Refused(
+                    "Dieser Watch sortiert schon. Dann war die Nachricht der eine Alarm, der "
+                    "nach dem Einschalten kommt — der erste sortierte Text gegen den letzten "
+                    "unsortierten. Es ist nichts zu tun, das Issue kann zu.")
+            for name, text in changed.items():
+                write(os.path.join(args.out, "entries"), name, text)
+            names = [json.load(open(os.path.join(args.entries, n), encoding="utf-8"))
+                     .get("name") or n for n in changed]
+            slug = sorted(changed)[0][:-len(".json")]
+            write(args.out, "pr-body.md", sort_pr_body(names, f.get("diff"), args.issue))
+            write(args.out, "meta.json", json.dumps(
+                {"slug": slug, "branch": f"sort/{slug}",
+                 "title": f"sort: {', '.join(names)}"}, ensure_ascii=False, indent=1))
             return 0
 
         pick = args.pick
@@ -899,10 +973,12 @@ def main():
              "title": f"watch: {f['name']}"}, ensure_ascii=False, indent=1))
         return 0
     except Refused as e:
+        label = ("watch-weg" if args.drop else "sortieren" if args.sort
+                 else "filter-fix" if args.fix else "wizard")
         write(args.out, "comment.md",
               f"Das kann ich so nicht bauen.\n\n{e}\n\n"
               f"Ändere das Issue und setz das Label "
-              f"`{'watch-weg' if args.drop else 'filter-fix' if args.fix else 'wizard'}` "
+              f"`{label}` "
               f"neu, dann probiere ich es noch einmal.")
         print(f"refused: {e}", file=sys.stderr)
         return 3

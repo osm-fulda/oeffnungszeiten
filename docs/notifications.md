@@ -277,21 +277,28 @@ The relay recognises that shape and labels it, because the answer is always the 
 nobody should have to work it out from six identical-looking lines. It never suppresses the
 message: a watch that says nothing is a watch nobody checks.
 
-**Switching sorting on produces one of these too**, and the diff cannot tell the two apart: the
-first sorted snapshot runs against the last unsorted one, which is a reordering like any other.
-That is why the note names both readings. If the entry already carries the flag, the message is
-that one alarm and there is nothing to do; `rotation_check.py` confirms it as `SETTLED`.
+The note tells the room what matters to it — the hours did not move, OSM needs nothing — and
+carries the repair as a link, not as an instruction. *Umsortierung abstellen* opens the issue
+form of that name with page and diff filled in. A maintainer's `sortieren` label (the link sets
+it already when a maintainer clicks) starts `wizard-sort.yml`, which writes
+`"sort_text_alphabetically": true` into every entry on that page and opens the pull request. It
+fetches nothing: a single fetch cannot show a rotation, which depends on the time of day, and the
+diff the relay judged is the evidence the reviewer reads.
 
-**What to do**, once:
+**Switching sorting on produces one of these too**: the first sorted snapshot runs against the
+last unsorted one, which is a reordering like any other. The diff cannot tell the two apart, but
+the relay can — the sync announced the swap, so that alert arrives with the baseline line on top,
+and the note leaves the link out. If the form is opened anyway for a watch that already sorts,
+the bot says so and builds nothing.
+
+**With a checkout**, the same repair:
 
 1. `python3 scripts/rotation_check.py --url <the Webseite line from the message>` — it compares
    the stored snapshots and says `ROTATION` when the sorted text is identical across all of them.
-   Fetching the page proves nothing here, because the rotation depends on the time of day.
-2. Set `"sort_text_alphabetically": true` in the entry, or let `rotation_check.py --fix` write it.
-   The entry is the source; a change made in the UI is undone by the next sync.
-3. Commit it. Expect **exactly one** more alarm for that watch: the first sorted snapshot runs
-   against the last unsorted one. `rotation_check.py` calls that state `SETTLED`, so a later
-   reader can tell it apart from a filter that failed.
+2. `rotation_check.py --fix` writes the flag into the entry. The entry is the source; a change
+   made in the UI is undone by the next sync.
+3. Commit it. Expect **exactly one** more alarm for that watch. `rotation_check.py` calls that
+   state `SETTLED`, so a later reader can tell it apart from a filter that failed.
 
 Sorting hides re-ordering, **not duplication**. If the alarm returns after that, the same line is
 in the capture twice — a "today" widget inside the same wrapper — and the filter has to get

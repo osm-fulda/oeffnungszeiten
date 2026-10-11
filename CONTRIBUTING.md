@@ -216,6 +216,12 @@ Seite ruft er **nicht** ab: was auf ihr steht, hast du gelesen, und der Pull Req
 an der das jemand nachliest. Liegen auf einer Seite zwei Watches, sagt er ab — dann trägt sie Zeiten
 für zwei Betriebe, und welcher wegfällt, ist keine Frage für ein Formular.
 
+Meldet ein Watch `⟳ Nur umsortiert`, hat die Nachricht selbst den Link
+[Umsortierung abstellen](../../issues/new?template=umsortiert.yml): Seite und Diff sind schon
+eingetragen. Das Formular hängt `umsortiert` an, ein Maintainer setzt `sortieren`, und der Bot
+schaltet im Eintrag `sort_text_alphabetically` ein. Auch hier ruft er die Seite nicht ab — der
+Diff, in dem jede Zeile unverändert wiederkommt, ist der Beleg.
+
 ## Was zurückkommt
 
 CI lässt einen Pull Request durchfallen bei:
