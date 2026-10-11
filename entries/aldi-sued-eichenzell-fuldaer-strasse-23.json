@@ -8,6 +8,7 @@
  "note": "2026-10-04: Wie aldi-sued-3: einfacher Abruf gibt 403, gerendert geht es. Der Block fuehrt auch Sonderoeffnungszeiten (Feiertage) — die melden sich mit.",
  "osm_id": "node/2450999906",
  "schema": 1,
+ "sort_text_alphabetically": true,
  "tags": [
   "lkfulda-eichenzell",
   "lkfulda-supermarket"
