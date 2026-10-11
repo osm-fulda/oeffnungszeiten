@@ -8,6 +8,7 @@
  "note": "2026-10-04: Wie die anderen ALDI-Eintraege: einfacher Abruf 403, gerendert geht es.",
  "osm_id": "way/141501274",
  "schema": 1,
+ "sort_text_alphabetically": true,
  "tags": [
   "lkfulda-kuenzell",
   "lkfulda-supermarket"

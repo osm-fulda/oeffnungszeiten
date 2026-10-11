@@ -8,6 +8,7 @@
  "note": "2026-10-04: Wie subway-bahnhofstrasse: erste Zeitentabelle.",
  "osm_id": "node/1342946055",
  "schema": 1,
+ "sort_text_alphabetically": true,
  "tags": [
   "lkfulda-eichenzell",
   "lkfulda-fast_food"
