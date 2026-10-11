@@ -1,0 +1,33 @@
+name: Umsortierung abstellen
+description: Ein Watch meldet „Nur umsortiert“ — dieselben Zeiten in anderer Reihenfolge.
+title: "Umsortiert: "
+labels: ["umsortiert"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Für eine Seite, deren Zeitentabelle mit **heute** beginnt und sich deshalb täglich
+        umsortiert. Die Matrix-Nachricht sagt dann `⟳ Nur umsortiert` und hat einen Link, der
+        dieses Formular schon ausgefüllt öffnet.
+
+        Der Bot ruft die Seite **nicht** ab — ein einzelner Abruf kann eine Umsortierung nicht
+        zeigen. Er schaltet im Eintrag die Sortierung ein und baut einen Pull Request, den ein
+        Maintainer liest. In OSM ist nichts zu tun: die Zeiten haben sich nicht geändert.
+  - type: input
+    id: url
+    attributes:
+      label: Seite, die sich täglich umsortiert
+      description: Die Zeile `Webseite:` aus der Alarmnachricht.
+      placeholder: https://example.de/kontakt
+    validations:
+      required: true
+  - type: textarea
+    id: diff
+    attributes:
+      label: Was die Nachricht zeigte
+      description: >
+        Der Diff aus der Nachricht. Er ist der Beleg: jede entfernte Zeile kommt unverändert
+        wieder.
+      render: text
+    validations:
+      required: false

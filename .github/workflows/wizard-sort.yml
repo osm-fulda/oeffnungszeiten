@@ -1,0 +1,80 @@
+# "Umsortierung abstellen" as an issue -> branch, sort_text_alphabetically in the entry, pull
+# request.
+#
+# One job, like wizard-drop.yml, and for the same reason: nothing is fetched. A rotation cannot
+# be seen in a single fetch — it depends on the time of day — so the evidence is the diff the
+# relay already judged, pasted into the issue, and the pull request is where it is read. The
+# issue text never reaches a shell: it goes through the environment into a file.
+name: wizard-sort
+
+on:
+  issues:
+    types: [labeled]
+
+permissions: {}
+
+jobs:
+  sort:
+    # The label is the gate: the form attaches `umsortiert`, a maintainer sets `sortieren`.
+    if: github.event.label.name == 'sortieren'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          token: ${{ secrets.WIZARD_PR_TOKEN || github.token }}
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: the issue, as a file
+        env:
+          BODY: ${{ github.event.issue.body }}
+        run: printf '%s' "$BODY" > body.md
+      - name: build the change
+        continue-on-error: true          # a refusal is an answer and still has a comment to post
+        run: |
+          PYTHONPATH=scripts python3 scripts/wizard_bot.py emit --sort \
+            --body-file body.md --issue "${{ github.event.issue.number }}" --out out
+      - name: nothing to open
+        id: refused
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ ! -f out/meta.json ]; then
+            gh issue comment "${{ github.event.issue.number }}" \
+              --repo "${{ github.repository }}" --body-file out/comment.md
+            echo "stop=yes" >> "$GITHUB_OUTPUT"
+          fi
+      - name: branch, commit, pull request
+        if: steps.refused.outputs.stop != 'yes'
+        env:
+          GH_TOKEN: ${{ secrets.WIZARD_PR_TOKEN || github.token }}
+          REPO: ${{ github.repository }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          BRANCH=$(python3 -c "import json;print(json.load(open('out/meta.json'))['branch'])")
+          TITLE=$(python3 -c "import json;print(json.load(open('out/meta.json'))['title'])")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          cp out/entries/*.json entries/
+          python3 scripts/validate_entries.py
+          git add entries/
+          git commit -m "$TITLE"
+          git push --force origin "HEAD:$BRANCH"
+          URL=$(gh pr list --head "$BRANCH" --state open --json url -q '.[0].url')
+          if [ -z "$URL" ]; then
+            URL=$(gh pr create --base main --head "$BRANCH" --title "$TITLE" \
+                    --body-file out/pr-body.md) || URL=""
+          fi
+          if [ -n "$URL" ]; then
+            gh issue comment "$ISSUE" --repo "$REPO" \
+              --body "Pull Request steht: $URL. Nach dem Merge kommt noch genau ein Alarm für diese Seite, dann ist Ruhe."
+          else
+            python3 scripts/wizard_bot.py compare --repo "$REPO" --branch "$BRANCH" \
+              --title "$TITLE" --body-file out/pr-body.md --out out
+            gh issue comment "$ISSUE" --repo "$REPO" --body-file out/compare.md
+          fi

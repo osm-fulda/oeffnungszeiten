@@ -102,8 +102,13 @@ COLOR = {"added": "#2e7d32", "removed": "#c62828", "changed": "#ef6c00", "into":
 # the message carries it instead of leaving the reader to work it out. The check needs nothing
 # but the diff: a day name is part of its line, so two businesses swapping their times still
 # differ line by line and never look like a reordering.
-REORDER_DOC = ("https://github.com/osm-fulda/oeffnungszeiten/blob/main/docs/"
-               "notifications.md#umsortiert")
+# The fix for a rotation is one flag in the entry, and the verdict above is all the evidence it
+# needs. So the note carries no instruction but a link to the issue form, filled in with the
+# page and the diff; a maintainer's label turns that into the pull request (wizard-sort.yml).
+REORDER_FORM = "https://github.com/osm-fulda/oeffnungszeiten/issues/new"
+# What of the diff goes into that link. The diff is the evidence the reviewer reads, but a URL
+# has no room for a whole table, and the rotation shows in the first lines already.
+REORDER_FORM_DIFF = 1500
 DECODE_DOC = ("https://github.com/osm-fulda/oeffnungszeiten/blob/main/docs/"
               "notifications.md#zeichensalat")
 # What a failed decode leaves behind, one per undecodable byte.
@@ -164,15 +169,39 @@ def labelled_link(line):
     return (label, m.group(2)) if " " in label else None
 
 
-def reorder_note(kept):
-    """The two lines that explain a reordering, or [] when the diff is a real change.
+def reorder_form(page, kept):
+    """The issue-form link that switches sorting on for this page, with the diff as evidence.
+
+    >>> u = reorder_form("https://x.de/k", [("removed", "Mo 9-17"), ("added", "Mo 9-17")])
+    >>> u.startswith(REORDER_FORM + "?template=umsortiert.yml&")
+    True
+    >>> "url=https%3A%2F%2Fx.de%2Fk" in u and "labels=sortieren" in u
+    True
+    """
+    diff = "\n".join(f"{SIGIL.get(kind, ' ')} {t}" for kind, t in kept)[:REORDER_FORM_DIFF]
+    q = urllib.parse.urlencode({"template": "umsortiert.yml", "labels": "sortieren",
+                                "title": f"Umsortiert: {page}", "url": page, "diff": diff})
+    return f"{REORDER_FORM}?{q}"
+
+
+def reorder_note(kept, page=None, expected=False):
+    """The lines that explain a reordering, or [] when the diff is a real change.
 
     True only when every removed line comes back as an added one, unchanged and in the same
     number. Anything else — a changed line, a line the diff did not mark, one more removal than
     addition — is a real change and gets no note.
 
+    The note says what matters to whoever reads the room: the hours did not move, OSM needs
+    nothing. The repair is a link, not an instruction, and it is left out where it would be
+    wrong: when the relay expects this alert, sorting was just switched on and this is the one
+    alarm that follows, so there is nothing left to repair.
+
     >>> reorder_note([("removed", "Mo 9-17"), ("added", "Mo 9-17")])[0].startswith("⟳ Nur")
     True
+    >>> len(reorder_note([("removed", "Mo 9-17"), ("added", "Mo 9-17")], "https://x.de/"))
+    2
+    >>> len(reorder_note([("removed", "Mo 9-17"), ("added", "Mo 9-17")], "https://x.de/", True))
+    1
     >>> reorder_note([("removed", "Mo 9-17"), ("added", "Mo 9-18")])
     []
     >>> reorder_note([("removed", "Mo 9-17"), ("added", "Mo 9-17"), (None, "Küche bis 20:30")])
@@ -185,14 +214,11 @@ def reorder_note(kept):
     if not gone or gone != came or len(kept) != sum(gone.values()) + sum(came.values()):
         return []
     n = sum(gone.values())
-    # Switching sorting on produces one such diff too — the first sorted snapshot against the
-    # last unsorted one — and from the diff alone that is indistinguishable from a page still
-    # rotating. So the line names both readings instead of guessing at one.
-    return [f"⟳ Nur umsortiert — dieselben {n} Zeilen in anderer Reihenfolge, "
-            f"die Zeiten sind unverändert.",
-            f"  Zu tun: sort_text_alphabetically im Entry setzen. Steht es schon dort, war das "
-            f"der einmalige Alarm nach dem Umstellen.",
-            f"  Was dahintersteckt: {REORDER_DOC}"]
+    note = [f"⟳ Nur umsortiert — dieselben {n} Zeilen in anderer Reihenfolge, "
+            f"die Öffnungszeiten sind unverändert. In OSM ist nichts zu tun."]
+    if page and not expected:
+        note.append(f"  Umsortierung abstellen: {reorder_form(page, kept)}")
+    return note
 
 
 def decode_note(pairs):
@@ -299,7 +325,7 @@ def format_message(title, message, lead=None):
     message. MAX_BODY in send() is the second, coarser limit, because matrix.org rejects an
     oversized event outright.
 
-    A diff that only reordered itself is labelled as such (see REORDER_DOC), because the six
+    A diff that only reordered itself is labelled as such (see reorder_note), because the six
     identical-looking lines it produces are the one message nobody can read.
 
     Everything under a `Hinweise:` line is guidance rather than page content: it goes below the
@@ -316,11 +342,16 @@ def format_message(title, message, lead=None):
     >>> plain.splitlines()[:2]
     ['⤴ erwartet', 'T']
     >>> rot = "(removed) Mo 9-17\n(removed) Di 9-17\n(added) Di 9-17\n(added) Mo 9-17"
-    >>> plain, html = format_message("T", rot)
-    >>> plain.splitlines()[2]
-    '⟳ Nur umsortiert — dieselben 2 Zeilen in anderer Reihenfolge, die Zeiten sind unverändert.'
-    >>> "sort_text_alphabetically" in plain.splitlines()[3]
+    >>> plain, html = format_message("T", "Webseite: https://example.de/\n" + rot)
+    >>> plain.splitlines()[3][:56]
+    '⟳ Nur umsortiert — dieselben 2 Zeilen in anderer Reihenf'
+    >>> plain.splitlines()[4]                         # the link, by its label only
+    'Umsortierung abstellen'
+    >>> 'template=umsortiert.yml' in html
     True
+    >>> plain, html = format_message("T", "Webseite: https://example.de/\n" + rot, lead="⤴")
+    >>> "abstellen" in plain                        # sorting was just switched on
+    False
     >>> plain, html = format_message("T", "(removed) Mo 9-17\n(added) Mo 9-18")
     >>> "umsortiert" in plain
     False
@@ -375,7 +406,8 @@ def format_message(title, message, lead=None):
 
     kept, pairs = fold(kept)
 
-    note = reorder_note(kept) or decode_note(pairs)
+    page = head[0][1] if head else None
+    note = reorder_note(kept, page, expected=bool(lead)) or decode_note(pairs)
     rest = 0
     if len(kept) > MAX_LINES:
         rest = len(kept) - MAX_LINES
