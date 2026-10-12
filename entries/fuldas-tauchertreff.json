@@ -1,9 +1,10 @@
 {
  "added": "2026-07-26",
- "captured_sample": "Öffnungszeiten Fuldas Tauchertreff Montag: geschlossen Dienstag: 15.00 - 18:00 Uhr Mittwoch: 14.30 - 17:00 Uhr Donnerstag: geschlossen Freitag: 15.00 - 18:00 Uhr Samstag: 11.30 - 13.00 Uhr",
+ "captured_sample": "Ladengeschäft / TauchschuleTauchsportartikel Schwimmsportartikel Revisionen / WartungenTauchschule / Ausbildung ÖffnungszeitenMontag: geschlossenDienstag: 15.00 - 18:00 UhrMittwoch: 15:00 - 18:00 UhrDonnerstag: geschlossenFreitag: 15.00 - 18:00 UhrSamstag: 11.30 - 13.00 Uhr",
  "fetch_backend": "system",
- "filter": "xpath://div[contains(@class,\"heading-root\")][.//strong[contains(.,\"Öffnungszeiten\")]]",
+ "filter": "xpath://p[span[contains(.,\"Öffnungszeiten\")]][span[contains(.,\"Montag\")]]",
  "name": "Fuldas Tauchertreff",
+ "note": "2026-10-12: Neuer Anker nach Umbau der Seite: der Absatz, dessen Spans \"Öffnungszeiten\" und \"Montag\" tragen. Er faengt auch die Leistungsliste darueber, die ist statisch.",
  "osm_id": "node/432864080",
  "schema": 1,
  "tags": [
