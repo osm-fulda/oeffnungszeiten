@@ -44,6 +44,14 @@ RED, AMBER, GREEN = "red", "amber", "green"
 RANK = {RED: 0, AMBER: 1, GREEN: 2}
 NOISY_CHANGES_30D = 4          # global recheck is 3 days -> ~10 checks/30d
 DEFAULT_SETTINGS = "deploy/global-settings.json"
+# How far back a watch without hours is searched for a snapshot that had some. Three covers a
+# notice that has been rewritten twice, and the search only runs for the few watches whose
+# latest capture holds no time at all.
+NOTICE_LOOKBACK = 3
+# A notice standing in for the hours is a pause, not a blind watch — until it has stood long
+# enough to be the page's new normal. Half a year covers a winter break, the longest pause the
+# watches here have shown, and matches the recheck interval of no-watch.json.
+NOTICE_MAX_DAYS = 183
 
 
 def ignore_patterns(path=DEFAULT_SETTINGS):
@@ -113,8 +121,42 @@ def snapshot(base_url, key, uuid):
         return "", stamps
 
 
-def judge(w, text, stamps, lang, dup_count, patterns=()):
-    """-> (verdict, [plain-language issues])"""
+def notice_since(base_url, key, uuid, stamps):
+    """When the hours gave way to a notice: the first snapshot after the last one with times.
+
+    None when none of the earlier snapshots held a time either — then the filter never caught
+    the hours, which is the blind watch this audit exists to find.
+    """
+    base = base_url.rstrip('/') + '/api/v1/watch/' + uuid + '/history/'
+    after = stamps[-1] if stamps else None
+    for stamp in reversed(stamps[-1 - NOTICE_LOOKBACK:-1]):
+        try:
+            req = urllib.request.Request(base + stamp, headers={'x-api-key': key})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                text = r.read().decode('utf-8', 'replace')
+        except Exception:
+            return None
+        if L.time_matches(text):
+            return after
+        after = stamp
+    return None
+
+
+def judge(w, text, stamps, lang, dup_count, patterns=(), since=None, now=None):
+    """-> (verdict, [plain-language issues])
+
+    `since` is what notice_since() found: the timestamp from which a notice stands where the
+    hours used to be.
+
+    >>> judge({}, "Wir haben Urlaub bis 18.10.", [], "de", 1, since="1790000000",
+    ...       now=1790000000 + 86400)[0]
+    'amber'
+    >>> judge({}, "Wir haben Urlaub bis 18.10.", [], "de", 1, since="1790000000",
+    ...       now=1790000000 + 200 * 86400)[0]
+    'red'
+    >>> judge({}, "Rufen Sie uns an", [], "de", 1)[0]
+    'red'
+    """
     issues = []
     verdict = GREEN
     filtered = bool([f for f in (w.get("include_filters") or []) if f.strip()])
@@ -129,7 +171,14 @@ def judge(w, text, stamps, lang, dup_count, patterns=()):
     days = L.weekdays_any(text, lang)
     times = L.time_matches(text)
 
-    if not times:
+    age = (int(now or time.time()) - int(since)) // 86400 if since else None
+    if not times and age is not None and age <= NOTICE_MAX_DAYS:
+        # The anchor is right: it held hours until a holiday or a seasonal break replaced them,
+        # and when they come back that is a change like any other, so the watch will report it.
+        verdict = AMBER
+        issues.append(f"a notice has replaced the hours for {age} day(s) (holiday, seasonal "
+                      f"break) — the watch reports when they come back")
+    elif not times:
         verdict = RED
         issues.append("no opening hours on this page at all — this watch can never fire")
     else:
@@ -206,6 +255,8 @@ def collect(api, base_url, uuids, names, lang, workers, patterns=()):
         except Exception as e:
             return u, None, "", [], str(e)
         text, stamps = snapshot(base_url, api.key, u)
+        if text.strip() and not L.time_matches(text):
+            w["_notice_since"] = notice_since(base_url, api.key, u, stamps)
         return u, w, text, stamps, None
 
     rows = []
@@ -227,7 +278,8 @@ def collect(api, base_url, uuids, names, lang, workers, patterns=()):
     for u, (w, text, stamps) in raw.items():
         fp = L.fingerprint(text) if text.strip() else None
         n_dup = len(dup.get(fp, [])) if fp else 1
-        verdict, issues = judge(w, text, stamps, lang, n_dup, patterns)
+        verdict, issues = judge(w, text, stamps, lang, n_dup, patterns,
+                                since=w.get("_notice_since"))
         filt = [f for f in (w.get("include_filters") or []) if f.strip()]
         rows.append({
             "uuid": u,
