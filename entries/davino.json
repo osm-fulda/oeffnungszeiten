@@ -1,0 +1,10 @@
+{
+ "added": "2026-10-13",
+ "captured_sample": "Restaurant:Montag - Mittwoch | 11 - 21 UhrDonnerstag - Samstag | 11 - 0 UhrWeinfenster:(To-Go-Weinfenster zur Brauhausstraße)Freitags ab 17 UhrSamstags ab 12 Uhr",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Davino",
+ "osm_id": "node/14279863697",
+ "schema": 1,
+ "url": "https://davino-fulda.de/"
+}
