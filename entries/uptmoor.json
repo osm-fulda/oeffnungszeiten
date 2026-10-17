@@ -1,0 +1,13 @@
+{
+ "added": "2026-10-17",
+ "captured_sample": "Montag-Freitag 10.00 - 18.00 Uhr Samstag 10.00 - 13.00 Uhr",
+ "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Uptmoor",
+ "osm_id": "node/4997363092",
+ "schema": 1,
+ "tags": [
+  "fulda-books"
+ ],
+ "url": "https://uptmoorbuch.buchkatalog.de/AdresseOeffnungszeitenKontakt"
+}
