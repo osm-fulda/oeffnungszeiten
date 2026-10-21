@@ -1,0 +1,13 @@
+{
+ "added": "2026-10-21",
+ "captured_sample": "Telefon: +49 661-3804614 Montag-Dienstag: 10:00 - 18:00 Uhr Donnerstag-Freitag: 10:00 - 18:00 Uhr Samstag: 10:00 - 15:00 Uhr",
+ "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Hark",
+ "osm_id": "node/14303000050",
+ "schema": 1,
+ "tags": [
+  "fulda-shop"
+ ],
+ "url": "https://www.hark.de/hark-kamin-und-kachelofenbau-fulda-38000.html"
+}
