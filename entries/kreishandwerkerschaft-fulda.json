@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-27",
+ "captured_sample": "Montag bis Donnerstag 08:00 bis 16:30 Uhr Freitag 08:00 bis 12:30 Uhr (tel. Erreichbarkeit in dringenden Fällen bis 15:30 Uhr)",
+ "fetch_backend": "system",
+ "filter": "xpath://p[contains(.,\"Uhr\")][preceding-sibling::*[self::h2 or self::h3][1][contains(.,\"Geschäftszeiten\")]]",
+ "lang": "de",
+ "name": "Kreishandwerkerschaft Fulda",
+ "note": "Die Zeiten stehen als flache Absaetze unter der Ueberschrift \"Unsere Geschaeftszeiten\"; der Filter nimmt jeden Absatz mit \"Uhr\" bis zur naechsten Ueberschrift.",
+ "osm_id": "way/207111254",
+ "schema": 1,
+ "tags": [
+  "fulda-association"
+ ],
+ "url": "https://www.dashandwerk.de/fulda/"
+}

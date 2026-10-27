@@ -123,7 +123,7 @@ def text(url):
     with urllib.request.urlopen(req, timeout=25) as r:
         enc = r.headers.get_content_charset() or "utf-8"
         h = r.read(5_000_000).decode(enc, "replace")
-    d = lxml.html.fromstring(h)
+    d = lxml.html.fromstring(re.sub(r"^\s*<\?xml[^>]*\?>", "", h, count=1))  # XHTML: lxml refuses a declared str
     for t in d.xpath("//script|//style"):
         t.getparent().remove(t)
     return " ".join(d.text_content().split())
