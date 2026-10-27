@@ -156,7 +156,7 @@ def check_live(e, lang_default="de", browser_ws=None):
         warns.append("only XPath filters are checked offline")
         return errs, warns
     try:
-        doc = W.strip_noise(lxml.html.fromstring(html))
+        doc = W.strip_noise(W.parse_html(html))
         sel = doc.xpath(xp)
     except Exception as exc:
         if filt.startswith("xpath:"):

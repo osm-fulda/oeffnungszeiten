@@ -39,6 +39,7 @@ import lxml.html
 import hours_lang as L
 import osm_cd_common as C
 
+XML_DECL = re.compile(r'^\s*<\?xml[^>]*\?>')
 HEAD_TAGS = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'strong', 'b', 'p', 'span', 'div', 'li', 'td', 'th']
 MAX_CAPTURE = 4000          # a filter capturing more than this is not a filter
 CONTEXT_DEPTH = 15          # how far down the ranking the heading lookup runs
@@ -562,10 +563,21 @@ def verdict(cand):
     return 'good pick — no warnings'
 
 
+def parse_html(html):
+    """lxml refuses a str that still carries an XML declaration, and XHTML pages send one
+    (tk.de's branch finder): "Unicode strings with encoding declaration are not supported".
+    The text is already decoded, so the declaration says nothing any more — drop it.
+
+    >>> parse_html('<?xml version="1.0" encoding="UTF-8"?><html><p>Mo 9-17</p></html>').text_content()
+    'Mo 9-17'
+    """
+    return lxml.html.fromstring(XML_DECL.sub('', html, count=1))
+
+
 def _blocked(html):
     """Does this response body read as a block page rather than as the site?"""
     try:
-        return L.looks_blocked(txt_of(strip_noise(lxml.html.fromstring(html))))
+        return L.looks_blocked(txt_of(strip_noise(parse_html(html))))
     except Exception:
         return False
 
@@ -600,7 +612,7 @@ def capture(html, filt):
     if body is None:
         return None
     try:
-        doc = lxml.html.fromstring(html)
+        doc = parse_html(html)
         found = doc.xpath(body)
     except Exception:
         return None
@@ -658,7 +670,7 @@ def context_of(doc, filt):
 
 
 def collect(html, lang, page_text_len=None):
-    doc = strip_noise(lxml.html.fromstring(html))
+    doc = strip_noise(parse_html(html))
     page_len = page_text_len if page_text_len is not None else len(txt_of(doc))
     cands = (jsonld_candidates(html) + heading_candidates(doc, lang)
              + heading_sibling_candidates(doc, lang)
