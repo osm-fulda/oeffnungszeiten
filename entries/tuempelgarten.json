@@ -5,7 +5,7 @@
  "filter": "xpath://b[contains(.,\"Uhr\")]",
  "lang": "de",
  "name": "Tümpelgarten — Aquarien- und Terrarienausstellung",
- "note": "Die Zeiten stehen als ein fetter Satz im Fliesstext, ohne Ueberschrift oder Klasse. Die Seite kommt als Latin-1 ohne charset im Header. Die Warnung "kein Wochentag" ist erwartet: der Satz sagt "Sonn- und Feiertage".",
+ "note": "Die Zeiten stehen als ein fetter Satz im Fliesstext, ohne Ueberschrift oder Klasse. Die Seite kommt als Latin-1 ohne charset im Header. Die Warnung, es fehle ein Wochentag, ist erwartet: der Satz sagt Sonn- und Feiertage.",
  "osm_id": "way/595915922",
  "schema": 1,
  "tags": [
