@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-27",
+ "captured_sample": "Mo–Fr08:00 – 18:00 UhrSa08:00 – 18:00 UhrSo08:00 – 18:00 Uhr",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://h2[contains(normalize-space(.),\"Öffnungszeiten\")]/following-sibling::*[1]",
+ "lang": "de",
+ "name": "Café Bäckerei Storch Friedrichstraße",
+ "note": "Storch hat seit dem neuen Webauftritt eine Seite je Filiale; die Seite fuellt erst JavaScript. Der Anker ist die Ueberschrift, nicht die Tailwind-Klasse daneben.",
+ "osm_id": "node/10144755011",
+ "schema": 1,
+ "tags": [
+  "fulda-cafe"
+ ],
+ "url": "https://www.baeckereistorch.de/filialen/baeckerei-fulda-friedrichstrasse"
+}

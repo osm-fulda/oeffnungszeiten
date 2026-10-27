@@ -650,24 +650,6 @@
    "osm_id": "node/9254542549"
   },
   {
-   "url": "https://www.baeckereistorch.de/",
-   "name": "Café Bäckerei Storch",
-   "reason": "no-hours-on-page",
-   "established": "2026-08-18",
-   "recheck": "2027-02-18",
-   "note": "Weder die Startseite noch /kontakt, /impressum, /oeffnungszeiten, /ueber-uns, /filialen oder /standorte nennen einen Wochentag mit Uhrzeit; am 2026-08-18 geprueft.",
-   "osm_id": "node/1332257610",
-   "gilt_auch_fuer": [
-    "Café Bäckerei Storch im DB Zentrum",
-    "Café Bäckerei Storch im OBI"
-   ],
-   "osm_ids_weitere": [
-    "node/10144755011",
-    "node/6992755544",
-    "node/5324638624"
-   ]
-  },
-  {
    "url": "https://www.heilemann.de",
    "name": "Café Herzlich",
    "reason": "no-hours-on-page",
@@ -2828,6 +2810,41 @@
    "recheck": "2027-01-07",
    "note": "Am 2026-10-07: Jede Adresse unter sturmius.fulda.schule.hessen.de leitet auf loginproxy2.bildung.hessen.de um (\"Not a protected or trusted URL\"), auch von zu Hause. Sieht nach einer Umstellung beim Land aus, daher kurzer Pruefabstand.",
    "osm_id": "way/1201939427"
+  },
+  {
+   "url": "https://www.fulda.de/stadt-politik/stadtteile-buergerhaeuser/buergerhaeuser",
+   "name": "Bürgerhaus Kohlhaus",
+   "reason": "no-hours-on-page",
+   "established": "2026-10-27",
+   "recheck": "2027-04-27",
+   "note": "Die Seite der Stadt beschreibt alle Bürgerhäuser mit Lage, Saal und Mietpreisen; Zeiten nennt sie nur für das Gebäudemanagement. Die Sprechstunden in OSM stammen von anderswo.",
+   "osm_id": "way/55481050",
+   "gilt_auch_fuer": [
+    "Bürgerhaus Haimbach",
+    "Bürgerhaus Johannes-Nehring-Straße"
+   ],
+   "osm_ids_weitere": [
+    "way/55941045",
+    "way/664974547"
+   ]
+  },
+  {
+   "url": "https://www.fulda.de/serviceportal/eintrag/parkplaetze-haeuser",
+   "name": "Parkhaus Rosengarten",
+   "reason": "no-hours-on-page",
+   "established": "2026-10-27",
+   "recheck": "2027-04-27",
+   "note": "Die Seite nennt Öffnungszeiten für andere Parkhäuser, für das Rosengarten nur Preise und Stellplätze.",
+   "osm_id": "way/23748795"
+  },
+  {
+   "url": "https://hendl-stubn.com",
+   "name": "Hendl Stub'n",
+   "reason": "site-unreachable",
+   "established": "2026-10-27",
+   "recheck": "2027-04-27",
+   "note": "Am 30.07.2026 und am 27.10.2026 HTTP 503.",
+   "osm_id": "node/3239658876"
   }
  ]
 }

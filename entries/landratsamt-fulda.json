@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-27",
+ "captured_sample": "Öffnungszeiten BÜRGERSERVICE IM LANDRATSAMT MONTAG – DONNERSTAG 8 Uhr – 18 Uhr FREITAG 8 Uhr – 14 Uhr ZU DEN ÖFFNUNGSZEITEN DER AUSSENSTELLEN",
+ "fetch_backend": "system",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Landratsamt Fulda",
+ "note": "Der Block steht im Fuss der Startseite. Die Klasse daneben (id-content-second-column) traegt die Seite dreimal, darum der Anker auf \"Montag\".",
+ "osm_id": "way/133054633",
+ "schema": 1,
+ "tags": [
+  "fulda-government"
+ ],
+ "url": "https://www.landkreis-fulda.de/"
+}

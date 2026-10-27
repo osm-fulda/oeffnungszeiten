@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-27",
+ "captured_sample": "Mo–Fr07:00 – 18:00 UhrSa07:00 – 18:00 UhrSoGeschlossen",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://h2[contains(normalize-space(.),\"Öffnungszeiten\")]/following-sibling::*[1]",
+ "lang": "de",
+ "name": "Café Bäckerei Storch Bahnhofstraße",
+ "note": "Storch hat seit dem neuen Webauftritt eine Seite je Filiale; die Seite fuellt erst JavaScript. Der Anker ist die Ueberschrift, nicht die Tailwind-Klasse daneben.",
+ "osm_id": "node/1332257610",
+ "schema": 1,
+ "tags": [
+  "fulda-cafe"
+ ],
+ "url": "https://www.baeckereistorch.de/filialen/baeckerei-fulda-bahnhofstrasse"
+}
