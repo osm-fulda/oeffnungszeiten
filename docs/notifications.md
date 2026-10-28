@@ -144,24 +144,19 @@ line cap, so a long change can never truncate it.
 six consecutive misses, so roughly 18 days at a 3-day cadence. Nothing to do in OSM: the site was
 rebuilt and the anchor is gone. Re-run the wizard and commit the new filter.
 
-**3. `N Watches brauchen Aufmerksamkeit`**: the weekly `audit_report.py`. These are the watches
-that will never tell you anything themselves, and each finding carries its own first move:
+**3. `Wochenreport: N Watches brauchen Aufmerksamkeit`**: the weekly `audit_report.py`. These are
+the watches that will never tell you anything themselves. The report is one message in the room
+however bad the week was: a count per kind of finding, the hosts with more than one finding
+(usually one cause), and a link to the repair loop. Every finding follows as a reply of its own in
+that message's thread, with its page, its `uuid` and its first move, and a link to its section in
+[repair.md](./repair.md). One reply per finding is what lets a finding be marked done with a
+reaction or discussed without quoting the rest, and it keeps a bad week clear of `MAX_LINES`.
+repair.md is the long version: how to tell the causes apart, where the fix goes, and how to prove
+it before and after the merge.
 
-| finding | what it means | first move |
-|---|---|---|
-| `fetch error: 403` | the host refuses us | fetch the URL from a home connection and from the VPS with the same UA. Only the VPS gets 403 → the host blocks datacenter ranges, drop the watch. Both get 403 → the UA is the problem, not the address |
-| `fetch error: 404` | page is gone | find the successor page, otherwise drop the watch |
-| `fetch error: 5xx` | the site is broken today | wait one cycle before touching anything |
-| `no opening hours on this page at all` | blind watch | look for `/kontakt`, `/oeffnungszeiten`, a branch page; drop it if the business publishes none |
-| `no weekday named` / `only N weekday(s)` | filter caught part of the block | the rest sits in a sibling: anchor on the common ancestor |
-| `every day shows the same 09:00-17:00` | theme default, not this business | find the visible hours instead |
-| `the same hours are captured N×` | the anchor is too high | pick the narrower element |
-| `discarded by the global ignore pattern` | `global_ignore_text` swallows real lines | narrow the pattern in `deploy/global-settings.json` |
-| `captures text identical to N other watch(es)` | two watches on one page | give each business its own key, usually its address ([FILTERS.md](../FILTERS.md) case 12) |
-| `connect_over_cdp: … has been closed` | the shared cluster browser was gone mid-fetch, not a problem with the page | survives the recheck → look at the browser pod |
-| `429` | the host is rate-limiting, not blocking | over several runs it is the hoster, not this page |
-| `no filters were found` | the site was rebuilt, the anchor is gone | `filter_wizard.py --uuid`, then commit the entry |
-| `no filter` | whole page is watched | set one |
+The thread uses the relay's own mechanism, `page` plus `thread: true`, under a key no watch can
+claim (`audit-report`), so a finding never lands in a page's alert thread. The replies are paced a
+second apart, because matrix.org answers a burst with 429 and the relay passes that on.
 
 **Every fetch error is looked at twice.** One blink of the shared browser writes
 `connect_over_cdp` into every `html_webdriver` watch that was in flight, and a 429 is gone by the
@@ -330,7 +325,7 @@ they are the whole list:
 | `decode_note()` | `charts/changedetection/files/matrix_relay.py` | the `⚠ Zeichensalat` verdict, see [Zeichensalat](#zeichensalat) |
 | `notification_title`, `notification_body` | `deploy/global-settings.json` | the subject of every change alert, and the `Hinweise:` block under the diff |
 | `desired()` | `scripts/entries_sync.py` | the per-watch body, `Webseite:` and `OpenStreetMap:` |
-| `compose()` | `scripts/audit_report.py` | the weekly report: title, `Zu tun:` lines, `Webseite:`, `uuid:` |
+| `compose()` | `scripts/audit_report.py` | the weekly report: a summary that opens a thread, then one reply per finding |
 
 The relay's own parsing is not language-bound: `LINK_LINE` accepts any label up to 30 characters,
 so a translated one keeps producing a header link. `TRAILER_MARK` is the one German word the

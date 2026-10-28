@@ -109,6 +109,35 @@ def check_structure(path, e, slugs):
     return errs, warns
 
 
+def cd_select(html, xp):
+    """Evaluate `xp` the way changedetection evaluates an `xpath:` filter, or None if we cannot.
+
+    changedetection does not hand `xpath:` to lxml: it parses with lxml's HTMLParser and runs
+    the expression through elementpath as XPath 3.1. The two disagree in places — a positional
+    predicate on a reverse axis, `preceding-sibling::*[self::h3][1]`, selected the right
+    paragraphs in lxml and nothing at all in the cluster. elementpath is optional here, so a
+    contributor without it is not blocked; the caller says the check was skipped.
+
+    >>> r = cd_select('<div><h3>Zeiten</h3><p>Mo 9-17 Uhr</p></div>',
+    ...               '//h3[contains(.,"Zeiten")]/following-sibling::p')
+    >>> r is None or [p.text for p in r] == ['Mo 9-17 Uhr']
+    True
+    """
+    try:
+        import elementpath
+        from elementpath.xpath3 import XPath3Parser
+    except ImportError:
+        return None
+    from lxml import etree, html as lxml_html
+
+    tree = lxml_html.fromstring(html, parser=etree.HTMLParser())
+    namespaces = {"re": "http://exslt.org/regular-expressions"}
+    if getattr(tree, "nsmap", None) and None in tree.nsmap:
+        namespaces[""] = tree.nsmap[None]
+    r = elementpath.select(tree, xp, namespaces=namespaces, parser=XPath3Parser)
+    return r if isinstance(r, list) else [r]
+
+
 def check_live(e, lang_default="de", browser_ws=None):
     """Fetch the page and confirm the filter still yields opening hours.
 
@@ -155,6 +184,13 @@ def check_live(e, lang_default="de", browser_ws=None):
     if not xp:
         warns.append("only XPath filters are checked offline")
         return errs, warns
+    if not needs_browser and W.XML_DECL.match(html):
+        # changedetection hands the decoded text straight to lxml, which refuses a str that
+        # still declares an encoding — every check of this watch fails before any filter runs
+        # (tk.de). A browser serialises the DOM without the declaration.
+        errs.append("page starts with an XML declaration, which changedetection cannot parse "
+                    "from a plain fetch — set fetch_backend: html_webdriver")
+        return errs, warns
     try:
         doc = W.strip_noise(W.parse_html(html))
         sel = doc.xpath(xp)
@@ -175,6 +211,22 @@ def check_live(e, lang_default="de", browser_ws=None):
             warns.append("filter matched nothing in a plain fetch — expected if the page needs "
                          "a browser, otherwise the filter is wrong")
         return errs, warns
+
+    # Only now, and only on the page changedetection itself sees: an html_webdriver entry
+    # checked without a browser matches nothing under either engine, and that says nothing
+    # about the engines. What this is for is the split — lxml finds the hours, elementpath
+    # does not, and the cluster reports "no filters were found" on a page nobody rebuilt.
+    if filt.startswith("xpath:") and (browser_ws or not needs_browser):
+        try:
+            cd = cd_select(W.XML_DECL.sub("", html, count=1), xp)
+        except Exception as exc:
+            errs.append(f"changedetection's XPath engine (elementpath) rejects the filter on "
+                        f"this page: {str(exc)[:70] or type(exc).__name__}")
+            return errs, warns
+        if cd is not None and not cd:
+            errs.append("lxml matches but elementpath, the engine changedetection uses for "
+                        "xpath:, matches nothing — rewrite it, or use xpath1: to get lxml")
+            return errs, warns
 
     text = L.clean(" ".join(W.txt_of(x) for x in sel))
     if not L.time_matches(text):
@@ -290,6 +342,10 @@ def main():
             # whose entry needs no rendering at all.
             print(f"warn: no browser at {args.browser_ws} — html_webdriver entries stay "
                   f"unverified")
+
+    if args.live and cd_select("<p/>", "//p") is None:
+        print("warn: elementpath not installed — xpath: filters are checked with lxml only, "
+              "not with the engine changedetection runs (pip install elementpath)")
 
     paths = args.only or sorted(glob.glob(os.path.join(args.entries, "*.json")))
     paths = [p for p in paths if not os.path.basename(p).startswith(".")]
