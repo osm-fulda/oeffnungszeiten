@@ -1,9 +1,10 @@
 {
  "added": "2026-08-13",
- "captured_sample": "Öffnungszeiten Montag 08:30 - 18:00 Uhr Dienstag 08:30 - 18:00 Uhr Mittwoch 08:30 - 18:00 Uhr Donnerstag 08:30 - 18:00 Uhr Freitag 08:30 - 18:00 Uhr Samstag 08:30 - 13:00 Uhr",
+ "captured_sample": "Montag 08:30-18:00 Uhr Dienstag 08:30-18:00 Uhr Mittwoch 08:30-18:00 Uhr Donnerstag 08:30-18:00 Uhr Freitag 08:30-18:00 Uhr Samstag 08:30-13:00 Uhr",
  "fetch_backend": "system",
- "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" c-ia-working-hours__day \")]",
  "name": "Rosen-Apotheke",
+ "note": "Neues Apotheken-Theme seit Oktober 2026: eine Zeile pro Tag (c-ia-working-hours__day), sechs Treffer. Nicht den ganzen Block (b-working-hours) nehmen: im Browser steht dort \"Geöffnet bis 18:00 Uhr\", eine Uhr, die bei jedem Abruf anders lautet. Der einfache Abruf reicht.",
  "osm_id": "node/697224827",
  "schema": 1,
  "tags": [

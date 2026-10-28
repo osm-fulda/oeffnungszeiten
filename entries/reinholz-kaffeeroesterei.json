@@ -1,13 +1,14 @@
 {
  "added": "2026-07-26",
- "captured_sample": "Öffnungszeiten Mo-Sa: 10:00 – 18:00 Uhr Öffnungszeiten Mo-Sa: 09:00 – 22:00 Uhr So und Feiertag: 10 – 18:00 Uhr",
+ "captured_sample": "Öffnungszeiten Mo-Sa: 10:00 – 18:00 Uhr",
  "fetch_backend": "system",
- "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "filter": "xpath:(//b[contains(normalize-space(.),\"Öffnungszeiten\")])[1]/parent::*",
  "name": "Reinholz Kaffeerösterei",
+ "note": "Eigene Seite des Kaffeeladens im Steinweg (seit 28.10.2026, vorher die Startseite, die die Zeiten mehrerer Standorte zeigt). Die Seite liefert den Block mit den Zeiten doppelt aus, deshalb [1]. Nicht nehmen: den Fussbereich (rhf__hours), der auf jeder Seite steht und andere Zeiten nennt, und das JSON-LD, das Di-Sa sagt.",
  "osm_id": "node/10157985153",
  "schema": 1,
  "tags": [
   "fulda-coffee"
  ],
- "url": "https://www.reinholz-kaffee.de/"
+ "url": "https://reinholz-kaffee.de/reinholz-kaffeeladen-in-fulda/"
 }
