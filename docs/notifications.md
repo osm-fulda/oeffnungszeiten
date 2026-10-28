@@ -145,23 +145,11 @@ six consecutive misses, so roughly 18 days at a 3-day cadence. Nothing to do in 
 rebuilt and the anchor is gone. Re-run the wizard and commit the new filter.
 
 **3. `N Watches brauchen Aufmerksamkeit`**: the weekly `audit_report.py`. These are the watches
-that will never tell you anything themselves, and each finding carries its own first move:
-
-| finding | what it means | first move |
-|---|---|---|
-| `fetch error: 403` | the host refuses us | fetch the URL from a home connection and from the VPS with the same UA. Only the VPS gets 403 → the host blocks datacenter ranges, drop the watch. Both get 403 → the UA is the problem, not the address |
-| `fetch error: 404` | page is gone | find the successor page, otherwise drop the watch |
-| `fetch error: 5xx` | the site is broken today | wait one cycle before touching anything |
-| `no opening hours on this page at all` | blind watch | look for `/kontakt`, `/oeffnungszeiten`, a branch page; drop it if the business publishes none |
-| `no weekday named` / `only N weekday(s)` | filter caught part of the block | the rest sits in a sibling: anchor on the common ancestor |
-| `every day shows the same 09:00-17:00` | theme default, not this business | find the visible hours instead |
-| `the same hours are captured N×` | the anchor is too high | pick the narrower element |
-| `discarded by the global ignore pattern` | `global_ignore_text` swallows real lines | narrow the pattern in `deploy/global-settings.json` |
-| `captures text identical to N other watch(es)` | two watches on one page | give each business its own key, usually its address ([FILTERS.md](../FILTERS.md) case 12) |
-| `connect_over_cdp: … has been closed` | the shared cluster browser was gone mid-fetch, not a problem with the page | survives the recheck → look at the browser pod |
-| `429` | the host is rate-limiting, not blocking | over several runs it is the hoster, not this page |
-| `no filters were found` | the site was rebuilt, the anchor is gone | `filter_wizard.py --uuid`, then commit the entry |
-| `no filter` | whole page is watched | set one |
+that will never tell you anything themselves. Each finding carries its first move, grouped so that
+one wave of the same cause costs one instruction; under `Hinweise:` the report names the hosts
+with more than one finding, which are usually one cause, and links each kind of finding to its
+section in [repair.md](./repair.md). That page is the long version: how to tell the causes apart,
+where the fix goes, and how to prove it before and after the merge.
 
 **Every fetch error is looked at twice.** One blink of the shared browser writes
 `connect_over_cdp` into every `html_webdriver` watch that was in flight, and a 429 is gone by the

@@ -132,6 +132,7 @@ wird eine URL genommen und beobachtet.
 | [CONCEPT.md](./CONCEPT.md) | warum es das gibt und warum Watches Dateien in git sind (englisch) |
 | [docs/changedetection.md](./docs/changedetection.md) | wie es ausgerollt ist und die drei Entscheidungen dahinter (englisch) |
 | [docs/notifications.md](./docs/notifications.md) | wie eine Änderung ins Matrix-Zimmer kommt und wie die Sitzung entsteht (englisch) |
+| [docs/repair.md](./docs/repair.md) | eine Watch aus dem Wochenreport reparieren: Ursache finden, Eintrag ändern, Reparatur nachweisen (englisch) |
 | [entries/README.md](./entries/README.md) | was ein Eintrag enthält und unter welcher Lizenz (englisch) |
 
 Sechs Dokumente, jedes beantwortet eine Frage. Diese Seite ist die Karte, nichts wird hier zweimal
