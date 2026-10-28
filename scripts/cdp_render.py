@@ -36,7 +36,10 @@ DEFAULT_WS = "ws://localhost:3000"
 # changedetection's own render waits after domcontentloaded because hours often arrive with a
 # late XHR (store locators). Keep the same order of magnitude or we capture a spinner.
 SETTLE_SECONDS = 3.5
-MAX_HTML = 900_000
+# A bound against a runaway page, not a size limit: changedetection keeps the whole DOM, and a
+# render cut short makes a working filter look wrong. tabla-restaurant.de inlines its images and
+# renders 6.5 MB, with the hours in the footer at the very end.
+MAX_HTML = 30_000_000
 
 
 class WSError(RuntimeError):
