@@ -1,12 +1,13 @@
 {
  "added": "2026-08-17",
- "captured_sample": "Dienstag      08:00 - 20:00 Donnerstag    08:00 - 20:00 Freitag       08:00 - 20:00 Mittwoch      08:00 - 20:00 Montag        08:00 - 20:00 Samstag       08:00 - 20:00 Sonntag       Geschlossen Wochentag   Stunden",
- "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")])]",
+ "captured_sample": "\"Mo-Sa 08:00-20:00\"",
+ "fetch_backend": "system",
+ "filter": "jq:.. | objects | select(.\"@type\"==\"HardwareStore\" and (.\"@id\"|tostring|endswith(\"#store\"))) | .openingHours",
  "name": "OBI",
- "note": "Sichtbare Tabelle statt JSON-LD, weil sie den Sonntag ausdruecklich nennt. Die Tabelle beginnt beim heutigen Tag, deshalb sortiert.",
+ "note": "JSON-LD statt der sichtbaren Tabelle (28.10.2026). Die Tabelle beginnt beim heutigen Tag und wird kurz nach Mitternacht falsch gebaut: am 20.10. fehlte der Montag, am 23.10. der Donnerstag, beide Male stand der Sonntag doppelt da - zwei Fehlalarme, gegen die Sortieren nicht hilft. jq statt json:$..openingHours, weil changedetection den ersten Script-Block nimmt, in dem der Pfad trifft, und das ist hier der Nuxt-Datenblock mit Verweiszahlen statt Zeiten. Die @id #store waehlt den Markt, nicht die fuenf Abteilungen mit eigenem Eintrag.",
  "osm_id": "node/1406092124",
  "schema": 1,
- "sort_text_alphabetically": true,
+ "sort_text_alphabetically": false,
  "tags": [
   "fulda-doityourself"
  ],
