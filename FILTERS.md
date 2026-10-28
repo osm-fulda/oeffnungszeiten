@@ -383,7 +383,8 @@ knowing what an XPath is.
 ```bash
 python3 scripts/filter_wizard.py https://example.de/kontakt      # explore a URL
 python3 scripts/filter_wizard.py --uuid <uuid>                   # existing watch
-python3 scripts/filter_wizard.py --uuid <uuid> --pick 2 --apply  # write the choice
+python3 scripts/filter_wizard.py --uuid <uuid> --pick 2 --apply  # try it on the watch; the sync
+                                                                 # puts the entry back within the hour
 python3 scripts/filter_wizard.py <url> --render                  # JS-rendered page
 python3 scripts/filter_wizard.py <url> --lang en                 # English page
 ```
