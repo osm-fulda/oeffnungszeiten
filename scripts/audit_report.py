@@ -34,6 +34,7 @@ import re
 import subprocess
 import sys
 import time
+import urllib.error
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -241,11 +242,6 @@ def match(issues):
     return None, None
 
 
-def action_for(issues):
-    """The first move for a finding, or None when nothing matches."""
-    return match(issues)[0]
-
-
 def shared_hosts(rows):
     """Hosts with more than one finding: one cause, to be diagnosed once.
 
@@ -262,32 +258,60 @@ def shared_hosts(rows):
     return sorted(((h, n) for h, n in hosts.items() if h and n > 1), key=lambda x: (-x[1], x[0]))
 
 
+# The key the report's thread is remembered under in the relay. Not a page: no watch can ever
+# claim it, so a finding never lands in a page's alert thread or the other way round. One key
+# for every week, because the relay keeps one root per key — the new report replaces the old.
+THREAD_KEY = "audit-report"
+# matrix.org answers a burst with 429, and the relay passes that on instead of retrying.
+PACE = 1.0
+
+
+def order(red):
+    """Findings in the order of their doc section, then by name: one kind of cause together."""
+    rank = {a: i for i, a in enumerate(GUIDE)}
+    return sorted(red, key=lambda r: (rank.get(match(r.get("issues") or [])[1], len(rank)),
+                                      r.get("name") or ""))
+
+
 def compose(rows):
-    """-> (title, body) for the relay, or None when there is nothing worth sending."""
-    red = [r for r in rows if r.get("verdict") == "red"]
+    """-> [(title, body), ...] for the relay, or None when there is nothing worth sending.
+
+    The first message is the summary and opens a thread; every finding follows as a reply of
+    its own. In the room the report is one message however bad the week was, and in the thread
+    each finding can be answered, marked done, or discussed without quoting the others.
+
+    >>> rows = [{"verdict": "red", "name": "A", "url": "https://a.9gg.de/", "uuid": "u1",
+    ...          "issues": ["fetch error: Error - Request returned a HTTP error code 404"]},
+    ...         {"verdict": "red", "name": "B", "url": "https://b.9gg.de/", "uuid": "u2",
+    ...          "issues": ["no filters were found"]},
+    ...         {"verdict": "green", "name": "C", "url": "https://c.de/", "uuid": "u3"}]
+    >>> msgs = compose(rows)
+    >>> msgs[0][0]
+    'Wochenreport: 2 Watches brauchen Aufmerksamkeit'
+    >>> [t for t, _ in msgs[1:]]                  # doc order: 404 before a filter miss
+    ['A', 'B']
+    >>> print(msgs[1][1])
+    Webseite: https://a.9gg.de/
+    (changed) Error - Request returned a HTTP error code 404
+    uuid: u1
+    Hinweise:
+    Zu tun: Die Seite gibt es nicht mehr. Nachfolger suchen, sonst Watch entfernen.
+    Anleitung Seite weg: https://github.com/osm-fulda/oeffnungszeiten/blob/main/docs/repair.md#404-the-page-is-gone
+    >>> compose(rows[2:]) is None
+    True
+    """
+    red = order([r for r in rows if r.get("verdict") == "red"])
     if not red:
         return None
-    title = (f"{len(red)} Watch braucht Aufmerksamkeit" if len(red) == 1
-             else f"{len(red)} Watches brauchen Aufmerksamkeit")
-    # Group by what has to be done, so one 403 wave costs one instruction line and not one per
-    # watch. Findings without a known move come last, under a heading that says so.
-    lines, last = [], object()
-    for r in sorted(red, key=lambda r: (action_for(r.get("issues") or []) or "zzz",
-                                        r.get("name") or "")):
-        what = action_for(r.get("issues") or [])
-        if what != last:
-            lines.append(f"Zu tun: {what}" if what else
-                         "Zu tun: unbekannter Befund - Diff und Filter von Hand ansehen.")
-            last = what
-        # The relay treats a leading "Label: <url>" line as a header link, so the URL goes last
-        # on its own line and the reason above it. Playwright errors arrive as a multi-line call
-        # log, which would break that shape into unreadable fragments — collapse them.
-        issues = re.sub(r'\s+', ' ', '; '.join(r.get('issues') or [])).strip()
-        lines.append(f"(changed) {r.get('name')}: {issues[:160]}")
-        lines.append(f"Webseite: {r.get('url')}")
-        # Several of the moves above end in "--uuid", and the report is the only place the
-        # reader has it: the Matrix message is where they start, not the watch list.
-        lines.append(f"uuid: {r.get('uuid')}")
+    title = (f"Wochenreport: {len(red)} Watch braucht Aufmerksamkeit" if len(red) == 1
+             else f"Wochenreport: {len(red)} Watches brauchen Aufmerksamkeit")
+    found = [match(r.get("issues") or []) for r in red]
+    counts = {}
+    for _what, anchor in found:
+        label = GUIDE[anchor].removeprefix("Anleitung ") if anchor else "unbekannter Befund"
+        counts[label] = counts.get(label, 0) + 1
+    lines = ["Jeder Befund einzeln im Thread - erledigt mit einer Reaktion markieren."]
+    lines += [f"{n}× {label}" for label, n in counts.items()]
     # Below this line the relay renders guidance, not findings: it stays out of the line cap,
     # and the link is shown as its label instead of as an address nobody reads.
     lines.append("Hinweise:")
@@ -295,12 +319,33 @@ def compose(rows):
     if shared:
         lines.append("Gleicher Host, vermutlich eine Ursache - einen ansehen, alle reparieren: "
                      + ", ".join(f"{h} ({n})" for h, n in shared))
-    for anchor in dict.fromkeys(match(r.get("issues") or [])[1] for r in red):
-        if anchor:
-            lines.append(f"{GUIDE[anchor]}: {DOCS}#{anchor}")
     lines.append(f"Wie eine Reparatur ablaeuft: {DOCS}#the-loop")
     lines.append(f"(von {len(rows)} Watches insgesamt)")
-    return title, "\n".join(lines)
+    messages = [(title, "\n".join(lines))]
+
+    for r, (what, anchor) in zip(red, found):
+        # Playwright errors arrive as a multi-line call log — collapse them. "fetch error: "
+        # repeats what the move below already says.
+        issues = re.sub(r'\s+', ' ', '; '.join(r.get('issues') or [])).strip()
+        issues = re.sub(r'(^|; )fetch error: ', r'\1', issues)
+        body = [f"Webseite: {r.get('url')}",
+                f"(changed) {issues[:300]}",
+                # Several of the moves end in "--uuid", and the report is the only place the
+                # reader has it: the Matrix message is where they start, not the watch list.
+                f"uuid: {r.get('uuid')}",
+                "Hinweise:",
+                f"Zu tun: {what or 'unbekannter Befund - Diff und Filter von Hand ansehen.'}"]
+        if anchor:
+            body.append(f"{GUIDE[anchor]}: {DOCS}#{anchor}")
+        messages.append((r.get("name") or r.get("url"), "\n".join(body)))
+    return messages
+
+
+def send(relay, payload):
+    req = urllib.request.Request(relay, data=json.dumps(payload).encode(),
+                                 headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.status, r.read().decode()[:200]
 
 
 def main():
@@ -320,23 +365,37 @@ def main():
     if not args.no_recheck:
         rows = confirmed(rows, args.base_url, C.resolve_api_key(args.api_key),
                          args.recheck_budget)
-    message = compose(rows)
-    if message is None:
+    messages = compose(rows)
+    if messages is None:
         print(f"{len(rows)} watches, no RED — nothing sent")
         return
-    title, body = message
 
     if args.dry_run:
-        print(title)
-        print(body)
+        for title, body in messages:
+            print(f"--- {title}\n{body}")
         return
 
-    payload = json.dumps({"title": title, "message": body}).encode()
-    req = urllib.request.Request(args.relay, data=payload,
-                                 headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        print(f"sent: HTTP {r.status} {r.read().decode()[:200]}")
-
+    # The summary opens the thread; without it the findings would arrive flat, one message
+    # each in the room, which is exactly what the thread is for avoiding. So a failed summary
+    # stops the run, and a failed finding is retried once after a pause, then skipped.
+    (title, body), rest = messages[0], messages[1:]
+    print("sent summary: HTTP %s %s" % send(args.relay, {"title": title, "message": body,
+                                                          "page": THREAD_KEY}))
+    failed = 0
+    for title, body in rest:
+        time.sleep(PACE)
+        payload = {"title": title, "message": body, "page": THREAD_KEY, "thread": True}
+        for attempt in (1, 2):
+            try:
+                send(args.relay, payload)
+                break
+            except urllib.error.URLError as e:
+                if attempt == 2:
+                    failed += 1
+                    print(f"finding not sent: {title}: {e}", file=sys.stderr)
+                else:
+                    time.sleep(10 * PACE)
+    print(f"sent {len(rest) - failed} of {len(rest)} findings into the thread")
 
 if __name__ == "__main__":
     main()

@@ -144,12 +144,19 @@ line cap, so a long change can never truncate it.
 six consecutive misses, so roughly 18 days at a 3-day cadence. Nothing to do in OSM: the site was
 rebuilt and the anchor is gone. Re-run the wizard and commit the new filter.
 
-**3. `N Watches brauchen Aufmerksamkeit`**: the weekly `audit_report.py`. These are the watches
-that will never tell you anything themselves. Each finding carries its first move, grouped so that
-one wave of the same cause costs one instruction; under `Hinweise:` the report names the hosts
-with more than one finding, which are usually one cause, and links each kind of finding to its
-section in [repair.md](./repair.md). That page is the long version: how to tell the causes apart,
-where the fix goes, and how to prove it before and after the merge.
+**3. `Wochenreport: N Watches brauchen Aufmerksamkeit`**: the weekly `audit_report.py`. These are
+the watches that will never tell you anything themselves. The report is one message in the room
+however bad the week was: a count per kind of finding, the hosts with more than one finding
+(usually one cause), and a link to the repair loop. Every finding follows as a reply of its own in
+that message's thread, with its page, its `uuid` and its first move, and a link to its section in
+[repair.md](./repair.md). One reply per finding is what lets a finding be marked done with a
+reaction or discussed without quoting the rest, and it keeps a bad week clear of `MAX_LINES`.
+repair.md is the long version: how to tell the causes apart, where the fix goes, and how to prove
+it before and after the merge.
+
+The thread uses the relay's own mechanism, `page` plus `thread: true`, under a key no watch can
+claim (`audit-report`), so a finding never lands in a page's alert thread. The replies are paced a
+second apart, because matrix.org answers a burst with 429 and the relay passes that on.
 
 **Every fetch error is looked at twice.** One blink of the shared browser writes
 `connect_over_cdp` into every `html_webdriver` watch that was in flight, and a 429 is gone by the
@@ -318,7 +325,7 @@ they are the whole list:
 | `decode_note()` | `charts/changedetection/files/matrix_relay.py` | the `⚠ Zeichensalat` verdict, see [Zeichensalat](#zeichensalat) |
 | `notification_title`, `notification_body` | `deploy/global-settings.json` | the subject of every change alert, and the `Hinweise:` block under the diff |
 | `desired()` | `scripts/entries_sync.py` | the per-watch body, `Webseite:` and `OpenStreetMap:` |
-| `compose()` | `scripts/audit_report.py` | the weekly report: title, `Zu tun:` lines, `Webseite:`, `uuid:` |
+| `compose()` | `scripts/audit_report.py` | the weekly report: a summary that opens a thread, then one reply per finding |
 
 The relay's own parsing is not language-bound: `LINK_LINE` accepts any label up to 30 characters,
 so a translated one keeps producing a header link. `TRAILER_MARK` is the one German word the

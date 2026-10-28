@@ -1,6 +1,7 @@
 # Repairing a watch
 
-The weekly report (`N Watches brauchen Aufmerksamkeit`) names each broken watch and a first move.
+The weekly report (`Wochenreport: N Watches brauchen Aufmerksamkeit`) answers its own message with
+one reply per broken watch, each with a first move and a link to its section below.
 This page is the long version: how to find the cause behind a finding, fix it in the right place,
 and prove the fix both before and after it is merged. It assumes `source scripts/cd_env.sh`, so
 `CD_BASE_URL` and `CHANGEDETECTION_API_KEY` are set; [FILTERS.md](../FILTERS.md) covers how to
