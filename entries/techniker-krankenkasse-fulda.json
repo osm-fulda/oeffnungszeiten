@@ -1,10 +1,11 @@
 {
  "added": "2026-10-27",
  "captured_sample": "Montag 09:00-16:00 Uhr Dienstag 09:00-17:00 Uhr Mittwoch 09:00-16:00 Uhr Donnerstag 09:00-18:00 Uhr Freitag 09:00-14:00 Uhr",
- "fetch_backend": "system",
+ "fetch_backend": "html_webdriver",
  "filter": "xpath://tbody[contains(concat(\" \",normalize-space(@class),\" \"),\" ui-datatable-data \")]",
  "lang": "de",
  "name": "Techniker Krankenkasse Fulda",
+ "note": "tk.de liefert XHTML mit XML-Deklaration, an der changedetection beim einfachen Abruf scheitert (\"Unicode strings with encoding declaration are not supported\"). Der Browser gibt das DOM ohne Deklaration zurueck.",
  "osm_id": "node/1342134572",
  "schema": 1,
  "tags": [
