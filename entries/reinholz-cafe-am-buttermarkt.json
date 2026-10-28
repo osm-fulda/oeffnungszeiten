@@ -1,9 +1,10 @@
 {
  "added": "2026-08-03",
- "captured_sample": "Öffnungszeiten Mo-Sa: 09:00 – 22:00 Uhr So & Feiertag: 10:00 – 18:00 Uhr Öffnungszeiten Mo-Sa: 08:00 – 20:00 Uhr So & Feiertag: 10:00 – 18:00 Uhr",
+ "captured_sample": "Öffnungszeiten Mo-Mi: 09:00 – 18:00 Uhr Do-Sa: 09:00 – 19:00 Uhr So & Feiertag: 10:00 – 18:00 Uhr",
  "fetch_backend": "system",
- "filter": "xpath:(//b[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "filter": "xpath:(//b[contains(normalize-space(.),\"Öffnungszeiten\")])[1]/parent::*",
  "name": "Reinholz Café am Buttermarkt",
+ "note": "Die Seite liefert den Block mit den Zeiten doppelt aus, deshalb [1] (28.10.2026). Nicht nehmen: den Fussbereich (rhf__hours), der auf jeder Seite steht und andere Zeiten nennt (Mo-Sa 8-18), und das JSON-LD (Mo-Sa 8-20).",
  "osm_id": "node/13393181068",
  "schema": 1,
  "tags": [
