@@ -476,7 +476,7 @@ def watching(url, entries="entries"):
     return hits
 
 
-def fetch(url, lang):
+def fetch(url, lang, name=None):
     """(html, ranked candidates). Raises Refused with a readable reason."""
     import filter_wizard as W
     try:
@@ -485,7 +485,7 @@ def fetch(url, lang):
         raise Refused(f"Die Seite war nicht abrufbar: `{e}`. Antwortet sie im Browser, "
                       f"blockt der Anbieter vermutlich Rechenzentren — dann trägt der Fall "
                       f"in `blocked-hosts.txt` mehr als ein Watch.")
-    ranked = W.collect(html, lang)
+    ranked = W.collect(html, lang, name=name)
     real = [c for c in ranked if c["strategy"] != "whole page"]
     if not real:
         raise Refused(
@@ -891,7 +891,7 @@ def main():
             path = os.path.join(args.entries, dup)
             entry = json.load(open(path, encoding="utf-8"))
             lang = entry.get("lang") or f["lang"]
-            html, ranked = fetch(f["url"], lang)
+            html, ranked = fetch(f["url"], lang, entry.get("name"))
             import filter_wizard as W
             current = W.capture(html, entry.get("filter"))
             if args.command == "candidates":
@@ -946,7 +946,7 @@ def main():
                      f"(`{record.get('reason')}`), war aber ab {record.get('recheck')} wieder "
                      f"anzusehen. Der Eintrag kommt beim Bauen aus `no-watch.json` heraus, im "
                      f"selben Pull Request. Was damals dort stand: {record.get('note')}"] + notes
-        html, ranked = fetch(f["url"], f["lang"])
+        html, ranked = fetch(f["url"], f["lang"], f["name"])
         if args.command == "candidates":
             write(args.out, "comment.md", candidates_comment(f, ranked, len(html), notes))
             write(args.out, "candidates.json", json.dumps(ranked, ensure_ascii=False, indent=1))
