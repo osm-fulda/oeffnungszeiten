@@ -76,7 +76,7 @@ carried it and **9 became clean filters, 0 reverted**, far better than any other
 Where it is used, the entry records **why**, so a later reader knows the visible page offered
 nothing better, rather than assuming JSON-LD was the lazy first pick.
 
-**Three traps:**
+**Four traps:**
 - **WordPress theme boilerplate.** Four unrelated businesses emitted the identical
   `Monday,…,Sunday 09:00-17:00`. The resulting watch looks healthy and monitors a constant.
   Sanity-check that the hours differ per day and per business before accepting.
@@ -87,6 +87,14 @@ nothing better, rather than assuming JSON-LD was the lazy first pick.
   `09:00-17:00`, treat the page as *unexamined*, not as answered.
 - CD **strips `<script>` text**, so hours that exist only inside a framework payload (Next.js flight
   data; e-motion) are not reachable this way even though you can see them in the HTML.
+- **A `json:` filter does not read only the JSON-LD.** changedetection parses every `<script>` of
+  any type, then `<body>`, and takes the first that yields a non-empty result. On a Nuxt page the
+  app's data block comes first and its `openingHours` holds index numbers: OBI watched
+  `[470, 750, 1576, …]` while the review sample showed `Mo-Sa 08:00-20:00`. The same order
+  applies to `jq:`. The fix is a `jq:` filter that can only match the JSON-LD object, by its
+  `@type` (`entries/obi.json`). The wizard marks such a candidate `avoid` and quotes what
+  changedetection would really capture; `validate_entries.py --live` checks existing entries
+  the same way (`filter_wizard.cd_json`).
 
 **When probing by hand, print more than the top candidate.** The same Happ page ranked the
 boilerplate JSON-LD first and the real branch-hours widget second; a probe script that printed

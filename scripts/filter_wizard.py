@@ -152,6 +152,12 @@ def jsonld_candidates(html):
             if lines:
                 out.append({'strategy': 'json-ld', 'filter': sel,
                             'text': ' · '.join(dict.fromkeys(lines))})
+    # The text above is the JSON-LD; changedetection reads the first script of any type that
+    # matches. Say so where the two differ, once per filter.
+    for c in out:
+        r = cd_json(html, c['filter'])
+        if r and r['block'] is not None and r['ldjson'] is False:
+            c['cd_trap'] = ' '.join(r['text'].split())[:80]
     return out
 
 
@@ -595,6 +601,11 @@ def score(cand, page_len, lang):
     def flag(text_, severity):
         flags.append(text_)
         sev.append(severity)
+    if cand.get('cd_trap') is not None:
+        s -= 60
+        flag(f'changedetection reads another <script> first (app data, not JSON-LD) and would '
+             f'capture "{cand["cd_trap"]}" — narrow it with a jq: filter on @type, as for OBI',
+             3)
     if BRITTLE.search(cand['filter']):
         s -= 40
         flag('brittle selector (generated class — dies on next site edit)', 3)
@@ -686,21 +697,141 @@ def strip_noise(doc):
     return doc
 
 
+_KEY = r'[A-Za-z_@][\w@-]*'
+
+
+def _jsonpath(data, path):
+    """Matches for the two JSONPath shapes the entries use, `$..key` and `$.a.b`; None for
+    any other shape, so the caller says "not checked" instead of guessing.
+
+    >>> _jsonpath({"a": {"openingHours": "Mo"}, "openingHours": "Di"}, "$..openingHours")
+    ['Di', 'Mo']
+    >>> _jsonpath({"response": {"openingHours": ["Mo 9-17"]}}, "$.response.openingHours")
+    [['Mo 9-17']]
+    >>> _jsonpath({}, "$[0].x") is None
+    True
+    """
+    if path.startswith('$..') and re.fullmatch(_KEY, path[3:]):
+        key, out = path[3:], []
+
+        def walk(node):
+            if isinstance(node, dict):
+                if key in node:
+                    out.append(node[key])
+                for v in node.values():
+                    walk(v)
+            elif isinstance(node, list):
+                for v in node:
+                    walk(v)
+        walk(data)
+        return out
+    m = re.fullmatch(rf'\$((?:\.{_KEY})+)', path)
+    if not m:
+        return None
+    nodes = [data]
+    for k in m.group(1)[1:].split('.'):
+        nodes = [n[k] for n in nodes if isinstance(n, dict) and k in n]
+    return nodes
+
+
+def _json_match(data, filt):
+    """changedetection's `_parse_json` for one JSON document: matches, or None if unchecked."""
+    if filt.startswith('json:'):
+        return _jsonpath(data, filt[len('json:'):])
+    if filt.startswith('jq:'):
+        try:
+            import jq
+        except ImportError:
+            return None
+        return jq.compile(filt[len('jq:'):]).input(data).all()
+    return None
+
+
+def _json_text(match):
+    """changedetection's `_get_stripped_text_from_json_match`: one match as itself, several
+    as a list, none as the empty string."""
+    if not match:
+        return ''
+    return json.dumps(match[0] if len(match) == 1 else match, indent=4, ensure_ascii=False)
+
+
+def cd_json(html, filt):
+    """What changedetection captures with a `json:` or `jq:` filter on an HTML page.
+
+    It does not read only the JSON-LD. It takes every `<script>` of any type, then `<body>`,
+    keeps those that parse as JSON, and stops at the first with a non-empty result. On a Nuxt
+    page the app's own data block comes first, and its `openingHours` holds index numbers:
+    OBI captured those while the wizard showed the JSON-LD hours. Read out of 0.55.8
+    (`html_tools.extract_json_blob_from_html`).
+
+    Returns {'block': n, 'ldjson': bool, 'text': str}, with block None when nothing matched,
+    or None when this filter cannot be evaluated here (another JSONPath shape, no jq module).
+    `ldjson` is None for a JSON answer that is read whole: there is no script to pick.
+
+    >>> page = ('<script type="application/json">[{"openingHours": 3}, "x"]</script>'
+    ...         '<script type="application/ld+json">{"openingHours": "Mo-Sa 08:00-20:00"}</script>')
+    >>> cd_json(page, 'json:$..openingHours')
+    {'block': 0, 'ldjson': False, 'text': '3'}
+    >>> cd_json(page, 'json:$..openingHoursSpecification')
+    {'block': None, 'ldjson': False, 'text': ''}
+    >>> cd_json('{"response": {"openingHours": "Mo 9-17"}}', 'json:$.response.openingHours')
+    {'block': 0, 'ldjson': None, 'text': '"Mo 9-17"'}
+    """
+    if _json_match({}, filt) is None:
+        return None
+    # A JSON API answer is read whole, not searched for scripts (uberall for Matratzen Concord).
+    if html.lstrip('\ufeff').strip()[:1] in ('{', '['):
+        try:
+            data = json.loads(html.lstrip('\ufeff'))
+        except ValueError:
+            pass
+        else:
+            text = _json_text(_json_match(data, filt))
+            return {'block': None if not text else 0, 'ldjson': None, 'text': text}
+    try:
+        doc = parse_html(html)
+    except Exception:
+        return None
+    blocks = [(el.text or '', (el.get('type') or '').strip().lower() == 'application/ld+json')
+              for el in doc.iter('script')]
+    blocks += [(el.text_content(), False) for el in doc.iter('body')]
+    for i, (raw, ld) in enumerate(blocks):
+        head = raw.lstrip('\ufeff').strip()[:1]
+        if head not in ('{', '['):
+            continue
+        try:
+            data = json.loads(raw)
+        except ValueError:
+            continue
+        match = _json_match(data, filt)
+        if match is None:
+            return None
+        text = _json_text(match)
+        if text:
+            return {'block': i, 'ldjson': ld, 'text': text}
+    return {'block': None, 'ldjson': False, 'text': ''}
+
+
 def capture(html, filt):
     """What an existing changedetection filter grabs from this page, or None if we cannot say.
 
-    Only the two forms the entries use are honoured. `json:` filters read a JSON-LD block rather
-    than the DOM, and a bare CSS selector needs cssselect, which the wizard does not install —
-    both return None so the caller can say "nicht ausgewertet" instead of showing a wrong text.
+    `json:` and `jq:` go through cd_json, which reads the script blocks the way changedetection
+    does. A bare CSS selector needs cssselect, which the wizard does not install, and returns
+    None so the caller can say "nicht ausgewertet" instead of showing a wrong text.
 
     >>> capture('<div class="h"><p>Mo 9-17</p></div>',
     ...         'xpath://*[contains(concat(" ",normalize-space(@class)," ")," h ")]')
     'Mo 9-17'
-    >>> capture('<p>x</p>', 'json:$..openingHours') is None
+    >>> capture('<p>x</p>', 'json:$..openingHours')
+    ''
+    >>> capture('<p>x</p>', 'json:$[0]') is None
     True
     """
     if not filt:
         return None
+    if filt.startswith(('json:', 'jq:')):
+        r = cd_json(html, filt)
+        return None if r is None else r['text']
     body = filt.split(":", 1)[1] if filt.startswith(("xpath:", "xpath1:")) else None
     if body is None:
         return None

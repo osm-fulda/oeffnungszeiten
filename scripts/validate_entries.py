@@ -174,9 +174,8 @@ def check_live(e, lang_default="de", browser_ws=None):
 
     lang = e.get("lang", lang_default)
     filt = e.get("filter", "")
-    if filt.startswith("json:"):
-        warns.append("JSON-LD filter not evaluated offline; check the sample by eye")
-        return errs, warns
+    if filt.startswith(("json:", "jq:")):
+        return check_json(html, filt, lang, errs, warns)
     if not filt:
         return errs, warns
 
@@ -238,6 +237,34 @@ def check_live(e, lang_default="de", browser_ws=None):
         else:
             errs.append("filter captures no time at all — this watch could never fire "
                         "(set text_only: true if the notice is the point)")
+    elif not L.weekdays_any(text, lang):
+        warns.append("times captured but no weekday named — may not be an hours block")
+    return errs, warns
+
+
+def check_json(html, filt, lang, errs, warns):
+    """A `json:` or `jq:` filter, read the way changedetection reads it: first script that
+    matches, of any type. The wizard shows the JSON-LD, so a page whose app data comes first
+    passed review with the right hours in the sample and watched index numbers (OBI)."""
+    import filter_wizard as W
+    import hours_lang as L
+
+    r = W.cd_json(html, filt)
+    if r is None:
+        warns.append("filter not evaluated offline (other JSONPath shape, or jq not installed: "
+                     "pip install jq); check the sample by eye")
+        return errs, warns
+    if r["block"] is None:
+        errs.append("no <script> on the page yields anything for this filter")
+        return errs, warns
+    text = " ".join(r["text"].split())
+    if r["ldjson"] is False:
+        warns.append(f"changedetection reads script block {r['block']}, which is not JSON-LD: "
+                     f"{text[:60]!r}")
+    if not L.time_matches(text):
+        errs.append("filter captures no time at all — changedetection reads another <script> "
+                    "first; narrow it with a jq: filter on @type (see entries/obi.json)"
+                    if r["ldjson"] is False else "filter captures no time at all")
     elif not L.weekdays_any(text, lang):
         warns.append("times captured but no weekday named — may not be an hours block")
     return errs, warns
