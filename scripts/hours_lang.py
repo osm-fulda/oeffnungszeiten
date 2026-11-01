@@ -34,6 +34,11 @@ LANGS = {
             ("Sat", ["samstag", "samstags", "sonnabend"], ["sa"]),
             ("Sun", ["sonntag", "sonntags"], ["so"]),
         ],
+        # Abbreviations that are also ordinary words. "So erreichen Sie uns" is not Sunday.
+        "word_abbrevs": {"so"},
+        # Lowercase words that may follow a day without making it prose: "So geschlossen".
+        "day_followers": {"und", "u", "bis", "geschlossen", "ab", "von", "sowie", "nach",
+                          "nur", "feiertags", "und/oder"},
     },
     "en": {
         "keywords": ["Opening Hours", "Opening hours", "OPENING HOURS", "Opening Times",
@@ -183,11 +188,37 @@ def _boundary_ok(text, start):
     return len(text) > start + 1 and text[start + 1].islower()
 
 
+_NEXT_WORD = re.compile(r'\s+([a-zäöüß/]+)')
+
+
+def _prose_abbrev(text, m, spec):
+    """True when an abbreviation hit is the ordinary word, not the day.
+
+    Only for abbreviations that are also words ("so"). A day carries a dot, a colon, a time
+    or a range after it; a word is followed by more lowercase prose. The Gemeinde Kalbach
+    page read "So erreichen Sie uns persönlich" as Sunday and ranked the town hall's hours
+    above the library's.
+
+    >>> _sun = lambda t: "Sun" in weekdays(t)
+    >>> _sun("So erreichen Sie uns persönlich Montag 08:00 - 12:30 Uhr")
+    False
+    >>> _sun("Sa 9-13 Uhr So geschlossen"), _sun("Sa, So 10:00-12:00"), _sun("So. 10-12 Uhr")
+    (True, True, True)
+    >>> _sun("Mo - So 9:00 - 18:00"), _sun("So und Feiertage 10-12 Uhr")
+    (True, True)
+    """
+    if m.group(0).lower() not in spec.get("word_abbrevs", ()):
+        return False
+    nxt = _NEXT_WORD.match(text, m.end())
+    return bool(nxt) and nxt.group(1) not in spec.get("day_followers", ())
+
+
 def _day_hits(text, lang):
     """[(start, end, day_index)] for every weekday mentioned, left to right."""
     allow_abbrev = has_time(text)
     hits = []
-    for idx, (_canon, full, abbrev) in enumerate(_lang(lang)["days"]):
+    spec = _lang(lang)
+    for idx, (_canon, full, abbrev) in enumerate(spec["days"]):
         for w in full:
             for m in re.finditer(re.escape(w), text, re.I):
                 if _boundary_ok(text, m.start()):
@@ -195,7 +226,7 @@ def _day_hits(text, lang):
         if allow_abbrev:
             for a in abbrev:
                 for m in re.finditer(re.escape(a) + r'\.?(?![a-zäöüß])', text, re.I):
-                    if _boundary_ok(text, m.start()):
+                    if _boundary_ok(text, m.start()) and not _prose_abbrev(text, m, spec):
                         hits.append((m.start(), m.end(), idx))
     # English full names always count as well, whatever the page language: a JSON-LD filter
     # renders as `https://schema.org/Monday`, so a German-only day list reported every

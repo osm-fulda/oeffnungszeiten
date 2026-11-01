@@ -268,6 +268,99 @@ def heading_sibling_candidates(doc, lang):
 
 
 # --------------------------------------------------------------------------- #
+# Strategy 2c — the business's own name as the anchor
+# --------------------------------------------------------------------------- #
+def name_candidates(doc, lang, name):
+    """On a page listing several places, anchor on the heading that names this one.
+
+    gemeinde-kalbach.de lists three libraries in identical blocks, each with an
+    "Öffnungszeiten" item. Every keyword strategy either took all three at once or found the
+    town hall's hours above them, and none of the candidates was the library the issue asked
+    for. The name from the issue is the one thing that tells the blocks apart.
+
+    The name must label exactly one box on the page; a name that also sits in a teaser or
+    a breadcrumb gives no anchor, and a guess here would be worse than no candidate.
+
+    >>> doc = parse_html('<div><h3><span>Bücherei A</span></h3><ul><li><b>Öffnungszeiten</b>'
+    ...     '<ul><li>Mi. 9:00 bis 10:00 Uhr</li></ul></li><li>Tel. 123</li></ul>'
+    ...     '<h3>Bücherei B</h3><ul><li><b>Öffnungszeiten</b>Fr. 17:00 bis 18:00 Uhr</li></ul></div>')
+    >>> [(c['filter'], c['text']) for c in name_candidates(doc, 'de', ' Bücherei  A ')][-1]
+    ('xpath://h3[normalize-space(.)="Bücherei A"]/following-sibling::*[1]//b[contains(normalize-space(.),"Öffnungszeiten")]/parent::*', 'ÖffnungszeitenMi. 9:00 bis 10:00 Uhr')
+    >>> [c['filter'] for c in name_candidates(doc, 'de', 'Bücherei B')]
+    ['xpath://h3[normalize-space(.)="Bücherei B"]/following-sibling::*[1]']
+    >>> name_candidates(doc, 'de', 'Bücherei')
+    []
+    """
+    name = ' '.join((name or '').split())
+    if len(name) < 3 or '"' in name:
+        return []
+    lit = f'normalize-space(.)="{name}"'
+    try:
+        hits = [el for el in doc.xpath(f'//*[{lit}]') if el.tag in HEAD_TAGS]
+    except Exception:
+        return []
+    # A heading is often wrapped: <div><h3><span>Name</span></h3></div>. Take the outermost
+    # box that holds the name and nothing else, so its next sibling is the content.
+    boxes = []
+    for el in hits:
+        while el.getparent() is not None and txt_of(el.getparent()) == txt_of(el):
+            el = el.getparent()
+        if el not in boxes:
+            boxes.append(el)
+    if len(boxes) != 1:
+        return []
+    box = boxes[0]
+    anchor = f'//{box.tag}[{lit}]'
+    try:
+        if len(doc.xpath(anchor)) != 1:
+            return []
+    except Exception:
+        return []
+    out = []
+    sib, k = box.getnext(), 1
+    while sib is not None and k <= 3 and not out:
+        if not isinstance(sib.tag, str):
+            sib = sib.getnext()
+            continue
+        # the next place's heading ends this one's section
+        if sib.tag == box.tag:
+            break
+        text = txt_of(sib)
+        if text and len(text) <= MAX_CAPTURE and L.hours_score(text, lang) > 0:
+            block = f'{anchor}/following-sibling::*[{k}]'
+            out.append({'strategy': f'name "{name}"', 'filter': 'xpath:' + block, 'text': text})
+            inner = _keyword_item(doc, lang, block, text)
+            if inner:
+                kw, xp, t = inner
+                out.append({'strategy': f'name "{name}" → "{kw}"', 'filter': 'xpath:' + xp,
+                            'text': t})
+        sib, k = sib.getnext(), k + 1
+    return out
+
+
+def _keyword_item(doc, lang, block, text):
+    """(keyword, xpath, text) for the item under the hours keyword inside `block`, or None.
+
+    The block under a name often carries address, phone and manager as well; the item under
+    "Öffnungszeiten" is the part that changes when the hours change.
+    """
+    for kw in L.keywords(lang):
+        for tag in HEAD_TAGS:
+            for rel in ('', '/parent::*'):
+                xp = f'{block}//{tag}[contains(normalize-space(.),"{kw}")]{rel}'
+                try:
+                    sel = doc.xpath(xp)
+                except Exception:
+                    continue
+                if len(sel) != 1:
+                    continue
+                t = txt_of(sel[0])
+                if t and t != text and L.has_time(t) and L.hours_score(t, lang) > 0:
+                    return kw, xp, t
+    return None
+
+
+# --------------------------------------------------------------------------- #
 # Strategy 3 — authored class / id container
 # --------------------------------------------------------------------------- #
 def class_candidates(doc, lang):
@@ -669,10 +762,11 @@ def context_of(doc, filt):
     return None, len(els)
 
 
-def collect(html, lang, page_text_len=None):
+def collect(html, lang, page_text_len=None, name=None):
     doc = strip_noise(parse_html(html))
     page_len = page_text_len if page_text_len is not None else len(txt_of(doc))
-    cands = (jsonld_candidates(html) + heading_candidates(doc, lang)
+    cands = (name_candidates(doc, lang, name)
+             + jsonld_candidates(html) + heading_candidates(doc, lang)
              + heading_sibling_candidates(doc, lang)
              + class_candidates(doc, lang) + content_candidates(doc, lang))
     # keep only things that actually look like hours; the whole page is added separately
@@ -684,7 +778,11 @@ def collect(html, lang, page_text_len=None):
         fp = L.fingerprint(c['text'])
         if fp not in best or c['score'] > best[fp]['score']:
             best[fp] = c
-    ranked = sorted(best.values(), key=lambda c: -c['score'])
+    # A candidate anchored on the place's own name goes first whatever its score: the score
+    # rewards more weekdays, and on a shared page that is exactly what someone else's block
+    # has. Within the named ones the narrower capture wins a tie.
+    ranked = sorted(best.values(), key=lambda c: (not c['strategy'].startswith('name '),
+                                                   -c['score'], len(c['text'])))
     whole = {'strategy': 'whole page', 'filter': '', 'text': txt_of(doc)}
     whole['score'] = score(whole, page_len, lang)
     whole['flags'] = ['no filter — every change anywhere on the page will alert'] + whole['flags']
@@ -847,7 +945,7 @@ def main():
         html = fetch_plain(url)
     print(f"fetched: {len(html)} bytes ({'rendered' if rendered else 'plain'})")
 
-    ranked = collect(html, args.lang)
+    ranked = collect(html, args.lang, name=args.name)
     real = [c for c in ranked if c['strategy'] != 'whole page']
 
     # A plain fetch finding nothing is the signal that the page needs a browser. So is finding
@@ -870,7 +968,7 @@ def main():
                       "the plain fetch")
             else:
                 html, rendered = r_html, True
-                ranked = collect(html, args.lang)
+                ranked = collect(html, args.lang, name=args.name)
                 real = [c for c in ranked if c['strategy'] != 'whole page']
         except Exception as e:
             print(f"  browser render unavailable ({e}); staying with the plain fetch")
