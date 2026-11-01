@@ -1,0 +1,14 @@
+{
+ "added": "2026-10-30",
+ "captured_sample": "Öffnungszeiten Mi. 9:00 bis 10:00 Uhr (außerhalb der Ferien) Mi. 16:00 bis 18:00 Uhr Fr. 16:00 bis 17:30 Uhr",
+ "fetch_backend": "system",
+ "filter": "xpath://h3[normalize-space(.)=\"Bücherei Mittelkalbach\"]/following-sibling::ul[1]/li[strong[normalize-space(.)=\"Öffnungszeiten\"]]",
+ "name": "Bücherei Mittelkalbach",
+ "note": "Die Gemeindeseite führt drei Büchereien (Heubach, Mittelkalbach, Niederkalbach) mit gleich gebauten Blöcken. Der Filter hängt an der Überschrift \"Bücherei Mittelkalbach\" und nimmt nur den Listenpunkt \"Öffnungszeiten\" darunter, ohne Adresse und Leitung.",
+ "osm_id": "node/11978787763",
+ "schema": 1,
+ "tags": [
+  "fulda-library"
+ ],
+ "url": "https://www.gemeinde-kalbach.de/leben-in-kalbach/freizeit-kultur/buechereien"
+}

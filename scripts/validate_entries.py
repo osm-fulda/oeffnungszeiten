@@ -33,7 +33,7 @@ EXAMPLE_OSM_ID = "node/123456789"
 KNOWN = {"schema", "name", "url", "filter", "fetch_backend", "sort_text_alphabetically",
          "trigger_text", "subtractive_selectors", "extract_text",
          "text_should_not_be_present", "webdriver_delay", "tag", "lang", "osm_id",
-         "note", "captured_sample", "added", "tags"}
+         "note", "captured_sample", "added", "tags", "text_only"}
 BACKENDS = {"system", "html_requests", "html_webdriver"}
 FILTER_PREFIX = ("xpath:", "xpath1:", "json:", "jq:", "css:", "//", "#", ".", "/")
 # Absolute XPaths break on the next site edit. This exact shape blinded a watch here once and
@@ -230,7 +230,14 @@ def check_live(e, lang_default="de", browser_ws=None):
 
     text = L.clean(" ".join(W.txt_of(x) for x in sel))
     if not L.time_matches(text):
-        errs.append("filter captures no time at all — this watch could never fire")
+        # Some watches hold a notice on purpose: a winter break, "bei gutem Wetter an
+        # Wochenenden". They fire when hours come back, so for them no time is the expected
+        # state, and failing CI on it blocks every pull request that touches the entry.
+        if e.get("text_only"):
+            warns.append("captures no time — expected, the entry says text_only")
+        else:
+            errs.append("filter captures no time at all — this watch could never fire "
+                        "(set text_only: true if the notice is the point)")
     elif not L.weekdays_any(text, lang):
         warns.append("times captured but no weekday named — may not be an hours block")
     return errs, warns
