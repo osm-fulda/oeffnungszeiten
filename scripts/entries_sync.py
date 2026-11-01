@@ -141,6 +141,16 @@ def adoptions(entries, live, lock):
     >>> adoptions({"a": {"url": "https://a.de/", "name": "A"}}, live, {"a": "u1"})
     {}
 
+    One of two businesses on a page moves to its own page. The old page is still wanted by
+    the other entry, but no entry there carries the mover's name, so its watch moves along.
+
+    >>> shared = {"u1": {"url": "https://a.de/", "title": "Bike"},
+    ...           "u2": {"url": "https://a.de/", "title": "Outdoor"}}
+    >>> moved = {"bike": {"url": "https://a.de/bike", "name": "Bike"},
+    ...          "outdoor": {"url": "https://a.de/", "name": "Outdoor"}}
+    >>> adoptions(moved, shared, {}) == {"outdoor": "u2", "bike": "u1"}
+    True
+
     A second entry on a page that has one watch so far is not that watch's owner by position:
     the name decides, and the newcomer is created.
 
@@ -173,11 +183,18 @@ def adoptions(entries, live, lock):
         if pick:
             adopt[slug] = pick
 
-    # Only watches that no entry addresses at all: a page some other entry still names is that
-    # entry's, even when this pass runs before that entry has claimed it.
-    wanted = {norm_url(e.get("url")) for e in entries.values()}
+    # Only watches that no entry at their page could own: a watch whose page another entry
+    # still names is that entry's, even when this pass runs before that entry has claimed it.
+    # The name decides on a shared page, though. When one of two businesses on a page moves,
+    # the page stays wanted by the other one, and a URL-only test lost the mover's history
+    # (auf-und-davon-bike). The sibling's own watch carries the sibling's name; a watch whose
+    # title no entry at that page carries belongs to nobody there.
+    names_at = {}
+    for e in entries.values():
+        names_at.setdefault(norm_url(e.get("url")), set()).add(norm_name(e.get("name")))
     pool = [u for u in live
-            if u not in taken and norm_url(live[u].get("url")) not in wanted]
+            if u not in taken and norm_name(live[u].get("title"))
+            not in names_at.get(norm_url(live[u].get("url")), ())]
     for slug in unlocked:
         if slug in adopt:
             continue
