@@ -2845,6 +2845,15 @@
    "recheck": "2027-04-27",
    "note": "Am 30.07.2026 und am 27.10.2026 HTTP 503.",
    "osm_id": "node/3239658876"
+  },
+  {
+   "url": "https://www.wuerth.de/web/de/awkg/niederlassungen/niederlassung.php?branch=500735",
+   "name": "Würth",
+   "reason": "anti-bot",
+   "established": "2026-11-01",
+   "recheck": "2027-05-01",
+   "note": "Am 2026-11-01 entfernt: Der Watch meldete \"No parsable JSON found\" und hatte nie eine Änderung erfasst. Würth liefert eine Seite \"Challenge Validation\" (200, 1900 Bytes) an den Pod, an einen einfachen Abruf vom Heimanschluss und an einen Browser (sockpuppet, Block-Seite). Vorher JSON-LD openingHoursSpecification, Niederlassung 500735.",
+   "osm_id": "node/12500533601"
   }
  ]
 }
