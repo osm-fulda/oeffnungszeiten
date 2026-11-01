@@ -181,6 +181,7 @@ Der Wizard schreibt sie vollständig. Von Hand sähe sie so aus:
 | `lang` | `de` (Vorgabe) oder `en`, steuert die Wochentagserkennung |
 | `fetch_backend` | `html_webdriver`, wenn die Zeiten JavaScript brauchen, setzt der Wizard |
 | `sort_text_alphabetically` | `true`, wenn der Block täglich umsortiert, setzt der Wizard |
+| `text_only` | `true`, wenn der Block mit Absicht keine Uhrzeit trägt, etwa eine Winterpause. CI warnt dann nur |
 | `note` | deutsch, freier Text: was die Seite zeigt und was geprüft wurde. Wissen, keine Zierde |
 | `added` | das Datum, an dem der Eintrag entstand, setzt der Wizard |
 
