@@ -1,11 +1,11 @@
 {
  "added": "2026-09-22",
- "captured_sample": "Februar bis DezemberDienstag bis Samstag: ab 16 UhrSonntag ab 15 Uhr(bis 21 Uhr warme Küche)Montag: Ruhetag",
- "fetch_backend": "html_webdriver",
- "filter": "xpath://*[not(self::script)][contains(.,\"Februar bis Dezember\") and contains(.,\"Ruhetag\")][not(.//*[not(self::script)][contains(.,\"Februar bis Dezember\") and contains(.,\"Ruhetag\")])]",
+ "captured_sample": "Restaurant & Biergarten Di–Sa ab 16 Uhr So ab 15 Uhr Mo Ruhetag Februar bis Dezember, warme Küche bis 21 Uhr. An Feiertagen gelten andere Zeiten. Feiern und Gesellschaften stimmen wir individuell mit Ihnen ab.",
+ "fetch_backend": "system",
+ "filter": "xpath://section[h3[normalize-space(.)=\"Restaurant & Biergarten\"]]",
  "lang": "de",
  "name": "Der Florenberg",
- "note": "2026-09-30: Filter auf den Gaststaetten-Block (\"Februar bis Dezember ...\"). Der alte Filter nahm den Hotel-Absatz (Check-in Di-Sa 16-22, So 15-21), und genau dieser Wert stand bis 30.09.2026 falsch in OSM. Betrieb jetzt als Grundstuecksflaeche way/1563853994 (Restaurant + Hotel), Haus und Biergarten sind reine Geometrie; der eigene Biergarten-Watch entfaellt. Die Seite baut die Zeiten erst mit Javascript auf.",
+ "note": "2026-11-03: Die Seite ist neu und liefert die Zeiten statisch. Filter auf den Abschnitt 'Restaurant & Biergarten'; der alte Textanker traf nach dem Umbau auch FAQ und Fliesstext. Die Rezeption (Di-Sa 16-22, So 15-21) ist die Hotelzeit und gehoert nicht in opening_hours. Betrieb als Grundstuecksflaeche way/1563853994 (Restaurant + Hotel).",
  "osm_id": "way/1563853994",
  "schema": 1,
  "tags": [

@@ -1,10 +1,10 @@
 {
  "added": "2026-08-03",
- "captured_sample": "Öffnungszeiten Montag geschlossen Dienstag - Sonntag 10-17 Uhr Jeden dritten Dienstag 10-20 Uhr Öffnungszeiten Montag - Donnerstag 8:30-16:00 Uhr Freitag 8:30 - 12:30 Uhr",
+ "captured_sample": "Öffnungszeiten Montag geschlossen Dienstag - Sonntag 10-17 Uhr Jeden dritten Dienstag 10-20 Uhr",
  "fetch_backend": "system",
- "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "filter": "xpath:(//div[contains(concat(\" \",normalize-space(@class),\" \"),\" contact-box__additional-description \")])[1]",
  "name": "Vonderau Museum",
- "note": "Die Erkennung folgte dem seitenweiten Link 'Kontakt' im Fussbereich auf fulda.de/kontakt, der die Zeiten des BUERGERBUEROS zeigt und nicht die des Museums. Auf die Museumsseite umgehaengt. IN OSM PRUEFEN, moeglicherweise zusammenzufuehren: node/12463473269 und relation/161084 heissen beide 'Vonderau Museum'.",
+ "note": "2026-11-03: Der alte Filter (jedes <p> mit 'Öffnungszeiten', dessen Elternelement) griff auch den Ausstellungstext und die Bibliothekszeiten. Jetzt nur der erste Kontaktkasten. IN OSM PRUEFEN, moeglicherweise zusammenzufuehren: node/12463473269 und relation/161084 heissen beide 'Vonderau Museum'.",
  "osm_id": "node/12463473269",
  "schema": 1,
  "tags": [

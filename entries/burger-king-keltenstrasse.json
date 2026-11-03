@@ -4,11 +4,11 @@
  "fetch_backend": "html_webdriver",
  "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])[1]/parent::*",
  "name": "Burger King (Keltenstraße)",
- "note": "Der Block traegt am laufenden Tag ein Live-Abzeichen ('Mittwoch • Open Now'), das sonst jeden Tag diffen wuerde; subtractive_selectors nimmt es heraus. Der Filter greift nur den Restaurantblock - der zweite h3 ist der Drive-in.",
+ "note": "Der Block traegt am laufenden Tag ein Live-Abzeichen (' • Offen', frueher 'Open Now'), das sonst jeden Tag diffen wuerde; subtractive_selectors nimmt es heraus. Der Filter greift nur den Restaurantblock - der zweite h3 ist der Drive-in.",
  "osm_id": "way/713607031",
  "schema": 1,
  "subtractive_selectors": [
-  "xpath://p[normalize-space(.)=\"Open Now\"]/parent::*"
+  "xpath://p[normalize-space(.)=\"Open Now\" or normalize-space(.)=\"Offen\" or normalize-space(.)=\"Geschlossen\"]/parent::*"
  ],
  "tags": [
   "fulda-fast_food"
