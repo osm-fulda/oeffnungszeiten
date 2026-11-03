@@ -35,6 +35,9 @@ jobs:
       # wizard_bot reads what a stranger typed into an issue form. Its parsing and validation
       # half is stdlib and needs no network, exactly so it can be checked in this job.
       - run: PYTHONPATH=scripts python3 -m doctest scripts/wizard_bot.py
+      # judge decides what the weekly report calls broken. A notice watched on purpose
+      # (`text_only`) must not come back as RED every Monday.
+      - run: PYTHONPATH=scripts python3 -m doctest scripts/watch_audit.py
       # The bot finds a field by its heading, and the heading GitHub renders is the form's
       # `label`. Renaming one therefore breaks the parsing in silence: the issue looks right and
       # the bot reads an empty URL. One pass over the forms says whether every heading it knows
