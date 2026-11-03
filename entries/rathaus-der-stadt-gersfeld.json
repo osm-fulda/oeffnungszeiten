@@ -1,15 +1,15 @@
 {
  "added": "2026-10-02",
- "captured_sample": "Rathaus Stadt Gersfeld Marktplatz 1936129 Gersfeld (Rhön) +49 (0)6654 17-0 Bankverbindung: Sparkasse Fulda IBAN: DE76 5305 0180 0002 0045 09 BIC: HELADEF1FDS SITZUNGSDIENST Sitzungsdienst ALLRIS 4 (nu",
- "filter": "xpath://*[contains(.,\"Öffnungszeiten Rathaus\") and contains(.,\"Bauabteilung\")][not(.//*[contains(.,\"Öffnungszeiten Rathaus\") and contains(.,\"Bauabteilung\")])]",
+ "captured_sample": "Montag 08:00 – 12:30 Uhr 14:00 – 16:00 Uhr Dienstag 08:00 – 12:30 Uhr Mittwoch 08:00 – 12:30 Uhr Donnerstag 08:00 – 12:30 Uhr 14:00 – 18:00 Uhr Freitag 08:00 – 12:30 Uhr",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*//table",
  "lang": "de",
  "name": "Rathaus der Stadt Gersfeld",
- "note": "2026-10-02: Block enthaelt auch die Bauabteilung; in OSM steht das Rathaus.",
+ "note": "2026-10-02: Block enthaelt auch die Bauabteilung; in OSM steht das Rathaus. 2026-11-03: gersfeld.de ist jetzt die Tourismusseite; das Rathaus hat die Subdomain rathaus.gersfeld.de.",
  "osm_id": "way/179101821",
  "schema": 1,
  "tags": [
   "lkfulda-gersfeld-rhoen",
   "lkfulda-townhall"
  ],
- "url": "https://www.gersfeld.de/rathaus.html"
+ "url": "https://rathaus.gersfeld.de/"
 }

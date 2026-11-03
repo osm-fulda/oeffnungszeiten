@@ -1,10 +1,10 @@
 {
  "added": "2026-08-03",
- "captured_sample": "TRAININGSZEIT:(nur für Mitglieder mit Berechtigung/kostenpflichtige Zusatzoption) MONTAG - SONNTAG 24 STUNDEN ÖFFNUNGSZEITEN:(für Jederman, mit Personal) MONTAG - FREITAG 10:00 UHR - 21:00 UHR SAMSTAG 10:00 UHR - 15:00 UHR SONNTAG 10:00 UHR - 14:00 UHR",
+ "captured_sample": "Montag – Freitag 10:00 – 21:00 Uhr Samstag 10:00 – 15:00 Uhr Sonntag 10:00 – 14:00 Uhr",
  "fetch_backend": "system",
- "filter": "xpath://div[starts-with(@id,\"imTextObject_\") and not(contains(@id,\"_tab\")) and (contains(.,\"UHR\") or contains(.,\"STUNDEN\") or contains(.,\"MONTAG\") or contains(.,\"SAMSTAG\") or contains(.,\"SONNTAG\") or contains(.,\"ÖFFNUNGSZEITEN\") or contains(.,\"TRAININGSZEIT\"))]",
+ "filter": "xpath://dl[contains(concat(\" \",normalize-space(@class),\" \"),\" fp-hours \")]",
  "name": "Fitness Park",
- "note": "2026-08-14: sichtbare Zeiten statt JSON-LD. Die Seite unterscheidet zwei Dinge, die das Metadaten-Feld in eines wirft: 24 Stunden Zutritt fuer Mitglieder und betreute Oeffnungszeiten Mo-Fr 10-21, Sa 10-15, So 10-14. Der Filter sammelt die Textbausteine des Seitenbaukastens ueber ihren Inhalt ein, nicht ueber ihre Nummern, damit er einen Umbau ueberlebt.",
+ "note": "2026-08-14: sichtbare Zeiten statt JSON-LD. Die Seite unterscheidet zwei Dinge, die das Metadaten-Feld in eines wirft: 24 Stunden Zutritt fuer Mitglieder und betreute Oeffnungszeiten Mo-Fr 10-21, Sa 10-15, So 10-14. Der Filter sammelt die Textbausteine des Seitenbaukastens ueber ihren Inhalt ein, nicht ueber ihre Nummern, damit er einen Umbau ueberlebt. 2026-11-03: Neue Seite. Filter auf die betreuten Oeffnungszeiten; das 24/7-Training fuer Mitglieder steht daneben und ist nicht gemeint.",
  "osm_id": "node/4984463208",
  "schema": 1,
  "tags": [

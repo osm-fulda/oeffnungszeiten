@@ -1,10 +1,10 @@
 {
  "added": "2026-09-08",
- "captured_sample": "Unsere Öffnungszeiten: Di. - Do.: 09.00 : 17.00 Uhr Fr.: 09.00 : 23:00 Uhr Sa.: 08.00 : 15.00 Uhr Frühstück: Di. - Sa. 08.00 : 11.30 Mittagstisch: Di. - Sa. 11.30 : 15.30",
+ "captured_sample": "Di–Do 9–17 Uhr Fr 9–23 Uhr Sa 8–15 Uhr So, Mo geschlossen",
  "fetch_backend": "system",
- "filter": "xpath://*[@id=\"text-4\"]",
+ "filter": "xpath:(//p[normalize-space(.)=\"Geöffnet\"]/following-sibling::p[contains(.,\"Uhr\")])[1]",
  "name": "Stadtmetzgerei",
- "note": "Die Zeiten stehen in einem Text-Widget in der Fusszeile; der Block nennt neben den Ladenzeiten auch Fruehstueck und Mittagstisch, beides Oeffnungszeit-Information. Anker ist die Widget-ID, weil die Spaltenklasse footer_col2 ein zweites Widget mitfangen wuerde.",
+ "note": "Die Zeiten stehen in einem Text-Widget in der Fusszeile; der Block nennt neben den Ladenzeiten auch Fruehstueck und Mittagstisch, beides Oeffnungszeit-Information. Anker ist die Widget-ID, weil die Spaltenklasse footer_col2 ein zweites Widget mitfangen wuerde. 2026-11-03: Neue Seite. Filter auf den Kasten \"Geöffnet\" im Fussbereich.",
  "osm_id": "node/1332032907",
  "schema": 1,
  "tags": [

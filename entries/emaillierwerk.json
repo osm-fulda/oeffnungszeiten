@@ -1,10 +1,10 @@
 {
  "added": "2026-07-26",
- "captured_sample": "* Action 09:00 bis 20:00 * Action 09:00 bis 20:00 * Action 09:00 bis 20:00 * Action 09:00 bis 20:00 * Action 09:00 bis 20:00 * Action 09:00 bis 20:00 * Aktivoptik 09:00 bis 20:00 * Aktivoptik 09:00 bi",
+ "captured_sample": "Geöffnet Mo. - Sa. 09:00 bis 20:00 Uhr",
  "fetch_backend": "system",
- "filter": "xpath://li[contains(concat(\" \",normalize-space(@class),\" \"),\" shop-time \")]",
+ "filter": "xpath://h2[contains(normalize-space(.),\"Geöffnet\")]",
  "name": "Emaillierwerk",
- "note": "Ein Einkaufszentrum. Die Zeiten sind 165 li.shop-time-Zeilen je Mieter, keine davon nennt einen Wochentag, deshalb ist 'Zeiten ohne Wochentag' hier der Normalzustand. Der Text auf derselben Seite, der nach Wochentagen aussieht, ist eine Liste der Feiertagsschliessungen.",
+ "note": "Ein Einkaufszentrum. Die Zeiten sind 165 li.shop-time-Zeilen je Mieter, keine davon nennt einen Wochentag, deshalb ist 'Zeiten ohne Wochentag' hier der Normalzustand. Der Text auf derselben Seite, der nach Wochentagen aussieht, ist eine Liste der Feiertagsschliessungen. 2026-11-03: Neue Seite. Filter auf die Centerzeit in der Ueberschrift; die Liste der Geschaefte darunter hat Reiter pro Wochentag.",
  "osm_id": "way/193308489",
  "schema": 1,
  "tags": [
