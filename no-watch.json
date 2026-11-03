@@ -2863,15 +2863,6 @@
    "recheck": "2027-05-01",
    "note": "Am 2026-11-03 entfernt: Barmenia ist jetzt BarmeniaGothaer, die Agenturseite leitet auf die allgemeine Seite barmeniagothaer.de/beratung/ um. Eine neue Agenturseite unter agentur.barmeniagothaer.de/<ort>/rainer_handwerk antwortet 404.",
    "osm_id": "node/11676367208"
-  },
-  {
-   "url": "https://agentur.barmenia.de/christiane_sauer",
-   "name": "Barmenia Versicherung - Christiane Sauer",
-   "reason": "site-unreachable",
-   "established": "2026-11-03",
-   "recheck": "2027-05-01",
-   "note": "Am 2026-11-03 entfernt: christiane_sauer leitet auf die allgemeine Seite barmeniagothaer.de/beratung/ um. Der Watch lief auf agentur.barmenia.de/adem_kama, das jetzt auf eine Agentur in Kamen zeigt (kamen/adem_kama) - falscher Betrieb. Die Zeiten in OSM (Mo-Th 09:30-12:30,13:30-18:30; Fr 09:30-12:30) kamen aus dieser Quelle und sind zu pruefen.",
-   "osm_id": "node/11681015631"
   }
  ]
 }
