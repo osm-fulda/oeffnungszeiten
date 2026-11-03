@@ -1,13 +1,14 @@
 {
  "added": "2026-08-13",
- "captured_sample": "vom 12. – 21. Juni 2026 unsere Öffnungszeiten Mo. – Fr. 10 – 18 Uhr Sa. 10 – 15 Uhr",
+ "captured_sample": "Unsere Öffnungszeiten:Mo-Fr: 10-20 Uhr | Sa + So: 10-18 UhrFeiertage: 10-16 UhrAn Neujahr, Rosenmontag, und an den 1+2 Weihnachtsfeiertagen ist das Sonnenstudio geschlossen!",
  "fetch_backend": "system",
- "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "RZ Wellness & Sun",
+ "note": "2026-11-03: rz-wellness.de ist jetzt die Sauna- und Infrarot-Ausstellung mit datierten Terminen; die Zeiten des Sonnenstudios stehen auf rz-sonnenstudio.de.",
  "osm_id": "node/4985073955",
  "schema": 1,
  "tags": [
   "fulda-beauty"
  ],
- "url": "https://www.rz-wellness.de/"
+ "url": "https://rz-sonnenstudio.de"
 }

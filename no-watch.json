@@ -2854,6 +2854,15 @@
    "recheck": "2027-05-01",
    "note": "Am 2026-11-01 entfernt: Der Watch meldete \"No parsable JSON found\" und hatte nie eine Änderung erfasst. Würth liefert eine Seite \"Challenge Validation\" (200, 1900 Bytes) an den Pod, an einen einfachen Abruf vom Heimanschluss und an einen Browser (sockpuppet, Block-Seite). Vorher JSON-LD openingHoursSpecification, Niederlassung 500735.",
    "osm_id": "node/12500533601"
+  },
+  {
+   "url": "https://agentur.barmenia.de/rainer_handwerk",
+   "name": "Barmenia Versicherung - Rainer Handwerk",
+   "reason": "site-unreachable",
+   "established": "2026-11-03",
+   "recheck": "2027-05-01",
+   "note": "Am 2026-11-03 entfernt: Barmenia ist jetzt BarmeniaGothaer, die Agenturseite leitet auf die allgemeine Seite barmeniagothaer.de/beratung/ um. Eine neue Agenturseite unter agentur.barmeniagothaer.de/<ort>/rainer_handwerk antwortet 404.",
+   "osm_id": "node/11676367208"
   }
  ]
 }

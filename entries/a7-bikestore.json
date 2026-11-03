@@ -4,7 +4,7 @@
  "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" penci-working-hours \")]",
  "lang": "de",
  "name": "A7 Bikestore",
- "note": "Die Unterseite fuehrt beide Saisons; in der Karte steht nur der Sommerblock, den die Seite belegt.",
+ "note": "Die Unterseite fuehrt alle Filialen und beide Saisons. Seit 2026-11-03 traegt die Karte auch den Winterblock (Nov-Mar).",
  "osm_id": "node/11962724737",
  "schema": 1,
  "tags": [

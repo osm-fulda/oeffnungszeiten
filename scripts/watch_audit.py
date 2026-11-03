@@ -52,6 +52,27 @@ NOTICE_LOOKBACK = 3
 # enough to be the page's new normal. Half a year covers a winter break, the longest pause the
 # watches here have shown, and matches the recheck interval of no-watch.json.
 NOTICE_MAX_DAYS = 183
+DEFAULT_ENTRIES = "entries"
+
+
+def text_only_urls(d=DEFAULT_ENTRIES):
+    """URLs whose every entry says `text_only`: a notice there is the point, not a blind watch.
+
+    Keyed on the URL because that is all a watch and its entry share in the cluster. A URL that
+    also carries an ordinary entry stays out, since that watch is expected to hold hours.
+    Missing directory, no exemptions: the audit then judges every watch as before.
+    """
+    import glob
+    seen = {}
+    for path in glob.glob(os.path.join(d, "*.json")):
+        try:
+            with open(path) as fh:
+                e = json.load(fh)
+        except (OSError, ValueError):
+            continue
+        u = (e.get("url") or "").rstrip("/").lower()
+        seen.setdefault(u, []).append(bool(e.get("text_only")))
+    return {u for u, flags in seen.items() if u and all(flags)}
 
 
 def ignore_patterns(path=DEFAULT_SETTINGS):
@@ -142,7 +163,8 @@ def notice_since(base_url, key, uuid, stamps):
     return None
 
 
-def judge(w, text, stamps, lang, dup_count, patterns=(), since=None, now=None):
+def judge(w, text, stamps, lang, dup_count, patterns=(), since=None, now=None,
+          text_only=False):
     """-> (verdict, [plain-language issues])
 
     `since` is what notice_since() found: the timestamp from which a notice stands where the
@@ -156,6 +178,9 @@ def judge(w, text, stamps, lang, dup_count, patterns=(), since=None, now=None):
     'red'
     >>> judge({}, "Rufen Sie uns an", [], "de", 1)[0]
     'red'
+    >>> judge({"include_filters": ["p"]}, "Bei gutem Wetter am Wochenende geöffnet.", [], "de",
+    ...       1, text_only=True)
+    ('green', [])
     """
     issues = []
     verdict = GREEN
@@ -178,6 +203,8 @@ def judge(w, text, stamps, lang, dup_count, patterns=(), since=None, now=None):
         verdict = AMBER
         issues.append(f"a notice has replaced the hours for {age} day(s) (holiday, seasonal "
                       f"break) — the watch reports when they come back")
+    elif not times and text_only:
+        pass                    # the entry watches a notice on purpose (`text_only`)
     elif not times:
         verdict = RED
         issues.append("no opening hours on this page at all — this watch can never fire")
@@ -248,7 +275,7 @@ def judge(w, text, stamps, lang, dup_count, patterns=(), since=None, now=None):
     return verdict, issues
 
 
-def collect(api, base_url, uuids, names, lang, workers, patterns=()):
+def collect(api, base_url, uuids, names, lang, workers, patterns=(), notice_urls=()):
     def one(u):
         try:
             w = api.get(u)
@@ -279,7 +306,9 @@ def collect(api, base_url, uuids, names, lang, workers, patterns=()):
         fp = L.fingerprint(text) if text.strip() else None
         n_dup = len(dup.get(fp, [])) if fp else 1
         verdict, issues = judge(w, text, stamps, lang, n_dup, patterns,
-                                since=w.get("_notice_since"))
+                                since=w.get("_notice_since"),
+                                text_only=(w.get("url") or "").rstrip("/").lower()
+                                in notice_urls)
         filt = [f for f in (w.get("include_filters") or []) if f.strip()]
         rows.append({
             "uuid": u,
@@ -360,6 +389,9 @@ def main():
     ap.add_argument("--settings", default=DEFAULT_SETTINGS, metavar="FILE",
                     help="managed global settings, checked for ignore patterns that discard "
                          "hours lines (default: %(default)s; skipped if absent)")
+    ap.add_argument("--entries", default=DEFAULT_ENTRIES, metavar="DIR",
+                    help="entries directory, read for `text_only` (default: %(default)s; "
+                         "skipped if absent)")
     ap.add_argument("--base-url",
                     default=os.environ.get("CD_BASE_URL", "http://localhost:5000"),
                     help="changedetection API root; defaults to $CD_BASE_URL, so the same call "
@@ -382,7 +414,8 @@ def main():
     print(f"auditing {len(uuids)} watches "
           f"({len(patterns)} global ignore pattern(s) considered) …", file=sys.stderr)
 
-    rows = collect(api, args.base_url, uuids, names, args.lang, args.workers, patterns)
+    rows = collect(api, args.base_url, uuids, names, args.lang, args.workers, patterns,
+                   text_only_urls(args.entries))
     if args.only:
         rows = [r for r in rows if r["verdict"] == args.only]
 
