@@ -2908,6 +2908,42 @@
    "recheck": "2027-05-01",
    "note": "Am 2026-11-03 entfernt: freibaeder.html antwortet 404. Die neue Seite https://www.gersfeld.de/seite/881367/freibad-gersfeld.html nennt ausserhalb der Saison keine Zeiten. Zur Saison 2027 neu einrichten.",
    "osm_id": "relation/9270547"
+  },
+  {
+   "url": "https://www.schuelerhilfe.de/nachhilfe/fulda-peterstor/",
+   "name": "Schülerhilfe",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-03",
+   "recheck": "2027-05-01",
+   "note": "Am 2026-11-03 entfernt: Die Filialseite zeigt eine Vorlage, Mo-Fr 07:00-22:00, Sa 10:00-16:00, 'Die Öffnungszeiten können variieren'. Dieselben Zeiten stehen bei Kassel und Hamburg-Altona. Vorher 09:00-19:30.",
+   "osm_id": "node/8734397501"
+  },
+  {
+   "url": "https://www.schuelerhilfe.de/nachhilfe/fulda/",
+   "name": "Schülerhilfe",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-03",
+   "recheck": "2027-05-01",
+   "note": "Am 2026-11-03 entfernt: Die Filialseite zeigt eine Vorlage, Mo-Fr 07:00-22:00, Sa 10:00-16:00, 'Die Öffnungszeiten können variieren'. Dieselben Zeiten stehen bei Kassel und Hamburg-Altona. Vorher 09:00-19:30.",
+   "osm_id": "node/8734375104"
+  },
+  {
+   "url": "https://www.redcorridor.com/ausstellungen/13-little-by-little",
+   "name": "Red Corridor Gallery",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-03",
+   "recheck": "2027-05-01",
+   "note": "Am 2026-11-03 entfernt: Die Ausstellungsseite antwortet 404. Die Liste unter /ausstellungen endet 2018, keine Seite nennt Öffnungszeiten.",
+   "osm_id": "way/620880187"
+  },
+  {
+   "url": "https://stella-fulda.de#reservierung",
+   "name": "Stella Fulda",
+   "reason": "site-unreachable",
+   "established": "2026-11-03",
+   "recheck": "2027-02-01",
+   "note": "Am 2026-11-03 entfernt: Jede Seite antwortet 503 mit 'Huch, Seite nicht gefunden', vom Pod und vom Heimanschluss. Keine Meldung ueber eine Schliessung gefunden.",
+   "osm_id": "node/3978092613"
   }
  ]
 }
