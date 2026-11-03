@@ -1,9 +1,9 @@
 {
  "added": "2026-08-18",
- "captured_sample": "Öffnungszeiten Montag geschlossenDienstag - Sonntag 10-17 UhrJeden dritten Dienstag 10-20 Uhr",
- "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")])]",
+ "captured_sample": "Öffnungszeiten Montag geschlossen Dienstag - Sonntag 10-17 Uhr Jeden dritten Dienstag 10-20 Uhr",
+ "filter": "xpath:(//div[contains(concat(\" \",normalize-space(@class),\" \"),\" contact-box__additional-description \")])[1]",
  "name": "Vonderau Museum",
- "note": "Der Block nennt neben den Wochenzeiten den langen dritten Dienstag.",
+ "note": "2026-11-03: Einziger Watch fuers Museum. kultur-freizeit/vonderau-museum leitet hierher um, der zweite Watch (node/12463473269) ist entfallen, der Node wird in die Gebaeuderelation gefuehrt. Filter auf den ersten Kontaktkasten: der alte Anker (innerstes div mit 'Dienstag') traf auch den Ausstellungstext.",
  "osm_id": "relation/161084",
  "schema": 1,
  "tags": [
