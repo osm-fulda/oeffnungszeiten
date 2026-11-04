@@ -4,7 +4,7 @@
  "fetch_backend": "system",
  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mo – fr\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mo – fr\")])]",
  "name": "Freigeist",
- "note": "2026-11-04: Seit 02.11.2026 gibt es einen zweiten Standort in Dipperz (Gewerbepark 1 laut Website). Die Seite zeigt einen gemeinsamen Zeitenblock fuer beide Standorte, deshalb gibt es keinen zweiten Watch: ein Alarm hier gilt auch fuer den Dipperzer Node.",
+ "note": "2026-11-04: Seit 02.11.2026 gibt es einen zweiten Standort in Dipperz (Gewerbepark 1 laut Website). Die Seite zeigt einen gemeinsamen Zeitenblock fuer beide Standorte, deshalb gibt es keinen zweiten Watch: ein Alarm hier gilt auch fuer den Dipperzer Node (node/14349816038).",
  "osm_id": "node/13004511902",
  "schema": 1,
  "tags": [
