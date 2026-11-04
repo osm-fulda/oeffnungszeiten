@@ -1,9 +1,9 @@
 {
  "added": "2026-08-17",
- "captured_sample": "Asia Imbiss 10:00 bis 20:00",
- "filter": "xpath://li[span[normalize-space(.)=\"Asia Imbiss\"]]",
+ "captured_sample": "Geöffnet Mo. - Sa. 09:00 bis 20:00 Uhr Einkaufen im Emaillierwerk Fulda",
+ "filter": "xpath://h2[contains(concat(\" \",normalize-space(@class),\" \"),\" uppercase \")]",
  "name": "Asia Imbiss",
- "note": "Ladenseite im Center Emaillierwerk; die Zeiten stehen dort je Geschaeft. 2026-11-03: Die Geschaeftsseiten des Emaillierwerks gibt es nicht mehr (404). Die Zeit steht jetzt nur noch in der Liste auf /oeffnungszeiten/, die Reiter pro Wochentag hat.",
+ "note": "Ladenseite im Center Emaillierwerk; die Zeiten stehen dort je Geschaeft. 2026-11-03: Die Geschaeftsseiten des Emaillierwerks gibt es nicht mehr (404). Die Zeit steht jetzt nur noch in der Liste auf /oeffnungszeiten/, die Reiter pro Wochentag hat. 2026-11-04: Filter auf day-anchored text geändert, der vorherige erfasste seitenabhängigen Text mit (Issue #174).",
  "osm_id": "node/10091957709",
  "schema": 1,
  "tags": [
