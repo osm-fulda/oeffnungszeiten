@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-04",
+ "captured_sample": "Café Neuhof Fuldaer Straße 1336119 NeuhofT 06655 9764695 Anfahrt Mo. - Fri. 05:00 - 19:00 Uhr Sa. 05:00 - 18:00 Uhr So. 07:00 - 18:00 Uhr Sa, 03. Oktober 07.00 - 18.00 Uhr",
+ "fetch_backend": "system",
+ "filter": "xpath://div[contains(.,\"Fuldaer Straße 13\") and contains(.,\"Uhr\")][not(.//div[contains(.,\"Fuldaer Straße 13\") and contains(.,\"Uhr\")])]",
+ "name": "Bäckerei Happ (Café Neuhof)",
+ "note": "2026-11-04: Zeile der Filialliste ueber die Anschrift (FILTERS.md Fall 12). OSM-Node am 04.11.2026 nach der Filialliste auf Fuldaer Straße 13 gesetzt (vorher 19; neueroeffnung.info nannte 29-37). Der Fusszeilen-Eintrag 'Fuldaer Str. 13' ist abgekuerzt und faellt nicht unter den Filter.",
+ "osm_id": "node/4951092606",
+ "schema": 1,
+ "tags": [
+  "fulda-bakery"
+ ],
+ "url": "https://baecker-happ.de/fachgeschaefte/"
+}

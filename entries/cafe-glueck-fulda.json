@@ -1,9 +1,10 @@
 {
  "added": "2026-08-13",
- "captured_sample": "Montag - Samstag: 09:00-19:00 Sonn- & Feiertage: 09:00-18:00",
+ "captured_sample": "Dienstag Ruhetag Mo - Sa 09:00-19:00 (April bis September) Mo - Sa 09:00-18:00 (Oktober bis März) Sonn- und Feiertags 09:00-18:00 (ganzjährig)",
  "fetch_backend": "system",
  "filter": "xpath://*[@id=\"oeffnungszeiten\"]",
  "name": "Café Glück Fulda",
+ "note": "2026-11-04: captured_sample nachgezogen. Nach der Wiedereroeffnung am 13.08.2026 traegt der Block wieder die Saisonzeiten und den Ruhetag; das entspricht dem Wert in OSM.",
  "osm_id": "node/3978092611",
  "schema": 1,
  "tags": [

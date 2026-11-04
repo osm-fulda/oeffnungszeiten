@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-04",
+ "captured_sample": "Frankfurter Straße Frankfurter Straße 7136043 FuldaT 0661 96214320 Anfahrt Mo. - Fri. 06:00 - 18:00 Uhr Sa. 06:00 - 18:00 Uhr So. 07:00 - 17:00 Uhr",
+ "fetch_backend": "system",
+ "filter": "xpath://div[contains(.,\"Frankfurter Straße 71\") and contains(.,\"Uhr\")][not(.//div[contains(.,\"Frankfurter Straße 71\") and contains(.,\"Uhr\")])]",
+ "name": "Bäckerei Happ (Frankfurter Straße 71)",
+ "note": "2026-11-04: Filiale laut neueroeffnung.info seit 01.10.2026 offen. Zeile der Filialliste ueber die Anschrift (FILTERS.md Fall 12), wie die anderen Happ-Eintraege. Die Anschrift ist eindeutig: Frankfurter Straße 146 ist der Vortagsladen.",
+ "osm_id": "node/14189463810",
+ "schema": 1,
+ "tags": [
+  "fulda-bakery"
+ ],
+ "url": "https://baecker-happ.de/fachgeschaefte/"
+}
