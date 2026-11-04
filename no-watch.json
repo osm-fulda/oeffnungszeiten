@@ -2942,7 +2942,8 @@
    "reason": "no-hours-on-page",
    "established": "2026-11-04",
    "recheck": "2027-05-04",
-   "note": "Praxis seit 10.10.2026. Startseite und /kontakt nennen keine Zeiten, nur \"Jetzt kostenloses Erstgespräch vereinbaren\"; /meine-angebote ist \"COMING SOON\". Noch kein OSM-Objekt beim Anlegen, osm_id nach dem Upload nachtragen."
+   "note": "Praxis seit 10.10.2026. Startseite und /kontakt nennen keine Zeiten, nur \"Jetzt kostenloses Erstgespräch vereinbaren\"; /meine-angebote ist \"COMING SOON\".",
+   "osm_id": "node/14349816039"
   },
   {
    "url": "https://tamaris.com/de-DE/",
@@ -2950,7 +2951,8 @@
    "reason": "no-hours-on-page",
    "established": "2026-11-04",
    "recheck": "2027-05-04",
-   "note": "Die Zeiten stehen nur im Filialfinder, und der zeigt sie erst nach einer Sucheingabe (\"Fulda\") in einem Seitenpanel, ohne eigene URL je Filiale. Stores-FindStores?format=ajax liefert ohne die Sitzung nur eine leere Huelle (\"Gefunden! Karte Liste\"). Wert am 04.11.2026 vom Nutzer im Filialfinder abgelesen: Mo-Sa 10:00-19:00, So geschlossen. Noch kein OSM-Objekt beim Anlegen, osm_id nach dem Upload nachtragen."
+   "note": "Die Zeiten stehen nur im Filialfinder, und der zeigt sie erst nach einer Sucheingabe (\"Fulda\") in einem Seitenpanel, ohne eigene URL je Filiale. Stores-FindStores?format=ajax liefert ohne die Sitzung nur eine leere Huelle (\"Gefunden! Karte Liste\"). Wert am 04.11.2026 vom Nutzer im Filialfinder abgelesen: Mo-Sa 10:00-19:00, So geschlossen.",
+   "osm_id": "node/14349816040"
   }
  ]
 }
