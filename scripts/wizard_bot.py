@@ -882,12 +882,22 @@ def main():
             pick = int(m.group(1))
 
         if args.fix:
-            dup, _ = already_watched(f["url"], None, args.entries)
-            if not dup:
+            # `watching`, not `already_watched`: the latter returns the first file in sorted
+            # order, and on a page shared by two watches that picks one by its name alone.
+            hits = watching(f["url"], args.entries)
+            if not hits:
                 raise Refused(
                     "Diese Seite steht nicht in `entries/`, es gibt also keinen Filter zu "
                     "korrigieren. Für eine neue Seite ist das Formular **Watch vorschlagen** "
                     "das richtige.")
+            if len(hits) > 1:
+                liste = ", ".join(f"`entries/{h}`" for h in hits)
+                raise Refused(
+                    f"Auf dieser Seite liegen mehrere Watches: {liste}. Die Alarmnachricht "
+                    f"nennt im Titel den Betrieb, das Formular aber nur die Seite, und welcher "
+                    f"Filter gemeint ist, kann ich daraus nicht ableiten. Sag es hier im "
+                    f"Issue, ein Maintainer korrigiert es von Hand.")
+            dup = hits[0]
             path = os.path.join(args.entries, dup)
             entry = json.load(open(path, encoding="utf-8"))
             lang = entry.get("lang") or f["lang"]
