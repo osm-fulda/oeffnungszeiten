@@ -34,6 +34,7 @@ import html as html_mod
 import json
 import logging
 import os
+import random
 import re
 import tempfile
 import threading
@@ -719,6 +720,8 @@ class MatrixSession:
     def send(self, text, html=None, thread=None):
         """Send one m.text message, refreshing once if the token was rejected.
 
+        A 429 is waited out and sent again with the same transaction ID, see rate_limit_delay.
+
         `thread` is the (root, latest) pair from the ThreadBook. A client that does not render
         threads shows the message as a reply to `latest`, which is what is_falling_back means.
         """
@@ -743,18 +746,60 @@ class MatrixSession:
         # threads in the same millisecond, and the homeserver then answers the second send with
         # the first one's event_id, silently dropping a notification.
         txn = "cd-" + uuid.uuid4().hex
-        for attempt in (1, 2):
+        refreshed, waited = False, 0.0
+        while True:
             token = self.token()
             status, body = self._call(
                 "PUT", f"/_matrix/client/v3/rooms/{room}/send/m.room.message/{txn}",
                 content, token=token)
             if status == 200:
                 return body.get("event_id")
-            if status == 401 and attempt == 1:
+            if status == 401 and not refreshed:
                 log.info("token rejected (%s) - refreshing", body.get("errcode"))
                 self.refresh(stale=token)
+                refreshed = True
+                continue
+            delay = rate_limit_delay(status, body, waited)
+            if delay is not None:
+                log.info("rate limited - retrying in %.1fs", delay)
+                time.sleep(delay)
+                waited += delay
                 continue
             raise RuntimeError(f"send failed: HTTP {status} {body}")
+
+
+# How long one send may wait out 429s in total. The callers give up after 30 s (the sync's
+# urlopen timeout), so the budget stays below that.
+RATE_LIMIT_BUDGET = 25.0
+
+
+def rate_limit_delay(status, body, waited):
+    """Seconds to wait before the next try after a 429, or None to give up.
+
+    matrix.org answers a burst with 429 and `retry_after_ms`. A sync that changes many filters
+    sends one note per watch in the same second, and without a retry those notes were lost.
+    The wait is the server's value plus a little jitter, so that concurrent sends do not come
+    back at the same moment.
+
+    >>> rate_limit_delay(500, {}, 0) is None
+    True
+    >>> 2.0 <= rate_limit_delay(429, {"retry_after_ms": 2000}, 0) < 2.6
+    True
+    >>> 1.0 <= rate_limit_delay(429, {}, 0) < 1.6
+    True
+    >>> rate_limit_delay(429, {"retry_after_ms": 2000}, 24.0) is None
+    True
+    """
+    if status != 429:
+        return None
+    try:
+        base = max(float(body.get("retry_after_ms", 1000)), 100.0) / 1000
+    except (TypeError, ValueError):
+        base = 1.0
+    delay = base + random.uniform(0, 0.5)
+    if waited + delay > RATE_LIMIT_BUDGET:
+        return None
+    return delay
 
 
 # The line the announced alert carries. It says what the diff below it is, because the diff
