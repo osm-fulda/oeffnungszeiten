@@ -156,7 +156,8 @@ it before and after the merge.
 
 The thread uses the relay's own mechanism, `page` plus `thread: true`, under a key no watch can
 claim (`audit-report`), so a finding never lands in a page's alert thread. The replies are paced a
-second apart, because matrix.org answers a burst with 429 and the relay passes that on.
+second apart, because matrix.org answers a burst with 429. The relay waits out a 429 and sends
+again with the same transaction ID, but only for 25 seconds in total, so the pacing still matters.
 
 **Every fetch error is looked at twice.** One blink of the shared browser writes
 `connect_over_cdp` into every `html_webdriver` watch that was in flight, and a 429 is gone by the
