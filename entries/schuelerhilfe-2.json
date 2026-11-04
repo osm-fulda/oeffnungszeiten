@@ -1,9 +1,9 @@
 {
  "added": "2026-08-18",
- "captured_sample": "Montag 09:00 - 19:30 Uhr Dienstag 09:00 - 19:30 Uhr Mittwoch 09:00 - 19:30 Uhr Donnerstag 09:00 - 19:30 Uhr Freitag 09:00 - 19:30 Uhr Samstag geschlossen Sonntag geschlossen",
- "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" location-hours-overview \")]",
+ "captured_sample": "Montag 07:00 - 22:00 Uhr Dienstag 07:00 - 22:00 Uhr Mittwoch 07:00 - 22:00 Uhr Donnerstag 07:00 - 22:00 Uhr Freitag 07:00 - 22:00 Uhr Samstag 10:00 - 16:00 Uhr",
+ "filter": "xpath://table[.//td[normalize-space(.)=\"Montag\"]]",
  "name": "Schülerhilfe",
- "note": "Zweites OSM-Objekt der Schuelerhilfe auf derselben Seite; das Audit meldet den identischen Text.",
+ "note": "Zweite Filiale (Rabanusstraße 12A, eigene Seite und Leitung); node/8734397501 ist die Filiale am Peterstor. Die Zeiten gleichen denen anderer Standorte, gelten aber laut Seite für Fulda.",
  "osm_id": "node/8734375104",
  "schema": 1,
  "tags": [
