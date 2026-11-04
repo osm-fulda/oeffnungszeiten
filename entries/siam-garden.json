@@ -1,0 +1,13 @@
+{
+ "added": "2026-11-04",
+ "captured_sample": "11:00 UHR - 14:00 UHR 17:00 UHR - 23:00 UHR 17:00 UHR - 00:00 UHR 17:00 UHR - 00:00 UHR 17:00 UHR - 22:00 UHR",
+ "filter": "xpath://*[@id=\"comp-kybina0y\"]",
+ "lang": "de",
+ "name": "Siam Garden",
+ "osm_id": "way/158492082",
+ "schema": 1,
+ "tags": [
+  "fulda-restaurants"
+ ],
+ "url": "https://www.siam-garden.info/"
+}
