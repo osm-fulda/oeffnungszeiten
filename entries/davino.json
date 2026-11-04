@@ -4,7 +4,8 @@
  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
  "lang": "de",
  "name": "Davino",
- "osm_id": "node/14279863697",
+ "note": "2026-11-04: osm_id korrigiert. node/14279863697 ist geloescht (HTTP 410); Davino steht jetzt als node/1332042843 in der Karlstraße 15.",
+ "osm_id": "node/1332042843",
  "schema": 1,
  "url": "https://davino-fulda.de/"
 }

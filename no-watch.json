@@ -2926,6 +2926,31 @@
    "recheck": "2027-02-01",
    "note": "Am 2026-11-03 entfernt: Jede Seite antwortet 503 mit 'Huch, Seite nicht gefunden', vom Pod und vom Heimanschluss. Keine Meldung ueber eine Schliessung gefunden.",
    "osm_id": "node/3978092613"
+  },
+  {
+   "url": "https://www.rewe.de/marktseite/eiterfeld/1466019/rewe-markt-bahnhofstrasse-58-60/",
+   "name": "REWE Brähler (Eiterfeld, Bahnhofstraße 58-60)",
+   "reason": "anti-bot",
+   "established": "2026-11-04",
+   "recheck": "on-relocation",
+   "note": "403 auf den einfachen Abruf, wie bei allen rewe.de-Marktseiten. Wert in OSM (Mo-Sa 07:00-21:00) am 04.11.2026 mit neueroeffnung.info abgeglichen (Wiedereroeffnung 19.10.2026).",
+   "osm_id": "node/1937171183"
+  },
+  {
+   "url": "https://www.heimat-energyhealing.de/",
+   "name": "Heimat Energy Healing (Friedrichstraße 16)",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-04",
+   "recheck": "2027-05-04",
+   "note": "Praxis seit 10.10.2026. Startseite und /kontakt nennen keine Zeiten, nur \"Jetzt kostenloses Erstgespräch vereinbaren\"; /meine-angebote ist \"COMING SOON\". Noch kein OSM-Objekt beim Anlegen, osm_id nach dem Upload nachtragen."
+  },
+  {
+   "url": "https://tamaris.com/de-DE/",
+   "name": "Tamaris Store (Fulda, Bahnhofstraße 5)",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-04",
+   "recheck": "2027-05-04",
+   "note": "Die Zeiten stehen nur im Filialfinder, und der zeigt sie erst nach einer Sucheingabe (\"Fulda\") in einem Seitenpanel, ohne eigene URL je Filiale. Stores-FindStores?format=ajax liefert ohne die Sitzung nur eine leere Huelle (\"Gefunden! Karte Liste\"). Wert am 04.11.2026 vom Nutzer im Filialfinder abgelesen: Mo-Sa 10:00-19:00, So geschlossen. Noch kein OSM-Objekt beim Anlegen, osm_id nach dem Upload nachtragen."
   }
  ]
 }

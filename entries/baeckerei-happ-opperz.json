@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-04",
+ "captured_sample": "Opperz Niederkalbacher Straße 236119 NeuhofT 06655 749 671 Anfahrt wegen Renovierung geschlossen",
+ "fetch_backend": "system",
+ "filter": "xpath://div[contains(.,\"Niederkalbacher Straße 2\") and contains(.,\"Anfahrt\")][not(.//div[contains(.,\"Niederkalbacher Straße 2\") and contains(.,\"Anfahrt\")])]",
+ "name": "Bäckerei Happ (Opperz)",
+ "note": "2026-11-04: Die Filiale ist laut Filialliste 'wegen Renovierung geschlossen', der Block traegt darum keine Uhrzeit (text_only). Der Watch meldet sich, wenn die Zeiten zurueckkommen; dann OSM pruefen. Zeile der Filialliste ueber die Anschrift (FILTERS.md Fall 12).",
+ "osm_id": "node/11940733165",
+ "schema": 1,
+ "tags": [
+  "fulda-bakery"
+ ],
+ "text_only": true,
+ "url": "https://baecker-happ.de/fachgeschaefte/"
+}
