@@ -2863,6 +2863,51 @@
    "recheck": "2027-05-01",
    "note": "Am 2026-11-03 entfernt: Barmenia ist jetzt BarmeniaGothaer, die Agenturseite leitet auf die allgemeine Seite barmeniagothaer.de/beratung/ um. Eine neue Agenturseite unter agentur.barmeniagothaer.de/<ort>/rainer_handwerk antwortet 404.",
    "osm_id": "node/11676367208"
+  },
+  {
+   "url": "https://www.tegut.com/maerkte/markt/tegut-fulda-kaiserwiesen-keltenstrasse-20.html#openingtimesCollapse",
+   "name": "tegut",
+   "reason": "site-unreachable",
+   "established": "2026-11-03",
+   "recheck": "2027-02-01",
+   "note": "Am 2026-11-03 entfernt: Die Marktseite antwortet 404, der Markt Kaiserwiesen fehlt in der tegut-Marktsuche. Migros zieht tegut bis Ende 2026 aus Deutschland zurueck; Maerkte gehen an Edeka, Rewe oder Tante Enso oder schliessen. Neuen Betreiber vor Ort pruefen.",
+   "osm_id": "node/1406092150"
+  },
+  {
+   "url": "https://www.tegut.com/maerkte/markt/tegut-fulda-rabanusstrasse-3.html#openingtimesCollapse",
+   "name": "tegut",
+   "reason": "site-unreachable",
+   "established": "2026-11-03",
+   "recheck": "2027-02-01",
+   "note": "Am 2026-11-03 entfernt: Die Marktseite antwortet 404, der Markt Rabanusstrasse fehlt in der tegut-Marktsuche. Migros zieht tegut bis Ende 2026 aus Deutschland zurueck; Maerkte gehen an Edeka, Rewe oder Tante Enso oder schliessen. Neuen Betreiber vor Ort pruefen.",
+   "osm_id": "node/1328314102"
+  },
+  {
+   "url": "https://www.tegut.com/maerkte/markt/tegut-huenfeld-haune-center-josefstrasse-3.html",
+   "name": "tegut (Hünfeld, Haune Center)",
+   "reason": "site-unreachable",
+   "established": "2026-11-03",
+   "recheck": "2027-02-01",
+   "note": "Am 2026-11-03 entfernt: Die Marktseite antwortet 404, in Huenfeld fuehrt die Marktsuche nur noch Am Niedertor 2-8. Migros zieht tegut bis Ende 2026 aus Deutschland zurueck; Maerkte gehen an Edeka, Rewe oder Tante Enso oder schliessen. Neuen Betreiber vor Ort pruefen.",
+   "osm_id": "node/2192215257"
+  },
+  {
+   "url": "https://www.tegut.com/maerkte/markt/tegut-huenfeld-mackenzell-huenfelder-strasse-2.html",
+   "name": "tegut (Hünfeld-Mackenzell)",
+   "reason": "site-unreachable",
+   "established": "2026-11-03",
+   "recheck": "2027-02-01",
+   "note": "Am 2026-11-03 entfernt: Die Marktseite antwortet 404. Mackenzell steht auf der Liste der Maerkte, die Tante Enso uebernimmt; in OSM heisst way/89614682 schon 'Tante Enso'. Die Standortkarte von tanteenso.de fuehrt Mackenzell noch nicht.",
+   "osm_id": "way/89614682"
+  },
+  {
+   "url": "https://www.gersfeld.de/freibaeder.html",
+   "name": "Freibad Gersfeld",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-03",
+   "recheck": "2027-05-01",
+   "note": "Am 2026-11-03 entfernt: freibaeder.html antwortet 404. Die neue Seite https://www.gersfeld.de/seite/881367/freibad-gersfeld.html nennt ausserhalb der Saison keine Zeiten. Zur Saison 2027 neu einrichten.",
+   "osm_id": "relation/9270547"
   }
  ]
 }

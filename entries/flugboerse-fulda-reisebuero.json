@@ -1,13 +1,14 @@
 {
  "added": "2026-07-26",
- "captured_sample": "Öffnungszeiten Mo 10:00-18:00 Di 10:00-18:00 Mi 10:00-18:00 Do 10:00-18:00 Fr 10:00-18:00 Sa 11:00-14:00",
+ "captured_sample": "Mo 10:00-18:00 Di 10:00-18:00 Mi 10:00-18:00 Do 10:00-18:00 Fr 10:00-18:00 Sa 11:00-14:00",
  "fetch_backend": "system",
- "filter": "xpath:(//b[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" times \")]",
  "name": "Flugbörse Fulda Reisebüro",
+ "note": "2026-11-03: flugboerse-fulda.de leitet auf flugboerse.de/fulda/ um.",
  "osm_id": "node/1332064501",
  "schema": 1,
  "tags": [
   "fulda-travel_agency"
  ],
- "url": "https://www.flugboerse-fulda.de"
+ "url": "https://flugboerse.de/fulda/"
 }

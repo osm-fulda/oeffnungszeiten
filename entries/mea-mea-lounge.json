@@ -1,13 +1,14 @@
 {
  "added": "2026-08-03",
- "captured_sample": "TÄGLICH AB 11 UHR GEÖFFNET",
+ "captured_sample": "Montag bis Donnerstag Mo – Do 12:00 – 01:00 Von 12 Uhr bis 1 Uhr Freitag und Samstag Fr, Sa 12:00 – 03:00 Von 12 Uhr bis 3 Uhr Sonntag",
  "fetch_backend": "system",
- "filter": "xpath://p[contains(concat(\" \",normalize-space(@class),\" \"),\" font_5 \")]",
+ "filter": "xpath://*[contains(@class,\"opening-hours_container\")]",
  "name": "Mea-Mea-Lounge",
+ "note": "2026-11-03: meamea-lounge.com antwortet auf jeder Seite 404. Die Bahnhofsseite der DB fuehrt die Zeiten; sie ist keine Betreiberseite. Der Klassenname traegt einen Build-Hash, deshalb nur der Praefix \"opening-hours_container\".",
  "osm_id": "way/1284529868",
  "schema": 1,
  "tags": [
   "fulda-bar"
  ],
- "url": "https://www.meamea-lounge.com"
+ "url": "https://www.bahnhof.de/fulda/einkaufen-und-essen/mea-mea-lounge"
 }

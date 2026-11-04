@@ -1,10 +1,10 @@
 {
  "added": "2026-07-26",
- "captured_sample": "ÖFFNUNGSZEITEN Montag – Freitag: 10:00 – 18:00 Uhr Samstag: 10:00 – 14:00 Uhr Sonntag: geschlossen",
- "fetch_backend": "html_webdriver",
- "filter": "xpath:(//h3[contains(normalize-space(.),\"ÖFFNUNGSZEITEN\")])/parent::*",
+ "captured_sample": "Öffnungszeiten Montag – Freitag: 10:00 – 18:00 Uhr Samstag: 10:00 – 14:00 Uhr Sonntag: geschlossen",
+ "fetch_backend": "system",
+ "filter": "xpath:(//*[self::h2 or self::h3][translate(normalize-space(.),\"ÖFFNUNGSZEITEN\",\"öffnungszeiten\")=\"öffnungszeiten\"])/parent::*",
  "name": "Konditorei Lembach",
- "note": "2026-10-28: Ueberschrift ist jetzt eine h3 in Grossbuchstaben (ÖFFNUNGSZEITEN), vorher h2. 2026-10-09: Seite umgebaut, Zeiten jetzt im Block \"Besuch & Kontakt\"; der Hinweis auf Sommerschliessung ab 28 Grad ist weg. 2026-10-07: Browser statt requests: Shopify antwortet dem Python-Client im Cluster mit 429, auch bei einer Abfrage pro Minute; curl und der Cluster-Browser bekommen von derselben Adresse 200.",
+ "note": "2026-11-03: Ueberschrift wieder eine h2 (\"Öffnungszeiten\", gross nur per CSS). Der Anker vergleicht jetzt ohne Gross-/Kleinschreibung und nimmt h2 oder h3. Zurueck auf requests: der Cluster-Browser stuerzte an der Seite ab (\"Target crashed\"), der Pod bekam am 2026-11-03 per requests 200. Kommt wieder 429, zurueck auf html_webdriver. 2026-10-28: Ueberschrift ist jetzt eine h3 in Grossbuchstaben (ÖFFNUNGSZEITEN), vorher h2. 2026-10-09: Seite umgebaut, Zeiten jetzt im Block \"Besuch & Kontakt\"; der Hinweis auf Sommerschliessung ab 28 Grad ist weg. 2026-10-07: Browser statt requests: Shopify antwortet dem Python-Client im Cluster mit 429, auch bei einer Abfrage pro Minute; curl und der Cluster-Browser bekommen von derselben Adresse 200.",
  "osm_id": "node/1332267938",
  "schema": 1,
  "tags": [

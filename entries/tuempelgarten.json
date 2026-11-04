@@ -1,15 +1,16 @@
 {
  "added": "2026-10-27",
- "captured_sample": "Unsere Aquarien- und Terrarienausstellung ist an Sonn- und Feiertagen von 10 bis 17 Uhr geöffnet.",
+ "captured_sample": "Unsere Aquarien- und Terrarienausstellung ist während der Wintermonate geschlossen. Wir öffnen wieder am Karfreitag, 26. März 2027.",
  "fetch_backend": "system",
- "filter": "xpath://b[contains(.,\"Uhr\")]",
+ "filter": "xpath://b[contains(.,\"Terrarienausstellung ist\")]",
  "lang": "de",
  "name": "Tümpelgarten — Aquarien- und Terrarienausstellung",
- "note": "Die Zeiten stehen als ein fetter Satz im Fliesstext, ohne Ueberschrift oder Klasse. Die Seite kommt als Latin-1 ohne charset im Header. Die Warnung, es fehle ein Wochentag, ist erwartet: der Satz sagt Sonn- und Feiertage.",
+ "note": "Die Zeiten stehen als ein fetter Satz im Fliesstext, ohne Ueberschrift oder Klasse. Die Seite kommt als Latin-1 ohne charset im Header. Die Warnung, es fehle ein Wochentag, ist erwartet: der Satz sagt Sonn- und Feiertage. 2026-11-03: Der Satz \"Unsere Aquarien- und Terrarienausstellung ist ...\" traegt in der Saison die Zeiten und im Winter den Pausenhinweis. Der alte Filter verlangte \"Uhr\" und traf im Winter nichts. text_only, weil der Winterhinweis keine Uhrzeit traegt; ab der Saison stehen dort wieder Zeiten.",
  "osm_id": "way/595915922",
  "schema": 1,
  "tags": [
   "fulda-museum"
  ],
+ "text_only": true,
  "url": "https://www.scalare-fulda.de/oeffnungszeiten.html"
 }
