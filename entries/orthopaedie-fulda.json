@@ -1,0 +1,10 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Sonntag Geschlossen Montag 08:00 – 12:30 , 13:30 – 17:00 Dienstag 08:00 – 12:30 , 13:30 – 19:00 Mittwoch 08:00 – 12:30 , 13:30 – 17:00 Donnerstag 08:00 – 12:30 , 13:30 – 16:00 Freitag 08:00 – 12:30 Sa",
+ "filter": "xpath://tbody[contains(concat(\" \",normalize-space(@class),\" \"),\" opening-hours-more \")]",
+ "lang": "de",
+ "name": "Orthopädie Fulda",
+ "osm_id": "node/13448807040",
+ "schema": 1,
+ "url": "https://meliva.de/standort/orthopaedie-fulda/"
+}
