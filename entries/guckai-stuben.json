@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "täglich geöffnetdurchgehend warme Küche von 12:00 bis 20:00 UhrDienstags von 12:00 bis 16:00 Uhr Montag 12:00 – 19:00 UhrDienstag + Mittwoch geschlossenDonnerstag 12:00 – 19:00 UhrFreitag + Samstag 12",
+ "filter": "xpath://ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")][not(.//ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")])]",
+ "lang": "de",
+ "name": "Guckai-Stuben",
+ "note": "2026-11-08: Sommer- und Winterplan plus Betriebsurlaub; OSM traegt den Winterplan ab 05.12.2026.",
+ "osm_id": "node/812282372",
+ "schema": 1,
+ "tags": [
+  "lkfulda-poppenhausen",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://guckai-stuben.de/oeffnungszeiten-kontakt/"
+}

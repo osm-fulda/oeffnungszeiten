@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Montag: 10 - 18 Uhr Dienstag u. Mittwoch ist Ruhetag Donnerstag - Samstag: 10-18 Uhr Sonntag: 11-17 Uhr Direkt am Hochrhönring (K41) zwischen Schwarzerden und Sommerberg und am Wanderweg Wachtküppel -",
+ "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Rhöner Bauernladen",
+ "osm_id": "node/13056060434",
+ "schema": 1,
+ "tags": [
+  "lkfulda-farm",
+  "lkfulda-poppenhausen"
+ ],
+ "url": "https://www.rhoener-bauernladen.de"
+}

@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Mo, Di, Do, Fr: 08:00 - 18:30 Uhr Mi: 08:30 - 18:30 Uhr Sa: 08:30 - 13:00 Uhr",
+ "filter": "xpath://figure[contains(concat(\" \",normalize-space(@class),\" \"),\" table \")]",
+ "lang": "de",
+ "name": "Alte Apotheke Flieden",
+ "osm_id": "node/611632672",
+ "schema": 1,
+ "tags": [
+  "lkfulda-flieden",
+  "lkfulda-pharmacy"
+ ],
+ "url": "https://www.alte-apotheke-flieden.de"
+}

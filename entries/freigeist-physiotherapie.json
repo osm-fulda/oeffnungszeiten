@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "ÖffnungszeitenMo – Fr: 07:00 – 17:00 Uhr Termine nur nach Vereinbarung",
+ "filter": "xpath:(//h5[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "Freigeist Physiotherapie",
+ "osm_id": "node/14349816038",
+ "schema": 1,
+ "tags": [
+  "lkfulda-dipperz",
+  "lkfulda-physiotherapist"
+ ],
+ "url": "https://freigeist-physiotherapie.de/"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Mo - Sa08:00 - 20:00 SoGeschlossen",
+ "filter": "xpath://*[@id=\"openbox\"]//p[contains(concat(\" \",normalize-space(@class),\" \"),\" opening \")]",
+ "lang": "de",
+ "name": "Rossmann (Flieden)",
+ "note": "2026-11-08: Filter wie bei den anderen Rossmann-Filialen.",
+ "osm_id": "node/11137894916",
+ "schema": 1,
+ "tags": [
+  "lkfulda-chemist",
+  "lkfulda-flieden"
+ ],
+ "url": "https://www.rossmann.de/de/filialen/hessen/flieden/schluechterner-str--1b.html"
+}

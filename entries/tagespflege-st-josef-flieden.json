@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Öffnungszeiten: Montag-Freitag 08.00-16.30 Uhr.",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])",
+ "lang": "de",
+ "name": "Tagespflege St. Josef (Flieden)",
+ "osm_id": "node/9730783860",
+ "schema": 1,
+ "tags": [
+  "lkfulda-flieden",
+  "lkfulda-social_facility"
+ ],
+ "url": "https://www.sozialewerke.de/flieden/tagespflege-st-josef.html"
+}

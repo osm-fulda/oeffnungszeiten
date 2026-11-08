@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Georgstraße 15 36163 Poppenhausen Tel. 0 66 58 – 91 85 686Handy 0170 - 488 5997 Öffnungszeiten Mo.+ Mi. Ruhetag Di., Do. + Fr. 08:00-17:00 Uhr Sa. 07:30-12:00 UhrBetriebsurlaub von 29.09. - 12.10.2026",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Paradieshof-Metzgerei",
+ "osm_id": "node/1265034126",
+ "schema": 1,
+ "tags": [
+  "lkfulda-butcher",
+  "lkfulda-poppenhausen"
+ ],
+ "url": "http://www.paradieshof-metzgerei.de/"
+}

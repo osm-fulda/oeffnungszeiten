@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Öffnungszeiten Hofladen Unser Hofladen ist von Dienstag bis Samstag für Sie geöffnet.Dienstag bis Freitag: 10:00 bis 18:00 UhrSamstag: 07:30 bis 13:00 Uhr",
+ "filter": "xpath://*[contains(.,\"Öffnungszeiten Hofladen\") and contains(.,\"Samstag\")][not(.//*[contains(.,\"Öffnungszeiten Hofladen\") and contains(.,\"Samstag\")])]",
+ "lang": "de",
+ "name": "LindenGut Hofladen",
+ "note": "2026-11-08: Nur der Hofladen; die Seite listet darunter die Maerkte, die LindenGut-Produkte fuehren (denns, Rewe).",
+ "osm_id": "way/192999935",
+ "schema": 1,
+ "tags": [
+  "lkfulda-dipperz",
+  "lkfulda-farm"
+ ],
+ "url": "https://linden-gut.eu/de/hofladen/"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Markt Mo-Sa: 07:00 - 21:00 Getränkemarkt Mo-Sa: 08:00 - 21:00 Post Mo-Fr: 09:00 - 13:00 und 14:00 - 18:00 Sa: 09:00 - 13:00",
+ "filter": "xpath://*[@id=\"openingtimesCollapse\"]",
+ "lang": "de",
+ "name": "tegut (Dipperz, Gewerbepark 5)",
+ "note": "2026-11-08: Nur openingtimesCollapse gehoert diesem Markt.",
+ "osm_id": "way/457727286",
+ "schema": 1,
+ "tags": [
+  "lkfulda-dipperz",
+  "lkfulda-supermarket"
+ ],
+ "url": "https://www.tegut.com/maerkte/markt/tegut-dipperz-gewerbepark-5.html"
+}

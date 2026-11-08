@@ -1,0 +1,16 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Montag09:00-12:30 UhrDienstag14:00-16:00 UhrDonnerstag14:00-16:00 UhrFreitag09:00-12:30 Uhr",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://*[contains(.,\"Montag09:00\") and contains(.,\"Freitag\")][not(.//*[contains(.,\"Montag09:00\") and contains(.,\"Freitag\")])]",
+ "lang": "de",
+ "name": "Sparkasse Fulda (Filiale Dipperz)",
+ "note": "2026-11-08: Service-Zeiten; der zweite Block (Mo-Fr 08-20) ist die Beratung nach Termin.",
+ "osm_id": "node/4322635407",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bank",
+  "lkfulda-dipperz"
+ ],
+ "url": "https://www.sparkasse-fulda.de/de/home/toolbar/filialen/sparkasse-fulda-filiale-dipperz-8527.html"
+}

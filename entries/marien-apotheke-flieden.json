@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Notdienst-Apotheken anzeigen Öffnungszeiten Montag 08:00 - 13:00 14:00 - 18:30 Dienstag 08:00 - 13:00 14:00 - 18:30 Mittwoch 08:30 - 13:00 Donnerstag 08:00 - 13:00 14:00 - 18:30 Freitag 08:00 - 18:30 ",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Marien Apotheke Flieden",
+ "osm_id": "node/269262631",
+ "schema": 1,
+ "tags": [
+  "lkfulda-flieden",
+  "lkfulda-pharmacy"
+ ],
+ "url": "https://www.marien-apotheke-flieden.de"
+}

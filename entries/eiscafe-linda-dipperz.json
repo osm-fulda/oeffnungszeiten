@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Montags bis Sonntags 11:00 bis 19:00 Uhr",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" font-bold \")]",
+ "lang": "de",
+ "name": "Eiscafé Linda (Dipperz)",
+ "osm_id": "node/1810910966",
+ "schema": 1,
+ "tags": [
+  "lkfulda-dipperz",
+  "lkfulda-pub"
+ ],
+ "url": "https://www.eiscafe-linda.de/kontakt.html"
+}
