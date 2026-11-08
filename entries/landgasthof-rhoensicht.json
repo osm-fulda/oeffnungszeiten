@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Mittwoch – Samstag17:00 – 24:00 Küche17:00 – 20:00 Sonntag11:00 – 15:0017:00 – 20:00 Küche11:00 – 13:3017:00 – 20:00 Montag – DienstagRuhetag",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" rsq-row \")]",
+ "lang": "de",
+ "name": "Landgasthof Rhönsicht",
+ "note": "2026-11-08: Zeitenzeile des Info-Fensters (rsq-row); der Abschnitt #oeffnungszeiten nimmt Inline-CSS mit. Seit November Mi und So-Abend neu offen.",
+ "osm_id": "way/166632904",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kalbach",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://landgasthofrhoensicht.de/"
+}

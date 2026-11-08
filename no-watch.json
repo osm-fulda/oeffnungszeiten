@@ -2154,13 +2154,14 @@
    "reason": "no-hours-on-page",
    "established": "2026-08-18",
    "recheck": "2027-02-18",
-   "note": "Weder die Startseite noch /kontakt, /impressum, /oeffnungszeiten, /ueber-uns, /filialen oder /standorte nennen einen Wochentag mit Uhrzeit; am 18.08.2026 geprueft.",
+   "note": "Weder die Startseite noch /kontakt, /impressum, /oeffnungszeiten, /ueber-uns, /filialen oder /standorte nennen einen Wochentag mit Uhrzeit; am 18.08.2026 geprueft. Kalbach (node/2217028613): Zeiten am 08.11.2026 ueber den Filialfinder geprueft (Klick), keine eigene Filialseite.",
    "osm_id": "node/4984464007",
    "gilt_auch_fuer": [],
    "osm_ids_weitere": [
     "way/150682710",
     "way/575988230",
-    "way/1155286917"
+    "way/1155286917",
+    "node/2217028613"
    ]
   },
   {
@@ -2962,6 +2963,24 @@
    "recheck": "2027-05-08",
    "note": "Falsche URL ist in diesem EIntrag hinterlegt. Ich lösche es hierüber und lege es erneut an. Zuletzt erfasst, bevor der Watch entfernt wurde: (+49) 0661 9753 0 (Telefon) (+49) 0661 9753 299 Dienstag 08:00 – 12:30 , 14:30 – 17:00 Donnerstag 08:00 – 12:30 , 14:30 – 14:30 Freitag 08:00 – 12:30 Mittwoch 08:00 – 12:30 , 14:30 – 17:00 Montag 08:0 (Issue #181)",
    "osm_id": "node/13448807040"
+  },
+  {
+   "url": "https://www.edeka.de/eh/hessenring/henrik-wehner-e.k.-gewerbestr.-1a/index.jsp",
+   "name": "EDEKA (Kalbach, Gewerbestr. 1a)",
+   "reason": "anti-bot",
+   "established": "2026-11-08",
+   "recheck": "on-relocation",
+   "note": "Access Denied (Akamai) auch im Render-Browser, wie die anderen edeka.de-Marktseiten. Wert in OSM am 08.11.2026 vom Nutzer gegen die Marktseite geprueft (Mo-Sa 08:00-20:00).",
+   "osm_id": "node/442006801"
+  },
+  {
+   "url": "https://www.facebook.com/p/Blumenwerk-Rensch-100057483278178/",
+   "name": "Blumenwerk Rensch",
+   "reason": "social-only",
+   "established": "2026-11-08",
+   "recheck": "2027-05-08",
+   "note": "Einziger Auftritt ist Facebook (Login-Wand). Zeiten am 08.11.2026 vom Nutzer dort gelesen, decken sich mit OSM.",
+   "osm_id": "node/11939222621"
   }
  ]
 }

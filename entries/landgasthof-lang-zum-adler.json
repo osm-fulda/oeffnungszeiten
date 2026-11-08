@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Mo-Sa: 17:00 Uhr – 22:00 Uhr oder nach AbspracheAbendessen nach Absprache(für Hausgäste kleine Karte)Sonntag RuhetagSonstige Anreise nach Absprache",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"sonntag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"sonntag\")])]",
+ "lang": "de",
+ "name": "Landgasthof Lang zum Adler",
+ "osm_id": "node/442004488",
+ "schema": 1,
+ "tags": [
+  "lkfulda-caterer",
+  "lkfulda-kalbach"
+ ],
+ "url": "https://www.gasthof-lang.de/"
+}

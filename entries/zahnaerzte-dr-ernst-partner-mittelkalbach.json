@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Standort Mittelkalbach Raiffeisenstraße 2 36148 Kalbach Telefon: 06655 9095910 E-Mail: kalbach@ernst-partner.net Sprechzeiten Mo 8.30 – 13 | 14 – 18.30 Uhr Di 8.30 – 13 | 14 – 18.30 Uhr Mi 8.30 – 14.3",
+ "filter": "xpath://*[contains(.,\"Standort Mittelkalbach\") and contains(.,\"Sprechzeiten\")][not(.//*[contains(.,\"Standort Mittelkalbach\") and contains(.,\"Sprechzeiten\")])]",
+ "lang": "de",
+ "name": "Zahnärzte Dr. Ernst + Partner (Mittelkalbach)",
+ "note": "2026-11-08: Die Seite fuehrt zwei Standorte; der Filter nimmt nur den Abschnitt Mittelkalbach, nicht Fulda.",
+ "osm_id": "node/11960901261",
+ "schema": 1,
+ "tags": [
+  "lkfulda-dentist",
+  "lkfulda-kalbach"
+ ],
+ "url": "https://www.ernst-partner.net/"
+}

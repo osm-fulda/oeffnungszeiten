@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Montag09:00 - 18:30Dienstag09:00 - 18:30Mittwoch09:00 - 18:30Donnerstag09:00 - 18:30Freitag09:00 - 18:30Samstag09:00 - 16:00",
+ "filter": "xpath://ul[contains(concat(\" \",normalize-space(@class),\" \"),\" cs-store-locator__item-hours \")]",
+ "lang": "de",
+ "name": "NKD (Kalbach)",
+ "osm_id": "node/11961645037",
+ "schema": 1,
+ "tags": [
+  "lkfulda-clothes",
+  "lkfulda-kalbach"
+ ],
+ "url": "https://www.nkd.com/filialen/2582/kalbach/36148/nkd-gewerbestr-1"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Küchen-Zeiten Unser Küchenteam ist von Montag bis Samstag von 11:30 Uhr – 13:30 Uhr & 17:30 Uhr – 20:30 Uhr und Sonntag von 11:30 Uhr – 14:00 Uhr & 17:30 Uhr – 20:00 Uhr für Sie da. Die angegebenen Ze",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")])]",
+ "lang": "de",
+ "name": "Zum Taufstein (Restaurant)",
+ "note": "2026-11-08: Die Seite nennt nur Kuechenzeiten (OSM: opening_hours:kitchen). Das JSON-LD (Mo-Su 08-22) sind die Hotelzeiten.",
+ "osm_id": "way/41332157",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kalbach",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.zum-taufstein.de/restaurant/"
+}

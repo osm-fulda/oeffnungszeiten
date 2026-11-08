@@ -4,7 +4,8 @@
  "fetch_backend": "html_requests",
  "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" section__panel \")][.//h2[contains(.,\"Bar Barock\")]]//table",
  "name": "Bar Barock",
- "note": "Hotelbar, eigener Abschnitt auf der Restaurantseite. Noch kein OSM-Objekt; osm_id nachtragen, sobald es angelegt ist. Die \"BARock Bar\" in der Kanalstrasse ist ein anderer Betrieb.",
+ "note": "Hotelbar, eigener Abschnitt auf der Restaurantseite. Die \"BARock Bar\" in der Kanalstrasse ist ein anderer Betrieb.",
+ "osm_id": "node/14245153825",
  "schema": 1,
  "tags": [
   "fulda-bar"
