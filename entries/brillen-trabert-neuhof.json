@@ -1,0 +1,16 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Montag: Dienstag-Freitag:Samstag:geschlossen09:00 Uhr – 18:00 Uhr09:00 Uhr – 13:00 Uhr Montag:Dienstag-Freitag:Samstag: geschlossen09:00 – 18:00 Uhr09:00 – 13:00 Uhr",
+ "filter": "xpath://*[contains(.,\"Dienstag-Freitag\") and contains(.,\"13:00\")][not(.//*[contains(.,\"Dienstag-Freitag\") and contains(.,\"13:00\")])]",
+ "lang": "de",
+ "name": "Brillen Trabert (Neuhof)",
+ "note": "2026-11-08: Nicht verwechseln mit brillen-trabert.de (Fulda, eigener Watch).",
+ "osm_id": "node/12628476437",
+ "schema": 1,
+ "sort_text_alphabetically": true,
+ "tags": [
+  "lkfulda-neuhof",
+  "lkfulda-optician"
+ ],
+ "url": "https://www.brillen-trabert.com/kontakt/"
+}

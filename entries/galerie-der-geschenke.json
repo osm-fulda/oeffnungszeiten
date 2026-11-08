@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Mo. - Sa. 8.30Uhr - 12.30Uhr Mo. - Fr. 14.30Uhr - 17.30Uhr",
+ "filter": "xpath://div[contains(@class,\"module-type-text\")][contains(.,\"12.30Uhr\")]",
+ "lang": "de",
+ "name": "Galerie der Geschenke",
+ "note": "2026-11-08: Nur der Textbaustein unter \"Wir haben fuer Sie geoeffnet!\", nicht die ganze Seitenleiste.",
+ "osm_id": "node/4927485000",
+ "schema": 1,
+ "tags": [
+  "lkfulda-gift",
+  "lkfulda-neuhof"
+ ],
+ "url": "https://www.galerie-der-geschenke.de/"
+}

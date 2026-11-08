@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Hauptsitz Hauswurz Scheuerwaldstr. 5 36119 Neuhof – Hauswurz Tel. 06669-1339 Öffnungszeiten Montag Ruhetag Dienstag – Donnerstag 05.30 – 12.30 Uhr Freitag 05.30 – 12.00 Uhr 14.30 – 18.00 Uhr Samstag 0",
+ "filter": "xpath://*[contains(.,\"Hauptsitz Hauswurz\") and contains(.,\"Samstag\")][not(.//*[contains(.,\"Hauptsitz Hauswurz\") and contains(.,\"Samstag\")])]",
+ "lang": "de",
+ "name": "Backhaus Möller (Hauswurz)",
+ "note": "2026-11-08: Die Seite fuehrt zwei Standorte; der Filter nimmt nur den Hauptsitz Hauswurz.",
+ "osm_id": "node/10593436465",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bakery",
+  "lkfulda-neuhof"
+ ],
+ "url": "https://www.backhaus-moeller.de/standorte/"
+}

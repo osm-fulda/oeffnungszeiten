@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "AdresseTierarztpraxis Föller August-Rosterg-Str. 20 36119 Neuhof Tel 06655-1356 ​Öffnungszeiten NeuhofTerminsprechstunde Mo-Fr 09:00 - 18:00 UhrÖffnungszeiten ThalauHier finden Sie uns auf facebook:..",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "Tierarztpraxis Föller",
+ "osm_id": "node/11999730892",
+ "schema": 1,
+ "tags": [
+  "lkfulda-neuhof",
+  "lkfulda-veterinary"
+ ],
+ "url": "https://www.tierarztpraxis-foeller.de/"
+}

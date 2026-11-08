@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Montag08:00 - 12:30 Uhr Von 08:00 bis 12:30 Uhr 14:00 - 16:00 Uhr Von 14:00 bis 16:00 Uhr Dienstag08:00 - 12:30 Uhr Von 08:00 bis 12:30 Uhr 14:00 - 16:00 Uhr Von 14:00 bis 16:00 Uhr Mittwoch08:00 - 12",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" opening-hours__days \")]",
+ "lang": "de",
+ "name": "Rathaus Neuhof",
+ "note": "2026-11-08: Sprechzeiten; Besuch nur mit Termin.",
+ "osm_id": "way/85314863",
+ "schema": 1,
+ "tags": [
+  "lkfulda-neuhof",
+  "lkfulda-townhall"
+ ],
+ "url": "https://www.neuhof-fulda.de"
+}

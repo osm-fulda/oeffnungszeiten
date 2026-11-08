@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Mittwoch, Donnerstag, Freitag 11:30 bis 14:00 UhrMontag und Dienstag RuhetagMittwoch – Samstag 17:00 bis 00:00 Uhr Sonntag ganztägigWarme Küche bis 21:00 Uhr",
+ "filter": "xpath://ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Gasthof Deutsches Haus",
+ "note": "2026-11-08: Sonntag nur \"ganztaegig\" ohne Uhrzeit; OSM: Su open \"ganztägig\".",
+ "osm_id": "node/4200365389",
+ "schema": 1,
+ "tags": [
+  "lkfulda-caterer",
+  "lkfulda-neuhof"
+ ],
+ "url": "https://deutsches-haus-neuhof.de/kontakt/"
+}

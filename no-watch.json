@@ -2981,6 +2981,15 @@
    "recheck": "2027-05-08",
    "note": "Einziger Auftritt ist Facebook (Login-Wand). Zeiten am 08.11.2026 vom Nutzer dort gelesen, decken sich mit OSM.",
    "osm_id": "node/11939222621"
+  },
+  {
+   "url": "https://www.instagram.com/pizzeria7europa/",
+   "name": "Pizzeria Europa (Neuhof)",
+   "reason": "social-only",
+   "established": "2026-11-08",
+   "recheck": "2027-05-08",
+   "note": "Einziger Auftritt ist Instagram (Login-Wand, kein stabiler Anker). OSM-Wert unveraendert (flex16, 2024).",
+   "osm_id": "node/4200343889"
   }
  ]
 }
