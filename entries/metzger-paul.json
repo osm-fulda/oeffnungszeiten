@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "METZGER PAUL Hauptstraße 11 36103 Flieden/Hessen Telefon: 06655/2516 Telefax: 06655/2664 ​ ÖFFNUNGSZEITEN MO: 07:30 - 13:00 und 14:00 - 18:00 Uhr DI: 07:30 - 13:00 und 14:00 - 18:00 Uhr MI: 07:30 - 13",
+ "filter": "xpath://*[@id=\"comp-ijslorez\"]",
+ "lang": "de",
+ "name": "Metzger Paul",
+ "osm_id": "node/760223464",
+ "schema": 1,
+ "tags": [
+  "lkfulda-butcher",
+  "lkfulda-flieden"
+ ],
+ "url": "https://www.metzger-paul.net"
+}

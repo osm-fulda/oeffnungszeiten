@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Kontakt & Öffnungszeiten Öffnungszeiten Gasthof Die Öffnungszeiten können sich kurzfristig ändern und sind vom guten Wetter abhängig. WEIHNACHTEN 202624.12.26 geschlossen25.12.26 von 11:30 bis 14:00 2",
+ "filter": "xpath://header[contains(concat(\" \",normalize-space(@class),\" \"),\" entry-header \")]/following-sibling::*[1]",
+ "lang": "de",
+ "name": "Landgasthof Zum Stern (Poppenhausen)",
+ "osm_id": "node/1268172719",
+ "schema": 1,
+ "tags": [
+  "lkfulda-poppenhausen",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://landgasthof-zum-stern.com/kontakt-oeffnungszeiten/"
+}

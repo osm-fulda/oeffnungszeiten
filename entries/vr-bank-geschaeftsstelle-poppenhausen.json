@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "MontagGeschlossenDienstagGeschlossenMittwochGeschlossenDonnerstag09:0012:0014:3017:30FreitagGeschlossenSamstagGeschlossenSonntagGeschlossen",
+ "filter": "xpath://*[contains(.,\"14:30\") and contains(.,\"Montag\") and not(contains(.,\"06:00\"))][not(.//*[contains(.,\"14:30\") and contains(.,\"Montag\") and not(contains(.,\"06:00\"))])]",
+ "lang": "de",
+ "name": "VR Bank (Geschäftsstelle Poppenhausen)",
+ "note": "2026-11-08: Nur die Filialtabelle; das JSON-LD und die zweite Tabelle sind der SB-Bereich (06-23 Uhr).",
+ "osm_id": "node/2784856835",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bank",
+  "lkfulda-poppenhausen"
+ ],
+ "url": "https://www.regionalbank.de/meine-bank/filialen/filialen-uebersicht/geschaeftsstelle-poppenhausen.html"
+}

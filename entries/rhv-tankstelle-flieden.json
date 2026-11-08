@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Öffnungszeiten: durchgehend geöffnet",
+ "filter": "xpath://*[contains(.,\"Öffnungszeiten\") and contains(.,\"durchgehend\")][not(.//*[contains(.,\"Öffnungszeiten\") and contains(.,\"durchgehend\")])]",
+ "lang": "de",
+ "name": "rhv Tankstelle Flieden",
+ "note": "2026-11-08: Automatentankstelle, durchgehend geoeffnet.",
+ "osm_id": "way/161242511",
+ "schema": 1,
+ "tags": [
+  "lkfulda-flieden",
+  "lkfulda-fuel"
+ ],
+ "url": "https://raiffeisen-rhv.de/tankstellen/rhv-tankstellen/flieden.html"
+}

@@ -3008,6 +3008,24 @@
    "recheck": "2027-05-08",
    "note": "Die Domain leitet auf Lieferando um; keine eigene Seite mit Zeiten.",
    "osm_id": "node/9033267017"
+  },
+  {
+   "url": "http://www.bio-hof-gensler.de/",
+   "name": "Biohof Gensler (Bauernladen)",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-08",
+   "recheck": "2027-05-08",
+   "note": "Zeiten nur in einem Jahres-PDF (rhoenindianerhotel.com/wp-content/uploads/2025/10/Oeffnungszeiten-2025.pdf), dessen Name jedes Jahr wechselt. OSM am 08.11.2026 danach gesetzt.",
+   "osm_id": "node/3827550129"
+  },
+  {
+   "url": "https://freibad.flieden.de/de/",
+   "name": "Freibad Landrücken (Flieden)",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-08",
+   "recheck": "2027-05-01",
+   "note": "Saison beendet; die Seite nennt ausserhalb der Saison keine Zeiten. OSM: May-Sep 10:30-19:30 (auf Monate gerundet). Zur neuen Saison pruefen.",
+   "osm_id": "way/222987082"
   }
  ]
 }

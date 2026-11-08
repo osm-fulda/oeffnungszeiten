@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Freitag 17-21 Uhr (Küche 17-20 Uhr) Samstag 11-21 Uhr (Küche 11:30 -14:30 & 17-20 Uhr) Sonntag 11-17 Uhr (Küche 11:30-15 Uhr)",
+ "filter": "xpath://ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")][not(.//ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"freitag\")])]",
+ "lang": "de",
+ "name": "Waldgasthof Zum Wachtküppel",
+ "osm_id": "node/925350491",
+ "schema": 1,
+ "tags": [
+  "lkfulda-poppenhausen",
+  "lkfulda-restaurant"
+ ],
+ "url": "http://www.wachtkueppel.de/"
+}

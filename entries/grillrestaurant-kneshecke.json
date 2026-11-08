@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "MontagGeschlossenDienstagGeschlossenMittwochGeschlossenDonnerstag17:00–22:00Freitag13:00–22:00Samstag11:30–22:00Sonntag11:30–22:00 MontagGeschlossenDienstagGeschlossenMittwochGeschlossenDonnerstag17:0",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" elementor-widget-kneshecke_opening_hours \")]",
+ "lang": "de",
+ "name": "Grillrestaurant Kneshecke",
+ "osm_id": "way/111087177",
+ "schema": 1,
+ "sort_text_alphabetically": true,
+ "tags": [
+  "lkfulda-dipperz",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.kneshecke.de/"
+}

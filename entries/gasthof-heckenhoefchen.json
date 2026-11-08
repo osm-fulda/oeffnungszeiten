@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Sommer (Mai bis September)Donnerstag - Sonntag09:00 Uhr - 22:00 Uhrwarme Küche nur bis 20:00 UhrWinter (Oktober bis April)Freitag - Sonntag09:00 Uhr - 22:00 Uhrwarme Küche nur bis 20:00 UhrFrühstückFr",
+ "filter": "xpath://ol[contains(concat(\" \",normalize-space(@class),\" \"),\" gap-10 \")]",
+ "lang": "de",
+ "name": "Gasthof Heckenhöfchen",
+ "note": "2026-11-08: Sommer (Mai-Sep) und Winter (Okt-Apr).",
+ "osm_id": "node/3827550133",
+ "schema": 1,
+ "tags": [
+  "lkfulda-poppenhausen",
+  "lkfulda-restaurant"
+ ],
+ "url": "http://www.heckenhoefchen.de/"
+}

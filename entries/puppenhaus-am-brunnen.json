@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Freitag & Samstag 17.30. - 22 Uhr Küche 17.30 - 20 Uhr Sonn- und Feiertage 11.30 - 14.30 Uhr 17.30 - 21 Uhr Küche 11.30 - 13.30 Uhr 17.30 - 19.30 Uhr bitte beachten: - wir servieren maximal 3 verschie",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" module-type-text \")]",
+ "lang": "de",
+ "name": "Puppenhaus am Brunnen",
+ "osm_id": "node/1810911078",
+ "schema": 1,
+ "tags": [
+  "lkfulda-dipperz",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.puppenhaus-dipperz.de/%C3%B6ffnungszeiten/"
+}

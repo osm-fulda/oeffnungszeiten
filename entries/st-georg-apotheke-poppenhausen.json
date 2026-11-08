@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Mo08:30 - 13:00 Uhr14:30 - 18:00 UhrDi08:30 - 13:00 Uhr14:30 - 18:00 UhrMi08:30 - 13:00 Uhr14:30 - 18:00 UhrDo08:30 - 13:00 Uhr14:30 - 18:00 UhrFr08:30 - 13:00 Uhr14:30 - 18:00 UhrSa09:00 - 12:30 Uhr",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" openings \")]",
+ "lang": "de",
+ "name": "St. Georg Apotheke Poppenhausen",
+ "osm_id": "node/3694905143",
+ "schema": 1,
+ "tags": [
+  "lkfulda-pharmacy",
+  "lkfulda-poppenhausen"
+ ],
+ "url": "https://www.apotheke-poppenhausen.de/"
+}

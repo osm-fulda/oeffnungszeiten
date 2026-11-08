@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Sonntag & Montag ist Ruhetag. Wenn der Sonntag ein Feiertag ist haben wir geöffnet! Dienstag bis Samstag : 12:00 Uhr - 22:00 Uhr. Von 12:00 bis 20:00 Uhr durchgehend warme Küche. Die Selbstbedienungst",
+ "filter": "xpath://h3[contains(concat(\" \",normalize-space(@class),\" \"),\" mbr-section-subtitle \")]",
+ "lang": "de",
+ "name": "Fuldaer Haus (SB-Terrasse)",
+ "note": "2026-11-08: Gleicher Block wie das Restaurant; OSM traegt nur die SB-Terrasse (So 11-17).",
+ "osm_id": "node/3677946439",
+ "schema": 1,
+ "tags": [
+  "lkfulda-biergarten",
+  "lkfulda-poppenhausen"
+ ],
+ "url": "https://www.fuldaer-haus.de/oeffnungszeiten.html"
+}
