@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Öffnungszeiten Montag 08:30 - 18:00 Dienstag 08:30 - 18:00 Mittwoch 08:30 - 18:00 Donnerstag 08:30 - 18:00 Freitag 08:30 - 14:30 Samstag 08:30 - 12:30 Sonntag geschlossen Kann ggf. aufgrund von Feiert",
+ "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Kalbach-Apotheke",
+ "osm_id": "node/5316457247",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kalbach",
+  "lkfulda-pharmacy"
+ ],
+ "url": "https://www.kalbach-apotheke.de"
+}

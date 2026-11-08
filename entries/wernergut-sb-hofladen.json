@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "In unserem SB-Hofladen können Sie täglich (Mo – So) von 6.00 – 22.00 Uhr einkaufen. Neben unseren eigenen Produkten bieten wir außerdem Produkte aus der Region.",
+ "filter": "xpath://*[contains(.,\"SB-Hofladen können\") and contains(.,\"22.00\")][not(.//*[contains(.,\"SB-Hofladen können\") and contains(.,\"22.00\")])]",
+ "lang": "de",
+ "name": "WernerGut SB-Hofladen",
+ "note": "2026-11-08: Nur der Satz zum SB-Hofladen. Der bediente Hofladen (/hofladen/) hat keine festen Zeiten und ist nicht das OSM-Objekt.",
+ "osm_id": "way/1043680828",
+ "schema": 1,
+ "tags": [
+  "lkfulda-farm",
+  "lkfulda-kalbach"
+ ],
+ "url": "https://wernergut.com/"
+}

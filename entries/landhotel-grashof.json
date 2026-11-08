@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "ÖffnungszeitenRestaurantMontagRuhetagDi–Do17–23Fr–Sa17–24So · Apr–Sep10–21So · Okt–Mär10–15KücheDi–Sa17–21So/Feiertag11–14So/Feiertag · Apr–Sep17:30–20:00Montag Ruhetag – außer für Tagungsgruppen und ",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Landhotel Grashof",
+ "note": "2026-11-08: Sichtbarer Block statt JSON-LD: das JSON-LD verliert die Saison beim Sonntag (Apr-Sep / Okt-Mar).",
+ "osm_id": "node/3190141278",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kalbach",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.grashof.de/"
+}

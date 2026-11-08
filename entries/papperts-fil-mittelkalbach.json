@@ -1,0 +1,16 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Montag: 06:00 - 20:00 Dienstag: 06:00 - 20:00 Mittwoch: 06:00 - 20:00 Donnerstag: 06:00 - 20:00 Freitag: 06:00 - 20:00 Samstag: 06:00 - 20:00 Sonntag: 07:00 - 12:00",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" detail-open-hours-list \")]",
+ "lang": "de",
+ "name": "papperts (Fil. Mittelkalbach)",
+ "note": "2026-11-08: Filialseite. Bis 08.11.2026 zeigte die Seite Sa 07-12; jetzt Sa 06-20 wie OSM. Cafe-Dublette am 08.11.2026 geloescht.",
+ "osm_id": "node/11940710110",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bakery",
+  "lkfulda-kalbach"
+ ],
+ "url": "https://www.papperts.de/dealer/fil-mittelkalbach/"
+}
