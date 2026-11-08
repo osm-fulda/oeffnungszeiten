@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Montag - Freitag 07:45-17:00 Samstag 07:45-14:00",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" openinghours \")]",
+ "lang": "de",
+ "name": "Scania Fulda",
+ "osm_id": "way/1576709490",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-truck"
+ ],
+ "url": "https://www.scania.com/de/de/home/admin/misc/dealer/dealer-details.html?dealer=eaad97c4-f9fa-428b-a0e4-756503e15d5e"
+}
