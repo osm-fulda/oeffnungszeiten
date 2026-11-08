@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "KÜCHENÖFFNUNGSZEITEN AB 1.12.2025 mittags 11.30 Uhr – 13.30 Uhr abends 17.30 Uhr – 20.30 Uhr",
+ "filter": "xpath://div[contains(@class,\"post_content\")]/h2[contains(.,\"Uhr\") or contains(.,\"ÖFFNUNGSZEITEN\")]",
+ "lang": "de",
+ "name": "Gasthof Schmitt",
+ "note": "2026-11-08: Die Startseite nennt die Zeiten ohne Tage; die Tage stehen in der Speisekarte (PDF). Der Watch meldet Aenderungen der Uhrzeiten.",
+ "osm_id": "node/1947298421",
+ "schema": 1,
+ "tags": [
+  "lkfulda-neuhof",
+  "lkfulda-restaurant"
+ ],
+ "url": "http://www.gasthof-schmitt.de/"
+}

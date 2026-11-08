@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Bahnhof Apotheke Herr Alchoufi, Frau Schlag Bahnhofstr. 7 · 36119 Neuhof · Telefon: 06655 - 9868613 E-Mail: bahnhof[at]wagner-apotheken.com Montag, Dienstag & Donnerstag von 8.00 bis 18.30 Uhr Mittwoc",
+ "filter": "xpath://p[contains(normalize-space(.),\"Bahnhofstr. 7\")]",
+ "lang": "de",
+ "name": "Wagner Bahnhof Apotheke (Neuhof)",
+ "note": "2026-11-08: Absatz der Standortliste ueber die Anschrift, wie die anderen Wagner-Apotheken.",
+ "osm_id": "node/11288940226",
+ "schema": 1,
+ "tags": [
+  "lkfulda-neuhof",
+  "lkfulda-pharmacy"
+ ],
+ "url": "https://www.wagner-apotheken.com/ueber-uns/standorte-oeffnungszeiten"
+}

@@ -1,9 +1,10 @@
 {
  "added": "2026-09-20",
- "captured_sample": "Montag bis Donnerstags: 12.30 bis 18.00 Freitags von 15.00 bis 18.00 Samstag: 11:00 bis 14.00 Uhr Montag: 16.30 bis 18:00 Uhr Dienstag: 16.30 bis 18:00 Uhr Mittwoch: 16:30 bis 18:00Uhr Dienstag 18.00 ",
- "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" oeffnungszeiten \")]",
+ "captured_sample": "Standort Neuhof Michaelsstraße 2 | NeuhofTelefon: 06 61 - 7 37 89 Montag: 16.30 bis 18:00 Uhr Dienstag: 16.30 bis 18:00 Uhr Mittwoch: 16:30 bis 18:00Uhr",
+ "filter": "xpath://*[@id=\"singleStandort_2\"]",
  "lang": "de",
  "name": "Fahrschule Gerhard Weber",
+ "note": "2026-11-08: Filter auf singleStandort_2 (Standort Neuhof). Der alte Filter (Klasse oeffnungszeiten) nahm alle drei Standorte, Fulda zuerst; daraus kam der falsche OSM-Wert vom 19.09.2026 (Buerozeiten Fulda), korrigiert am 08.11.2026.",
  "osm_id": "node/11962893002",
  "schema": 1,
  "tags": [

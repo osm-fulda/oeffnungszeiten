@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Öffnungszeiten: Mo. 10.00 - 18.00 UhrDi. 09.30 - 18.30 UhrMi. GESCHLOSSEN Do. & Fr. 09.30 - 18.30 UhrSa. 09.00 - 14.00 Uhr Wir arbeiten mit Termine!",
+ "filter": "xpath://h5[contains(concat(\" \",normalize-space(@class),\" \"),\" mbr-section-title \")]",
+ "lang": "de",
+ "name": "Hairfair",
+ "osm_id": "node/4917528051",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hairdresser",
+  "lkfulda-neuhof"
+ ],
+ "url": "https://www.hairfair-neuhof.de/"
+}

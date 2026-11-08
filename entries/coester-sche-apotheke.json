@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Monday 08:00-18:00 · Tuesday 08:00-18:00 · Wednesday 08:00-18:00 · Thursday 08:00-18:00 · Friday 08:00-18:00 · Saturday 08:00-13:00 · Sunday 00:00-00:00",
+ "filter": "json:$..openingHoursSpecification",
+ "lang": "de",
+ "name": "Cöster'sche Apotheke",
+ "note": "2026-11-08: JSON-LD; die sichtbaren Zeiten entstehen aus einer Vorlage.",
+ "osm_id": "node/4927484999",
+ "schema": 1,
+ "tags": [
+  "lkfulda-neuhof",
+  "lkfulda-pharmacy"
+ ],
+ "url": "https://www.coestersche-apotheke-neuhof-app.de/"
+}

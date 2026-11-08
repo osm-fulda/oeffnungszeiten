@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "FILIALE NEUHOF ADRESSE Leinweber Baucentrum GmbH & Co. KG Filiale Neuhof In der Au 20 36119 Neuhof ÖFFNUNGSZEITEN Montag - Samstag 06:00 - 21:00 Uhr ACHTUNG Abholzeiten für Schüttgut: Mo.-Fr 8:00-17:0",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")])]",
+ "lang": "de",
+ "name": "Leinweber Baucentrum (Neuhof)",
+ "note": "2026-11-08: Filialseite Neuhof, Filter wie bei der Filiale Petersberg.",
+ "osm_id": "way/384128981",
+ "schema": 1,
+ "tags": [
+  "lkfulda-doityourself",
+  "lkfulda-neuhof"
+ ],
+ "url": "https://www.leinweber-baucentrum.de/de/services/standorte/filiale-neuhof.html"
+}

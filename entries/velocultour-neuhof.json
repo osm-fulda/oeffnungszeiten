@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "+49 6655 999 90 80 info@velocultour.de Am Stockgraben 1 36119 Neuhof Di–Fr 9:30–18:30 · Sa 9–15 Montag Ruhetag",
+ "filter": "xpath://ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "VeloCulTour (Neuhof)",
+ "osm_id": "way/1115561067",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bicycle",
+  "lkfulda-neuhof"
+ ],
+ "url": "https://www.velocultour.de/Filiale-Neuhof"
+}

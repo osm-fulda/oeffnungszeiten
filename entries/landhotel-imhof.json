@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Mittwoch - Montag: 17:00 - 24:00 Uhr (Küche von 17.30-20.30 Uhr) Dienstag: Ruhetag Sonntag: 11.00-14.00 Uhr 17.00-24.00 Uhr außerhalb unserer Öffnungszeiten auf Anfrage",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Landhotel Imhof",
+ "osm_id": "node/1947295364",
+ "schema": 1,
+ "tags": [
+  "lkfulda-neuhof",
+  "lkfulda-restaurant"
+ ],
+ "url": "http://www.landhotel-imhof.de/"
+}
