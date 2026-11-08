@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "02. November - 28. Februar:Mo. - Fr.: 09:30 Uhr - 17:00 UhrSa.: 09:30 - 13:00 Uhr01. März - 31. Oktober:Mo. - Fr.: 09:30 Uhr - 18:00 UhrSa.: 09:30 - 13:00 UhrAm 07.12.2026 wegen Inventur geschlossen",
+ "filter": "xpath:(//h3[normalize-space(.)=\"Öffnungszeiten:\"])/following-sibling::p[normalize-space(.)][1]",
+ "lang": "de",
+ "name": "Fritz Berger (Eichenzell)",
+ "note": "Fritz-Berger-Shop im Gebäude von Günther Caravaning. Beobachtet die Filialseite, nicht guenther-caravaning.de: nur hier stehen die Winter- und Sommerzeiten. Die Seite trägt weiter unten noch Blöcke anderer Filialen und den Werkstattpartner, der Filter nimmt nur den Absatz direkt unter \"Öffnungszeiten:\". Tage wie \"wegen Inventur geschlossen\" kommen nicht nach OSM.",
+ "osm_id": "node/12890217970",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-outdoor"
+ ],
+ "url": "https://www.fritz-berger.de/filiale/fulda/"
+}
