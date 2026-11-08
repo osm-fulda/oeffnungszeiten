@@ -1,0 +1,15 @@
+{
+ "added": "2026-10-04",
+ "captured_sample": "Öffnungszeiten Schlosshütte am Postenhaus Montag, Mittwoch-Freitag: 14:00 Uhr - 22:00 Uhr Samstag 9:30 Uhr - 22:00 Uhr Sonntag 9:30 Uhr - 20:00 Uhr",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten Schlosshütte\")])/parent::*",
+ "lang": "de",
+ "name": "Schlosshütte am Postenhaus",
+ "note": "Beobachtet die Fußzeilen-Tabelle \"Öffnungszeiten Schlosshütte am Postenhaus\". Der Biergarten am Postenhaus hat im Winter Pause, die Schlosshütte an gleicher Stelle ist geöffnet. Gleiche Seite wie die Fasanerie, eigenes Objekt.",
+ "osm_id": "way/1576687113",
+ "schema": 1,
+ "tags": [
+  "lkfulda-eichenzell",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://die-fasanerie.de/"
+}

@@ -1,10 +1,10 @@
 {
  "added": "2026-10-04",
- "captured_sample": "Unsere aktuellen Öffnungszeiten: Café/Restaurant Montag Ruhetag Dienstag-Mittwoch 10:30 Uhr bis 18:00 Uhr Donnerstag-Samstag 10:30 Uhr bis 22:00 Uhr Sonntag 10:30 Uhr bis 18:00 Uhr",
- "filter": "xpath://*[contains(.,\"aktuellen Öffnungszeiten\") and contains(.,\"Sonntag\")][not(.//*[contains(.,\"aktuellen Öffnungszeiten\") and contains(.,\"Sonntag\")])]",
+ "captured_sample": "Öffnungszeiten Café/Restaurant Montag-Mittwoch: Ruhetag Donnerstag bis Sonntag 12:00 Uhr bis 18:00 Uhr Donnerstag-Samstag zusätzlich nach Reservierung: 18:00 Uhr bis 22:00 Uhr",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten Café/Restaurant\")])/parent::*",
  "lang": "de",
  "name": "Die Fasanerie (Café/Restaurant)",
- "note": "2026-10-04: Beobachtet den Block \"Unsere aktuellen Öffnungszeiten\" (Stand 03.10.2026: Di-Mi 10:30-18, Do-Sa 10:30-22, So 10:30-18), der in OSM steht. Die Fusszeile (Di-Mi 12-18, Do-Sa 12-23, So 12-18) ist der Normalbetrieb: verschwindet der Aktuell-Block, gilt vermutlich wieder sie.",
+ "note": "Beobachtet die Fußzeilen-Tabelle \"Öffnungszeiten Café/Restaurant\". Die Seite trägt dort auch die Schlosshütte am Postenhaus (eigene Watch, eigene Tabelle). Ein zeitweiser Block \"Aktuelles\" weiter oben ist nicht im Filter.",
  "osm_id": "node/1022744000",
  "schema": 1,
  "tags": [
