@@ -2953,6 +2953,15 @@
    "recheck": "2027-05-04",
    "note": "Die Zeiten stehen nur im Filialfinder, und der zeigt sie erst nach einer Sucheingabe (\"Fulda\") in einem Seitenpanel, ohne eigene URL je Filiale. Stores-FindStores?format=ajax liefert ohne die Sitzung nur eine leere Huelle (\"Gefunden! Karte Liste\"). Wert am 04.11.2026 vom Nutzer im Filialfinder abgelesen: Mo-Sa 10:00-19:00, So geschlossen.",
    "osm_id": "node/14349816040"
+  },
+  {
+   "url": "https://meliva.de/standort/dalberg-klinik-fulda/",
+   "name": "Orthopädie Fulda, Stefan Schiffhauer, Dr. med. Christian Kegel, Dr. med. Jan Weghenkel",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-08",
+   "recheck": "2027-05-08",
+   "note": "Falsche URL ist in diesem EIntrag hinterlegt. Ich lösche es hierüber und lege es erneut an. Zuletzt erfasst, bevor der Watch entfernt wurde: (+49) 0661 9753 0 (Telefon) (+49) 0661 9753 299 Dienstag 08:00 – 12:30 , 14:30 – 17:00 Donnerstag 08:00 – 12:30 , 14:30 – 14:30 Freitag 08:00 – 12:30 Mittwoch 08:00 – 12:30 , 14:30 – 17:00 Montag 08:0 (Issue #181)",
+   "osm_id": "node/13448807040"
   }
  ]
 }
