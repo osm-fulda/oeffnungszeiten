@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "ÖffnungszeitenMi. – So. von 11:30 bis 22:00 UhrMontag & Dienstag RuhetagKüchenzeiten (warme Küche)Mi., Do. und So. von 12:00 bis 20:00 UhrFr. & Sa. von 12:00 bis 21:00 Uhr",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Enzianhütte",
+ "note": "2026-11-08: Oeffnungs- und Kuechenzeiten.",
+ "osm_id": "way/169355882",
+ "schema": 1,
+ "tags": [
+  "lkfulda-alpine_hut",
+  "lkfulda-hilders"
+ ],
+ "url": "https://www.enzianhuette-rhoen.de/"
+}

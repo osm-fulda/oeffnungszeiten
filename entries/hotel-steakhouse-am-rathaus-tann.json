@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Dienstag - Freitag: 17:00 - 22:00 Uhr Samstag, Sonntag, Feiertage: 11:00 - 14:00 Uhr und 17:00 - 23:00 Uhr Montag Ruhetag",
+ "filter": "xpath://ul[contains(concat(\" \",normalize-space(@class),\" \"),\" elementor-price-list \")]",
+ "lang": "de",
+ "name": "Hotel Steakhouse Am Rathaus (Tann)",
+ "osm_id": "node/6819650934",
+ "schema": 1,
+ "tags": [
+  "lkfulda-restaurant",
+  "lkfulda-tann"
+ ],
+ "url": "https://tann-hotel.de/"
+}

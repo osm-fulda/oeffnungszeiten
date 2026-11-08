@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Öffnungszeiten GaststätteDonnerstags ab 17.00 UhrFreitags ab 17.00 UhrSamstags ab 17.00 UhrSonntags von 11.00 bis 14.00 Uhr und von 17.00 bis 0.00 UhrAn Feiertagen haben wir zusätzlich für Sie geöffne",
+ "filter": "xpath://*[@id=\"c427\"]",
+ "lang": "de",
+ "name": "Zur Krone (Gaststätte, Tann)",
+ "osm_id": "node/6757288657",
+ "schema": 1,
+ "tags": [
+  "lkfulda-restaurant",
+  "lkfulda-tann"
+ ],
+ "url": "https://www.zur-krone-tann.de/"
+}

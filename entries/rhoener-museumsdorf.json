@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Öffnungszeiten Vom 28.03.2026 – 01.11.2026Dienstags bis Sonntag: von 11 Uhr bis 17 Uhr Montag ist Ruhetag!An Feiertagen haben wir ebenfalls für Dich geöffnet.ACHTUNG!Wir renovieren 2026 das Museumsdor",
+ "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "Rhöner Museumsdorf",
+ "note": "2026-11-08: Seit 08.06.2026 wegen Renovierung zu; der Block meldet die Wiedereroeffnung.",
+ "osm_id": "way/727817508",
+ "schema": 1,
+ "tags": [
+  "lkfulda-museum",
+  "lkfulda-tann"
+ ],
+ "url": "https://tann-rhoen.de/tourismus-und-kultur/tanner-museen"
+}

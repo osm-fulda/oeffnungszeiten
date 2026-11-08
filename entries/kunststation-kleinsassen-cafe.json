@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Öffnungszeiten:Winter: Do. – So. & Feiertage von 13 – 17 UhrSommer: Di. – So. & Feiertage von 13 – 18 Uhr",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Kunststation Kleinsassen (Café)",
+ "note": "2026-11-08: Gleiche Zeiten wie die Galerie (Eintrag kunststation-kleinsassen).",
+ "osm_id": "node/2519060768",
+ "schema": 1,
+ "tags": [
+  "lkfulda-cafe",
+  "lkfulda-hofbieber"
+ ],
+ "url": "https://kunststation-kleinsassen.de/"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Montag geschlossenDienstag – Freitagvon 09 – 12 Uhrund 14 – 18 UhrSamstag von 09 – 13 Uhr",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Rhönbike",
+ "note": "2026-11-08: Sichtbarer Block; das JSON-LD (Mo-Su 09-17) ist eine Vorlage.",
+ "osm_id": "node/8267522134",
+ "schema": 1,
+ "tags": [
+  "lkfulda-bicycle",
+  "lkfulda-hilders"
+ ],
+ "url": "https://rhoen-bike.de/"
+}

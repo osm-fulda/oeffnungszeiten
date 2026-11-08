@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Hauptsitz 36142 Tann (Rhön) Montag - Freitag (Sommerzeit) 7:00 Uhr - 20:00 Uhr Montag - Freitag (Winterzeit) 7:00 Uhr - 19:00 Uhr Samstag 7:30 Uhr - 19:00 Uhr Sonntag 9:00 Uhr - 19:00 Uhr Feiertage 9:",
+ "filter": "xpath://*[contains(.,\"Hauptsitz 36142\") and contains(.,\"Neujahr\")][not(.//*[contains(.,\"Hauptsitz 36142\") and contains(.,\"Neujahr\")])]",
+ "lang": "de",
+ "name": "bft Leubecher (Tann)",
+ "note": "2026-11-08: Nur der Block Hauptsitz Tann, nicht Dermbach und nicht die Waschanlage. Sommer-/Winterzeit = Zeitumstellung (OSM: Su[-1]).",
+ "osm_id": "way/92261178",
+ "schema": 1,
+ "tags": [
+  "lkfulda-fuel",
+  "lkfulda-tann"
+ ],
+ "url": "https://www.leubecher.de/tankstellen/36142-tann-rhoen/"
+}

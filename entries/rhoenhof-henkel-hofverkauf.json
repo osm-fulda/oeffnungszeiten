@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "jeden Mittwoch (gerade und ungerade KW) 17 – 19 UhrSamstags (nur gerade Kalenderwochen) 10 – 13 Uhr Donnerstags (ungerade KW) von 10 – 20 Uhr Samstags (ungerade KW) von 8 – 17 Uhr",
+ "filter": "xpath://ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")][not(.//ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"samstag\")])]",
+ "lang": "de",
+ "name": "Rhönhof Henkel (Hofverkauf)",
+ "note": "2026-11-08: Hofladen Mahlertsmuehle; Samstag nur in geraden Kalenderwochen. Die Liste nennt auch Markttermine.",
+ "osm_id": "node/10080255735",
+ "schema": 1,
+ "tags": [
+  "lkfulda-farm",
+  "lkfulda-hofbieber"
+ ],
+ "url": "https://rhoenhofhenkel.de/hofverkauf/"
+}

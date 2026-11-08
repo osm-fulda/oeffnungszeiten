@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Öffnungszeiten Mo08:30 – 13:00 | 14:30 – 18:30 Uhr Di08:30 – 13:00 | 14:30 – 18:30 Uhr Mi08:30 – 13:00 | 14:30 – 18:30 Uhr Do08:30 – 13:00 | 14:30 – 19:00 Uhr Fr08:30 – 13:00 | 14:30 – 18:30 Uhr Sa08:",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Tannen-Apotheke",
+ "osm_id": "node/11953366562",
+ "schema": 1,
+ "tags": [
+  "lkfulda-pharmacy",
+  "lkfulda-tann"
+ ],
+ "url": "https://www.apotheke-tann.de"
+}

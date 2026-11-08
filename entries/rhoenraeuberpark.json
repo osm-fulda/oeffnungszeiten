@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Öffnungszeiten Ferien & Feiertage 2026 02.11.26.-08.11.26 TÄGLICH 11-19 Uhr geöffnet ...auch an ALLEN Feiertagen! Ab 09.11.26: Mo. - Mi. geschlossen Do. - FAMILIENTAG 14-19 Uhr geöffnet Fr. 14-19 Uhr ",
+ "filter": "xpath://ul[contains(concat(\" \",normalize-space(@class),\" \"),\" elementor-price-list \")]",
+ "lang": "de",
+ "name": "RhönRäuberPark",
+ "note": "2026-11-08: Ferienzeiten wechseln; der Block meldet jede neue Ferienregel.",
+ "osm_id": "way/92237849",
+ "schema": 1,
+ "tags": [
+  "lkfulda-tann",
+  "lkfulda-theme_park"
+ ],
+ "url": "https://rhoenraeuberpark.de/oeffnungszeiten/"
+}
