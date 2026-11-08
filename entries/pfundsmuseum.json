@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "01. Apr bis 31. Okt 2027 Sa & So 13-17 Uhr",
+ "filter": "xpath://*[contains(.,\"Sa & So\") and contains(.,\"13-17\")][not(.//*[contains(.,\"Sa & So\") and contains(.,\"13-17\")])]",
+ "lang": "de",
+ "name": "Pfundsmuseum",
+ "note": "2026-11-08: Saison 01.04.-31.10.; der Filter nimmt die Zeile mit den Wochenendzeiten.",
+ "osm_id": "node/257527860",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hofbieber",
+  "lkfulda-museum"
+ ],
+ "url": "https://www.pfunds-museum.de/"
+}

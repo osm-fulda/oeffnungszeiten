@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Täglich von 9.00 Uhr - 01.00 Uhr Dienstag: Ruhetag",
+ "filter": "xpath://p[contains(concat(\" \",normalize-space(@class),\" \"),\" headline \")]/following-sibling::*[1]",
+ "lang": "de",
+ "name": "Gasthof-Pension Kühler Grund",
+ "osm_id": "node/473027046",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hilders",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://gasthof-kuehler-grund.de/oeffnungszeiten.html"
+}

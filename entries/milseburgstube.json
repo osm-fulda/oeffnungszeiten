@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "ÖFFNUNGSZEITEN von November bis April: Donnerstag bis Sonntag: 11:00 - 18:00 Uhr (Küche bis 17:00 Uhr) Montag, Dienstag und Mittwoch ist Ruhetag!",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"donnerstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"donnerstag\")])]",
+ "lang": "de",
+ "name": "Milseburgstube",
+ "note": "2026-11-08: Zwei Saisons (Nov-Apr, Mai-Okt).",
+ "osm_id": "node/954963951",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hofbieber",
+  "lkfulda-restaurant"
+ ],
+ "url": "https://www.milseburgstube.de/"
+}

@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Öffnungszeiten Metzgerei:MO – FR: 07:30 – 18:00SA: 07:00 – 13:00SO: GESCHLOSSEN Datenschutz Impressum",
+ "filter": "xpath://*[contains(.,\"Öffnungszeiten Metzgerei\") and contains(.,\"SA\")][not(.//*[contains(.,\"Öffnungszeiten Metzgerei\") and contains(.,\"SA\")])]",
+ "lang": "de",
+ "name": "Zum Zobel (Metzgerei)",
+ "osm_id": "node/1709179908",
+ "schema": 1,
+ "tags": [
+  "lkfulda-butcher",
+  "lkfulda-tann"
+ ],
+ "url": "https://zum-zobel.de/metzgerei/"
+}

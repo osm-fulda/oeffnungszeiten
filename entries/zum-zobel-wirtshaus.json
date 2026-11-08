@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Öffnungszeiten Wirtshaus:Aktuell nur auf Anfrage.Gruppenreservierungen auf Anfrage möglich.Partyservice außer Haus",
+ "filter": "xpath://*[contains(.,\"Öffnungszeiten Wirtshaus\") and contains(.,\"Anfrage\")][not(.//*[contains(.,\"Öffnungszeiten Wirtshaus\") and contains(.,\"Anfrage\")])]",
+ "lang": "de",
+ "name": "Zum Zobel (Wirtshaus)",
+ "note": "2026-11-08: Wirtshaus aktuell nur auf Anfrage.",
+ "osm_id": "node/1709179902",
+ "schema": 1,
+ "tags": [
+  "lkfulda-restaurant",
+  "lkfulda-tann"
+ ],
+ "url": "https://zum-zobel.de/metzgerei/"
+}

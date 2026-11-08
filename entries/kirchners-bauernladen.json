@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "ÖffnungszeitenJeden Donnerstag 09:00 – 18:00 Uhrnach telefonischer Absprache",
+ "filter": "xpath:(//h4[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Kirchners Bauernladen",
+ "osm_id": "node/2421581512",
+ "schema": 1,
+ "tags": [
+  "lkfulda-farm",
+  "lkfulda-tann"
+ ],
+ "url": "https://rhoen-metzger.de/oeffnungszeiten-kontakt/"
+}

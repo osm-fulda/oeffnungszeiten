@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Montag08:30-13:00 Uhr14:30-18:00 UhrDienstag08:30-13:00 Uhr14:30-18:30 UhrMittwoch08:30-13:00 UhrDonnerstag08:30-13:00 Uhr14:30-18:30 UhrFreitag08:30-13:00 Uhr14:30-18:00 UhrSamstag08:30-12:00 Uhr",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" b-working-hours__shortcodes \")]",
+ "lang": "de",
+ "name": "Genius-Apotheke (Hilders)",
+ "note": "2026-11-08: Sichtbarer Block; das JSON-LD laesst die Mittagspause weg.",
+ "osm_id": "node/329990252",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hilders",
+  "lkfulda-pharmacy"
+ ],
+ "url": "https://www.genius-apotheke.de"
+}

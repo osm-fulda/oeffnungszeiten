@@ -2552,15 +2552,6 @@
    "osm_id": "way/23462098"
   },
   {
-   "url": "https://lift-kosten.de/kontakt-lift-kosten/",
-   "name": "Lift Reith GmbH & Co. KG",
-   "reason": "no-hours-on-page",
-   "established": "2026-09-22",
-   "recheck": "never",
-   "note": "Auf der Seite stehen keine Zeiten im sichtbaren Text, nur im JSON-LD — und das nennt Mo-So 09:00-17:00, waehrend die Karte Mo-Do 08:00-17:00 und Fr 08:00-12:00 fuehrt. Ein Filter auf Markup, das der Seite widerspricht, waere kein Beleg.",
-   "osm_id": "node/3854157957"
-  },
-  {
    "url": "https://www.einza.com/standorte?tx_einzashop_storelist%5Baction%5D=detail&tx_einzashop_storelist%5Bcontroller%5D=Store&tx_einzashop_storelist%5Bstore%5D=102&tx_einzashop_storelist%5Bzip%5D=fulda&cHash=4d5cf76cb5884d447ad5a19c7d75d6d5",
    "name": "einzA Farben, Niederlassung Fulda",
    "reason": "site-unreachable",
@@ -2990,6 +2981,33 @@
    "recheck": "2027-05-08",
    "note": "Einziger Auftritt ist Instagram (Login-Wand, kein stabiler Anker). OSM-Wert unveraendert (flex16, 2024).",
    "osm_id": "node/4200343889"
+  },
+  {
+   "url": "https://www.edeka.de/maerkte/062005/",
+   "name": "EDEKA Wolf (Tann)",
+   "reason": "anti-bot",
+   "established": "2026-11-08",
+   "recheck": "on-relocation",
+   "note": "403 auf den einfachen Abruf, wie die anderen edeka.de-Marktseiten. Wert in OSM am 08.11.2026 gegen die Marktseite geprueft (Mo-Sa 08:00-20:00).",
+   "osm_id": "way/127752309"
+  },
+  {
+   "url": "https://www.holger-bruening.com/",
+   "name": "Praxis für Naturheilverfahren Holger Brüning",
+   "reason": "appointment-only",
+   "established": "2026-11-08",
+   "recheck": "2027-11-08",
+   "note": "Seite: Termine nach Vereinbarung; OSM traegt \"nach Vereinbarung\" (bestaetigt 08.11.2026).",
+   "osm_id": "way/167993168"
+  },
+  {
+   "url": "https://www.laromahilders.de/",
+   "name": "La Roma (Hilders)",
+   "reason": "delivery-platform-only",
+   "established": "2026-11-08",
+   "recheck": "2027-05-08",
+   "note": "Die Domain leitet auf Lieferando um; keine eigene Seite mit Zeiten.",
+   "osm_id": "node/9033267017"
   }
  ]
 }

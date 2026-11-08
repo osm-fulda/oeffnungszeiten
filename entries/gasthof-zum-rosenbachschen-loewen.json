@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Unsere Öffnungszeiten: Wir haben für Sie dienstags bis sonntags von 8.00 Uhr bis 14.00 Uhr und von 17.00 Uhr bis 24.00 Uhr geöffnet. Montags ist bei uns Ruhetag. Unsere Öffnungszeiten: dienstags bis s",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Gasthof Zum Rosenbachschen Löwen",
+ "osm_id": "node/473027026",
+ "schema": 1,
+ "sort_text_alphabetically": true,
+ "tags": [
+  "lkfulda-hilders",
+  "lkfulda-restaurant"
+ ],
+ "url": "http://www.zum-rosenbachschen-loewen.de/"
+}

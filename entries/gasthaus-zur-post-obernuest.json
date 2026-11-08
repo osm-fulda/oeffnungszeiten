@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Öffnungszeiten Montag:Dienstag:Mittwoch:Donnerstag: Freitag: Samstag: Sonntag: geschlossengeschlossengeschlossen10:00 - 14:00 Uhr17:30 - 21:00 Uhr10:00 - 14:00 Uhr17:30 - 21:00 Uhr10:00 - 14:00 Uhr17:",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Gasthaus Zur Post (Obernüst)",
+ "note": "2026-11-08: Tage und Zeiten stehen in zwei Spalten; Kuechenzeiten darunter.",
+ "osm_id": "node/329990628",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hofbieber",
+  "lkfulda-restaurant"
+ ],
+ "url": "http://www.zurpost-obernuest.de/"
+}

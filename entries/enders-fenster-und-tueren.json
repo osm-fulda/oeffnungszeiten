@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Geschäftszeiten: Mo. – Fr. 8:00 – 18.00 Uhr Samstag 9:00 – 12:00 Uhr Mittagspause: Mo – Fr. 12:30 – 13:30",
+ "filter": "xpath:(//p[contains(normalize-space(.),\"Geschäftszeiten\")])",
+ "lang": "de",
+ "name": "ENDERS Fenster und Türen",
+ "osm_id": "node/13992276183",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hofbieber",
+  "lkfulda-window_construction"
+ ],
+ "url": "https://enders-fenster-tueren.de"
+}

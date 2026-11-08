@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "ÖffnungszeitenSo.geschlossenMo.08:00 - 20:00Di.08:00 - 20:00Mi.08:00 - 20:00Do.08:00 - 20:00Fr.08:00 - 20:00Sa.08:00 - 20:00",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "ALDI Süd (Hilders)",
+ "osm_id": "way/29974972",
+ "schema": 1,
+ "tags": [
+  "lkfulda-hilders",
+  "lkfulda-supermarket"
+ ],
+ "url": "https://filialen.aldi-sued.de/hessen/hilders/krautacker-3"
+}

@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Service:Montag bis Freitag: 08:00 − 18:00 UhrSamstag: Geschlossen Verkauf:Montag bis Freitag: 08:00 − 18:00 UhrSamstag: Nach Vereinbarung Teile & Zubehör:Montag bis Freitag: 08:00 − 16:30 UhrSamstag: ",
+ "filter": "xpath://p[contains(.,\"Montag bis Freitag:\")]",
+ "lang": "de",
+ "name": "Autohaus Erwin Weber (Hilders)",
+ "note": "2026-11-08: Sichtbarer Block (Service, Verkauf, Teile). Das JSON-LD nennt Sa 08-12 und widerspricht der Seite. OSM traegt die Verkaufszeiten.",
+ "osm_id": "node/662378487",
+ "schema": 1,
+ "tags": [
+  "lkfulda-car",
+  "lkfulda-hilders"
+ ],
+ "url": "https://www.weber-hilders.de/kontakt"
+}

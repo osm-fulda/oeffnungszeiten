@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-08",
+ "captured_sample": "Öffnungszeiten Vom 28.03.2026 – 01.11.2026Dienstags bis Sonntag: von 11 Uhr bis 17 Uhr Montag ist Ruhetag!An Feiertagen haben wir ebenfalls für Dich geöffnet.ACHTUNG!Wir renovieren 2026 das Museumsdor",
+ "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "Naturmuseum Tann",
+ "note": "2026-11-08: Saison und Winteroeffnung; gilt auch fuer das Museumsdorf (eigener Eintrag).",
+ "osm_id": "way/128193747",
+ "schema": 1,
+ "tags": [
+  "lkfulda-museum",
+  "lkfulda-tann"
+ ],
+ "url": "https://tann-rhoen.de/tourismus-und-kultur/tanner-museen"
+}
