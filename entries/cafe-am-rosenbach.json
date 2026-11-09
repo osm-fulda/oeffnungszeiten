@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "– dienstags bis sonntags – 14:00 bis 18:00 Uhr",
+  "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" elementor-text-editor \")]",
+  "lang": "de",
+  "name": "Cafe Am Rosenbach",
+  "osm_id": "node/861330911",
+  "schema": 1,
+  "tags": [
+    "lkfulda-cafe",
+    "lkfulda-nuesttal"
+  ],
+  "url": "http://www.cafe-rosenbach.de/"
+}

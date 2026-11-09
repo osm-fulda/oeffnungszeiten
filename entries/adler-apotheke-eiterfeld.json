@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Öffnungszeiten Mo 08:00 - 18:00 Uhr Di 08:00 - 18:00 Uhr Mi 08:00 - 18:00 Uhr Do 08:00 - 18:00 Uhr Fr 08:00 - 18:00 Uhr Sa 08:00 - 13:00 Uhr",
+  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "Adler Apotheke",
+  "osm_id": "node/5024938705",
+  "schema": 1,
+  "tags": [
+    "lkfulda-eiterfeld",
+    "lkfulda-pharmacy"
+  ],
+  "url": "https://www.adlerapotheke-eiterfeld.de/"
+}

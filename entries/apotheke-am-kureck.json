@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "WochentagUhrzeitenMo - Fr08:00 - 13:00 Uhr15:00 - 18:00 UhrSa09:00 - 13:00 Uhr",
+  "filter": "xpath://table[contains(concat(\" \",normalize-space(@class),\" \"),\" compact \")]",
+  "lang": "de",
+  "name": "Apotheke am Kureck",
+  "note": "2026-11-08: Sichtbare Tabelle; das JSON-LD hat einen leeren Sonntag.",
+  "osm_id": "node/1579692232",
+  "schema": 1,
+  "tags": [
+    "lkfulda-bad-salzschlirf",
+    "lkfulda-pharmacy"
+  ],
+  "url": "https://www.apotheke-am-kureck-bad-salzschlirf.de"
+}

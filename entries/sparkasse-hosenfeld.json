@@ -1,0 +1,16 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Montag14:00-16:00 UhrDienstag09:00-12:30 UhrDonnerstag09:00-12:30 UhrFreitag14:00-16:00 Uhr",
+  "fetch_backend": "html_webdriver",
+  "filter": "xpath://*[contains(.,\"Montag14:00\") and contains(.,\"Freitag\")][not(.//*[contains(.,\"Montag14:00\") and contains(.,\"Freitag\")])]",
+  "lang": "de",
+  "name": "Sparkasse Hosenfeld",
+  "note": "2026-11-08: Service-Zeiten; Beratung (Mo-Fr 08-20) und Geldautomat nicht im Filter.",
+  "osm_id": "way/116505164",
+  "schema": 1,
+  "tags": [
+    "lkfulda-bank",
+    "lkfulda-hosenfeld"
+  ],
+  "url": "https://www.sparkasse-fulda.de/de/home/toolbar/filialen/sparkasse-fulda-filiale-hosenfeld-8560.html"
+}

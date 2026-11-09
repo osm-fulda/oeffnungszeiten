@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "ADRESSE Leinweber Baucentrum GmbH & Co. KG Filiale Hosenfeld Blankenweg 2 36154 Hosenfeld ÖFFNUNGSZEITEN Montag - Samstag 06:00 - 21:00 Uhr ACHTUNG Abholzeiten für Schüttgut: Mo.-Fr 8:00-17:00 Uhr Sam",
+  "filter": "xpath://*[@id=\"anchor_OYHWP\"]",
+  "lang": "de",
+  "name": "Leinweber Baucentrum (Hosenfeld)",
+  "note": "2026-11-08: Filialseite Hosenfeld (in OSM noch als \"Bauspezi\").",
+  "osm_id": "node/666268674",
+  "schema": 1,
+  "tags": [
+    "lkfulda-doityourself",
+    "lkfulda-hosenfeld"
+  ],
+  "url": "https://www.leinweber-baucentrum.de/de/services/standorte/filiale-hosenfeld.html"
+}

@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Öffnungszeiten:Donnerstag 10:00 - 18:00 UhrFreitag 8:00 - 18:00 UhrSamstag 8:00 - 13:00 Uhr",
+  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"donnerstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"donnerstag\")])]",
+  "lang": "de",
+  "name": "Pomnitz",
+  "osm_id": "node/8759798651",
+  "schema": 1,
+  "tags": [
+    "lkfulda-butcher",
+    "lkfulda-nuesttal"
+  ],
+  "url": "https://www.landmetzgerei-pomnitz.de/"
+}

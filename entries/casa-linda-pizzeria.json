@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Öffnungszeiten Nüsttal MorlesMontag16:00 – 22:30DienstagRuhetagMittwoch – Samstag16:00 – 22:30Sonntag & Feiertage11:00 – 22:3006684 1340",
+  "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "Casa Linda Pizzeria",
+  "osm_id": "node/1994109653",
+  "schema": 1,
+  "tags": [
+    "lkfulda-nuesttal",
+    "lkfulda-restaurant"
+  ],
+  "url": "http://www.casa-linda.de/"
+}

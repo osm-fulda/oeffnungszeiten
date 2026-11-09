@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Öffnungszeiten Montag 8:00 - 12:00 Uhr und 14:00 - 16:00 Uhr, Dienstag 8:00 - 12:00 Uhr, Mittwoch geschlossen, Donnerstag 8:00 - 12:00 Uhr und 14:00 Uhr - 18:00 Uhr Freitag 8:00 - 12:00 Uhr",
+  "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+  "lang": "de",
+  "name": "Tourist-Information",
+  "note": "2026-11-08: Gleiche Zeiten wie das Rathaus (Tourist-Info im Rathaus).",
+  "osm_id": "node/4332550086",
+  "schema": 1,
+  "tags": [
+    "lkfulda-ehrenberg",
+    "lkfulda-information"
+  ],
+  "url": "https://ehrenberg-rhoen.de/"
+}

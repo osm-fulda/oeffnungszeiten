@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "ÖffnungszeitenMontag07:00 - 20:00Dienstag07:00 - 20:00Mittwoch07:00 - 20:00Donnerstag07:00 - 20:00Freitag07:00 - 20:00Samstag07:00 - 20:00SonntagGeschlossenBesondere Öffnungszeiten24.12.202607:00 - 13",
+  "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" store-details__hours \")]",
+  "lang": "de",
+  "name": "Aldi Eiterfeld",
+  "osm_id": "way/964565021",
+  "schema": 1,
+  "tags": [
+    "lkfulda-eiterfeld",
+    "lkfulda-supermarket"
+  ],
+  "url": "https://www.aldi-nord.de/filialen-und-oeffnungszeiten.html/l/eiterfeld/eisenacher-weg-5/3181466"
+}

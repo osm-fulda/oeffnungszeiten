@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Montag & Dienstag 08:00 – 12:00 Uhr14:00 – 17:00 Uhr Mittwoch geschlossen Donnerstag 08:00 – 12:00 Uhr14:00 – 18:00 Uhr Freitag 08:00 – 12:00 Uhr",
+  "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" elementor-accordion-item \")]",
+  "lang": "de",
+  "name": "Gemeindeverwaltung Rasdorf",
+  "osm_id": "node/10593475120",
+  "schema": 1,
+  "tags": [
+    "lkfulda-government",
+    "lkfulda-rasdorf"
+  ],
+  "url": "https://www.rasdorf.de/ansprechpartner-verwaltung/"
+}

@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Werkstatt ÖffnungszeitenMontag bis Freitag von 07:45 bis 18:00 UhrSamstag von 08:00 bis 12:30 Uhr Verkauf ÖffnungszeitenMontag bis Freitag von 08:00 bis 12:30 UhrMontag bis Freitag von 13:30 bis 18:00",
+  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+  "lang": "de",
+  "name": "Automarkt Handwerk",
+  "note": "2026-11-08: Werkstatt und Verkauf; OSM (shop=car) traegt den Verkauf.",
+  "osm_id": "way/216068806",
+  "schema": 1,
+  "tags": [
+    "lkfulda-car",
+    "lkfulda-ehrenberg"
+  ],
+  "url": "https://automarkt-handwerk.de/kontakt-oeffnungszeiten-telefon/"
+}
