@@ -1,8 +1,9 @@
 {
  "added": "2026-08-17",
- "captured_sample": "ÖffnungszeitenMontag14:00 - 16:00 UhrDienstag09:00 - 12:30 UhrMittwochGeschlossenDonnerstag09:00 - 12:30 UhrFreitag14:00 - 16:00 UhrSamstagGeschlossenSonntagGeschlossen",
- "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "captured_sample": "Monday 14:00-16:00 · Tuesday 09:00-12:30 · Thursday 09:00-12:30 · Friday 14:00-16:00",
+ "filter": "json:$..openingHoursSpecification",
  "name": "Sparkasse Fulda",
+ "note": "2026-11-09: Filter auf json-ld geändert, der vorherige erfasste seitenabhängigen Text mit (Issue #198).",
  "osm_id": "node/10251628955",
  "schema": 1,
  "tags": [
