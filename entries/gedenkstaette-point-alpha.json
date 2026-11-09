@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Einfach und bequem: Nutzen Sie die Möglichkeit, die Eintrittskarte(n) vorab online zu buchen. (Online gekaufte Tickets haben ab Kauf eine Gültigkeit von 4 Wochen) April bis Oktober 10:00 - 18:00 Uhr t",
+  "filter": "xpath://*[contains(.,\"April bis Oktober\") and contains(.,\"Dezember\")][not(.//*[contains(.,\"April bis Oktober\") and contains(.,\"Dezember\")])]",
+  "lang": "de",
+  "name": "Gedenkstätte Point Alpha",
+  "note": "2026-11-09: Drei Saisons; Weihnachts-Schliesstage stehen jaehrlich neu im Block.",
+  "osm_id": "way/121544866",
+  "schema": 1,
+  "tags": [
+    "lkfulda-museum",
+    "lkfulda-rasdorf"
+  ],
+  "url": "https://www.pointalpha.com/gedenkstaette/"
+}
