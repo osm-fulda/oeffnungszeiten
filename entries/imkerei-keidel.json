@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "ÖFFNUNGSZEITENDo. - Fr.: 14 Uhr - 18 UhrSa.: 11 Uhr - 18 UhrSo.: 14 Uhr - 18 Uhr",
+  "filter": "xpath:(//strong[contains(normalize-space(.),\"ÖFFNUNGSZEITEN\")])/parent::*/parent::*",
+  "lang": "de",
+  "name": "Imkerei Keidel",
+  "note": "2026-11-09: Hofladen und Cafe.",
+  "osm_id": "node/12697729916",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-eiterfeld"
+  ],
+  "url": "https://www.imkerei-keidel.de/hofladen-_-caf_/"
+}

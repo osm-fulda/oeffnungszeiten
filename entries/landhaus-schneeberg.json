@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Mo: 16:30 - 21:30 Uhr Di - Do: Ruhetag Fr & Sa: 16:30 - 22:00 Uhr So: 11:00 - 21:30 Uhr",
+  "filter": "xpath://*[contains(.,\"16:30\")][not(.//*[contains(.,\"16:30\")])]/parent::*",
+  "lang": "de",
+  "name": "Landhaus Schneeberg",
+  "note": "2026-11-09: Nur die Oeffnungszeiten; die Kuechenzeiten stehen im Block daneben (opening_hours:kitchen).",
+  "osm_id": "way/178550474",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-gersfeld"
+  ],
+  "url": "https://www.landhausschneeberg.com"
+}

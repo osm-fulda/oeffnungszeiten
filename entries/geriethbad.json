@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten Das Freibad ist jährlich von Ende Mai bis Mitte September geöffnet.Je nach Wetterlage kann dies aber auch um ca. 1-2 Wochen verkürzt werden. Tägliche Badezeiten Hauptsaison 27.06.26 - 1",
+  "filter": "xpath:(//h1[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "Geriethbad",
+  "note": "2026-11-09: Hauptsaison-Daten aendern sich jedes Jahr (2026: 27.06.-16.08.).",
+  "osm_id": "way/349159504",
+  "schema": 1,
+  "tags": [
+    "lkfulda-leisure",
+    "lkfulda-tann"
+  ],
+  "url": "https://geriethbad.de/oeffnungszeiten"
+}

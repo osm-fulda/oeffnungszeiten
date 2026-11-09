@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Montag bis Freitag 09.00 Uhr bis 18.00 Uhr Mittwoch 09.00 Uhr bis 17.00 Uhr Samstag 08.45 Uhr bis 12.30 Uhr",
+  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mittwoch\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mittwoch\")])]",
+  "lang": "de",
+  "name": "Landmarkt Wahl",
+  "osm_id": "node/6989186855",
+  "schema": 1,
+  "tags": [
+    "lkfulda-shop",
+    "lkfulda-tann"
+  ],
+  "url": "https://www.wahllandhandel.de/landmaerkte/"
+}

@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Dienstag – Freitag: 10:00-18:00 UhrSamstag: 10:00-18:00 Uhr",
+  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")])]",
+  "lang": "de",
+  "name": "Sovestia",
+  "osm_id": "node/13458619138",
+  "schema": 1,
+  "tags": [
+    "lkfulda-dipperz",
+    "lkfulda-shop"
+  ],
+  "url": "https://sovestia.com"
+}

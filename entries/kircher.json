@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Montag - Freitagvon 8:00 Uhr - 17:00 Uhr",
+  "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+  "lang": "de",
+  "name": "Kircher",
+  "osm_id": "way/1577217190",
+  "schema": 1,
+  "tags": [
+    "lkfulda-eiterfeld",
+    "lkfulda-shop"
+  ],
+  "url": "https://www.auto-kircher.de/cms/"
+}

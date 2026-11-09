@@ -1,0 +1,16 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Nach der pandemiebedingten Pause soll der Fair-Teiler wieder genutzt werden :-) Der Fair-Teiler ist zu den Öffnungszeiten des PIT (Pro-Integrations-Treff) Hünfeld zugänglich. Derzeit ist die zuverläss",
+  "fetch_backend": "html_webdriver",
+  "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])",
+  "lang": "de",
+  "name": "foodsharing Fair-Teiler",
+  "note": "2026-11-09: Zugang zu den Zeiten des PIT; OSM traegt nur den verlaesslichen Termin Di 14:30-18:30. Die Seite braucht JavaScript.",
+  "osm_id": "node/12417021730",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-huenfeld"
+  ],
+  "url": "https://foodsharing.de/fairteiler/1636"
+}

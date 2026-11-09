@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Das Spacemanagement ist besetztMontag von 8.30 Uhr – 15 Uhr undMittwoch von 8.30 Uhr – 15 Uhr",
+  "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+  "lang": "de",
+  "name": "Zuseworks Coworking",
+  "note": "2026-11-09: Nur Mo und Mi ist das Spacemanagement besetzt.",
+  "osm_id": "way/1551279820",
+  "schema": 1,
+  "tags": [
+    "lkfulda-huenfeld",
+    "lkfulda-office"
+  ],
+  "url": "https://zuseworks.de"
+}

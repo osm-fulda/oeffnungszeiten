@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Unsere Ausstellung ist von montags bis freitags von 8.00 bis 12.00 Uhr geöffnet. Gerne auch zu anderen Zeiten nach telefonischer Vereinbarung unter 06652/8560.",
+  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+  "lang": "de",
+  "name": "vogler (Ausstellung)",
+  "note": "2026-11-09: Ausstellung.",
+  "osm_id": "way/166644792",
+  "schema": 1,
+  "tags": [
+    "lkfulda-craft",
+    "lkfulda-huenfeld"
+  ],
+  "url": "https://www.vogler-schreinerei.de/"
+}

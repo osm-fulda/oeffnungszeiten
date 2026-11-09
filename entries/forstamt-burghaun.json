@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten Sie erreichen uns telefonisch: Montag – Donnerstag: 07.30 – 12.30 Uhr und 13.30 – 16.00 Uhr Freitag: 07.30 – 13.00 Uhr unter: Telefon 06652 / 9632-0 oder per E-Mail.",
+  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "Forstamt Burghaun",
+  "osm_id": "node/10734542399",
+  "schema": 1,
+  "tags": [
+    "lkfulda-burghaun",
+    "lkfulda-office"
+  ],
+  "url": "https://www.hessen-forst.de/forstaemter/forstamt-burghaun"
+}

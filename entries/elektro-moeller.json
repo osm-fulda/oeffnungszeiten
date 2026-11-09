@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten: Mo. 09:00 - 18:00 Di. 09:00 - 18:00 Mi. 09:00 - 18:00 Do. 09:00 - 18:00 Fr. 09:00 - 18:00 Sa. 09:00 - 13:00",
+  "filter": "xpath://table[contains(concat(\" \",normalize-space(@class),\" \"),\" opening-schedule \")]",
+  "lang": "de",
+  "name": "Elektro Möller",
+  "osm_id": "node/13458373550",
+  "schema": 1,
+  "tags": [
+    "lkfulda-dipperz",
+    "lkfulda-shop"
+  ],
+  "url": "https://www.ep.de/elektro-moeller/"
+}

@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Kontaktdetails ToolBed GmbH Gewerbepark 8 36160 Dipperz Germany info@toolbed.com Öffnungszeiten Montag - Freitag: 9:00 - 16:30 Uhr Benötigen Sie Unterstützung? Wir freuen uns Ihnen helfen zu können. S",
+  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+  "lang": "de",
+  "name": "ToolBed GmbH",
+  "osm_id": "node/13458619125",
+  "schema": 1,
+  "tags": [
+    "lkfulda-dipperz",
+    "lkfulda-office"
+  ],
+  "url": "https://www.toolbed.com/de/Kontakt"
+}

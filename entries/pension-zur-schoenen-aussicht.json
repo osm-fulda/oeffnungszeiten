@@ -1,0 +1,16 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten : Sommer Mai bis Oktober Mittwoch bis Samstag von 17.00 - 21.00 Uhr Sonntag von 11.30 - 14.00 Uhr und 17.00 - 20.00 Uhr Montag & Dienstag Ruhetag Winter November bis April Donnerstag - ",
+  "fetch_backend": "html_webdriver",
+  "filter": "xpath:(//h4[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "Pension zur schönen Aussicht",
+  "note": "2026-11-09: Sommer- und Winterzeiten. Die Seite liefert ohne Browser 404.",
+  "osm_id": "node/1896145555",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-gersfeld"
+  ],
+  "url": "http://www.gasthof-zur-schoenen-aussicht.de/"
+}

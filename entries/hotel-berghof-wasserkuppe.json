@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Telefon: +49 (0) 6654 251 EMail: kontakt@berghof-wasserkuppe.de Öffnungszeiten: Montag bis Sonntag von 08:00 bis 22:00 Uhr Warme Küche: Mittags: 11:30 Uhr bis 14:00 Uhr Abends: 17:30 Uhr bis 20:30 Uhr",
+  "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "Hotel Berghof Wasserkuppe",
+  "note": "2026-11-09: Restaurant Rhoenwirt und Kueche.",
+  "osm_id": "node/954938946",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-gersfeld"
+  ],
+  "url": "https://berghof-wasserkuppe.de/restaurant-rhoenwirt/"
+}

@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten: Mo. 09:30 - 12:30 Di. 09:30 - 12:30 Mi. 09:30 - 12:30 Do. 09:30 - 12:30 Fr. 09:30 - 12:30 Termine auch nach Vereinbarung",
+  "filter": "xpath:(//span[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "LVM Versicherung Michael Geißler",
+  "osm_id": "node/13812376731",
+  "schema": 1,
+  "tags": [
+    "lkfulda-gersfeld",
+    "lkfulda-office"
+  ],
+  "url": "https://agentur.lvm.de/m-geissler/4"
+}

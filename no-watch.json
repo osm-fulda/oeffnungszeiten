@@ -3035,6 +3035,15 @@
    "recheck": "never",
    "note": "Laden insolvent; die Domain leitet auf Otto Diel (Kuenzell) weiter. In OSM seit 09.11.2026 disused:shop=sewing.",
    "osm_id": "node/9577860492"
+  },
+  {
+   "url": "https://skiverleih-wasserkuppe.de/",
+   "name": "Skiverleih Wasserkuppe",
+   "reason": "anti-bot",
+   "established": "2026-11-09",
+   "recheck": "2027-11-01",
+   "note": "NinjaFirewall antwortet mit 403. OSM traegt die Winterzeiten (Dec-Mar, Monate geschaetzt), gelesen am 08.11.2026. Vor der naechsten Wintersaison von Hand pruefen.",
+   "osm_id": "node/12288691267"
   }
  ]
 }

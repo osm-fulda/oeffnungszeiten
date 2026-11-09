@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "SPRECHZEITEN Montag, Dienstag und Donnerstag: 8:00-12:00 und 14:30-18:00 Uhr Mittwoch und Freitag: 8:00-12:00 Uhr Praxisurlaub Weihnachten24.12.26 – 03.01.27",
+  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+  "lang": "de",
+  "name": "Familienpraxis Rhön",
+  "note": "2026-11-09: Der Block enthaelt auch Urlaubsmeldungen.",
+  "osm_id": "node/13172729722",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-gersfeld"
+  ],
+  "url": "https://www.familienpraxis-rhoen.de/"
+}
