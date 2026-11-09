@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Montag 8 — 12 Uhr 16 — 18 Uhr Dienstag 8 — 12 Uhr 16 — 18 Uhr Mittwoch 8 — 12 Uhr Donnerstag 8 — 12 Uhr 17 — 19 Uhr Freitag 8 — 12 Uhr",
+  "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" abstand-oefnungszeiten \")]",
+  "lang": "de",
+  "name": "Gemeinschaftspraxis Dr. Mihm und Scheer",
+  "osm_id": "node/12853266238",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-tann"
+  ],
+  "url": "https://hausarzt-annastrasse.de/"
+}

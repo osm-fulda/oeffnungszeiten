@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Sonja Hedtrich Adresse Fuldaer Straße 52 a 36145 Hofbieber +49 6657 608500 hofbieber@planaris.de Öffnungszeiten Montag – Donnerstag 9:00 Uhr – 15:00 Uhr Freitag 9:00 Uhr – 12:00 Uhr sowie nach Vereinb",
+  "filter": "xpath://*[contains(.,\"Fuldaer Straße 52\") and contains(.,\"Freitag\")][not(.//*[contains(.,\"Fuldaer Straße 52\") and contains(.,\"Freitag\")])]",
+  "lang": "de",
+  "name": "Planaris",
+  "note": "2026-11-09: Zeile der Standortliste ueber die Anschrift (FILTERS.md Fall 12).",
+  "osm_id": "node/13849649264",
+  "schema": 1,
+  "tags": [
+    "lkfulda-hofbieber",
+    "lkfulda-office"
+  ],
+  "url": "https://www.planaris.de/kontakt/"
+}

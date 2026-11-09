@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Telefon und Öffnungszeiten:Wir haben von Montag bis Freitag durchgehend von 9:00 bis 17:00 Uhr geöffnet. Unsere freundlichen Mitarbeiterinnen Annika, Dagmar, Andrea oder Rodrigue beraten Sie gerne unt",
+  "filter": "xpath:(//h4[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "UNICOBRES Lagerverkauf",
+  "note": "2026-11-09: Die Seite nennt die Hersfelder Str. 16; OSM traegt das Lager Siedlungsstrasse 9 (Nutzer: gleiche Zeiten).",
+  "osm_id": "node/1481571896",
+  "schema": 1,
+  "tags": [
+    "lkfulda-eiterfeld",
+    "lkfulda-shop"
+  ],
+  "url": "http://www.al-ambik.com/impressum"
+}

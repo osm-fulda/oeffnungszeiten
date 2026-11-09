@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten:Montag- Freitag: 07:30 – 16:30 UhrSamstag: geschlossen",
+  "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "EBERT RENTAL & SALES",
+  "osm_id": "node/13457828487",
+  "schema": 1,
+  "tags": [
+    "lkfulda-burghaun",
+    "lkfulda-office"
+  ],
+  "url": "https://www.ebert-rental.de/"
+}

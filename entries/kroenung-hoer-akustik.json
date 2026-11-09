@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Praxiszeiten:Montag-Donnerstag: 09:00–13:00 Uhr und 14:00–18:00 Uhr Freitag: 09:00–15:00 Uhr Termine nur nach Vereinbarung",
+  "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+  "lang": "de",
+  "name": "Krönung Hör-Akustik",
+  "note": "2026-11-09: Filiale Huenfeld auf der Filialseite.",
+  "osm_id": "node/13456153285",
+  "schema": 1,
+  "tags": [
+    "lkfulda-huenfeld",
+    "lkfulda-shop"
+  ],
+  "url": "https://www.kroenung-hoerzentrum.de/kontakt/filialen/"
+}

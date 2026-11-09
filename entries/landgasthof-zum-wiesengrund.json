@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "MontagRuhetag DienstagRuhetag MittwochRuhetag Donnerstag18:00 – 20:00 Freitag18:00 – 20:00 Samstag18:00 – 20:00 Sonntag17:00 – 20:00",
+  "filter": "xpath://table[contains(concat(\" \",normalize-space(@class),\" \"),\" hours-table \")]",
+  "lang": "de",
+  "name": "Landgasthof zum Wiesengrund",
+  "note": "2026-11-09: Die Seite bittet, vor dem Besuch kurz anzurufen.",
+  "osm_id": "node/3779551429",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-huenfeld"
+  ],
+  "url": "http://www.gasthof-zum-wiesengrund.com/"
+}

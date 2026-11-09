@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Montag08.15 Uhr bis 12.45 Uhr 13.30 Uhr bis 16.15 Uhr Dienstag08.15 Uhr bis 12.45 Uhr 13.30 Uhr bis 16.15 Uhr Mittwoch08.15 Uhr bis 13.00 Uhr Donnerstag08.15 Uhr bis 12.45 Uhr13.30 Uhr bis 16.15 Uhr F",
+  "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" zeiten \")]",
+  "lang": "de",
+  "name": "Witzel Kai Dr. Dr.",
+  "osm_id": "node/4550847767",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-huenfeld"
+  ],
+  "url": "https://www.minimal-invasiv-center.de/"
+}

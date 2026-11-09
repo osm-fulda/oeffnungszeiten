@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "📞 06657-9186820 Mo - Fr von 8 - 18 Uhr",
+  "filter": "xpath://*[contains(.,\"Mo - Fr von\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Mo - Fr von\") and contains(.,\"Uhr\")])]",
+  "lang": "de",
+  "name": "MARIP GmbH",
+  "note": "2026-11-09: Telefonzeiten (Nutzer: uebernehmen).",
+  "osm_id": "node/13850121949",
+  "schema": 1,
+  "tags": [
+    "lkfulda-hofbieber",
+    "lkfulda-office"
+  ],
+  "url": "https://www.werbebonbons.de"
+}

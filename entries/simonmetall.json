@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten Zu folgenden Uhrzeiten sind wir für Sie im Büro erreichbar: Montag – Donnerstag 06:30 Uhr – 16.00 Uhr Freitag 06:30 Uhr – 13.00 Uhr Wir freuen uns über Ihren Besuch. Bitte vereinbaren S",
+  "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+  "lang": "de",
+  "name": "Simonmetall",
+  "note": "2026-11-09: Buerozeiten; vor dem Besuch Termin vereinbaren.",
+  "osm_id": "way/1537558924",
+  "schema": 1,
+  "tags": [
+    "lkfulda-craft",
+    "lkfulda-tann"
+  ],
+  "url": "https://www.simonmetall.de/kontakt/"
+}

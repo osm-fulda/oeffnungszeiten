@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten Montag geschlossen Dienstag 10:00-13:00 & 14:00-17:00 Uhr Mittwoch geschlossen Donnerstag 10:00-13:00 & 14:00-17:00 Uhr Freitag 10:00-13:00 & 14:00-17:00 Uhr Samstag 10:00-12:00 Uhr",
+  "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "Motorrad-Schmiede Schwarzbach",
+  "osm_id": "node/2051242215",
+  "schema": 1,
+  "tags": [
+    "lkfulda-hofbieber",
+    "lkfulda-shop"
+  ],
+  "url": "https://www.motorrad-schmiede.com/startseite/kontakt/"
+}

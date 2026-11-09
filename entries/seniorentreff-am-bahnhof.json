@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Wir sind Montag bis Freitag von 8.00 -16.00 Uhr für Sie da Ihr Team vom SeniorenTreff \"Am Bahnhof\"",
+  "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" module-type-text \")]",
+  "lang": "de",
+  "name": "SeniorenTreff Am Bahnhof",
+  "osm_id": "node/13162004854",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-gersfeld"
+  ],
+  "url": "https://www.seniorentreff-am-bahnhof.com/"
+}

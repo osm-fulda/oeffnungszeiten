@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Wochentags gerne flexibel nach kurzer telefonischer Absprache unter 0160 6079319 Mittwochs von 14:00 Uhr bis 18:00 Uhr Freitags von 10:00 Uhr bis 14:00 Uhr Samstags von 10:00 bis 15:00 Uhr",
+  "filter": "xpath://ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mittwoch\")][not(.//ul[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"mittwoch\")])]",
+  "lang": "de",
+  "name": "Königsmühle",
+  "note": "2026-11-09: Hofladen; wochentags auch nach Absprache.",
+  "osm_id": "node/13055961129",
+  "schema": 1,
+  "tags": [
+    "lkfulda-hofbieber",
+    "lkfulda-shop"
+  ],
+  "url": "https://www.koenigsmuehle.de/hofladen/"
+}
