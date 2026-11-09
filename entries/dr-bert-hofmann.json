@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Tel.: 0661-32 52 5 Fax: 0661 - 380 44 53 E-Mail: info@zahnarzt-künzell.de Sozial Media: Instagram Mo., Di. 08.00-13.00 / 14.30-18.00 Uhr Do. 08.00-13.00 / 14.30-19.00 Uhr Mi., Fr. 8.00-15.00 Uhr",
+  "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" contact-info \")]",
+  "lang": "de",
+  "name": "Dr. Bert Hofmann",
+  "osm_id": "node/12214657903",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-kuenzell"
+  ],
+  "url": "https://www.xn--zahnarzt-knzell-8vb.de/"
+}

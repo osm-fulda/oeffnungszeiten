@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Montag - Freitag: 9:00 Uhr - 11:00 Uhr Montag - Mittwoch und Freitag: 15:00 Uhr - 18:00 Uhr Termine nach Vereinbarung!",
+  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+  "lang": "de",
+  "name": "Dr. med. vet. Melanie Mohr",
+  "osm_id": "node/5318537627",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-kuenzell"
+  ],
+  "url": "https://tierarzt-kuenzell.de/"
+}

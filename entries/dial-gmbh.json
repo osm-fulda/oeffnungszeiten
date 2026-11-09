@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten: Montag -Freitag 08:00 -17:00 Uhr",
+  "filter": "xpath:(//b[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "DIAL GmbH",
+  "osm_id": "node/14341642538",
+  "schema": 1,
+  "tags": [
+    "lkfulda-eichenzell",
+    "lkfulda-office"
+  ],
+  "url": "https://dial-gmbh.de/"
+}

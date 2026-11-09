@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten Juni – September Restaurant & Biergarten Mo. bis Sa.: 15:30 - 22:00 Uhr Küche Mo. bis Sa.: 16:30 - 21:00 Uhr Sonntag & Feiertag Geschlossen Oktober – Mai Restaurant & Biergarten Mo. bis",
+  "filter": "xpath:(//span[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+  "lang": "de",
+  "name": "Berghof",
+  "note": "2026-11-09: Restaurant und Kueche, Sommer und Winter; die Rezeption steht nicht im Filter.",
+  "osm_id": "way/406144437",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-petersberg"
+  ],
+  "url": "https://www.berghof-almendorf.de/de"
+}

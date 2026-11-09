@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten: ​ Wir sind für Sie da: ​ Montag - Freitag 9.00 - 18.00 Uhr Samstag 9.00 - 13.00 Uhr oder nach Vereinbarung",
+  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+  "lang": "de",
+  "name": "Biel´s Bodenbeläge GmbH",
+  "osm_id": "node/13513567541",
+  "schema": 1,
+  "tags": [
+    "lkfulda-kuenzell",
+    "lkfulda-shop"
+  ],
+  "url": "https://www.biels-bodenbelaege.de/"
+}

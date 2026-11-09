@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Mo.-Fr.: 06:30 Uhr – 16:00 Uhr",
+  "filter": "xpath://*[contains(.,\"Mo.-Fr.:\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Mo.-Fr.:\") and contains(.,\"Uhr\")])]",
+  "lang": "de",
+  "name": "Schreinerei Weisbeck",
+  "osm_id": "way/115888035",
+  "schema": 1,
+  "tags": [
+    "lkfulda-craft",
+    "lkfulda-grossenlueder"
+  ],
+  "url": "https://schreinerei-weisbeck.de/"
+}

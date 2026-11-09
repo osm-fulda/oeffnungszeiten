@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Montag08:00 - 18:00 UhrDienstag08:00 - 18:00 UhrMittwoch08:00 - 18:00 UhrDonnerstag08:00 - 18:00 UhrFreitag08:00 - 18:00 UhrSamstagGeschlossenSonntagGeschlossen Montag08:00 - 18:00 UhrDienstag08:00 - ",
+  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+  "lang": "de",
+  "name": "Deisenroth & Söhne GmbH",
+  "osm_id": "node/13473724297",
+  "schema": 1,
+  "tags": [
+    "lkfulda-petersberg",
+    "lkfulda-shop"
+  ],
+  "url": "https://deisenroth-soehne-fulda.seat.de/ueberuns"
+}

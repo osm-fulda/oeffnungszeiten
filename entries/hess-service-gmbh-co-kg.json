@@ -1,0 +1,16 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "GEÖFFNET: MO - FR von 08-17 Uhr",
+  "fetch_backend": "html_webdriver",
+  "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" con-kit-component-label \")]",
+  "lang": "de",
+  "name": "Hess Service GmbH & Co. KG",
+  "note": "2026-11-09: Standort Kuenzell (Danziger Str. 10). Die Zeiten entstehen erst im Browser.",
+  "osm_id": "node/13513504586",
+  "schema": 1,
+  "tags": [
+    "lkfulda-?",
+    "lkfulda-kuenzell"
+  ],
+  "url": "https://werkstatt-hess.de/standort-fulda-kunzell"
+}

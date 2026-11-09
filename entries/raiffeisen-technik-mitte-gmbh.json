@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten Montag - Freitag:07:30 - 16:30 Uhr",
+  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+  "lang": "de",
+  "name": "Raiffeisen Technik Mitte GmbH",
+  "osm_id": "node/13473795360",
+  "schema": 1,
+  "tags": [
+    "lkfulda-craft",
+    "lkfulda-petersberg"
+  ],
+  "url": "https://www.rw.net/standorte/raiffeisen-technik-mitte-gmbh-petersberg"
+}

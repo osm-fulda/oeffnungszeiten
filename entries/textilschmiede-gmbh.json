@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten: Mo – Fr 9:00 – 17:00 UhrBesucherzeiten: nach Absprache",
+  "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])",
+  "lang": "de",
+  "name": "Textilschmiede GmbH",
+  "osm_id": "node/14341642543",
+  "schema": 1,
+  "tags": [
+    "lkfulda-eichenzell",
+    "lkfulda-shop"
+  ],
+  "url": "https://www.textilschmiede.de/"
+}

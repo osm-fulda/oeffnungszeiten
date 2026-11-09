@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "ÖffnungszeitenMontag bis Freitag8:00 bis 17:00 UhrSamstag und SonntagGeschlossen",
+  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "G+S GmbH",
+  "osm_id": "node/14341642537",
+  "schema": 1,
+  "tags": [
+    "lkfulda-eichenzell",
+    "lkfulda-office"
+  ],
+  "url": "https://g-u-s.com/kontakt"
+}

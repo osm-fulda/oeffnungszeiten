@@ -3026,6 +3026,15 @@
    "recheck": "2027-05-01",
    "note": "Saison beendet; die Seite nennt ausserhalb der Saison keine Zeiten. OSM: May-Sep 10:30-19:30 (auf Monate gerundet). Zur neuen Saison pruefen.",
    "osm_id": "way/222987082"
+  },
+  {
+   "url": "https://www.creartista.de/",
+   "name": "CreArtista Nähmaschinen (Petersberg)",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-09",
+   "recheck": "never",
+   "note": "Laden insolvent; die Domain leitet auf Otto Diel (Kuenzell) weiter. In OSM seit 09.11.2026 disused:shop=sewing.",
+   "osm_id": "node/9577860492"
   }
  ]
 }

@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungs­zeiten GaststätteMontag: Ruhetag Dienstag - Sonntag: 17 - 23 Uhr Öffnungs­zeiten KücheMontag: Ruhetag Dienstag - Sonntag: 17:30 - 21 Uhr",
+  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"dienstag\")])]",
+  "lang": "de",
+  "name": "Landgasthof Reith",
+  "note": "2026-11-09: Gaststaette und Kueche.",
+  "osm_id": "node/954893691",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-kuenzell"
+  ],
+  "url": "https://landgasthof-reith.de/oeffnungszeiten/"
+}
