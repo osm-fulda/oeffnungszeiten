@@ -2561,15 +2561,6 @@
    "osm_id": "node/5334648901"
   },
   {
-   "url": "https://www.werbebonbons.de",
-   "name": "MARIP GmbH",
-   "reason": "no-hours-on-page",
-   "established": "2026-09-22",
-   "recheck": "never",
-   "note": "Die Seite nennt nur eine telefonische Erreichbarkeit im Navigationsband (Mo - Fr von 8 - 18 Uhr), keine Oeffnungszeiten, und das OSM-Objekt traegt selbst keine. Ein Filter auf das Navigationsband meldet jeden Umbau des Menues.",
-   "osm_id": "node/13850121949"
-  },
-  {
    "url": "https://f60-sports.de/kursplan",
    "name": "F60 Sports",
    "reason": "no-hours-on-page",
