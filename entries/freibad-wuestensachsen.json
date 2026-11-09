@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten des Freibades: Saisoneröffnung Donnerstag, 14. Mai 2026 ab 12 Uhr - Sonntag, 30. August 2026 Außerhalb der hessischen Sommerferien: Mo - Fr von 14:00 bis 19:00 Uhr, Sa + So von 12:00 bi",
+  "filter": "xpath://*[contains(.,\"Freibad\") and contains(.,\"19\")][not(.//*[contains(.,\"Freibad\") and contains(.,\"19\")])]",
+  "lang": "de",
+  "name": "Freibad Wüstensachsen",
+  "note": "2026-11-09: Saison laut Seite 14.05.-30.08.; OSM auf Monate gerundet (May-Aug). Sommerferien taeglich 12-19 nicht in OSM.",
+  "osm_id": "way/434930328",
+  "schema": 1,
+  "tags": [
+    "lkfulda-ehrenberg",
+    "lkfulda-swimming_pool"
+  ],
+  "url": "https://ehrenberg-rhoen.de/tourismus/freizeit-kulinarik/freizeiteinrichtungen"
+}

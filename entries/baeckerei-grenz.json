@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Mo, Mi, Sa 6:00 - 13:00 Di, Do, Fr 6:00 - 18:00 Sonntag 7:30 - 10:30",
+  "filter": "xpath:(//dl[contains(concat(\" \",normalize-space(@class),\" \"),\" open-hours-data \")])[1]",
+  "lang": "de",
+  "name": "Bäckerei Grenz",
+  "osm_id": "node/3359899144",
+  "schema": 1,
+  "tags": [
+    "lkfulda-bad-salzschlirf",
+    "lkfulda-bakery"
+  ],
+  "url": "https://www.baeckereigrenz.de/"
+}

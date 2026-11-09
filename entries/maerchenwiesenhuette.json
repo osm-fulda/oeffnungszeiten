@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Allgemeine Öffnungszeiten Tagesaktuell bitte Ampelsystem beachten! Hauptsaison*Sommerferien in HessenMontag10:00 - 17:00 Uhr10:00 - 18:00 UhrDienstag10:00 - 17:00 Uhr10:00 - 18:00 UhrMittwoch10:00 - 1",
+  "filter": "xpath://*[contains(.,\"Allgemeine Öffnungszeiten\") and contains(.,\"Sonntag\")][not(.//*[contains(.,\"Allgemeine Öffnungszeiten\") and contains(.,\"Sonntag\")])]",
+  "lang": "de",
+  "name": "Märchenwiesenhütte",
+  "note": "2026-11-09: Filter auf die allgemeinen Arena-Zeiten; die Ampel nennt fuer die Huette \"taeglich ab 10 Uhr\" (OSM Mo-Su 10:00+) und wechselt taeglich, darum nicht im Filter.",
+  "osm_id": "way/46724754",
+  "schema": 1,
+  "tags": [
+    "lkfulda-ehrenberg",
+    "lkfulda-restaurant"
+  ],
+  "url": "https://www.ski-und-rodelarena-wasserkuppe.de/infos/oeffnungszeiten/"
+}
