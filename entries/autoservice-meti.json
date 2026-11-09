@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "ÖFFNUNGSZEITEN Mo-Fr: 08:00–20:00 Sa: 09:00–16:00",
+  "filter": "xpath:(//h6[contains(normalize-space(.),\"ÖFFNUNGSZEITEN\")])/parent::*",
+  "lang": "de",
+  "name": "Autoservice Meti",
+  "osm_id": "way/1117839700",
+  "schema": 1,
+  "tags": [
+    "lkfulda-eichenzell",
+    "lkfulda-shop"
+  ],
+  "url": "https://autoservice-meti.de/"
+}

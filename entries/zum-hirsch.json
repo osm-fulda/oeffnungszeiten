@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Wir freuen uns darauf, Sie bald in unserem Haus begrüßen zu dürfen. Biker, Radfahrer und Wanderer sind gern gesehene Gäste.MitarbeiterInnen für Service, Etage, Küche und Raumpflege ab sofort gesucht.Ö",
+  "filter": "xpath://*[contains(.,\"Öffnungszeiten Restaurant\") and contains(.,\"Sonntag\")][not(.//*[contains(.,\"Öffnungszeiten Restaurant\") and contains(.,\"Sonntag\")])]",
+  "lang": "de",
+  "name": "Zum Hirsch",
+  "note": "2026-11-09: Der Absatz enthaelt auch eine Stellenanzeige.",
+  "osm_id": "way/1240771483",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-grossenlueder"
+  ],
+  "url": "https://zum-hirsch.de/"
+}

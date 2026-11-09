@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Wir haben täglich von 07:00 Uhr (Frühstück) bis 23:00 Uhr geöffnet.",
+  "filter": "xpath://p[contains(concat(\" \",normalize-space(@class),\" \"),\" qodef-m-text \")]",
+  "lang": "de",
+  "name": "Gasthof Altes Casino",
+  "note": "2026-11-09: Hauszeit \"taeglich 07-23\"; die Kuechenzeiten stehen im Block daneben (opening_hours:kitchen).",
+  "osm_id": "node/2482240791",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-petersberg"
+  ],
+  "url": "https://www.akzenthotel-fulda.de/kontakt/"
+}

@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Montag8.00 bis 12.00 Uhr und 15.00 bis 18.00 Uhrheute Dienstag8.00 bis 15.00 Uhrheute Mittwoch8.00 bis 13.00 Uhrheute Donnerstag8.00 bis 12.00 Uhr und 15.00 bis 19.00 Uhrheute Freitag7.00 bis 13.00 Uh",
+  "filter": "xpath:(//*[contains(concat(\" \",normalize-space(@class),\" \"),\" sprechzeiten \")])[3]",
+  "lang": "de",
+  "name": "Landarzt MVZ",
+  "note": "2026-11-09: Dritter Reiter (Campus Grossenlueder); Sickels und Hainzell sind die Reiter 1 und 2.",
+  "osm_id": "node/13736047934",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-grossenlueder"
+  ],
+  "url": "https://www.landarzt-mvz.de"
+}

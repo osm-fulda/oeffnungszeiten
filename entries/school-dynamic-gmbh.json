@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Postanschrift school.dynamic GmbH Im Eichsfeld 39 36100 Petersberg Seminaranmeldungen Telefon: 0661 - 480 38 67 0 seminare@school-dynamic.de Bürozeiten 09:00 Uhr bis 16:00 Uhr - Mo - Do 09:00 Uhr bis ",
+  "filter": "xpath://*[contains(.,\"Bürozeiten\") and contains(.,\"Uhr\")][not(.//*[contains(.,\"Bürozeiten\") and contains(.,\"Uhr\")])]",
+  "lang": "de",
+  "name": "school.dynamic GmbH",
+  "note": "2026-11-09: Buerozeiten; der Block enthaelt auch Anschrift und Telefon.",
+  "osm_id": "node/10943150708",
+  "schema": 1,
+  "tags": [
+    "lkfulda-office",
+    "lkfulda-petersberg"
+  ],
+  "url": "https://www.school-dynamic.de/kontakt/"
+}

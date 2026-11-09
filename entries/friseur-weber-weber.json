@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Montag 9.00 – 18.00 Uhr Dienstag – Freitag: 9.00 – 19.00 Uhr Samstag: 8.00 – 15.00 Uhr",
+  "filter": "xpath://ul[contains(concat(\" \",normalize-space(@class),\" \"),\" elementor-price-list \")]",
+  "lang": "de",
+  "name": "Friseur WEBER & WEBER",
+  "osm_id": "node/5318527418",
+  "schema": 1,
+  "tags": [
+    "lkfulda-kuenzell",
+    "lkfulda-shop"
+  ],
+  "url": "https://weberundweber.com/"
+}

@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten Montag, Dienstag & Donnerstag: 7:30 Uhr - 13:00 Uhr 14:30 Uhr - 18:00 Uhr Mittwoch: 7:30 Uhr - 12:30 Uhr Freitag: 7:30 Uhr - 12:30 Uhr",
+  "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "Gemeinschaftspraxis Kalbach",
+  "osm_id": "node/11945553975",
+  "schema": 1,
+  "tags": [
+    "lkfulda-amenity",
+    "lkfulda-kalbach"
+  ],
+  "url": "https://www.gemeinschaftspraxis-mittelkalbach.de/"
+}
