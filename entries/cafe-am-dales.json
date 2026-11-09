@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Montag:GeschlossenDienstag:GeschlossenMittwoch:13:30 – 18:00Donnerstag:13:30 – 18:00Freitag:13:30 – 18:00Samstag:13:30 – 18:00Sonntag:13:30 – 18:00",
+  "filter": "xpath://*[contains(.,\"Montag:\") and contains(.,\"Sonntag:\") and not(contains(.,\"Es ist\"))][not(.//*[contains(.,\"Montag:\") and contains(.,\"Sonntag:\") and not(contains(.,\"Es ist\"))])]",
+  "lang": "de",
+  "name": "Café am Dales",
+  "note": "2026-11-08: Ohne die Live-Zeile \"Es ist ..., wir haben geschlossen\", die sich jede Minute aendert.",
+  "osm_id": "node/2264502675",
+  "schema": 1,
+  "tags": [
+    "lkfulda-cafe",
+    "lkfulda-ebersburg"
+  ],
+  "url": "http://www.cafeamdales.de/"
+}

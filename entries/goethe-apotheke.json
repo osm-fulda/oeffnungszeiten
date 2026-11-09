@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Öffnungszeiten Montag 08:30 - 12:30 14:30 - 18:00 Dienstag 08:30 - 12:30 14:30 - 18:00 Mittwoch 08:30 - 12:30 14:30 - 18:00 Donnerstag 08:30 - 12:30 14:30 - 18:00 Freitag 08:30 - 12:30 14:30 - 18:00 S",
+  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "Goethe Apotheke",
+  "osm_id": "node/666277703",
+  "schema": 1,
+  "tags": [
+    "lkfulda-hosenfeld",
+    "lkfulda-pharmacy"
+  ],
+  "url": "https://www.goethe-apotheke-hainzell.de/"
+}

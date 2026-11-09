@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Montags sowieDonnerstags bis Samstags17:00 Uhr bis 23:00 Uhr17:30 Uhr bis 20:30 Uhr (Küche)Sonntags11:00 Uhr bis 15:00 Uhr11:30 Uhr bis 13:30 Uhr (Küche)17:00 Uhr bis 23:00 Uhr17:30 Uhr bis 20:30 Uhr ",
+  "filter": "xpath://tbody[contains(concat(\" \",normalize-space(@class),\" \"),\" cm_table \")]",
+  "lang": "de",
+  "name": "Zum Goldenen Stern (Soisdorf)",
+  "note": "2026-11-08: Oeffnungs- und Kuechenzeiten.",
+  "osm_id": "node/3351606437",
+  "schema": 1,
+  "tags": [
+    "lkfulda-eiterfeld",
+    "lkfulda-restaurant"
+  ],
+  "url": "https://www.goldener-stern-soisdorf.de/"
+}

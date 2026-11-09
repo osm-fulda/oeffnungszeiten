@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "» So finden Sie uns ﻿Sprechzeiten Montag, Dienstag, Donnerstag, Freitag: 11.00 - 13.00 Uhr Dienstag und Donnerstag: 16.00 - 18.00 Uhr Mittwoch nach Vereinbarung Erkältungssprechstunde: nur MO, DI, DO,",
+  "filter": "xpath://*[contains(.,\"Sprechzeiten\") and contains(.,\"Mittwoch nach\")][not(.//*[contains(.,\"Sprechzeiten\") and contains(.,\"Mittwoch nach\")])]",
+  "lang": "de",
+  "name": "Praxis Martin/Wiegand",
+  "note": "2026-11-08: Nur die Sprechzeiten, nicht die Urlaubsmeldungen darueber.",
+  "osm_id": "node/577957820",
+  "schema": 1,
+  "tags": [
+    "lkfulda-doctors",
+    "lkfulda-rasdorf"
+  ],
+  "url": "https://hausarzt-rasdorf.de/"
+}

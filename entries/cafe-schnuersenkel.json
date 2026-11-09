@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "MONTAG – FREITAG7:00 – 18:00SAMSTAG7:00 – 16:00",
+  "filter": "xpath://div[contains(.,\"MONTAG – FREITAG\") and contains(.,\"SAMSTAG\")][not(.//div[contains(.,\"MONTAG – FREITAG\") and contains(.,\"SAMSTAG\")])]",
+  "lang": "de",
+  "name": "Café Schnürsenkel",
+  "note": "2026-11-08: Nur das Cafe; die Seite nennt auch die Zeiten des Schuhhauses (Mo-Fr 09-19).",
+  "osm_id": "node/9206552884",
+  "schema": 1,
+  "tags": [
+    "lkfulda-cafe",
+    "lkfulda-eiterfeld"
+  ],
+  "url": "https://schuh-zentgraf.de/cafe-schnuersenkel/"
+}

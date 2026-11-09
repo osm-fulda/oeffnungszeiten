@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Öffnungszeiten Achtung!neue Öffnungszeiten!Montag bis Freitagvon: 8:00 Uhr-12:00 Uhrund von :13:00 Uhr - 17:30 UhrSamstagvon: 8:00Uhr - 12:00 Uhrgeöffnet.",
+  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "Stefan Gilbert",
+  "osm_id": "way/217193597",
+  "schema": 1,
+  "tags": [
+    "lkfulda-company",
+    "lkfulda-ehrenberg"
+  ],
+  "url": "https://www.stefan-gilbert.de/"
+}

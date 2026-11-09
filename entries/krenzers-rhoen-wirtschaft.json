@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Öffnungszeiten Hotel, Laden + Wirtschaft REZEPTION + LADEN Sonntag bis Mittwoch von 9:00 bis 16:00 Uhr Donnerstag bis Samstag von 9:00 bis 18:00 Uhr WIRTSCHAFT Montag bis Sonntag Frühstück täglich von",
+  "filter": "xpath:(//h1[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+  "lang": "de",
+  "name": "Krenzers Rhön (Wirtschaft)",
+  "note": "2026-11-08: Rezeption/Laden und Wirtschaft; OSM traegt die Wirtschaft (Fruehstueck + Abende).",
+  "osm_id": "way/216069729",
+  "schema": 1,
+  "tags": [
+    "lkfulda-ehrenberg",
+    "lkfulda-restaurant"
+  ],
+  "url": "https://rhoenerlebnis.de/oeffnungszeiten"
+}

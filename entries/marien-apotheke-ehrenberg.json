@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Öffnungszeiten Mo 08:30 – 13:00 | 15:00 – 18:00 Di 08:30 – 13:00 | 15:00 – 18:00 Mi 08:30 – 13:00 | 15:00 – 18:00 Do 08:30 – 13:00 | 15:00 – 18:00 Fr 08:30 – 13:00 | 15:00 – 18:00 Sa 08:30 – 12:00",
+  "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "Marien-Apotheke",
+  "osm_id": "node/2526526983",
+  "schema": 1,
+  "tags": [
+    "lkfulda-ehrenberg",
+    "lkfulda-pharmacy"
+  ],
+  "url": "https://www.apotheke-ehrenberg.de"
+}

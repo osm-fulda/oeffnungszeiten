@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Unsere Öffnungszeiten: Mo. – Sa. ab 17:00 UhrSo. ab 11:30 UhrMittwochs RuhetagUm Tischreservierung wird gebeten! Unsere Termine im Februar und März 2025: 03. Februar 20259:00 Uhr – Frühstücksbuffet fü",
+  "filter": "xpath://*[contains(.,\"Unsere Öffnungszeiten\") and contains(.,\"Ruhetag\")][not(.//*[contains(.,\"Unsere Öffnungszeiten\") and contains(.,\"Ruhetag\")])]",
+  "lang": "de",
+  "name": "Haus zur Wasserkuppe",
+  "note": "2026-11-08: Die Kopfzeile \"taeglich 8-23\" ist veraltet; der Block \"Unsere Oeffnungszeiten\" gilt.",
+  "osm_id": "way/217193568",
+  "schema": 1,
+  "tags": [
+    "lkfulda-ehrenberg",
+    "lkfulda-restaurant"
+  ],
+  "url": "http://www.haus-zur-wasserkuppe.de/"
+}

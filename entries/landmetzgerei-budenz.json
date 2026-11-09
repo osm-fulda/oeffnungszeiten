@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Öffnungszeiten: Montag – Freitag: 06:30 Uhr – 18:00 Uhr Samstag: 06:30 Uhr – 13:30 Uhr",
+  "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+  "lang": "de",
+  "name": "Landmetzgerei Budenz",
+  "osm_id": "node/577708168",
+  "schema": 1,
+  "tags": [
+    "lkfulda-butcher",
+    "lkfulda-rasdorf"
+  ],
+  "url": "https://metzgereibudenz.de/kontakt/"
+}

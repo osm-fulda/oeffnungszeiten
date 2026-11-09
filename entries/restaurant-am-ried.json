@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Öffnungszeiten: Mo – Fr 17.00 – 22.00 Uhr Sa, So & feiertags 12.00 – 22.00 Uhr",
+  "filter": "xpath:(//th[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "Restaurant Am Ried",
+  "osm_id": "node/10709993505",
+  "schema": 1,
+  "tags": [
+    "lkfulda-bad-salzschlirf",
+    "lkfulda-restaurant"
+  ],
+  "url": "https://www.bad-salzschlirf.de/gastronomie/gaststaette-am-ried/"
+}

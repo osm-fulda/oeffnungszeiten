@@ -1,0 +1,14 @@
+{
+  "added": "2026-11-08",
+  "captured_sample": "Öffnungszeiten:Mo. - Fr. von 8:30 - 18:00 UhrSa. von 8:30 - 13:00 Uhr",
+  "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "Blumen Krug",
+  "osm_id": "node/903345266",
+  "schema": 1,
+  "tags": [
+    "lkfulda-ebersburg",
+    "lkfulda-garden_centre"
+  ],
+  "url": "http://www.blumenkrug-weyhers.de/"
+}
