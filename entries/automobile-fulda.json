@@ -1,0 +1,15 @@
+{
+  "added": "2026-11-09",
+  "captured_sample": "Öffnungszeiten Mo – Fr8:30 – 17:30 Uhr Samstag9:00 – 14:00 Uhr SonntagSchautag Sonntags: keine Beratung, kein Verkauf.",
+  "filter": "xpath:(//h4[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+  "lang": "de",
+  "name": "AutoMobile Fulda",
+  "note": "2026-11-09: Danziger Str. 8. Nicht verwechseln mit Hess Service (Nr. 10, werkstatt-hess.de).",
+  "osm_id": "way/550476692",
+  "schema": 1,
+  "tags": [
+    "lkfulda-kuenzell",
+    "lkfulda-shop"
+  ],
+  "url": "https://www.automobilefulda.de/kontakt/"
+}
