@@ -18,6 +18,9 @@ It writes no state anywhere else, holds no token, and talks to nothing but the p
 examination — the fetch runs in a job that has no write permission, and only its artifact
 crosses into the job that can comment or push.
 
+`emit --block` is the exception that fetches nothing: it records a page the wizard could not
+build in `no-watch.json`, with the reason and note taken from a `/no-watch` comment.
+
 Examples:
   python3 scripts/wizard_bot.py candidates --body-file body.md --out out
   python3 scripts/wizard_bot.py emit --body-file body.md --pick 2 --out out
@@ -77,10 +80,16 @@ REASONS = {
 # property of the business, and a business changes its mind — half a year is what the list has
 # used for that since it exists.
 RECHECK_MONTHS = 6
+# A property of our instance, not of the business: time does not change it, a move does. Only
+# the block path accepts these, because only a maintainer starts it.
+INSTANCE_REASONS = ("anti-bot", "datacenter-block")
 NO_RESPONSE = "_no response_"
 OSM_ID = re.compile(r"^(node|way|relation)/[1-9][0-9]*$")
 TAG = re.compile(r"^[a-z0-9][a-z0-9_-]{1,39}$")
 PICK = re.compile(r"^\s*/pick\s+([0-9]{1,2})\s*$", re.M)
+# `/no-watch <reason>` on the first line, the note on the lines below. Read by the block path,
+# which records a page the wizard could not build, so the issue does not stay open for nothing.
+BLOCK = re.compile(r"^\s*/no-watch[ \t]+([a-z-]+)[ \t]*\n?(.*)\Z", re.S)
 # Parameters that identify a campaign, not a page. Everything else stays in the key: a query
 # string is load-bearing here — `?branch=500735` is Würth's Fulda branch, `?store=221186` is a
 # brillen.de shop, and dropping those would make seven pages look like their own front page.
@@ -142,6 +151,30 @@ def raw_section(body, heading):
     return "" if text.lower() == NO_RESPONSE else text
 
 
+def url_shape(raw):
+    r"""The URL as it would be stored, checked for form only — no DNS, no fetch.
+
+    The block path needs this half alone: a page that goes on the block list is often one that
+    does not resolve any more, and refusing it for that reason would refuse the exact case.
+
+    >>> url_shape("www.druckerei-quell.de")
+    'https://www.druckerei-quell.de'
+    >>> url_shape("ftp://example.de")
+    Traceback (most recent call last):
+    wizard_bot.Refused: Nur http und https, nicht `ftp`.
+    """
+    if not raw:
+        raise Refused("Es fehlt die URL der Seite.")
+    raw = raw.split()[0]
+    scheme = re.match(r"([a-zA-Z][a-zA-Z0-9+.-]*)://", raw)
+    if scheme and scheme.group(1).lower() not in ("http", "https"):
+        raise Refused(f"Nur http und https, nicht `{scheme.group(1).lower()}`.")
+    url = C.normalize_url(raw)
+    if not urllib.parse.urlsplit(url).hostname:
+        raise Refused(f"Keine Adresse in `{raw}` erkennbar.")
+    return url
+
+
 def check_url(raw):
     r"""A URL we are willing to fetch. Public http(s) only.
 
@@ -161,17 +194,9 @@ def check_url(raw):
     Traceback (most recent call last):
     wizard_bot.Refused: Es fehlt die URL der Seite.
     """
-    if not raw:
-        raise Refused("Es fehlt die URL der Seite.")
-    raw = raw.split()[0]
-    scheme = re.match(r"([a-zA-Z][a-zA-Z0-9+.-]*)://", raw)
-    if scheme and scheme.group(1).lower() not in ("http", "https"):
-        raise Refused(f"Nur http und https, nicht `{scheme.group(1).lower()}`.")
-    url = C.normalize_url(raw)
+    url = url_shape(raw)
     parts = urllib.parse.urlsplit(url)
     host = parts.hostname
-    if not host:
-        raise Refused(f"Keine Adresse in `{raw}` erkennbar.")
     try:
         infos = socket.getaddrinfo(host, parts.port or (443 if parts.scheme == "https" else 80))
     except OSError as e:
@@ -329,9 +354,13 @@ def recheck_date(reason, today=None):
     '2027-06-30'
     >>> recheck_date("always-open", datetime.date(2026, 8, 31))
     'never'
+    >>> recheck_date("datacenter-block")
+    'on-relocation'
     """
     if reason == "always-open":
         return "never"
+    if reason in INSTANCE_REASONS:
+        return "on-relocation"
     d = today or datetime.date.today()
     month = d.month - 1 + RECHECK_MONTHS
     year, month = d.year + month // 12, month % 12 + 1
@@ -362,6 +391,54 @@ def block_record(entry, reason, note, issue):
         "note": note.strip(),
         "osm_id": entry.get("osm_id"),
     }
+
+
+def parse_block(comment):
+    r"""`/no-watch <reason>` plus a note -> (reason, note). Raises Refused with the syntax.
+
+    The reason must be one that `no-watch.json` allows; CI checks the same list.
+
+    >>> parse_block("/no-watch site-unreachable\nZertifikat abgelaufen, auch im Browser.")
+    ('site-unreachable', 'Zertifikat abgelaufen, auch im Browser.')
+    >>> parse_block("/no-watch anti-bot")[0]
+    'anti-bot'
+    >>> parse_block("/no-watch kaputt\nx")
+    Traceback (most recent call last):
+    wizard_bot.Refused: Den Grund `kaputt` kennt `no-watch.json` nicht. Erlaubt sind: `always-open`, `anti-bot`, `appointment-only`, `datacenter-block`, `delivery-platform-only`, `no-hours-on-page`, `site-unreachable`, `social-only`, `today-only`.
+    """
+    from validate_entries import REASONS as ALLOWED
+    m = BLOCK.match((comment or "").replace("\r\n", "\n"))
+    if not m:
+        raise Refused(
+            "Ich finde keinen Kommentar `/no-watch <grund>`. Schreib ihn so, Notiz darunter:\n\n"
+            "```\n/no-watch site-unreachable\nDas Zertifikat ist seit Oktober abgelaufen, "
+            "auch der Browser warnt.\n```\n\n"
+            "und setz danach das Label `no-watch`.")
+    reason, note = m.group(1), " ".join(m.group(2).split())
+    if reason not in ALLOWED:
+        raise Refused(f"Den Grund `{reason}` kennt `no-watch.json` nicht. Erlaubt sind: "
+                      + ", ".join(f"`{r}`" for r in sorted(ALLOWED)) + ".")
+    return reason, note
+
+
+def block_pr_body(record, issue):
+    return "\n".join([
+        f"**{record['name']}** kommt auf die Sperrliste, vorgeschlagen in #{issue}.",
+        "",
+        f"- Seite: {record['url']}",
+        f"- Grund: `{record['reason']}`",
+        f"- Wieder ansehen: `{record['recheck']}`",
+        "",
+        "Das steht künftig in `no-watch.json`:",
+        "",
+        fence(record["note"]),
+        "",
+        "Der Wizard konnte aus dieser Seite keinen Watch bauen. Grund und Notiz kommen aus dem "
+        "`/no-watch`-Kommentar im Issue, Name, Seite und OSM-Objekt aus dem Formular. Der Bot "
+        "hat die Seite für diesen Schritt **nicht** abgerufen.",
+        "",
+        f"Closes #{issue}",
+    ])
 
 
 def add_block(record, path="no-watch.json"):
@@ -769,6 +846,8 @@ def main():
                     help="correct the filter of an existing entry instead of creating one")
     ap.add_argument("--drop", action="store_true",
                     help="remove an existing entry and record the page in the block list")
+    ap.add_argument("--block", action="store_true",
+                    help="record a proposed page in the block list; reason from --comment-file")
     ap.add_argument("--sort", action="store_true",
                     help="switch sort_text_alphabetically on for the entries on this page")
     ap.add_argument("--entries", default="entries",
@@ -797,6 +876,12 @@ def main():
             # and everything the record needs beyond the reason and the note is already in it.
             f = {"url": check_url(raw.get("url")), "reason": raw.get("reason"),
                  "note": raw_section(body, "Was auf der Seite steht")}
+        elif args.block:
+            # Nothing is fetched, and the URL is not even resolved: a page that goes on the
+            # block list is often one that does not answer any more.
+            meta = check_meta(raw)
+            f = {"url": url_shape(raw.get("url")), "name": meta["name"],
+                 "osm_id": meta["osm_id"]}
         elif args.sort:
             # Nothing is fetched here either: a single fetch cannot show a rotation, the
             # relay's verdict on the diff is the evidence, and the reviewer reads it.
@@ -849,6 +934,44 @@ def main():
                 {"slug": slug, "name": entry.get("name"), "url": entry.get("url"),
                  "branch": f"weg/{slug}", "remove": f"entries/{hits[0]}",
                  "title": f"no-watch: {entry.get('name')}"}, ensure_ascii=False, indent=1))
+            return 0
+
+        if args.block:
+            reason, note = parse_block(
+                open(args.comment_file, encoding="utf-8", errors="replace").read()
+                if args.comment_file else "")
+            if len(note) < 30:
+                raise Refused(
+                    "Die Notiz unter `/no-watch` ist zu kurz. Sie ist das Einzige, was in einem "
+                    "halben Jahr noch erklärt, warum hier nichts beobachtet wird — schreib in "
+                    "einem Satz, was die Seite zeigt und wie du es geprüft hast. CI verlangt "
+                    "30 Zeichen.")
+            hits = watching(f["url"], args.entries)
+            if hits:
+                raise Refused(
+                    f"Diese Seite wird beobachtet: `entries/{hits[0]}`. Einen Watch entfernt "
+                    f"das Formular **Watch entfernen** mit dem Label `watch-weg`.")
+            record, due = blocked(f["url"], args.absences)
+            if record and not due:
+                raise Refused(
+                    f"Diese Seite steht schon auf der Sperrliste, seit "
+                    f"{record.get('established')}, Grund `{record.get('reason')}`. Es ist "
+                    f"nichts zu tun, das Issue kann zu.")
+            record = {
+                "url": f["url"], "name": f["name"], "reason": reason,
+                "established": datetime.date.today().isoformat(),
+                "recheck": recheck_date(reason),
+                "note": f"{note} (Issue #{args.issue})" if args.issue else note,
+                "osm_id": f["osm_id"],
+            }
+            import cd_export
+            slug = cd_export.slugify(f["name"], f["url"])
+            write(args.out, "no-watch.json", add_block(record, args.absences))
+            write(args.out, "pr-body.md", block_pr_body(record, args.issue))
+            write(args.out, "meta.json", json.dumps(
+                {"slug": slug, "name": f["name"], "url": f["url"],
+                 "branch": f"no-watch/{slug}", "title": f"no-watch: {f['name']}"},
+                ensure_ascii=False, indent=1))
             return 0
 
         if args.sort:
@@ -984,12 +1107,19 @@ def main():
         return 0
     except Refused as e:
         label = ("watch-weg" if args.drop else "sortieren" if args.sort
-                 else "filter-fix" if args.fix else "wizard")
+                 else "no-watch" if args.block else "filter-fix" if args.fix else "wizard")
+        hint = ""
+        if label == "wizard":
+            # The one way out the wizard path otherwise leaves unsaid: a page that cannot be
+            # watched still deserves a record, or the next person proposes it again.
+            hint = ("\n\nGibt die Seite keinen Watch her, gehört sie auf die Sperrliste. Ein "
+                    "Maintainer schreibt dafür einen Kommentar `/no-watch <grund>` mit einer "
+                    "Notiz darunter und setzt das Label `no-watch`.")
         write(args.out, "comment.md",
               f"Das kann ich so nicht bauen.\n\n{e}\n\n"
               f"Ändere das Issue und setz das Label "
               f"`{label}` "
-              f"neu, dann probiere ich es noch einmal.")
+              f"neu, dann probiere ich es noch einmal.{hint}")
         print(f"refused: {e}", file=sys.stderr)
         return 3
 

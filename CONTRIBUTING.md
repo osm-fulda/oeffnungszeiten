@@ -217,6 +217,22 @@ Seite ruft er **nicht** ab: was auf ihr steht, hast du gelesen, und der Pull Req
 an der das jemand nachliest. Liegen auf einer Seite zwei Watches, sagt er ab — dann trägt sie Zeiten
 für zwei Betriebe, und welcher wegfällt, ist keine Frage für ein Formular.
 
+**Nach einem Wizard-Fehlschlag** gibt es noch keinen Eintrag, den man entfernen könnte. Die Seite
+kommt trotzdem auf die Sperrliste, sonst schlägt sie der Nächste wieder vor. Dafür schreibt der
+Maintainer oder wer das Issue eröffnet hat einen Kommentar, Grund in der ersten Zeile, Notiz
+darunter:
+
+```
+/no-watch site-unreachable
+Das TLS-Zertifikat ist abgelaufen, auch der Browser warnt. Geprüft am 10.11.2026.
+```
+
+Danach setzt ein Maintainer das Label `no-watch`. Der Bot nimmt Name, Seite und OSM-Objekt aus dem
+Formular, Grund und Notiz aus dem letzten `/no-watch`-Kommentar, und baut den Pull Request. Erlaubt
+sind alle Gründe, die `no-watch.json` kennt, also auch `anti-bot` und `datacenter-block`: das Label
+setzt immer ein Maintainer. Diese beiden bekommen `recheck: on-relocation`, `always-open` bekommt
+`never`, alle anderen ein Datum in sechs Monaten. Auch hier ruft der Bot die Seite nicht ab.
+
 Meldet ein Watch `⟳ Nur umsortiert`, hat die Nachricht selbst den Link
 [Umsortierung abstellen](../../issues/new?template=umsortiert.yml): Seite und Diff sind schon
 eingetragen. Das Formular hängt `umsortiert` an, ein Maintainer setzt `sortieren`, und der Bot
