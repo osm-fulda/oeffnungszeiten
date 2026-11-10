@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-10",
+ "captured_sample": "Öffnungszeiten Montag – Freitag 8:30 – 17:30 Uhr Samstag 9:00 – 13:00 Uhr",
+ "filter": "xpath:(//*[normalize-space(.)=\"Hauptfirmensitz\"]/following::strong[contains(normalize-space(.),\"Öffnungszeiten\")])[1]/parent::*/parent::*",
+ "lang": "de",
+ "name": "Sanitätshaus Keil GmbH",
+ "note": "Die Kontaktseite listet fünf Standorte; der Filter nimmt den Block unter \"Hauptfirmensitz\". Das JSON-LD nennt dieselben Zeiten, ist aber nur Rückfall (FILTERS.md).",
+ "osm_id": "node/13633832781",
+ "schema": 1,
+ "tags": [
+  "fulda-medical_supply"
+ ],
+ "url": "https://www.keil-san.de/kontakt/"
+}
