@@ -1,0 +1,13 @@
+{
+ "added": "2026-11-10",
+ "captured_sample": "Öffnungzeiten: Mo – Do. 07:00 bis 17:30 Uhr Fr. 07:00 bis 17:00 Uhr (Mittagspause 12:30 bis 13:30 Uhr)",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnung\")])/parent::*",
+ "lang": "de",
+ "name": "Druckerei Quell",
+ "osm_id": "node/14364682190",
+ "schema": 1,
+ "tags": [
+  "fulda-printer"
+ ],
+ "url": "https://www.druckerei-quell.de"
+}
