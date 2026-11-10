@@ -5,7 +5,8 @@
  "filter": "xpath:(//span[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "lang": "de",
  "name": "Turm Automobile",
- "note": "Die Seite ist eine JavaScript-App, daher html_webdriver. Die Kopfzeile sagt nur \"Mo-Fr: 09-18 Uhr\"; der Block auf /kontakt nennt auch Sa 10:00-14:00 und stimmt mit dem JSON-LD überein. Noch nicht in OSM.",
+ "note": "Die Seite ist eine JavaScript-App, daher html_webdriver. Die Kopfzeile sagt nur \"Mo-Fr: 09-18 Uhr\"; der Block auf /kontakt nennt auch Sa 10:00-14:00 und stimmt mit dem JSON-LD überein.",
+ "osm_id": "node/14365560872",
  "schema": 1,
  "tags": [
   "fulda-car"

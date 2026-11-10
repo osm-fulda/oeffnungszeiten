@@ -4,7 +4,8 @@
  "filter": "xpath://h4[contains(concat(\" \",normalize-space(@class),\" \"),\" location-name \")]/parent::*",
  "lang": "de",
  "name": "Hertz",
- "note": "Stationsseite ZEEC60, Weichselstraße 17. Die Stadtseite /p/mietwagen/deutschland/fulda zeigt die Zeiten nur im JSON-LD und in der Karte. Die Koordinaten der Seite (50.4473, 9.61117) liegen nicht in Fulda, also nicht übernehmen. Noch nicht in OSM. text_only nur, weil Hertz die Zeiten ohne Doppelpunkt schreibt (\"0800-1800\") und die Zeiterkennung das nicht als Uhrzeit liest; der Block trägt echte Zeiten, und der Watch meldet jede Änderung daran.",
+ "note": "Stationsseite ZEEC60, Weichselstraße 17. Die Stadtseite /p/mietwagen/deutschland/fulda zeigt die Zeiten nur im JSON-LD und in der Karte. Die Koordinaten der Seite (50.4473, 9.61117) liegen nicht in Fulda, also nicht übernehmen. text_only nur, weil Hertz die Zeiten ohne Doppelpunkt schreibt (\"0800-1800\") und die Zeiterkennung das nicht als Uhrzeit liest; der Block trägt echte Zeiten, und der Watch meldet jede Änderung daran.",
+ "osm_id": "node/14365560873",
  "schema": 1,
  "tags": [
   "fulda-car_rental"
