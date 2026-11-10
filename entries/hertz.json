@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-10",
+ "captured_sample": "Fulda - Weichselstrasse17 Mo-Fr 0800-1800, Sa 0900-1200, Su closed Weichselstrasse 17, Fulda, 36043, Germany 49-0-661-47033",
+ "filter": "xpath://h4[contains(concat(\" \",normalize-space(@class),\" \"),\" location-name \")]/parent::*",
+ "lang": "de",
+ "name": "Hertz",
+ "note": "Stationsseite ZEEC60, Weichselstraße 17. Die Stadtseite /p/mietwagen/deutschland/fulda zeigt die Zeiten nur im JSON-LD und in der Karte. Die Koordinaten der Seite (50.4473, 9.61117) liegen nicht in Fulda, also nicht übernehmen. text_only nur, weil Hertz die Zeiten ohne Doppelpunkt schreibt (\"0800-1800\") und die Zeiterkennung das nicht als Uhrzeit liest; der Block trägt echte Zeiten, und der Watch meldet jede Änderung daran.",
+ "osm_id": "node/14365560873",
+ "schema": 1,
+ "tags": [
+  "fulda-car_rental"
+ ],
+ "text_only": true,
+ "url": "https://www.hertz.de/p/mietwagen/deutschland/fulda/fulda"
+}

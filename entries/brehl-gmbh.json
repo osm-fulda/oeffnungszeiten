@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-10",
+ "captured_sample": "Montag – Donnerstag : 8:00 – 17:00Uhr Freitag: 8:00 – 13:00 Uhr",
+ "filter": "xpath:(//span[normalize-space(.)=\"ÖFFNUNGSZEITEN\"]/following::div[contains(@class,\"elementor-widget-text-editor\")])[1]",
+ "lang": "de",
+ "name": "Brehl GmbH",
+ "note": "Die Kontaktseite nennt fünf Standorte (Zentrale Fulda, Weichselstr. 20, und vier Niederlassungen) und darunter einen einzigen Block \"ÖFFNUNGSZEITEN\" für alle. Das JSON-LD der Seite nennt dieselben Zeiten.",
+ "osm_id": "node/14365560874",
+ "schema": 1,
+ "tags": [
+  "fulda-plumber"
+ ],
+ "url": "https://brehl.de/kontakt/"
+}
