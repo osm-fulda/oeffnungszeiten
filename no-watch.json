@@ -3042,7 +3042,8 @@
    "reason": "appointment-only",
    "established": "2026-11-10",
    "recheck": "2027-11-10",
-   "note": "Die Kontaktseite sagt \"Unsere Ausstellung ist nur nach vorheriger Terminvereinbarung zugänglich\" und nennt keine Zeiten; die Startseite auch nicht. Noch nicht in OSM."
+   "note": "Die Kontaktseite sagt \"Unsere Ausstellung ist nur nach vorheriger Terminvereinbarung zugänglich\" und nennt keine Zeiten; die Startseite auch nicht.",
+   "osm_id": "node/14365575935"
   }
  ]
 }
