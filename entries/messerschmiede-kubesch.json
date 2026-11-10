@@ -1,7 +1,7 @@
 {
  "added": "2026-11-10",
- "captured_sample": "Montag bis Freitag 10:00 bis 12:00 Uhr 15:00 bis 18:00 Uhr Samstag 10:00 bis 14:00 Uhr Montag bis Freitag 10:00 bis 12:00 Uhr 15:00 bis 18:00 Uhr Samstag 10:00 bis 14:00 Uhr",
- "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" unformatted-opening-widget__content \")]",
+ "captured_sample": "Montag bis Freitag 10:00 bis 12:00 Uhr 15:00 bis 18:00 Uhr Samstag 10:00 bis 14:00 Uhr",
+ "filter": "xpath:(//*[contains(concat(\" \",normalize-space(@class),\" \"),\" unformatted-opening-widget__content \")])[1]",
  "lang": "de",
  "name": "Messerschmiede Kubesch",
  "osm_id": "node/11640719627",
