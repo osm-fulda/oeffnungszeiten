@@ -1,0 +1,13 @@
+{
+ "added": "2026-11-10",
+ "captured_sample": "Mo - Fr: 07:00 - 16:00 UhrSa: geschlossen",
+ "filter": "xpath://*[contains(concat(\" \",normalize-space(@class),\" \"),\" liOpening \")]",
+ "lang": "de",
+ "name": "Eisenbiegerei Schmitt GmbH",
+ "osm_id": "node/14364326780",
+ "schema": 1,
+ "tags": [
+  "fulda-metal_construction"
+ ],
+ "url": "https://www.eisenbiegerei-schmitt.de"
+}
