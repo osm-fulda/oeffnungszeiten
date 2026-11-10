@@ -1,0 +1,104 @@
+# "no-watch" on a proposal issue -> branch, block-list record, pull request.
+#
+# The path for the page the wizard could not build: a fetch that fails, a page without hours.
+# Without it the issue stays open, and the next person proposes the same page again. One job,
+# like wizard-drop.yml, because nothing is fetched: the record comes from the issue form and
+# from a `/no-watch <reason>` comment, and the pull request is where that judgement is checked.
+#
+# Two gates. The label says a maintainer decided. The comment carries the reason and the note,
+# and only the person who opened the issue or one of us may write the one that counts — the
+# label endorses a comment, so a passer-by must not be able to put words under it.
+name: wizard-block
+
+on:
+  issues:
+    types: [labeled]
+
+permissions: {}
+
+jobs:
+  record:
+    if: github.event.label.name == 'no-watch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      # A pull request opened with GITHUB_TOKEN starts no further workflow, so the check runs
+      # here. A PAT in WIZARD_PR_TOKEN gets the pull request its own CI run, with no change here.
+      - uses: actions/checkout@v7
+        with:
+          token: ${{ secrets.WIZARD_PR_TOKEN || github.token }}
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      # Standard library only: no page is parsed, so lxml is not needed.
+      - name: the issue and the last /no-watch comment, as files
+        env:
+          BODY: ${{ github.event.issue.body }}
+          GH_TOKEN: ${{ github.token }}
+          AUTHOR: ${{ github.event.issue.user.login }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          printf '%s' "$BODY" > body.md
+          # The last matching comment wins, so a corrected reason needs no deleted comment.
+          python3 - <<'PY'
+          import json, os, subprocess
+          repo, num = os.environ["GITHUB_REPOSITORY"], os.environ["ISSUE"]
+          raw = subprocess.run(
+              ["gh", "api", "--paginate", "--slurp", f"repos/{repo}/issues/{num}/comments"],
+              check=True, capture_output=True, text=True).stdout
+          comments = [c for page in json.loads(raw) for c in page]
+          ok = [c["body"] for c in comments
+                if c["body"].lstrip().startswith("/no-watch")
+                and (c["user"]["login"] == os.environ["AUTHOR"]
+                     or c["author_association"] in ("OWNER", "MEMBER", "COLLABORATOR"))]
+          open("block.md", "w", encoding="utf-8").write(ok[-1] if ok else "")
+          PY
+      - name: build the record
+        continue-on-error: true          # a refusal is an answer and still has a comment to post
+        run: |
+          PYTHONPATH=scripts python3 scripts/wizard_bot.py emit --block \
+            --body-file body.md --comment-file block.md \
+            --issue "${{ github.event.issue.number }}" --out out
+      - name: nothing to open
+        id: refused
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ ! -f out/meta.json ]; then
+            gh issue comment "${{ github.event.issue.number }}" \
+              --repo "${{ github.repository }}" --body-file out/comment.md
+            echo "stop=yes" >> "$GITHUB_OUTPUT"
+          fi
+      - name: branch, commit, pull request
+        if: steps.refused.outputs.stop != 'yes'
+        env:
+          GH_TOKEN: ${{ secrets.WIZARD_PR_TOKEN || github.token }}
+          REPO: ${{ github.repository }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          BRANCH=$(python3 -c "import json;print(json.load(open('out/meta.json'))['branch'])")
+          TITLE=$(python3 -c "import json;print(json.load(open('out/meta.json'))['title'])")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          cp out/no-watch.json no-watch.json
+          python3 scripts/validate_entries.py
+          git add no-watch.json
+          git commit -m "$TITLE"
+          git push --force origin "HEAD:$BRANCH"
+          URL=$(gh pr list --head "$BRANCH" --state open --json url -q '.[0].url')
+          if [ -z "$URL" ]; then
+            URL=$(gh pr create --base main --head "$BRANCH" --title "$TITLE" \
+                    --body-file out/pr-body.md) || URL=""
+          fi
+          if [ -n "$URL" ]; then
+            gh issue comment "$ISSUE" --repo "$REPO" \
+              --body "Pull Request steht: $URL. Abgerufen habe ich die Seite dafür nicht — Grund und Notiz stammen aus dem \`/no-watch\`-Kommentar."
+          else
+            python3 scripts/wizard_bot.py compare --repo "$REPO" --branch "$BRANCH" \
+              --title "$TITLE" --body-file out/pr-body.md --out out
+            gh issue comment "$ISSUE" --repo "$REPO" --body-file out/compare.md
+          fi
