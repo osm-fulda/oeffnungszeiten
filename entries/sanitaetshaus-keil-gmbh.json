@@ -1,0 +1,13 @@
+{
+ "added": "2026-11-10",
+ "captured_sample": "Monday, Tuesday, Wednesday, Thursday, Friday 08:30-17:30 · Saturday 09:00-13:00",
+ "filter": "json:$..openingHoursSpecification",
+ "lang": "de",
+ "name": "Sanitätshaus Keil GmbH",
+ "osm_id": "node/13633832781",
+ "schema": 1,
+ "tags": [
+  "fulda-medical_supply"
+ ],
+ "url": "https://www.keil-san.de/kontakt/"
+}
