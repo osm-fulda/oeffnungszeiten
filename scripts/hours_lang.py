@@ -150,6 +150,36 @@ def has_time(text):
     return bool(time_matches(text))
 
 
+# Hours that need no clock. A fuel station "durchgehend geöffnet" is 24/7, a practice "nur
+# nach Vereinbarung" is by appointment, and a change of either sentence is a change of hours,
+# so a watch that captures one is not blind. Kept narrow on purpose: "Reservierungen auf
+# Anfrage" sits in half the restaurant footers and says nothing about opening.
+HOURS_PHRASE_RE = re.compile(
+    r'durchgehend\s+ge(?:ö|oe)ffnet|rund\s+um\s+die\s+uhr|24\s*(?:h|std\.?|stunden)\s+'
+    r'ge(?:ö|oe)ffnet|\b24\s*/\s*7\b|\bnur\s+(?:auf|nach)\s+(?:anfrage|vereinbarung|absprache)'
+    r'|\bnach\s+(?:telefonischer\s+|vorheriger\s+)?vereinbarung|\bopen\s+24\s*h'
+    r'|\bby\s+appointment(?:\s+only)?', re.I)
+
+
+def hours_phrase(text):
+    """The first clock-free hours statement in `text`, or None.
+
+    >>> hours_phrase("Öffnungszeiten: durchgehend geöffnet")
+    'durchgehend geöffnet'
+    >>> hours_phrase("Öffnungszeiten Wirtshaus:Aktuell nur auf Anfrage.")
+    'nur auf Anfrage'
+    >>> hours_phrase("Gruppenreservierungen auf Anfrage möglich") is None
+    True
+    """
+    m = HOURS_PHRASE_RE.search(clean(text))
+    return m.group(0) if m else None
+
+
+def has_hours(text):
+    """A time, or a sentence that states hours without one. What 'not blind' means."""
+    return has_time(text) or hours_phrase(text) is not None
+
+
 # German inflects it ("T\u00e4gliche \u00d6ffnungszeiten"), so match the stem \u2014 a trailing \b drops
 # every form but the bare adverb.
 EVERYDAY_RE = re.compile(

@@ -130,6 +130,11 @@ DOCS = "https://github.com/osm-fulda/oeffnungszeiten/blob/main/docs/repair.md"
 # "fetch error: Exception:" alone covers a dead server, an XHTML page and an elementpath assert,
 # and each of those has a different fix.
 ACTIONS = (
+    # The audit's own access failed, not the page: without this the "Connection refused" in
+    # it would send the reader off to test a business website that is fine.
+    ("API error:",
+     "Das Audit hat diesen Watch in der changedetection-API nicht erreicht - kein Befund ueber "
+     "die Seite. Audit noch einmal laufen lassen.", None),
     ("fetch error: Error - 403",
      "Erst die Kennung: antwortet die Seite von der VPS mit aktuellem Chrome-UA mit 200, ist "
      "requests.default_ua veraltet. Sonst von hier und von der VPS vergleichen - nur die VPS "
@@ -139,6 +144,14 @@ ACTIONS = (
      "Die Seite gibt es nicht mehr. Nachfolger suchen, sonst Watch entfernen.",
      "404-the-page-is-gone"),
     ("HTTP error code 404", None, "404-the-page-is-gone"),
+    # 402 is not a block: the site builder or hoster has switched the page off, usually for an
+    # unpaid bill. Measured on a Base44 site: "is currently unavailable", from anywhere.
+    ("HTTP error code 402",
+     "Keine Sperre: der Anbieter der Seite (Baukasten, Hoster) hat sie abgeschaltet, meist "
+     "wegen offener Rechnung. Seite im Browser ansehen; bleibt es zwei Durchgaenge, "
+     "andere Seite suchen oder Watch entfernen - und nachsehen, ob es den Betrieb noch gibt.",
+     "402-the-site-is-switched-off"),
+    ("Error - 402", None, "402-the-site-is-switched-off"),
     ("fetch error: Error - 5",
      "Serverfehler beim Anbieter. Einen Durchgang abwarten; bleibt es, andere Seite suchen.",
      "5xx-the-server-fails"),
@@ -154,6 +167,30 @@ ACTIONS = (
      "Der Filter trifft nichts mehr. Meist wurde die Seite umgebaut, manchmal braucht sie jetzt "
      "JavaScript oder nur lxml trifft: erst validate_entries.py --live, dann "
      "filter_wizard.py --uuid.", "no-filters-were-found"),
+    # What follows "Caused by" decides the fix, so each cause gets its own move. The browser
+    # backend words the same causes as net::ERR_*.
+    ("Connection refused",
+     "Der Server lehnt die Verbindung ab. Oft laeuft nur HTTPS nicht mehr: dieselbe Adresse "
+     "mit http:// testen und die url im Eintrag umstellen; antwortet keine, Watch entfernen.",
+     "no-answer-max-retries-dns-tls"),
+    ("ERR_CONNECTION_REFUSED", None, "no-answer-max-retries-dns-tls"),
+    ("NameResolutionError",
+     "Der Name loest nicht mehr auf - Domain abgelaufen oder umgezogen. Bleibt es zwei "
+     "Durchgaenge, Nachfolger suchen, sonst Watch entfernen.",
+     "no-answer-max-retries-dns-tls"),
+    ("ERR_NAME_NOT_RESOLVED",
+     "Der Name loest nicht mehr auf - Domain abgelaufen oder umgezogen. Bleibt es zwei "
+     "Durchgaenge, Nachfolger suchen, sonst Watch entfernen.",
+     "no-answer-max-retries-dns-tls"),
+    ("SSLError",
+     "Das Zertifikat taugt nicht (abgelaufen, falscher Name). Mit http:// testen; antwortet "
+     "das, url umstellen, sonst einen Durchgang abwarten.", "no-answer-max-retries-dns-tls"),
+    ("ERR_CERT_",
+     "Das Zertifikat taugt nicht (abgelaufen, falscher Name). Mit http:// testen; antwortet "
+     "das, url umstellen, sonst einen Durchgang abwarten.", "no-answer-max-retries-dns-tls"),
+    ("timed out",
+     "Der Server antwortet nicht rechtzeitig. Einen Durchgang abwarten; bleibt es, von hier "
+     "und von der VPS pruefen.", "no-answer-max-retries-dns-tls"),
     ("Max retries exceeded",
      "Der Server antwortet gar nicht (aus, DNS oder Zertifikat). Von hier und von der VPS "
      "pruefen; bleibt es, Watch entfernen.", "no-answer-max-retries-dns-tls"),
@@ -206,6 +243,7 @@ ACTIONS = (
 GUIDE = {
     "403-the-host-refuses": "Anleitung Abruf verweigert",
     "404-the-page-is-gone": "Anleitung Seite weg",
+    "402-the-site-is-switched-off": "Anleitung Seite abgeschaltet",
     "5xx-the-server-fails": "Anleitung Serverfehler",
     "no-answer-max-retries-dns-tls": "Anleitung Server antwortet nicht",
     "exception-the-parser-fails": "Anleitung Exception",
@@ -230,6 +268,15 @@ def match(issues):
     'no-answer-max-retries-dns-tls'
     >>> match(["fetch error: Exception:"])[1]
     'exception-the-parser-fails'
+    >>> match(["fetch error: Error - Request returned a HTTP error code 402 "
+    ...        "(Access denied or blocked)"])[1]
+    '402-the-site-is-switched-off'
+    >>> match(["fetch error: Exception: HTTPSConnectionPool(host='x', port=443): Max retries "
+    ...        "exceeded with url: / (Caused by NewConnectionError: Failed to establish a new "
+    ...        "connection: [Errno 111] Connection refused)"])[0][:38]
+    'Der Server lehnt die Verbindung ab. Of'
+    >>> match(["API error: <urlopen error [Errno 111] Connection refused>"])[1] is None
+    True
     >>> match(["something new"])
     (None, None)
     """
