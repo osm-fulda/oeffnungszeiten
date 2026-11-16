@@ -1,0 +1,13 @@
+{
+ "added": "2026-11-16",
+ "captured_sample": "Gersfeld (Rhön), Berliner Str. 3 066549180060 info@tierarztpraxis-wasserkuppe.de Mo, Di, Mi, Do: 9 - 11 Uhr Mo, Di, Mi: 16 - 18 Uhr Fr: 10-15 Uhr",
+ "filter": "xpath://h4[contains(concat(\" \",normalize-space(@class),\" \"),\" et_pb_module_header \")]",
+ "lang": "de",
+ "name": "Tierarztpraxis Wasserkuppe",
+ "osm_id": "node/14383726772",
+ "schema": 1,
+ "tags": [
+  "fulda-veterinary"
+ ],
+ "url": "https://www.tierarztpraxis-wasserkuppe.de/"
+}
