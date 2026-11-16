@@ -1,0 +1,13 @@
+{
+ "added": "2026-11-16",
+ "captured_sample": "Mo 0–24 Uhr Di 0–24 Uhr Mi 0–24 Uhr Do 0–24 Uhr Fr 0–24 Uhr Sa 0–24 Uhr So 0–24 Uhr",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" ci__card-top \")]/following-sibling::*[1]",
+ "lang": "de",
+ "name": "GetFit Gersfeld",
+ "osm_id": "node/14383795801",
+ "schema": 1,
+ "tags": [
+  "fulda-fitness-centre"
+ ],
+ "url": "https://www.getfitgroup.de/studios/gersfeld"
+}
