@@ -32,7 +32,7 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v7
-      - uses: updatecli/updatecli-action@v3
+      - uses: updatecli/updatecli-action@v3.10.0
       - run: updatecli diff --config updatecli/updatecli.d --values updatecli/values.yaml
 
   apply:
@@ -43,5 +43,5 @@ jobs:
       pull-requests: write   # open or update the pull requests
     steps:
       - uses: actions/checkout@v7
-      - uses: updatecli/updatecli-action@v3
+      - uses: updatecli/updatecli-action@v3.10.0
       - run: updatecli apply --config updatecli/updatecli.d --values updatecli/values.yaml
