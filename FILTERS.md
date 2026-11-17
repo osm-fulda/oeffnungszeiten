@@ -423,7 +423,7 @@ instance is not reachable, so run one yourself, pick the block by clicking, and 
 built:
 
 ```bash
-docker run --rm -p 5000:5000 -v cd-data:/datastore ghcr.io/dgtlmoon/changedetection.io:0.55.8
+docker run --rm -p 5000:5000 -v cd-data:/datastore ghcr.io/dgtlmoon/changedetection.io:0.70.3
 python3 scripts/cd_export.py --split entries --base-url http://localhost:5000
 ```
 
