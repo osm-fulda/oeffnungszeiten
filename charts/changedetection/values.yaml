@@ -1,7 +1,7 @@
 # -- Image for the watcher itself. Pin a tag; updatecli raises the bump PRs.
 image:
   repository: ghcr.io/dgtlmoon/changedetection.io
-  tag: "0.55.8"
+  tag: "0.70.3"
   # -- Optional. When set, the image is pulled by digest and `tag` becomes documentation.
   digest: ""
   pullPolicy: IfNotPresent

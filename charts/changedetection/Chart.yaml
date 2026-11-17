@@ -3,4 +3,4 @@ name: changedetection
 description: Opening-hours monitor — changedetection.io plus a headless browser, reconciled from entries/ in git
 type: application
 version: 0.1.0
-appVersion: "0.55.8"
+appVersion: "0.70.3"

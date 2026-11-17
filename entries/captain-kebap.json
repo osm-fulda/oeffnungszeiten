@@ -1,10 +1,10 @@
 {
  "added": "2026-07-25",
  "captured_sample": "Öffnungszeiten Lieferung Abholung Montag 11:00 - 22:00 11:00 - 22:00 Dienstag 11:00 - 22:00 11:00 - 22:00 Mittwoch 11:00 - 22:00 11:00 - 22:00 Donnerstag 11:00 ",
- "fetch_backend": "system",
+ "fetch_backend": "html_webdriver",
  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Captain Kebap",
- "note": "2026-08-06: zurück auf die sichtbare Öffnungszeiten-Tabelle (Liefer- und Abholspalte). Teilt die Seite mit captain-kebap-lieferservice.",
+ "note": "2026-08-06: zurück auf die sichtbare Öffnungszeiten-Tabelle (Liefer- und Abholspalte). Teilt die Seite mit captain-kebap-lieferservice. 2026-11-17: Browser statt requests: ab changedetection 0.70.3 (urllib3 2) antwortet Cloudflare dem einfachen Abruf mit 403, 0.55.8 bekam 200 mit gleicher Kennung. Der Browser bekommt 200, gleicher Text.",
  "osm_id": "node/12864446462",
  "schema": 1,
  "tags": [
