@@ -84,6 +84,55 @@ kubectl -n changedetection scale deploy/changedetection --replicas=0
 kubectl -n changedetection scale deploy/changedetection --replicas=1
 ```
 
+## Upgrading changedetection
+
+`.github/workflows/updatecli.yml` checks the pinned images every Tuesday. When one moved, it
+rewrites the branch `deps/images` and opens or updates the issue labelled `deps` with the diff
+and a compare link. Opening the pull request is a click, on purpose: Actions may not open one
+here, and the click is also what makes CI run.
+
+A browser digest can be merged as it comes. A changedetection version cannot, without a look:
+it changes how a fetched page becomes text, and every watch whose text changes alerts once after
+the merge. Measure that first, on the laptop, never from the VPS, where a sweep of every watched
+site makes shared hosters block the address. Run both versions side by side on one copy of the
+datastore, notifications stripped, and let both check everything once:
+
+```bash
+kubectl -n changedetection exec deploy/changedetection -c changedetection -- \
+    tar czf - -C /datastore --exclude='*.png' --exclude='*.jpg' . > ds.tgz
+mkdir ds && tar xzf ds.tgz -C ds && rm -f ds/before-update-*.tar.gz
+python3 - <<'PY'                                   # no notification may leave the copy
+import json; p = "ds/changedetection.json"; d = json.load(open(p))
+d["settings"]["application"]["notification_urls"] = []; json.dump(d, open(p, "w"))
+PY
+cp -a ds ds-old && cp -a ds ds-new && podman network create cdtest
+for v in old new; do
+  podman run -d --rm --name browser-$v --network cdtest dgtlmoon/sockpuppetbrowser
+done
+podman run -d --rm --name cd-old --network cdtest -p 5010:5000 \
+    -e PLAYWRIGHT_DRIVER_URL=ws://browser-old:3000 -v $PWD/ds-old:/datastore:Z \
+    ghcr.io/dgtlmoon/changedetection.io:<running>
+podman run -d --rm --name cd-new --network cdtest -p 5011:5000 \
+    -e PLAYWRIGHT_DRIVER_URL=ws://browser-new:3000 -v $PWD/ds-new:/datastore:Z \
+    ghcr.io/dgtlmoon/changedetection.io:<candidate>
+curl -H "x-api-key: $KEY" 'localhost:5010/api/v1/watch?recheck_all=1'    # same for 5011
+```
+
+`$KEY` is `api_access_token` from `ds/changedetection.json`. Wait until `queue_size` in
+`/api/v1/systeminfo` is 0 on both, then compare per watch whether a snapshot newer than the
+recheck exists, and `last_error`:
+
+| outcome | meaning |
+|---|---|
+| changed on both | the page changed; it alerts either way |
+| changed on the candidate only | the upgrade changes this watch's text; it alerts once after the merge |
+| error on the candidate only | the upgrade breaks this watch; fix the entry in the same pull request |
+
+The last row is the one to act on. Going from 0.55.8 to 0.70.3, urllib3 1.26 became 2.8 and
+Cloudflare answered the new client with 403 where the old one got 200, same address, same user
+agent: two watches moved to `fetch_backend: html_webdriver` in the upgrade pull request. Name
+the expected one-time alerts in that pull request, so nobody reads them as a broken filter.
+
 ## Secrets
 
 The API token is mounted into the sync CronJob. Create it in-cluster, never in git:

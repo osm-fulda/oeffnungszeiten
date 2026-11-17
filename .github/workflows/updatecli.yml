@@ -1,0 +1,88 @@
+# Weekly: are the pinned images still current? updatecli raises the pins in the working tree, and
+# if anything moved the result goes to a branch and an issue carries the compare link.
+#
+# Actions may not open a pull request in this repository (a setting, left off on purpose), so the
+# click that turns the branch into one is a person's, as with the wizard's /pick. That click also
+# buys the CI run that a pull request opened with GITHUB_TOKEN would never trigger.
+#
+# Nothing here deploys. A changedetection bump changes how pages are read, and the issue says how
+# to measure that before the merge (docs/changedetection.md, "Upgrading changedetection").
+name: updatecli
+
+on:
+  schedule:
+    - cron: '23 4 * * 2'     # Tuesday: the Monday report has been read, the week is still young
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency: updatecli
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # push the deps/images branch
+      issues: write          # open or update the one issue that points at it
+    env:
+      BRANCH: deps/images
+      LABEL: deps
+    steps:
+      - uses: actions/checkout@v7
+      - uses: updatecli/updatecli-action@v2
+      - name: raise the pins
+        run: updatecli pipeline apply --config updatecli.d/
+
+      - name: branch and issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then
+            echo "every pin is current"
+            exit 0
+          fi
+
+          version() { sed -n 's/^appVersion: "\(.*\)"$/\1/p'; }
+          old=$(git show HEAD:charts/changedetection/Chart.yaml | version)
+          new=$(version < charts/changedetection/Chart.yaml)
+          if [ "$old" != "$new" ]; then
+            title="changedetection $old -> $new"
+          else
+            title="sockpuppetbrowser: neuer Digest"
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git commit -qam "deps: $title"
+          # One branch, rewritten each week: a bump nobody merged is replaced by the newer one
+          # instead of piling up next to it.
+          git push -f origin "$BRANCH"
+
+          {
+            echo "Der Branch \`$BRANCH\` ist vorbereitet:"
+            echo
+            echo '```diff'
+            git diff -U0 HEAD~1 HEAD | grep -E '^[-+][^-+]'
+            echo '```'
+            echo
+            echo "**Pull Request anlegen:** https://github.com/$GITHUB_REPOSITORY/compare/main...$BRANCH?expand=1"
+            if [ "$old" != "$new" ]; then
+              echo
+              echo "Vor dem Merge den Probelauf machen: alte und neue Version auf einer Kopie des"
+              echo "Datastores, ohne Benachrichtigungen, siehe"
+              echo "[Upgrading changedetection](https://github.com/$GITHUB_REPOSITORY/blob/main/docs/changedetection.md#upgrading-changedetection)."
+              echo "Was sich nur unter $new aendert, meldet sich nach dem Merge einmal in Matrix."
+              echo
+              echo "Release Notes: https://github.com/dgtlmoon/changedetection.io/releases"
+            fi
+          } > body.md
+
+          gh label create "$LABEL" --color ededed --description "Image-Updates von updatecli" --force
+          issue=$(gh issue list --label "$LABEL" --state open --json number -q '.[0].number')
+          if [ -n "$issue" ]; then
+            gh issue edit "$issue" --title "$title" --body-file body.md
+            gh issue comment "$issue" --body "Branch \`$BRANCH\` neu geschrieben: $title"
+          else
+            gh issue create --title "$title" --label "$LABEL" --body-file body.md
+          fi
