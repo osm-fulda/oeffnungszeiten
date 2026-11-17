@@ -38,6 +38,10 @@ jobs:
       # judge decides what the weekly report calls broken. A notice watched on purpose
       # (`text_only`) must not come back as RED every Monday.
       - run: PYTHONPATH=scripts python3 -m doctest scripts/watch_audit.py
+      # match() picks the move each finding is sent with. A needle placed below a more general
+      # one never fires, and nothing else would notice.
+      - run: PYTHONPATH=scripts python3 -m doctest scripts/audit_report.py
+      - run: python3 -m doctest scripts/hours_lang.py
       # The bot finds a field by its heading, and the heading GitHub renders is the form's
       # `label`. Renaming one therefore breaks the parsing in silence: the issue looks right and
       # the bot reads an empty URL. One pass over the forms says whether every heading it knows
