@@ -1,0 +1,87 @@
+---
+name: "changedetection.io"
+
+# One pipeline per image, so one pull request per image: a browser digest can be merged as it
+# comes, a changedetection version needs the probe run first (docs/changedetection.md).
+
+scms:
+  default:
+    kind: github
+    spec:
+      owner: '{{ .github.owner }}'
+      repository: '{{ .github.repository }}'
+      branch: '{{ .github.branch }}'
+      user: '{{ .github.user }}'
+      email: '{{ .github.email }}'
+      token: '{{ requiredEnv .github.token }}'
+      username: '{{ requiredEnv .github.username }}'
+      commitmessage:
+        type: deps
+        hidecredit: true
+
+sources:
+  changedetection:
+    name: "Get latest changedetection.io version tag"
+    kind: dockerimage
+    spec:
+      image: "ghcr.io/dgtlmoon/changedetection.io"
+      versionFilter:
+        kind: "semver"
+        pattern: "*"
+
+# The chart pins the image; appVersion and the docker line in FILTERS.md only name the version,
+# but a bump that leaves them behind makes the next reader believe the older one still runs.
+#
+# Every target is a regex on the file, not a yaml target. The yaml engines rewrite the document:
+# the default one drops the quotes (an unquoted 0.71 is a float, and the image tag breaks), and
+# yamlpath keeps them but deletes every blank line. A regex changes the value and nothing else.
+targets:
+  chart-tag:
+    name: "chart: image.tag"
+    kind: file
+    scmid: default
+    sourceid: changedetection
+    spec:
+      file: "charts/changedetection/values.yaml"
+      matchpattern: '(repository: ghcr\.io/dgtlmoon/changedetection\.io\n\s+tag: )"[^"]*"'
+      replacepattern: '${1}"{{ source "changedetection" }}"'
+
+  chart-appversion:
+    name: "chart: appVersion"
+    kind: file
+    scmid: default
+    sourceid: changedetection
+    spec:
+      file: "charts/changedetection/Chart.yaml"
+      matchpattern: 'appVersion: "[^"]*"'
+      replacepattern: 'appVersion: "{{ source "changedetection" }}"'
+
+  filters-docker-line:
+    name: "FILTERS.md: docker run example"
+    kind: file
+    scmid: default
+    sourceid: changedetection
+    spec:
+      file: "FILTERS.md"
+      matchpattern: 'changedetection\.io:[0-9][0-9.]*'
+      replacepattern: 'changedetection.io:{{ source "changedetection" }}'
+
+actions:
+  default:
+    kind: github/pullrequest
+    scmid: default
+    title: 'changedetection {{ source "changedetection" }}'
+    spec:
+      labels:
+        - deps
+      description: |
+        **Nicht ungeprüft mergen.** Eine neue changedetection-Version ändert, wie aus einer Seite
+        Text wird, und jede Watch, deren Text sich dadurch ändert, meldet sich nach dem Merge
+        einmal in Matrix. Vorher den Probelauf machen: alte und neue Version auf einer Kopie des
+        Datastores, ohne Benachrichtigungen, auf dem Laptop, nie von der VPS aus. Siehe
+        [Upgrading changedetection](https://github.com/osm-fulda/oeffnungszeiten/blob/main/docs/changedetection.md#upgrading-changedetection).
+
+        Release Notes: https://github.com/dgtlmoon/changedetection.io/releases
+
+        Die CI startet bei einem PR von GitHub Actions nicht von selbst: den PR einmal schließen
+        und wieder öffnen.

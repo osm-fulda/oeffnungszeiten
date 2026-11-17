@@ -1,0 +1,60 @@
+---
+name: "sockpuppetbrowser"
+
+scms:
+  default:
+    kind: github
+    spec:
+      owner: '{{ .github.owner }}'
+      repository: '{{ .github.repository }}'
+      branch: '{{ .github.branch }}'
+      user: '{{ .github.user }}'
+      email: '{{ .github.email }}'
+      token: '{{ requiredEnv .github.token }}'
+      username: '{{ requiredEnv .github.username }}'
+      commitmessage:
+        type: deps
+        hidecredit: true
+
+# sockpuppetbrowser has no usable semver stream: :latest is newer than its highest version tag
+# (0.0.3), so tracking the version would roll the browser BACKWARDS. Track the digest of :latest
+# instead — a bump is then a visible one-line diff rather than a silent pull.
+sources:
+  sockpuppetbrowser:
+    name: "Get current sockpuppetbrowser :latest digest"
+    kind: dockerdigest
+    spec:
+      image: "dgtlmoon/sockpuppetbrowser"
+      tag: "latest"
+    # The source answers "latest@sha256:…"; the chart holds the bare digest and adds the "@".
+    transformers:
+      - trimprefix: "latest@"
+
+# A regex, not a yaml target: the yaml engines drop quotes or blank lines (see changedetection.yaml).
+targets:
+  chart-browser-digest:
+    name: "chart: browser.image.digest"
+    kind: file
+    scmid: default
+    sourceid: sockpuppetbrowser
+    spec:
+      file: "charts/changedetection/values.yaml"
+      # The only digest with a value: image.digest for changedetection itself is "".
+      matchpattern: 'digest: "sha256:[0-9a-f]{64}"'
+      replacepattern: 'digest: "{{ source "sockpuppetbrowser" }}"'
+
+actions:
+  default:
+    kind: github/pullrequest
+    scmid: default
+    title: "sockpuppetbrowser: neuer Digest von :latest"
+    spec:
+      labels:
+        - deps
+      description: |
+        Neuer Digest für den Browser, der die `html_webdriver`-Watches rendert. Kann so gemergt
+        werden; wenn danach Watches mit `connect_over_cdp`-Fehlern im Wochenreport auftauchen,
+        ist dieser PR der erste Verdächtige.
+
+        Die CI startet bei einem PR von GitHub Actions nicht von selbst: den PR einmal schließen
+        und wieder öffnen.

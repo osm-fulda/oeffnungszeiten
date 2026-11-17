@@ -86,10 +86,11 @@ kubectl -n changedetection scale deploy/changedetection --replicas=1
 
 ## Upgrading changedetection
 
-`.github/workflows/updatecli.yml` checks the pinned images every Tuesday. When one moved, it
-rewrites the branch `deps/images` and opens or updates the issue labelled `deps` with the diff
-and a compare link. Opening the pull request is a click, on purpose: Actions may not open one
-here, and the click is also what makes CI run.
+`.github/workflows/updatecli.yml` checks the pinned images every Tuesday, one manifest per image
+in `updatecli/updatecli.d/`. When one moved, updatecli keeps one branch and one pull request
+(label `deps`) for that image up to date. That needs "Allow GitHub Actions to create and approve
+pull requests" in the repository settings. A pull request opened with `GITHUB_TOKEN` starts no
+workflow, so CI runs only after closing and reopening it.
 
 A browser digest can be merged as it comes. A changedetection version cannot, without a look:
 it changes how a fetched page becomes text, and every watch whose text changes alerts once after
