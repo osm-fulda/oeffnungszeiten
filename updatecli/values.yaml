@@ -1,0 +1,11 @@
+# Shared by every manifest in updatecli.d/. token and username name environment variables, never
+# a secret: the workflow fills them from GITHUB_TOKEN and the actor (updatecli reserves the
+# UPDATECLI_ prefix because GitHub reserves GITHUB_).
+github:
+  owner: osm-fulda
+  repository: oeffnungszeiten
+  branch: main
+  user: github-actions[bot]
+  email: 41898282+github-actions[bot]@users.noreply.github.com
+  token: UPDATECLI_GITHUB_TOKEN
+  username: UPDATECLI_GITHUB_USERNAME

@@ -1,0 +1,47 @@
+# updatecli, as its docs set it up (https://www.updatecli.io/docs/automate/github_action/): every
+# manifest in updatecli/updatecli.d/ checks one pinned image, and when it moved, updatecli itself
+# keeps one branch and one pull request per image up to date.
+#
+# Nothing here deploys. A changedetection bump changes how pages are read, and its pull request
+# says how to measure that before the merge (docs/changedetection.md, "Upgrading changedetection").
+name: updatecli
+
+on:
+  schedule:
+    - cron: '23 4 * * 2'     # Tuesday: the Monday report has been read, the week is still young
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'updatecli/**'
+      - '.github/workflows/updatecli.yml'
+
+permissions: {}
+
+concurrency: updatecli
+
+env:
+  UPDATECLI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  UPDATECLI_GITHUB_USERNAME: ${{ github.actor }}
+
+jobs:
+  diff:
+    # A pull request that touches the manifests shows what they would change, and nothing more.
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: updatecli/updatecli-action@v3.10.0
+      - run: updatecli diff --config updatecli/updatecli.d --values updatecli/values.yaml
+
+  apply:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # push the working branches
+      pull-requests: write   # open or update the pull requests
+    steps:
+      - uses: actions/checkout@v7
+      - uses: updatecli/updatecli-action@v3.10.0
+      - run: updatecli apply --config updatecli/updatecli.d --values updatecli/values.yaml
