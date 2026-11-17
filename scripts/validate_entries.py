@@ -228,7 +228,9 @@ def check_live(e, lang_default="de", browser_ws=None):
             return errs, warns
 
     text = L.clean(" ".join(W.txt_of(x) for x in sel))
-    if not L.time_matches(text):
+    if not L.time_matches(text) and L.hours_phrase(text):
+        pass                # "durchgehend geöffnet", "nur nach Vereinbarung": hours, no clock
+    elif not L.time_matches(text):
         # Some watches hold a notice on purpose: a winter break, "bei gutem Wetter an
         # Wochenenden". They fire when hours come back, so for them no time is the expected
         # state, and failing CI on it blocks every pull request that touches the entry.

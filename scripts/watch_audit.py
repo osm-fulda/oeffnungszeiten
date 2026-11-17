@@ -55,11 +55,14 @@ NOTICE_MAX_DAYS = 183
 DEFAULT_ENTRIES = "entries"
 
 
-def text_only_urls(d=DEFAULT_ENTRIES):
-    """URLs whose every entry says `text_only`: a notice there is the point, not a blind watch.
+def text_only_keys(d=DEFAULT_ENTRIES):
+    """The watches whose entry says `text_only`: a notice there is the point, not a blind watch.
 
-    Keyed on the URL because that is all a watch and its entry share in the cluster. A URL that
-    also carries an ordinary entry stays out, since that watch is expected to hold hours.
+    Keyed on (url, name), because a watch's title is its entry's name — the same pair the sync
+    falls back on where one URL carries several businesses. Keying on the URL alone missed
+    exactly those: one bakery branch closed for renovation on a page shared with seven open
+    ones came back RED every Monday. A URL whose every entry says `text_only` is also listed
+    as (url, None), so a watch whose title has drifted is still exempt there.
     Missing directory, no exemptions: the audit then judges every watch as before.
     """
     import glob
@@ -71,8 +74,27 @@ def text_only_urls(d=DEFAULT_ENTRIES):
         except (OSError, ValueError):
             continue
         u = (e.get("url") or "").rstrip("/").lower()
-        seen.setdefault(u, []).append(bool(e.get("text_only")))
-    return {u for u, flags in seen.items() if u and all(flags)}
+        seen.setdefault(u, []).append((e.get("name") or "", bool(e.get("text_only"))))
+    keys = set()
+    for u, entries in seen.items():
+        if not u:
+            continue
+        keys |= {(u, name.strip().lower()) for name, flag in entries if flag}
+        if all(flag for _name, flag in entries):
+            keys.add((u, None))
+    return keys
+
+
+def is_text_only(w, keys):
+    """
+    >>> keys = {("https://x.de/filialen", "happ (opperz)")}
+    >>> is_text_only({"url": "https://x.de/filialen/", "title": "Happ (Opperz)"}, keys)
+    True
+    >>> is_text_only({"url": "https://x.de/filialen/", "title": "Happ (Petersberg)"}, keys)
+    False
+    """
+    u = (w.get("url") or "").rstrip("/").lower()
+    return (u, None) in keys or (u, (w.get("title") or "").strip().lower()) in keys
 
 
 def ignore_patterns(path=DEFAULT_SETTINGS):
@@ -121,6 +143,31 @@ def ignore_overreach(text, patterns, lang):
     return hit, surviving
 
 
+def short_error(err, limit=240):
+    """`last_error` on one line, with the cause kept.
+
+    urllib3 puts the reason last — refused, unresolvable, bad certificate — and a plain cut
+    at 120 characters ended exactly at "(Caused by", so the report named the symptom and hid
+    the one part that decides the fix. The object reprs in between say nothing and go.
+
+    >>> short_error("Exception: HTTPSConnectionPool(host='x.de', port=443): Max retries "
+    ...     "exceeded with url: / (Caused by NewConnectionError('<urllib3.connection."
+    ...     "HTTPSConnection object at 0x7f>: Failed to establish a new connection: "
+    ...     "[Errno 111] Connection refused'))")
+    "Exception: HTTPSConnectionPool(host='x.de', port=443): Max retries exceeded with url: / \
+(Caused by NewConnectionError: Failed to establish a new connection: [Errno 111] Connection refused)"
+    """
+    err = " ".join(str(err).split())
+    if "(Caused by " not in err:
+        return err[:limit]
+    head, cause = err.split("(Caused by ", 1)
+    cause = re.sub(r"<[^<>]*>:?\s*", "", cause)
+    cause = re.sub(r"^(\w+)\(+[,\s'\"]*", r"\1: ", cause)
+    cause = re.sub(r"['\"]?\)+$", "", cause).strip()
+    head = head.strip()[:limit // 2]
+    return f"{head} (Caused by {cause})"[:limit]
+
+
 def snapshot(base_url, key, uuid):
     """(latest snapshot text, history timestamps). Empty text if there is none yet."""
     base = base_url.rstrip('/') + '/api/v1/watch/' + uuid
@@ -157,7 +204,7 @@ def notice_since(base_url, key, uuid, stamps):
                 text = r.read().decode('utf-8', 'replace')
         except Exception:
             return None
-        if L.time_matches(text):
+        if L.has_hours(text):
             return after
         after = stamp
     return None
@@ -181,13 +228,15 @@ def judge(w, text, stamps, lang, dup_count, patterns=(), since=None, now=None,
     >>> judge({"include_filters": ["p"]}, "Bei gutem Wetter am Wochenende geöffnet.", [], "de",
     ...       1, text_only=True)
     ('green', [])
+    >>> judge({"include_filters": ["p"]}, "Öffnungszeiten: durchgehend geöffnet", [], "de", 1)
+    ('green', [])
     """
     issues = []
     verdict = GREEN
     filtered = bool([f for f in (w.get("include_filters") or []) if f.strip()])
 
     if w.get("last_error"):
-        return RED, [f"fetch error: {str(w['last_error'])[:120]}"]
+        return RED, [f"fetch error: {short_error(w['last_error'])}"]
     if not text.strip():
         return RED, ["no snapshot yet — the watch has never captured anything"]
     if L.looks_blocked(text):
@@ -195,9 +244,12 @@ def judge(w, text, stamps, lang, dup_count, patterns=(), since=None, now=None,
 
     days = L.weekdays_any(text, lang)
     times = L.time_matches(text)
+    phrase = None if times else L.hours_phrase(text)
 
     age = (int(now or time.time()) - int(since)) // 86400 if since else None
-    if not times and age is not None and age <= NOTICE_MAX_DAYS:
+    if phrase:
+        pass                    # hours without a clock: "durchgehend geöffnet", by appointment
+    elif not times and age is not None and age <= NOTICE_MAX_DAYS:
         # The anchor is right: it held hours until a holiday or a seasonal break replaced them,
         # and when they come back that is a change like any other, so the watch will report it.
         verdict = AMBER
@@ -275,14 +327,14 @@ def judge(w, text, stamps, lang, dup_count, patterns=(), since=None, now=None,
     return verdict, issues
 
 
-def collect(api, base_url, uuids, names, lang, workers, patterns=(), notice_urls=()):
+def collect(api, base_url, uuids, names, lang, workers, patterns=(), text_only=()):
     def one(u):
         try:
             w = api.get(u)
         except Exception as e:
             return u, None, "", [], str(e)
         text, stamps = snapshot(base_url, api.key, u)
-        if text.strip() and not L.time_matches(text):
+        if text.strip() and not L.has_hours(text):
             w["_notice_since"] = notice_since(base_url, api.key, u, stamps)
         return u, w, text, stamps, None
 
@@ -307,8 +359,7 @@ def collect(api, base_url, uuids, names, lang, workers, patterns=(), notice_urls
         n_dup = len(dup.get(fp, [])) if fp else 1
         verdict, issues = judge(w, text, stamps, lang, n_dup, patterns,
                                 since=w.get("_notice_since"),
-                                text_only=(w.get("url") or "").rstrip("/").lower()
-                                in notice_urls)
+                                text_only=is_text_only(w, text_only))
         filt = [f for f in (w.get("include_filters") or []) if f.strip()]
         rows.append({
             "uuid": u,
@@ -415,7 +466,7 @@ def main():
           f"({len(patterns)} global ignore pattern(s) considered) …", file=sys.stderr)
 
     rows = collect(api, args.base_url, uuids, names, args.lang, args.workers, patterns,
-                   text_only_urls(args.entries))
+                   text_only_keys(args.entries))
     if args.only:
         rows = [r for r in rows if r["verdict"] == args.only]
 

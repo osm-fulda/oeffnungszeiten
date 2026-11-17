@@ -4,11 +4,12 @@
  "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "lang": "de",
  "name": "Druckerei Henschel",
+ "note": "2026-11-16: http statt https: Port 443 lehnt die Verbindung ab, Port 80 liefert die Seite (von hier und von der VPS).",
  "osm_id": "node/12585412354",
  "schema": 1,
  "tags": [
   "lkfulda-hosenfeld",
   "lkfulda-printer"
  ],
- "url": "https://www.druckerei-henschel.de"
+ "url": "http://www.druckerei-henschel.de"
 }

@@ -104,8 +104,11 @@ ssh vps "curl -s -o /dev/null -w '%{http_code}\n' -A '$UA' '<url>'"           # 
 
 - **200 from both**: the user agent in the cluster is not the one you just sent. Check the watch's
   `fetch_backend`; the browser backend sends whatever the sockpuppet image carries.
-- **403 from both**: the user agent is the problem. If 403s cluster across unrelated hosts, the
-  pinned Chrome version has aged; bump it in `deploy/global-settings.json`.
+- **403 from both**: the user agent is the problem. Some servers refuse every Chrome below a
+  cut-off version: one host behind four watches answered 403 to Chrome 120 to 139 and 200 to 140
+  and later, from here and from the VPS alike. Retry with a newer version in the same string; if
+  that gets 200, bump `requests.default_ua.html_requests` in `deploy/global-settings.json` and
+  run `apply_global_settings.py --emit-values`. That fixes every watch on such a host at once.
 - **200 here, 403 from the VPS**: the host blocks datacenter addresses. Nothing in the entry fixes
   that. Remove the watch, `reason: datacenter-block`, `recheck: on-relocation`.
 - **403 here as well, every backend**: anti-bot. Remove it, `reason: anti-bot`.
@@ -117,6 +120,14 @@ Look for the successor before removing anything: the site's own navigation, `/ko
 several 404s on one host in the same week are almost always that. Found → new `url`, then the
 filter for the new page. Not found → `reason: site-unreachable` with a recheck date.
 
+### 402: the site is switched off
+
+Not a block. The site builder or hoster has taken the page down, usually for an unpaid bill, and
+says so to every client: a Base44 site answered "is currently unavailable" from anywhere. Open it
+in a browser to see the provider's notice. Paid again, it comes back by itself; still there in
+the next report, treat it as a 404, and keep in mind that a business whose website lapsed may
+have closed.
+
 ### 5xx: the server fails
 
 One 503 is the site's bad day; wait for the next run before touching anything. The same 5xx in two
@@ -124,8 +135,16 @@ consecutive reports is a dead site: treat it as a 404.
 
 ### No answer: Max retries, DNS, TLS
 
-`HTTPSConnectionPool(...): Max retries exceeded` means no HTTP answer at all: the server is down,
-the name no longer resolves, or the certificate is broken. The text after `Caused by` says which.
+`HTTPSConnectionPool(...): Max retries exceeded` means no HTTP answer at all. The text after
+`Caused by` says why, and the report sends a different first move for each:
+
+| after `Caused by` | meaning | fix |
+|---|---|---|
+| `Connection refused` | nothing listens on the port | try `http://`: a site whose certificate lapsed often still serves on port 80. Answers → new `url` |
+| `NameResolutionError` | the name no longer resolves | domain expired or moved; look for a successor |
+| `SSLError` | certificate expired or for another name | as refused: `http://` often works |
+| `ConnectTimeoutError` | the server does not answer in time | wait one run |
+
 Run the curl from above from both places. Down from both → wait one run, then
 `reason: site-unreachable`. Down only from the VPS → the same split as a datacenter 403.
 
@@ -161,7 +180,12 @@ new filter has to avoid it too. After six consecutive misses changedetection sen
 ### No hours in the capture
 
 `no opening hours on this page at all` / `captures no time`: the filter matches, but what it
-captures cannot ever show a change of hours. Either the business took the hours off this page
+captures cannot ever show a change of hours. A capture without a clock is fine when it states
+hours anyway ("durchgehend geöffnet", "nur nach Vereinbarung"); the audit recognises the common
+phrasings, and a new one belongs in `HOURS_PHRASE_RE` in `scripts/hours_lang.py`. A notice
+watched on purpose (a branch closed for renovation) needs `text_only: true` in its entry; that
+works on a page shared with other branches too, because the audit matches it by URL and name.
+Otherwise either the business took the hours off this page
 (look for a better one, FILTERS.md §3 Step 1), or the filter slipped onto a neighbour element
 after a site edit (run the wizard). If the business publishes no hours anywhere, the watch is
 blind for good: remove it, `reason: no-hours-on-page`.
