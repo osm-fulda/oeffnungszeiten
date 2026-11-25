@@ -1,7 +1,7 @@
 {
  "added": "2026-07-26",
  "captured_sample": "Fulda Innenstadt Beratung & Verkauf Marktstraße 11 36037 Fulda Tel.: 0661 - 833 455 56 Öffnungszeiten: Mo. - Sa. 10 - 18 Uhr",
- "fetch_backend": "html_webdriver",
+ "fetch_backend": "system",
  "filter": "xpath://div[contains(@class,\"dali-plugin-text-content\")][.//h2[contains(text(),\"Fulda\")]]",
  "name": "Hintz-Bürsten - Bürstenmanufaktur",
  "osm_id": "node/13458419169",
@@ -9,5 +9,6 @@
  "tags": [
   "fulda-houseware"
  ],
- "url": "https://www.hintz-buersten.de/i/standorte"
+ "url": "https://www.hintz-buersten.de/i/standorte",
+ "note": "2026-11-25: auf system umgestellt; die Standortseite enthaelt den Fulda-Block schon im HTML, der geteilte Browser stuerzte auf der Seite ab (Page crashed)."
 }

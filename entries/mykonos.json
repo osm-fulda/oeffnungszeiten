@@ -1,7 +1,7 @@
 {
  "added": "2026-08-15",
  "captured_sample": "Montag : Geschlossen Dienstag – Samstag 17:00 – 23:00 Sonntag & Feiertage 12:00 – 14:00 17:00 – 22:00",
- "filter": "xpath://p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//p[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Mykonos",
  "osm_id": "node/3508043915",
  "schema": 1,

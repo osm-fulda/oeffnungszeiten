@@ -1,10 +1,10 @@
 {
   "added": "2026-11-09",
   "captured_sample": "Öffnungszeiten Juni – September Restaurant & Biergarten Mo. bis Sa.: 15:30 - 22:00 Uhr Küche Mo. bis Sa.: 16:30 - 21:00 Uhr Sonntag & Feiertag Geschlossen Oktober – Mai Restaurant & Biergarten Mo. bis",
-  "filter": "xpath:(//span[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+  "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" t-oz-karte \")][not(contains(.,\"Rezeption\"))]",
   "lang": "de",
   "name": "Berghof",
-  "note": "2026-11-09: Restaurant und Kueche, Sommer und Winter; die Rezeption steht nicht im Filter.",
+  "note": "Restaurant und Kueche, Sommer und Winter; die Karte mit Rezeption und Fruehstueck steht nicht im Filter. 2026-11-25: neuer Anker, die Seite fuehrt die Zeiten jetzt als Karten (t-oz-karte).",
   "osm_id": "way/406144437",
   "schema": 1,
   "tags": [

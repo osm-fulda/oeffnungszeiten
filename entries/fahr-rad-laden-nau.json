@@ -2,12 +2,13 @@
  "added": "2026-07-26",
  "captured_sample": "März bis August:Montag bis Freitag9.00 bis 18.30 UhrSamstag9.00 bis 15.00 UhrSeptember bis Februar:M",
  "fetch_backend": "system",
- "filter": "xpath:(//p[contains(normalize-space(.),\"Öffnungszeit\")])/parent::*",
+ "filter": "xpath:(//h3[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
  "name": "Fahr Rad Laden Nau",
  "osm_id": "way/150690419",
  "schema": 1,
  "tags": [
   "fulda-bicycle"
  ],
- "url": "https://www.bikenau.de/kontakt.asp"
+ "url": "https://www.bikenau.de/kontakt.asp",
+ "note": "Neu angelegt am 2026-11-25: der alte Anker (ein <p> mit \"Öffnungszeit\") ist bei einem Umbau verschwunden, die Überschrift ist jetzt ein <h3>."
 }
