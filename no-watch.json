@@ -3048,20 +3048,29 @@
   {
    "url": "https://www.musik-mollenhauer.de/Kontakt",
    "name": "Musikhaus Mollenhauer GmbH & Co. KG",
-   "reason": "site-unreachable",
+   "reason": "anti-bot",
    "established": "2026-11-25",
-   "recheck": "2027-02-25",
-   "note": "Seit Mitte November 2026 liefert die ganze Domain nur noch \"Leave the page!\" (54 Bytes), an jeden Abrufer, auch an einen echten Browser. Zuvor beobachtet seit 2026-07-26, Filter: xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+   "recheck": "on-relocation",
+   "note": "Seit Mitte November 2026 antwortet die Seite automatischen Abrufen nur noch mit \"Leave the page!\" (54 Bytes): einfacher Abruf, volle Firefox-Header und Headless-Chrome gleichermassen, vom Laptop wie aus dem Cluster. Im normalen Browser ist die Seite samt Oeffnungszeiten erreichbar. Zuvor beobachtet seit 2026-07-26, Filter: xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
    "osm_id": "node/1707393447"
   },
   {
    "url": "https://www.musik-mollenhauer.de/Ladengeschaeft",
    "name": "Mollenhauer Blockflöten Museum",
-   "reason": "site-unreachable",
+   "reason": "anti-bot",
    "established": "2026-11-25",
-   "recheck": "2027-02-25",
-   "note": "Seit Mitte November 2026 liefert die ganze Domain nur noch \"Leave the page!\" (54 Bytes), an jeden Abrufer, auch an einen echten Browser. Zuvor beobachtet seit 2026-08-03, Filter: xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+   "recheck": "on-relocation",
+   "note": "Seit Mitte November 2026 antwortet die Seite automatischen Abrufen nur noch mit \"Leave the page!\" (54 Bytes): einfacher Abruf, volle Firefox-Header und Headless-Chrome gleichermassen, vom Laptop wie aus dem Cluster. Im normalen Browser ist die Seite samt Oeffnungszeiten erreichbar. Zuvor beobachtet seit 2026-08-03, Filter: xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
    "osm_id": "node/11916484101"
+  },
+  {
+   "url": "https://reinholz-kaffee-shop.de/unternehmen/kontakt/",
+   "name": "Manufaktur Reinholz Kaffeerösterei",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-25",
+   "recheck": "2027-05-25",
+   "note": "Die Manufaktur Am Rhoenbad 5 ist jetzt Kaffeeschule und Eventlocation mit Roesterei, fuer Kurse und Buchungen (reinholz-kaffee-shop.de/unternehmen/manufaktur/). Oeffentliche Zeiten nennt die Seite nur noch fuer Kaffeeladen und Cafe, die eigene Watches haben. Der Watch fing deren Zeiten ein, nicht die der Manufaktur.",
+   "osm_id": "node/10080796572"
   }
  ]
 }
