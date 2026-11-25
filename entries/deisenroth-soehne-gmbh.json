@@ -10,5 +10,9 @@
     "lkfulda-petersberg",
     "lkfulda-shop"
   ],
-  "url": "https://deisenroth-soehne-fulda.seat.de/ueberuns"
+  "url": "https://deisenroth-soehne-fulda.seat.de/ueberuns",
+  "subtractive_selectors": [
+    "button .short"
+  ],
+  "note": "Der Status neben der Überschrift (Geöffnet / Öffnet am Montag um 08:00 Uhr) hängt von der Uhrzeit ab und wird abgezogen."
 }

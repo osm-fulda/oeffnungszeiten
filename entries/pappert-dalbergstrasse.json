@@ -4,11 +4,11 @@
  "fetch_backend": "html_requests",
  "filter": ".detail-dealer-open-hours",
  "name": "Pappert (dalbergstrasse)",
- "note": "Filialseite der Kette unter /dealer/<slug>/; dieselbe Vorlage wie die uebrigen Pappert-Watches. Die Zeiten sind derzeit identisch mit der Filiale Emaillierwerk, darum meldet das Audit \"identischer Text\".",
+ "note": "Filialseite der Kette unter /dealer/<slug>/; dieselbe Vorlage wie die uebrigen Pappert-Watches. Die Zeiten sind derzeit identisch mit der Filiale Emaillierwerk, darum meldet das Audit \"identischer Text\". 2026-11-25: Slug umbenannt, fil-fulda-dalbergstrasse -> fil-fulda-dalbergstrasse-rewe (alte Adresse 404). Seite nennt Dalbergstrasse 29; Zeiten unveraendert.",
  "osm_id": "node/2411418216",
  "schema": 1,
  "tags": [
   "fulda-bakery"
  ],
- "url": "https://www.papperts.de/dealer/fil-fulda-dalbergstrasse/"
+ "url": "https://www.papperts.de/dealer/fil-fulda-dalbergstrasse-rewe/"
 }

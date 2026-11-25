@@ -1,9 +1,9 @@
 {
  "added": "2026-08-17",
  "captured_sample": "Mo. - Sa. 10:00 - 04:00 Uhr So. 12:00 - 04:00 Uhr",
- "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" list-hours \")]/div[not(contains(@class,\"item--status\"))]",
+ "filter": "xpath://div[contains(concat(\" \",normalize-space(@class),\" \"),\" list-hours \")]/div[span[contains(concat(\" \",normalize-space(@class),\" \"),\" day \")]]",
  "name": "SPIEL-IN Spielhalle Fulda",
- "note": "item--status traegt die Live-Anzeige \"Geöffnet bis 04:00 Uhr\" und wechselt mehrmals taeglich — deshalb ausgenommen.",
+ "note": "item--status traegt die Live-Anzeige \"Geöffnet bis 04:00 Uhr\" und wechselt mehrmals taeglich — deshalb ausgenommen. 2026-11-25: nur noch die Wochenzeilen (div mit span.day). Zeitweise haengt die Seite eine mitlaufende Liste der naechsten Tage an (\"Geöffnet am 14.11.2026 ...\"), die sich bei jedem Abruf verschiebt.",
  "osm_id": "way/1284529848",
  "schema": 1,
  "tags": [

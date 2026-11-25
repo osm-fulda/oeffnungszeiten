@@ -3044,6 +3044,24 @@
    "recheck": "2027-11-10",
    "note": "Die Kontaktseite sagt \"Unsere Ausstellung ist nur nach vorheriger Terminvereinbarung zugänglich\" und nennt keine Zeiten; die Startseite auch nicht.",
    "osm_id": "node/14365575935"
+  },
+  {
+   "url": "https://www.musik-mollenhauer.de/Kontakt",
+   "name": "Musikhaus Mollenhauer GmbH & Co. KG",
+   "reason": "site-unreachable",
+   "established": "2026-11-25",
+   "recheck": "2027-02-25",
+   "note": "Seit Mitte November 2026 liefert die ganze Domain nur noch \"Leave the page!\" (54 Bytes), an jeden Abrufer, auch an einen echten Browser. Zuvor beobachtet seit 2026-07-26, Filter: xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+   "osm_id": "node/1707393447"
+  },
+  {
+   "url": "https://www.musik-mollenhauer.de/Ladengeschaeft",
+   "name": "Mollenhauer Blockflöten Museum",
+   "reason": "site-unreachable",
+   "established": "2026-11-25",
+   "recheck": "2027-02-25",
+   "note": "Seit Mitte November 2026 liefert die ganze Domain nur noch \"Leave the page!\" (54 Bytes), an jeden Abrufer, auch an einen echten Browser. Zuvor beobachtet seit 2026-08-03, Filter: xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+   "osm_id": "node/11916484101"
   }
  ]
 }

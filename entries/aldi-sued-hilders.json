@@ -7,6 +7,7 @@
  "name": "ALDI Süd (Hilders)",
  "osm_id": "way/29974972",
  "schema": 1,
+ "sort_text_alphabetically": true,
  "tags": [
   "lkfulda-hilders",
   "lkfulda-supermarket"
