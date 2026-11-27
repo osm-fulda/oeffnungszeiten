@@ -3071,6 +3071,150 @@
    "recheck": "2027-05-25",
    "note": "Die Manufaktur Am Rhoenbad 5 ist jetzt Kaffeeschule und Eventlocation mit Roesterei, fuer Kurse und Buchungen (reinholz-kaffee-shop.de/unternehmen/manufaktur/). Oeffentliche Zeiten nennt die Seite nur noch fuer Kaffeeladen und Cafe, die eigene Watches haben. Der Watch fing deren Zeiten ein, nicht die der Manufaktur.",
    "osm_id": "node/10080796572"
+  },
+  {
+   "url": "http://wellness-center-nicola.de/",
+   "name": "Podologiepraxis Nicola",
+   "reason": "appointment-only",
+   "established": "2026-11-27",
+   "recheck": "2027-05-27",
+   "note": "Unter \"Öffnungszeiten\" steht nur \"Montag–Freitag nach Vereinbarung\". Seite gerendert am 26.11.2026.",
+   "osm_id": "node/10942931109"
+  },
+  {
+   "url": "https://www.kopicacatering.com/",
+   "name": "KOPICA Catering & Partyservice",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-27",
+   "recheck": "2027-05-27",
+   "note": "Catering und Partyservice, die Seite nennt keine Öffnungszeiten (im Browser angesehen am 27.11.2026). Automatisch kommt nur eine Cloudflare-Sperrseite von jimdosite.com zurück.",
+   "osm_id": "node/10942837601"
+  },
+  {
+   "url": "http://lotus-hünfeld.de/",
+   "name": "street kitchen Vietnam Imbiss",
+   "reason": "anti-bot",
+   "established": "2026-11-27",
+   "recheck": "on-relocation",
+   "note": "Die Seite antwortet mit \"403 Forbidden\" (nginx), auch gerendert. Die Zeiten (Mo–So 11:00–21:00) stehen nur auf Facebook, geprüft am 27.11.2026.",
+   "osm_id": "node/13462547727"
+  },
+  {
+   "url": "https://www.weidstueckerhof.de",
+   "name": "Weidstücker Hof (Reitanlage)",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-27",
+   "recheck": "2027-05-27",
+   "note": "Baustellenseite: \"Wir arbeiten aktuell mit Hochdruck daran, unsere Internetpräsenz für Sie zu modernisieren\", keine Zeiten. Die Gaststube hat eine eigene Seite (weidstuecker-hof-events.de). Gerendert am 27.11.2026.",
+   "osm_id": "node/313912659"
+  },
+  {
+   "url": "https://www.physivo.de/",
+   "name": "Physivo I. Vukovic",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-27",
+   "recheck": "2027-05-27",
+   "note": "Startseite, Kontakt, Anfahrt und Impressum gerendert am 27.11.2026: Adresse, Telefon und Therapieangebot, keine Zeiten.",
+   "osm_id": "node/13369701916"
+  },
+  {
+   "url": "https://www.diekleinegeschenkidee.de",
+   "name": "Die Kleine Geschenkidee",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-27",
+   "recheck": "2027-05-27",
+   "note": "Die Seite zeigt nur \"derzeit ziehen wir mit dem Unternehmen um … Shop vorübergehend geschlossen … voraussichtlich ab Herbst 2026\", keine Zeiten. Gerendert am 27.11.2026.",
+   "osm_id": "node/11944626162"
+  },
+  {
+   "url": "https://www.zumeichenzeller.de/",
+   "name": "Zum Eichenzeller",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-27",
+   "recheck": "2027-05-27",
+   "note": "Autobahnhotel; unter \"Öffnungszeiten\" steht nur \"24-Check-In möglich\", für das Restaurant verweist die Seite auf \"das angrenzende Restaurant\". Gerendert am 27.11.2026.",
+   "osm_id": "way/139437548"
+  },
+  {
+   "url": "https://www.landgasthof-ulsterbruecke.de/",
+   "name": "Herzog's Ulsterbrücke",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-27",
+   "recheck": "2027-05-27",
+   "note": "Hotel garni (Zimmer, Buchung, Kontakt), das Restaurant gibt es nicht mehr; die Seite nennt keine Zeiten. Gerendert am 26.11.2026.",
+   "osm_id": "way/499932628"
+  },
+  {
+   "url": "https://www.kirche-hettenhausen.de/site/",
+   "name": "Ev.-Luth. Kirchengemeinde Hettenhausen",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-27",
+   "recheck": "2027-05-27",
+   "note": "Gemeindeseite mit Gottesdienstterminen und Kontakten zu Pfarramt und Gemeindebüro, keine Öffnungszeiten. Gerendert am 27.11.2026.",
+   "osm_id": "way/249648530"
+  },
+  {
+   "url": "https://www.rasdorferfelltreff.de/",
+   "name": "Felltreff",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-27",
+   "recheck": "2027-05-27",
+   "note": "Hundeschule und Katzenpension (Wix-Seite): Kurse, Pension, Impressum, keine Öffnungszeiten. Gerendert am 27.11.2026.",
+   "osm_id": "node/13383944878"
+  },
+  {
+   "url": "https://epoke.dk/de/",
+   "name": "Epoke Maschinenbau",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-27",
+   "recheck": "2027-05-27",
+   "note": "Herstellerseite mit Produkten und Kontakt, der Wizard findet keinen Zeitenblock. Gerendert am 27.11.2026.",
+   "osm_id": "node/13722704418"
+  },
+  {
+   "url": "https://www.sozialewerke.de/flieden/haus-st-katharina.html",
+   "name": "Alten- und Pflegeheim St. Katharina",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-27",
+   "recheck": "2027-05-27",
+   "note": "Seite des Pflegeheims mit Angebot, Adresse und Telefon, keine Öffnungs- oder Besuchszeiten. Gerendert am 27.11.2026.",
+   "osm_id": "way/222825824"
+  },
+  {
+   "url": "https://artecare.de/pflegezentrum-kalbach/",
+   "name": "ArteCare Pflegezentrum Kalbach",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-27",
+   "recheck": "2027-05-27",
+   "note": "Pflegezentrum; die Seite nennt Adresse, \"Rezeption: +49 6655 91570\" und E-Mail, aber keine Zeiten. Gerendert am 27.11.2026.",
+   "osm_id": "way/1282533891"
+  },
+  {
+   "url": "https://drk-fulda.de/angebote/altenpflegeeinrichtungen/seniorenzentrum-bruder-konrad.html",
+   "name": "DRK-Seniorenzentrum Bruder Konrad",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-27",
+   "recheck": "2027-05-27",
+   "note": "Seite des Seniorenzentrums mit Angebot und Kontakt, keine Öffnungs- oder Besuchszeiten. Gerendert am 27.11.2026.",
+   "osm_id": "way/185264677"
+  },
+  {
+   "url": "https://www.polizei.hessen.de/polizeipraesidien/polizeipraesidium-osthessen/polizeidirektion-fulda",
+   "name": "Polizei Hünfeld",
+   "reason": "always-open",
+   "established": "2026-11-27",
+   "recheck": "never",
+   "note": "Die Seite der Polizeidirektion Fulda nennt für die Station Hünfeld \"Öffnungszeiten: durchgehend erreichbar - 24/7\". Gerendert am 27.11.2026.",
+   "osm_id": "way/122461764"
+  },
+  {
+   "url": "https://www.polizei.hessen.de/polizeipraesidien/polizeipraesidium-osthessen/direktion-verkehrssicherheit-sonderdienste",
+   "name": "Polizeiautobahnstation Petersberg",
+   "reason": "no-hours-on-page",
+   "established": "2026-11-27",
+   "recheck": "2027-05-27",
+   "note": "Seite der Direktion Verkehrssicherheit/Sonderdienste mit Telefon und E-Mail der Autobahnstation, keine Zeiten. Gerendert am 27.11.2026.",
+   "osm_id": "way/416609751"
   }
  ]
 }

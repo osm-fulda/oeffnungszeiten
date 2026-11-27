@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-27",
+ "captured_sample": "Die Öffnungszeiten Sommerlad Küchen Künzell: Di - Fr: 9:30 - 19:00 Uhr Sa: 9:30 - 16:00 Uhr montags geschlossen",
+ "filter": "xpath:(//strong[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*/parent::*",
+ "lang": "de",
+ "name": "Sommerlad Küchen Künzell",
+ "osm_id": "node/5334642478",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kitchen",
+  "lkfulda-kuenzell"
+ ],
+ "url": "https://www.sommerlad.de/standorte/sommerlad-kuechen-kuenzell"
+}

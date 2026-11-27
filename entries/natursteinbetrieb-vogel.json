@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-27",
+ "captured_sample": "Öffnungszeiten: Montag 08:00–12:00 13:00–16:30 Dienstag 08:00–12:00 13:00–16:30 Mittwoch 08:00–12:00 13:00–16:30 Donnerstag 08:00–12:00 13:00–16:30 Freitag 08:00–12:00 13:00–16:30 Samstag 09:00–12:00 ",
+ "filter": "xpath://div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")][not(.//div[contains(translate(.,\"MONTAGDIESWCHRFPÄÖÜB\",\"montagdieswchrfpäöüb\"),\"montag\")])]",
+ "lang": "de",
+ "name": "Natursteinbetrieb Vogel",
+ "osm_id": "way/276413026",
+ "schema": 1,
+ "tags": [
+  "lkfulda-neuhof",
+  "lkfulda-stonemason"
+ ],
+ "url": "https://vogel-natursteinbetrieb.de/kontakt/"
+}
