@@ -1,4 +1,4 @@
-# -- Image for the watcher itself. Pin a tag; updatecli raises the bump PRs.
+# -- Image for the watcher itself. Pin a tag; the weekly updatecli workflow prepares the bump.
 image:
   repository: ghcr.io/dgtlmoon/changedetection.io
   tag: "0.70.3"

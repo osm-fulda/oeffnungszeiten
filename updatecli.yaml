@@ -1,5 +1,0 @@
----
-name: "Öffnungszeiten dependencies"
-
-policies:
-  - updatecli.d/changedetection-images.yaml
