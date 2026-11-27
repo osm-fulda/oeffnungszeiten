@@ -1,0 +1,15 @@
+{
+ "added": "2026-11-27",
+ "captured_sample": "Öffnungszeiten LieferungAbholungMontag12:00 - 20:3012:00 - 20:30DienstagGeschlossenGeschlossenMittwoch12:00 - 20:3012:00 - 20:30Donnerstag12:00 - 20:3012:00 - 20:30Freitag12:00 - 20:3012:00 - 20:30Sam",
+ "fetch_backend": "html_webdriver",
+ "filter": "xpath:(//h2[contains(normalize-space(.),\"Öffnungszeiten\")])/parent::*",
+ "lang": "de",
+ "name": "Botan Döner",
+ "osm_id": "node/13625338779",
+ "schema": 1,
+ "tags": [
+  "lkfulda-fast_food",
+  "lkfulda-flieden"
+ ],
+ "url": "https://botan-doener.de/contact"
+}

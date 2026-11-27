@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-27",
+ "captured_sample": "ÖffnungszeitenVerkauf PkwService PkwTeile/ZubehörMontag08.30 Uhr - 18.00 Uhr07.00 Uhr - 18.00 Uhr07.30 Uhr - 17.00 UhrDienstag08.30 Uhr - 18.00 Uhr07.00 Uhr - 18.00 Uhr07.30 Uhr - 17.00 UhrMittwoch08.",
+ "filter": "xpath://figure[contains(concat(\" \",normalize-space(@class),\" \"),\" table \")]",
+ "lang": "de",
+ "name": "SCHADE Hyundai Fulda/Petersberg",
+ "osm_id": "node/13011307014",
+ "schema": 1,
+ "tags": [
+  "lkfulda-car",
+  "lkfulda-petersberg"
+ ],
+ "url": "https://schade.de/unternehmen/oeffnungszeiten/fulda/"
+}

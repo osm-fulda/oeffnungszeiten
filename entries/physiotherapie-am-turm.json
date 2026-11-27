@@ -1,0 +1,14 @@
+{
+ "added": "2026-11-27",
+ "captured_sample": "Wir sind für Sie da Therapie-Termine: Montag 08:00 – 20:00 Uhr Dienstag 07:00 – 19:00 Uhr Mittwoch 08:00 – 20:00 Uhr Donnerstag 08:00 – 16:30 Uhr Freitag 07:00 – 18:00 Uhr Empfang / Büro: Montag bis F",
+ "filter": "xpath://*[@id=\"text-3\"]",
+ "lang": "de",
+ "name": "Physiotherapie am Turm",
+ "osm_id": "way/126833712",
+ "schema": 1,
+ "tags": [
+  "lkfulda-kuenzell",
+  "lkfulda-physiotherapist"
+ ],
+ "url": "https://www.physiotherapie-am-turm.de/kontakt/"
+}
